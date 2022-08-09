@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj",
-      "projectName": "Instant Generation UI",
-      "projectPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj",
+      "projectUniqueName": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant-Generation-Option-Form\\Instant-Generation-Option-Form.csproj",
+      "projectName": "Instant-Generation-Option-Form",
+      "projectPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant-Generation-Option-Form\\Instant-Generation-Option-Form.csproj",
       "packagesPath": "C:\\Users\\elsto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\obj\\",
+      "outputPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant-Generation-Option-Form\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

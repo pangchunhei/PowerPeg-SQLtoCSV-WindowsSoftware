@@ -1,4 +1,4 @@
-﻿namespace Instant_Generation_UI
+﻿namespace Instant_Generation_Option_Form
 {
     partial class InstantGenerationOptionForm
     {
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // InstantGenerationOptionForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "InstantGenerationOptionForm";
-            this.Text = "InstantGenerationOptionForm";
-            this.Load += new System.EventHandler(this.InstantGenerationOptionForm_Load);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

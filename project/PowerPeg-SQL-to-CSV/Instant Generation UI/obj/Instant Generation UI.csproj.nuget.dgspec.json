@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elsto\\Documents\\GitHub\\SQL_to_CSV_C#App\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj": {}
+    "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elsto\\Documents\\GitHub\\SQL_to_CSV_C#App\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj": {
+    "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elsto\\Documents\\GitHub\\SQL_to_CSV_C#App\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj",
+        "projectUniqueName": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj",
         "projectName": "Instant Generation UI",
-        "projectPath": "C:\\Users\\elsto\\Documents\\GitHub\\SQL_to_CSV_C#App\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj",
+        "projectPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj",
         "packagesPath": "C:\\Users\\elsto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elsto\\Documents\\GitHub\\SQL_to_CSV_C#App\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\obj\\",
+        "outputPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

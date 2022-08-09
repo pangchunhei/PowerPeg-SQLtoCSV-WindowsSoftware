@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Nw4rTiP57EPPFp+QfSoKPG/ccqSAThDUHEIPDeWjApY4CJusU4o/4Im2nRL4NHPStdqOsj3TtsXAywvyY16lhg==",
+  "dgSpecHash": "GpcKi9daPuWfpz3PHIqeyOb27eYMhjGsxz2mYZHv6bdAb+PvDZ2TgSh6z2CQxliWRtTVuenVtULOWB0lfBMjZg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\SQL_to_CSV_C#App\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj",
+  "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Instant Generation UI\\Instant Generation UI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
