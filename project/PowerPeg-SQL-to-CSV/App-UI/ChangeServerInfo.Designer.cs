@@ -28,152 +28,152 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.headerLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.catalogLabel = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
+            this.addressTextbox = new System.Windows.Forms.TextBox();
+            this.catalogTextbox = new System.Windows.Forms.TextBox();
+            this.usernameTextbox = new System.Windows.Forms.TextBox();
+            this.passwordTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // headerLabel
             // 
-            this.label1.AccessibleName = "headerLabel";
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(33, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(453, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Change Server Information";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.headerLabel.AccessibleName = "headerLabel";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.headerLabel.Location = new System.Drawing.Point(33, 35);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(453, 46);
+            this.headerLabel.TabIndex = 1;
+            this.headerLabel.Text = "Change Server Information";
+            this.headerLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // addressLabel
             // 
-            this.label2.AccessibleName = "addressLabel";
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(82, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 31);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Address: ";
+            this.addressLabel.AccessibleName = "addressLabel";
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.addressLabel.Location = new System.Drawing.Point(82, 114);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(108, 31);
+            this.addressLabel.TabIndex = 3;
+            this.addressLabel.Text = "Address: ";
             // 
-            // label3
+            // catalogLabel
             // 
-            this.label3.AccessibleName = "catalogLabel";
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(82, 175);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 31);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Catalog: ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.catalogLabel.AccessibleName = "catalogLabel";
+            this.catalogLabel.AutoSize = true;
+            this.catalogLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.catalogLabel.Location = new System.Drawing.Point(82, 175);
+            this.catalogLabel.Name = "catalogLabel";
+            this.catalogLabel.Size = new System.Drawing.Size(108, 31);
+            this.catalogLabel.TabIndex = 4;
+            this.catalogLabel.Text = "Catalog: ";
+            this.catalogLabel.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // usernameLabel
             // 
-            this.label4.AccessibleName = "usernameLabel";
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(82, 233);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 31);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Username: ";
+            this.usernameLabel.AccessibleName = "usernameLabel";
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.usernameLabel.Location = new System.Drawing.Point(82, 233);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(131, 31);
+            this.usernameLabel.TabIndex = 5;
+            this.usernameLabel.Text = "Username: ";
             // 
-            // label5
+            // passwordLabel
             // 
-            this.label5.AccessibleName = "passwordLabel";
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(82, 305);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 31);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Password: ";
+            this.passwordLabel.AccessibleName = "passwordLabel";
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.passwordLabel.Location = new System.Drawing.Point(82, 305);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(125, 31);
+            this.passwordLabel.TabIndex = 6;
+            this.passwordLabel.Text = "Password: ";
             // 
-            // button1
+            // saveBtn
             // 
-            this.button1.AccessibleName = "saveBtn";
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(247, 371);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 46);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.saveBtn.AccessibleName = "saveBtn";
+            this.saveBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.saveBtn.Location = new System.Drawing.Point(247, 371);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(120, 46);
+            this.saveBtn.TabIndex = 7;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // cancelBtn
             // 
-            this.button2.AccessibleName = "cancelBtn";
-            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(436, 371);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 46);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = false;
+            this.cancelBtn.AccessibleName = "cancelBtn";
+            this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cancelBtn.Location = new System.Drawing.Point(436, 371);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(120, 46);
+            this.cancelBtn.TabIndex = 8;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // addressTextbox
             // 
-            this.textBox1.AccessibleName = "addressTextbox";
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(219, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(452, 34);
-            this.textBox1.TabIndex = 9;
+            this.addressTextbox.AccessibleName = "addressTextbox";
+            this.addressTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addressTextbox.Location = new System.Drawing.Point(219, 114);
+            this.addressTextbox.Name = "addressTextbox";
+            this.addressTextbox.Size = new System.Drawing.Size(452, 34);
+            this.addressTextbox.TabIndex = 9;
             // 
-            // textBox2
+            // catalogTextbox
             // 
-            this.textBox2.AccessibleName = "catalogTextbox";
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(219, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(452, 34);
-            this.textBox2.TabIndex = 10;
+            this.catalogTextbox.AccessibleName = "catalogTextbox";
+            this.catalogTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.catalogTextbox.Location = new System.Drawing.Point(219, 174);
+            this.catalogTextbox.Name = "catalogTextbox";
+            this.catalogTextbox.Size = new System.Drawing.Size(452, 34);
+            this.catalogTextbox.TabIndex = 10;
             // 
-            // textBox3
+            // usernameTextbox
             // 
-            this.textBox3.AccessibleName = "usernameTextbox";
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(219, 232);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(452, 34);
-            this.textBox3.TabIndex = 11;
+            this.usernameTextbox.AccessibleName = "usernameTextbox";
+            this.usernameTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usernameTextbox.Location = new System.Drawing.Point(219, 232);
+            this.usernameTextbox.Name = "usernameTextbox";
+            this.usernameTextbox.Size = new System.Drawing.Size(452, 34);
+            this.usernameTextbox.TabIndex = 11;
             // 
-            // textBox4
+            // passwordTextbox
             // 
-            this.textBox4.AccessibleName = "passwordTextbox";
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(219, 304);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(452, 34);
-            this.textBox4.TabIndex = 12;
+            this.passwordTextbox.AccessibleName = "passwordTextbox";
+            this.passwordTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordTextbox.Location = new System.Drawing.Point(219, 304);
+            this.passwordTextbox.Name = "passwordTextbox";
+            this.passwordTextbox.Size = new System.Drawing.Size(452, 34);
+            this.passwordTextbox.TabIndex = 12;
             // 
             // ChangeServerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.passwordTextbox);
+            this.Controls.Add(this.usernameTextbox);
+            this.Controls.Add(this.catalogTextbox);
+            this.Controls.Add(this.addressTextbox);
+            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.saveBtn);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.catalogLabel);
+            this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.headerLabel);
             this.Name = "ChangeServerInfo";
             this.Text = "ChangeServerInfo";
             this.ResumeLayout(false);
@@ -183,16 +183,16 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private Label headerLabel;
+        private Label addressLabel;
+        private Label catalogLabel;
+        private Label usernameLabel;
+        private Label passwordLabel;
+        private Button saveBtn;
+        private Button cancelBtn;
+        private TextBox addressTextbox;
+        private TextBox catalogTextbox;
+        private TextBox usernameTextbox;
+        private TextBox passwordTextbox;
     }
 }

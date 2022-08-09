@@ -28,182 +28,182 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label6 = new System.Windows.Forms.Label();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.headerLabel = new System.Windows.Forms.Label();
+            this.header2Label = new System.Windows.Forms.Label();
+            this.serverInfoDataLabel = new System.Windows.Forms.Label();
+            this.gernerationOptionLabel = new System.Windows.Forms.Label();
+            this.fromDateLabel = new System.Windows.Forms.Label();
+            this.fromDateCalendar = new System.Windows.Forms.MonthCalendar();
+            this.toDateLabel = new System.Windows.Forms.Label();
+            this.toDateCalendar = new System.Windows.Forms.MonthCalendar();
+            this.selectFieldLabel = new System.Windows.Forms.Label();
+            this.selectFieldListView = new System.Windows.Forms.ListView();
+            this.outputLoactionLabel = new System.Windows.Forms.Label();
+            this.generateBtn = new System.Windows.Forms.Button();
+            this.filePathDataLabel = new System.Windows.Forms.Label();
+            this.getFileExplorerBtn = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // headerLabel
             // 
-            this.label1.AccessibleName = "headerLabel";
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(40, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Instant Generation";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.headerLabel.AccessibleName = "headerLabel";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.headerLabel.Location = new System.Drawing.Point(40, 39);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(319, 46);
+            this.headerLabel.TabIndex = 0;
+            this.headerLabel.Text = "Instant Generation";
+            this.headerLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // header2Label
             // 
-            this.label2.AccessibleName = "header2Label";
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(80, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Server Information: ";
+            this.header2Label.AccessibleName = "header2Label";
+            this.header2Label.AutoSize = true;
+            this.header2Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.header2Label.Location = new System.Drawing.Point(80, 110);
+            this.header2Label.Name = "header2Label";
+            this.header2Label.Size = new System.Drawing.Size(222, 31);
+            this.header2Label.TabIndex = 1;
+            this.header2Label.Text = "Server Information: ";
             // 
-            // label3
+            // serverInfoDataLabel
             // 
-            this.label3.AccessibleName = "serverInfoLabel";
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(308, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 28);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "<Server Address>";
+            this.serverInfoDataLabel.AccessibleName = "serverInfoDataLabel";
+            this.serverInfoDataLabel.AutoSize = true;
+            this.serverInfoDataLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.serverInfoDataLabel.Location = new System.Drawing.Point(308, 110);
+            this.serverInfoDataLabel.Name = "serverInfoDataLabel";
+            this.serverInfoDataLabel.Size = new System.Drawing.Size(170, 28);
+            this.serverInfoDataLabel.TabIndex = 2;
+            this.serverInfoDataLabel.Text = "<Server Address>";
             // 
-            // label4
+            // gernerationOptionLabel
             // 
-            this.label4.AccessibleName = "gernerationOptionLabel";
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(80, 174);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 31);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Generation Options: ";
+            this.gernerationOptionLabel.AccessibleName = "gernerationOptionLabel";
+            this.gernerationOptionLabel.AutoSize = true;
+            this.gernerationOptionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.gernerationOptionLabel.Location = new System.Drawing.Point(80, 174);
+            this.gernerationOptionLabel.Name = "gernerationOptionLabel";
+            this.gernerationOptionLabel.Size = new System.Drawing.Size(229, 31);
+            this.gernerationOptionLabel.TabIndex = 3;
+            this.gernerationOptionLabel.Text = "Generation Options: ";
             // 
-            // label5
+            // fromDateLabel
             // 
-            this.label5.AccessibleName = "fromDateLabel";
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(124, 219);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 28);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "From: ";
+            this.fromDateLabel.AccessibleName = "fromDateLabel";
+            this.fromDateLabel.AutoSize = true;
+            this.fromDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fromDateLabel.Location = new System.Drawing.Point(124, 219);
+            this.fromDateLabel.Name = "fromDateLabel";
+            this.fromDateLabel.Size = new System.Drawing.Size(67, 28);
+            this.fromDateLabel.TabIndex = 4;
+            this.fromDateLabel.Text = "From: ";
             // 
-            // monthCalendar1
+            // fromDateCalendar
             // 
-            this.monthCalendar1.AccessibleName = "fromDateCal";
-            this.monthCalendar1.Location = new System.Drawing.Point(203, 219);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 5;
+            this.fromDateCalendar.AccessibleName = "fromDateCal";
+            this.fromDateCalendar.Location = new System.Drawing.Point(203, 219);
+            this.fromDateCalendar.Name = "fromDateCalendar";
+            this.fromDateCalendar.TabIndex = 5;
             // 
-            // label6
+            // toDateLabel
             // 
-            this.label6.AccessibleName = "toDateLabel";
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(539, 219);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 28);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "To:";
+            this.toDateLabel.AccessibleName = "toDateLabel";
+            this.toDateLabel.AutoSize = true;
+            this.toDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toDateLabel.Location = new System.Drawing.Point(539, 219);
+            this.toDateLabel.Name = "toDateLabel";
+            this.toDateLabel.Size = new System.Drawing.Size(36, 28);
+            this.toDateLabel.TabIndex = 6;
+            this.toDateLabel.Text = "To:";
             // 
-            // monthCalendar2
+            // toDateCalendar
             // 
-            this.monthCalendar2.AccessibleName = "toDateCal";
-            this.monthCalendar2.Location = new System.Drawing.Point(587, 219);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 7;
+            this.toDateCalendar.AccessibleName = "toDateCal";
+            this.toDateCalendar.Location = new System.Drawing.Point(587, 219);
+            this.toDateCalendar.Name = "toDateCalendar";
+            this.toDateCalendar.TabIndex = 7;
             // 
-            // label7
+            // selectFieldLabel
             // 
-            this.label7.AccessibleName = "selectFieldLabel";
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(124, 445);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 28);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Select Field: ";
+            this.selectFieldLabel.AccessibleName = "selectFieldLabel";
+            this.selectFieldLabel.AutoSize = true;
+            this.selectFieldLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.selectFieldLabel.Location = new System.Drawing.Point(124, 445);
+            this.selectFieldLabel.Name = "selectFieldLabel";
+            this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
+            this.selectFieldLabel.TabIndex = 8;
+            this.selectFieldLabel.Text = "Select Field: ";
             // 
-            // listView1
+            // selectFieldListView
             // 
-            this.listView1.AccessibleName = "selectFieldListView";
-            this.listView1.CheckBoxes = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listView1.Location = new System.Drawing.Point(250, 445);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(522, 313);
-            this.listView1.TabIndex = 9;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.selectFieldListView.AccessibleName = "selectFieldListView";
+            this.selectFieldListView.CheckBoxes = true;
+            this.selectFieldListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.selectFieldListView.Location = new System.Drawing.Point(250, 445);
+            this.selectFieldListView.Name = "selectFieldListView";
+            this.selectFieldListView.Size = new System.Drawing.Size(522, 313);
+            this.selectFieldListView.TabIndex = 9;
+            this.selectFieldListView.UseCompatibleStateImageBehavior = false;
+            this.selectFieldListView.View = System.Windows.Forms.View.Details;
             // 
-            // label8
+            // outputLoactionLabel
             // 
-            this.label8.AccessibleName = "outputLoactionLabel";
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(124, 765);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 28);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Output Location: ";
+            this.outputLoactionLabel.AccessibleName = "outputLoactionLabel";
+            this.outputLoactionLabel.AutoSize = true;
+            this.outputLoactionLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.outputLoactionLabel.Location = new System.Drawing.Point(124, 765);
+            this.outputLoactionLabel.Name = "outputLoactionLabel";
+            this.outputLoactionLabel.Size = new System.Drawing.Size(164, 28);
+            this.outputLoactionLabel.TabIndex = 10;
+            this.outputLoactionLabel.Text = "Output Location: ";
             // 
-            // button1
+            // generateBtn
             // 
-            this.button1.AccessibleName = "generateBtn";
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(354, 807);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 48);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Generate";
-            this.button1.UseVisualStyleBackColor = false;
+            this.generateBtn.AccessibleName = "generateBtn";
+            this.generateBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.generateBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.generateBtn.Location = new System.Drawing.Point(354, 807);
+            this.generateBtn.Name = "generateBtn";
+            this.generateBtn.Size = new System.Drawing.Size(120, 48);
+            this.generateBtn.TabIndex = 12;
+            this.generateBtn.Text = "Generate";
+            this.generateBtn.UseVisualStyleBackColor = false;
             // 
-            // label9
+            // filePathDataLabel
             // 
-            this.label9.AccessibleName = "filePathLabel";
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(449, 766);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 25);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "<Path>";
+            this.filePathDataLabel.AccessibleName = "filePathLabel";
+            this.filePathDataLabel.AutoSize = true;
+            this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.filePathDataLabel.Location = new System.Drawing.Point(449, 766);
+            this.filePathDataLabel.Name = "filePathDataLabel";
+            this.filePathDataLabel.Size = new System.Drawing.Size(70, 25);
+            this.filePathDataLabel.TabIndex = 13;
+            this.filePathDataLabel.Text = "<Path>";
             // 
-            // button2
+            // getFileExplorerBtn
             // 
-            this.button2.AccessibleName = "getFileExplorerBtn";
-            this.button2.Location = new System.Drawing.Point(294, 766);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 29);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Open Folder";
-            this.button2.UseVisualStyleBackColor = true;
+            this.getFileExplorerBtn.AccessibleName = "getFileExplorerBtn";
+            this.getFileExplorerBtn.Location = new System.Drawing.Point(294, 766);
+            this.getFileExplorerBtn.Name = "getFileExplorerBtn";
+            this.getFileExplorerBtn.Size = new System.Drawing.Size(134, 29);
+            this.getFileExplorerBtn.TabIndex = 14;
+            this.getFileExplorerBtn.Text = "Open Folder";
+            this.getFileExplorerBtn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // cancelBtn
             // 
-            this.button3.AccessibleName = "cancelBtn";
-            this.button3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(521, 807);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 48);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = false;
+            this.cancelBtn.AccessibleName = "cancelBtn";
+            this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cancelBtn.Location = new System.Drawing.Point(521, 807);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(120, 48);
+            this.cancelBtn.TabIndex = 15;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
             // 
             // InstantGenerationOptionForm
             // 
@@ -211,21 +211,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(993, 867);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.monthCalendar2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.getFileExplorerBtn);
+            this.Controls.Add(this.filePathDataLabel);
+            this.Controls.Add(this.generateBtn);
+            this.Controls.Add(this.outputLoactionLabel);
+            this.Controls.Add(this.selectFieldListView);
+            this.Controls.Add(this.selectFieldLabel);
+            this.Controls.Add(this.toDateCalendar);
+            this.Controls.Add(this.toDateLabel);
+            this.Controls.Add(this.fromDateCalendar);
+            this.Controls.Add(this.fromDateLabel);
+            this.Controls.Add(this.gernerationOptionLabel);
+            this.Controls.Add(this.serverInfoDataLabel);
+            this.Controls.Add(this.header2Label);
+            this.Controls.Add(this.headerLabel);
             this.Name = "InstantGenerationOptionForm";
             this.Text = "InstantGenerationOptionForm";
             this.Load += new System.EventHandler(this.InstantGenerationOptionForm_Load);
@@ -236,20 +236,20 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private MonthCalendar monthCalendar1;
-        private Label label6;
-        private MonthCalendar monthCalendar2;
-        private Label label7;
-        private ListView listView1;
-        private Label label8;
-        private Button button1;
-        private Label label9;
-        private Button button2;
-        private Button button3;
+        private Label headerLabel;
+        private Label header2Label;
+        private Label serverInfoDataLabel;
+        private Label gernerationOptionLabel;
+        private Label fromDateLabel;
+        private MonthCalendar fromDateCalendar;
+        private Label toDateLabel;
+        private MonthCalendar toDateCalendar;
+        private Label selectFieldLabel;
+        private ListView selectFieldListView;
+        private Label outputLoactionLabel;
+        private Button generateBtn;
+        private Label filePathDataLabel;
+        private Button getFileExplorerBtn;
+        private Button cancelBtn;
     }
 }
