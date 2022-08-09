@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,6 +55,7 @@
             this.label1.Size = new System.Drawing.Size(319, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Instant Generation";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -71,7 +73,7 @@
             this.label3.AccessibleName = "serverInfoLabel";
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(314, 114);
+            this.label3.Location = new System.Drawing.Point(308, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 28);
             this.label3.TabIndex = 2;
@@ -142,7 +144,7 @@
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listView1.Location = new System.Drawing.Point(250, 445);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(522, 262);
+            this.listView1.Size = new System.Drawing.Size(522, 313);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -152,7 +154,7 @@
             this.label8.AccessibleName = "outputLoactionLabel";
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(124, 728);
+            this.label8.Location = new System.Drawing.Point(124, 765);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(164, 28);
             this.label8.TabIndex = 10;
@@ -163,7 +165,7 @@
             this.button1.AccessibleName = "generateBtn";
             this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(430, 789);
+            this.button1.Location = new System.Drawing.Point(354, 807);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 48);
             this.button1.TabIndex = 12;
@@ -175,7 +177,7 @@
             this.label9.AccessibleName = "filePathLabel";
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(434, 731);
+            this.label9.Location = new System.Drawing.Point(449, 766);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 25);
             this.label9.TabIndex = 13;
@@ -184,12 +186,24 @@
             // button2
             // 
             this.button2.AccessibleName = "getFileExplorerBtn";
-            this.button2.Location = new System.Drawing.Point(294, 729);
+            this.button2.Location = new System.Drawing.Point(294, 766);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 29);
             this.button2.TabIndex = 14;
             this.button2.Text = "Open Folder";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.AccessibleName = "cancelBtn";
+            this.button3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(521, 807);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 48);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Cancel";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // InstantGenerationOptionForm
             // 
@@ -197,6 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(993, 867);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
@@ -235,5 +250,6 @@
         private Button button1;
         private Label label9;
         private Button button2;
+        private Button button3;
     }
 }
