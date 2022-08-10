@@ -69,7 +69,7 @@
             this.catalogLabel.AccessibleName = "catalogLabel";
             this.catalogLabel.AutoSize = true;
             this.catalogLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.catalogLabel.Location = new System.Drawing.Point(82, 175);
+            this.catalogLabel.Location = new System.Drawing.Point(82, 172);
             this.catalogLabel.Name = "catalogLabel";
             this.catalogLabel.Size = new System.Drawing.Size(108, 31);
             this.catalogLabel.TabIndex = 4;
@@ -81,7 +81,7 @@
             this.usernameLabel.AccessibleName = "usernameLabel";
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.usernameLabel.Location = new System.Drawing.Point(82, 233);
+            this.usernameLabel.Location = new System.Drawing.Point(82, 230);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(131, 31);
             this.usernameLabel.TabIndex = 5;
@@ -92,7 +92,7 @@
             this.passwordLabel.AccessibleName = "passwordLabel";
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.passwordLabel.Location = new System.Drawing.Point(82, 305);
+            this.passwordLabel.Location = new System.Drawing.Point(82, 290);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(125, 31);
             this.passwordLabel.TabIndex = 6;
@@ -135,7 +135,7 @@
             // 
             this.catalogTextbox.AccessibleName = "catalogTextbox";
             this.catalogTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.catalogTextbox.Location = new System.Drawing.Point(219, 174);
+            this.catalogTextbox.Location = new System.Drawing.Point(219, 171);
             this.catalogTextbox.Name = "catalogTextbox";
             this.catalogTextbox.Size = new System.Drawing.Size(452, 34);
             this.catalogTextbox.TabIndex = 10;
@@ -144,7 +144,7 @@
             // 
             this.usernameTextbox.AccessibleName = "usernameTextbox";
             this.usernameTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usernameTextbox.Location = new System.Drawing.Point(219, 232);
+            this.usernameTextbox.Location = new System.Drawing.Point(219, 229);
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(452, 34);
             this.usernameTextbox.TabIndex = 11;
@@ -153,7 +153,7 @@
             // 
             this.passordMaskBox.AccessibleName = "passordMaskBox";
             this.passordMaskBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passordMaskBox.Location = new System.Drawing.Point(219, 302);
+            this.passordMaskBox.Location = new System.Drawing.Point(219, 287);
             this.passordMaskBox.Name = "passordMaskBox";
             this.passordMaskBox.Size = new System.Drawing.Size(452, 34);
             this.passordMaskBox.TabIndex = 12;

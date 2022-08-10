@@ -1,0 +1,8 @@
+//Get col info
+select COLUMN_NAME, ORDINAL_POSITION, DATA_TYPE from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'Table_1'
+
+//Get table name
+SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_CATALOG='dbName'
+
+//Cant find obj
+https://stackoverflow.com/questions/9419710/invalid-object-name-sql-server-2008-r2-stored-procedure#:~:text=Solution,IntelliSense%20%2D%3E%20Refresh%20Local%20Cache
