@@ -31,5 +31,10 @@ namespace App_UI
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
