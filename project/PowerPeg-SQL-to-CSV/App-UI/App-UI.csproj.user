@@ -7,9 +7,6 @@
     <Compile Update="ChangeServerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ChangeTaskSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="CreateNewTask.cs">
       <SubType>Form</SubType>
     </Compile>
