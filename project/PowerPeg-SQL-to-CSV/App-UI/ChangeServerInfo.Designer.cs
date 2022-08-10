@@ -38,7 +38,7 @@
             this.addressTextbox = new System.Windows.Forms.TextBox();
             this.catalogTextbox = new System.Windows.Forms.TextBox();
             this.usernameTextbox = new System.Windows.Forms.TextBox();
-            this.passwordTextbox = new System.Windows.Forms.TextBox();
+            this.passordMaskBox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -149,21 +149,21 @@
             this.usernameTextbox.Size = new System.Drawing.Size(452, 34);
             this.usernameTextbox.TabIndex = 11;
             // 
-            // passwordTextbox
+            // passordMaskBox
             // 
-            this.passwordTextbox.AccessibleName = "passwordTextbox";
-            this.passwordTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passwordTextbox.Location = new System.Drawing.Point(219, 304);
-            this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.Size = new System.Drawing.Size(452, 34);
-            this.passwordTextbox.TabIndex = 12;
+            this.passordMaskBox.AccessibleName = "passordMaskBox";
+            this.passordMaskBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passordMaskBox.Location = new System.Drawing.Point(219, 302);
+            this.passordMaskBox.Name = "passordMaskBox";
+            this.passordMaskBox.Size = new System.Drawing.Size(452, 34);
+            this.passordMaskBox.TabIndex = 12;
             // 
             // ChangeServerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.passwordTextbox);
+            this.Controls.Add(this.passordMaskBox);
             this.Controls.Add(this.usernameTextbox);
             this.Controls.Add(this.catalogTextbox);
             this.Controls.Add(this.addressTextbox);
@@ -193,6 +193,6 @@
         private TextBox addressTextbox;
         private TextBox catalogTextbox;
         private TextBox usernameTextbox;
-        private TextBox passwordTextbox;
+        private MaskedTextBox passordMaskBox;
     }
 }
