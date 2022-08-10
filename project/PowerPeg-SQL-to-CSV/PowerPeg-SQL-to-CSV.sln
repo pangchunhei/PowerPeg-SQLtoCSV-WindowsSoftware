@@ -5,7 +5,12 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerPeg-SQL-to-CSV", "PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV.csproj", "{015C5EA8-50E8-414A-969C-D087FD739765}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App-UI", "App-UI\App-UI.csproj", "{A923590A-342F-461F-8C98-5395E0B81F5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App-UI", "App-UI\App-UI.csproj", "{A923590A-342F-461F-8C98-5395E0B81F5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5A4B91B-82D1-4D5E-9D0B-B870E9CA60E4}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
