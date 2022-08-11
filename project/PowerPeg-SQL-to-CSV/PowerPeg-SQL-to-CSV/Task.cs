@@ -16,7 +16,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public Result toRun()
         {
-            return operationMode.toRun();
+            operationMode.toRun();
         }
 
         public void changeModeConfig()
