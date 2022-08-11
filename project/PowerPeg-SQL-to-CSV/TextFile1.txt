@@ -9,3 +9,6 @@ https://stackoverflow.com/questions/9419710/invalid-object-name-sql-server-2008-
 
 //Custom section
 <!-- "https://code.4noobz.net/csharp-store-variables-and-collection-in-config-file/ -->!>
+
+//JSON
+https://www.youtube.com/watch?v=fsOeem5NkZg&list=PLM2IdInFIRC5AAg1CPpltM5PYLT5eMkXj&index=2

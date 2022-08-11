@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -103,6 +104,15 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            Gateway g = Gateway.getInstance();
+            List<string> result = g.getDBTableColName();
+
+            string s = "";
+            foreach (var item in result)
+            {
+                s += item.ToString() + ", ";
+            }
+            Debug.Write(s);
 
         }
     }

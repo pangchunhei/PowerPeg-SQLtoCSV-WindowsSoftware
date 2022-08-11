@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace PowerPeg_SQL_to_CSV
 {
@@ -43,7 +46,12 @@ namespace PowerPeg_SQL_to_CSV
             this.catalog = ConfigurationManager.AppSettings["Catalog"];
             this.username = ConfigurationManager.AppSettings["Username"];
             this.password = ConfigurationManager.AppSettings["Password"];
+        }
 
+        public string createConnectionCmd()
+        {
+            // TODO -- location
+            return "Server=" + this.address + ";Database=" + this.catalog + ";Trusted_Connection=True;";
         }
 
         public void updateGateway(String a, String c, String u, String p)
@@ -67,6 +75,56 @@ namespace PowerPeg_SQL_to_CSV
         {
             string[] currentSetting = {this.address, this.catalog, this.username, this.password};
             return currentSetting;
+        }
+
+        public DataTable runSQLCommand(string storedCmdName)
+        {
+            string connectionString = createConnectionCmd();
+            DataTable dt;
+
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(storedCmdName, sqlcon))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        dt = new DataTable();
+
+                        da.Fill(dt);
+                    }
+                }
+            }
+
+            return dt;
+        }
+
+        public List<string> getDBTableColName()
+        {
+            DataTable d = runSQLCommand("sp_gateway_get_table_1_col");
+
+            List<string> result = new List<string>();
+
+            foreach (DataRow dr in d.Rows)
+            {
+                //Debug.Write(dr[0]);
+                result.Add(dr[0].ToString());
+            }
+
+            return result;
+        }
+
+        public void printDataTable(DataTable dt)
+        {
+            foreach (DataRow dataRow in dt.Rows)
+            {
+                foreach (var item in dataRow.ItemArray)
+                {
+                    Debug.Write(item + "\t");
+                }
+                Debug.WriteLine("");
+            }
         }
     }
 
