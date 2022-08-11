@@ -6,3 +6,6 @@ SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'
 
 //Cant find obj
 https://stackoverflow.com/questions/9419710/invalid-object-name-sql-server-2008-r2-stored-procedure#:~:text=Solution,IntelliSense%20%2D%3E%20Refresh%20Local%20Cache
+
+//Custom section
+<!-- "https://code.4noobz.net/csharp-store-variables-and-collection-in-config-file/ -->!>
