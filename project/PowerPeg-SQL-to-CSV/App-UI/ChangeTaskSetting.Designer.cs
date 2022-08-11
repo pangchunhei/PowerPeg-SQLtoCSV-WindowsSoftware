@@ -85,9 +85,9 @@
             this.generateBtn.AccessibleName = "generateBtn";
             this.generateBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.generateBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generateBtn.Location = new System.Drawing.Point(198, 738);
+            this.generateBtn.Location = new System.Drawing.Point(183, 738);
             this.generateBtn.Name = "generateBtn";
-            this.generateBtn.Size = new System.Drawing.Size(92, 48);
+            this.generateBtn.Size = new System.Drawing.Size(107, 48);
             this.generateBtn.TabIndex = 27;
             this.generateBtn.Text = "Generate";
             this.generateBtn.UseVisualStyleBackColor = false;
@@ -257,6 +257,7 @@
             this.Controls.Add(this.headerLabel);
             this.Name = "ChangeTaskSetting";
             this.Text = "ChangeTaskSetting";
+            this.Load += new System.EventHandler(this.ChangeTaskSetting_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

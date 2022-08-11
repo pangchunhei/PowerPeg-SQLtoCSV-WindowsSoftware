@@ -112,7 +112,8 @@ namespace App_UI
             {
                 s += item.ToString() + ", ";
             }
-            Debug.Write(s);
+
+            Debug.WriteLine(s);
 
         }
     }

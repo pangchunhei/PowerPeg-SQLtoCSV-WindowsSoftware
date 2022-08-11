@@ -105,6 +105,13 @@ namespace PowerPeg_SQL_to_CSV
             //Use the stored cmd
             DataTable d = runSQLCommand("sp_gateway_get_table_1_col");
 
+            List<string> result = datatableToStringList(d);
+
+            return result;
+        }
+
+        public List<string> datatableToStringList(DataTable d)
+        {
             List<string> result = new List<string>();
 
             foreach (DataRow dr in d.Rows)

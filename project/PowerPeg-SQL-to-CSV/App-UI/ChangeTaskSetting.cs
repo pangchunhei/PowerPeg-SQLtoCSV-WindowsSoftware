@@ -36,5 +36,10 @@ namespace App_UI
         {
 
         }
+
+        private void ChangeTaskSetting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
