@@ -38,7 +38,7 @@
             this.addressTextbox = new System.Windows.Forms.TextBox();
             this.catalogTextbox = new System.Windows.Forms.TextBox();
             this.usernameTextbox = new System.Windows.Forms.TextBox();
-            this.passordMaskBox = new System.Windows.Forms.MaskedTextBox();
+            this.passwordTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -109,6 +109,7 @@
             this.saveBtn.TabIndex = 7;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // cancelBtn
             // 
@@ -121,6 +122,7 @@
             this.cancelBtn.TabIndex = 8;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // addressTextbox
             // 
@@ -130,6 +132,7 @@
             this.addressTextbox.Name = "addressTextbox";
             this.addressTextbox.Size = new System.Drawing.Size(452, 34);
             this.addressTextbox.TabIndex = 9;
+            this.addressTextbox.TextChanged += new System.EventHandler(this.addressTextbox_TextChanged);
             // 
             // catalogTextbox
             // 
@@ -139,6 +142,7 @@
             this.catalogTextbox.Name = "catalogTextbox";
             this.catalogTextbox.Size = new System.Drawing.Size(452, 34);
             this.catalogTextbox.TabIndex = 10;
+            this.catalogTextbox.TextChanged += new System.EventHandler(this.catalogTextbox_TextChanged);
             // 
             // usernameTextbox
             // 
@@ -148,22 +152,23 @@
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(452, 34);
             this.usernameTextbox.TabIndex = 11;
+            this.usernameTextbox.TextChanged += new System.EventHandler(this.usernameTextbox_TextChanged);
             // 
-            // passordMaskBox
+            // passwordTextbox
             // 
-            this.passordMaskBox.AccessibleName = "passordMaskBox";
-            this.passordMaskBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passordMaskBox.Location = new System.Drawing.Point(219, 287);
-            this.passordMaskBox.Name = "passordMaskBox";
-            this.passordMaskBox.Size = new System.Drawing.Size(452, 34);
-            this.passordMaskBox.TabIndex = 12;
+            this.passwordTextbox.AccessibleName = "passwordTextbox";
+            this.passwordTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordTextbox.Location = new System.Drawing.Point(219, 287);
+            this.passwordTextbox.Name = "passwordTextbox";
+            this.passwordTextbox.Size = new System.Drawing.Size(452, 34);
+            this.passwordTextbox.TabIndex = 12;
             // 
             // ChangeServerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.passordMaskBox);
+            this.Controls.Add(this.passwordTextbox);
             this.Controls.Add(this.usernameTextbox);
             this.Controls.Add(this.catalogTextbox);
             this.Controls.Add(this.addressTextbox);
@@ -176,6 +181,7 @@
             this.Controls.Add(this.headerLabel);
             this.Name = "ChangeServerInfo";
             this.Text = "ChangeServerInfo";
+            this.Load += new System.EventHandler(this.ChangeServerInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +199,6 @@
         private TextBox addressTextbox;
         private TextBox catalogTextbox;
         private TextBox usernameTextbox;
-        private MaskedTextBox passordMaskBox;
+        private TextBox passwordTextbox;
     }
 }

@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "zHc4ztNIEWBT1xkRosIP1LDzeceUGlNGuHVTHJvKhs1G0iW1snC1XipI/vDyIJ7V2jgyIAnLmZ3laac08LoNnw==",
+  "dgSpecHash": "bWnmO2Sc+ozJAVOo4ZgS71JixlPMBThDMkBUR26OTcRotKcSZxHn22P5/9uad0p50+iVCeDRm2mfY1H23U0bMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\App-UI\\App-UI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\elsto\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\elsto\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\elsto\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\elsto\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\elsto\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\elsto\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\elsto\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

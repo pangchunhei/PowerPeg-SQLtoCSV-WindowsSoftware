@@ -19,3 +19,8 @@ C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.ChangeServerInfo.resources
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.ChangeScheduleGeneration.resources
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.ChangeTaskSetting.resources
+C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\PowerPeg-SQL-to-CSV.dll
+C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\PowerPeg-SQL-to-CSV.pdb
+C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.CreateNewTask.resources
+C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App-UI.csproj.CopyComplete
+C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\App-UI.dll.config

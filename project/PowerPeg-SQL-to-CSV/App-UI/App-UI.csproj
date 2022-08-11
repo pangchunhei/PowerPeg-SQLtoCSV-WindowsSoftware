@@ -9,4 +9,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV.csproj" />
+  </ItemGroup>
+
 </Project>
