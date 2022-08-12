@@ -39,7 +39,7 @@ namespace PowerPeg_SQL_to_CSV
         private string catalog;
         private string username;
         private string password;
-        
+
         public void setGateway()
         {
             this.address = ConfigurationManager.AppSettings["Address"];
@@ -48,16 +48,16 @@ namespace PowerPeg_SQL_to_CSV
             this.password = ConfigurationManager.AppSettings["Password"];
         }
 
-        public string createConnectionCmd()
+        public string createConnectionString()
         {
             // TODO -- location
-            return "Server=" + this.address + ";Database=" + this.catalog + ";Trusted_Connection=True;";
+            return "Server=" + this.address + ";Database=" + this.catalog + ";Trusted_Connection=True; User Id="+ this.username +";Password=" + this.password +";";
         }
 
-        public void updateGateway(String a, String c, String u, String p)
+        public bool updateGateway(String a, String c, String u, String p)
         {
             Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            
+
             configuration.AppSettings.Settings["Address"].Value = a;
             configuration.AppSettings.Settings["Catalog"].Value = c;
             configuration.AppSettings.Settings["Username"].Value = u;
@@ -68,18 +68,35 @@ namespace PowerPeg_SQL_to_CSV
 
             setGateway();
 
-            //Update connection
+            return isServerConnected(createConnectionString());
         }
 
         public string[] getGatewayInfo()
         {
-            string[] currentSetting = {this.address, this.catalog, this.username, this.password};
+            string[] currentSetting = { this.address, this.catalog, this.username, this.password };
             return currentSetting;
+        }
+
+        private bool isServerConnected(string connectionString)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    return true;
+                }
+                catch (SqlException)
+                {
+                    return false;
+                }
+            }
         }
 
         public DataTable runSQLCommand(string storedCmdName)
         {
-            string connectionString = createConnectionCmd();
+            string connectionString = createConnectionString();
+
             DataTable dt;
 
             using (SqlConnection sqlcon = new SqlConnection(connectionString))

@@ -8,23 +8,29 @@ namespace PowerPeg_SQL_to_CSV
 {
     public class InstantMode : Mode
     {
-        private String modeName { get; set; }
+        private String modeName { get; } = "Insatant Mode";
 
-        private DateTime startDateTime { get; set; }
+        private DateTime startDateTime { get; }
 
-        private DateTime endDateTime { get; set; }
+        private DateTime endDateTime { get; }
 
-        private DateTime triggerDateTime { get; set; }
+        private DateTime triggerDateTime { get; }
 
-        private List<String> selectColumn { get; set; }
+        private List<String> selectColumn { get; } = new List<String>();
 
-        public void changeModeConfig()
+        public InstantMode(DateTime s, DateTime e, DateTime t, List<String> sC)
         {
-            throw new NotImplementedException();
+            this.startDateTime = s;
+            this.endDateTime = e;
+            this.triggerDateTime = t;
+            this.selectColumn = sC;
         }
 
         public Result toRun()
         {
+            
+
+
             throw new NotImplementedException();
         }
     }

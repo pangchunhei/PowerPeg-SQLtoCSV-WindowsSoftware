@@ -23,34 +23,12 @@ namespace App_UI
         {
             int countPass = 0;
 
-            if(addressTextbox.Text.Length > 0)
-            {
-                countPass++;
-            }
-
-            if(catalogTextbox.Text.Length > 0)
-            {
-                countPass++;
-            }
-
-            if(usernameTextbox.Text.Length > 0)
-            {
-                countPass++;
-            }
-
-            if(passwordTextbox.Text.Length > 0)
-            {
-                countPass++;
-            }
-
-            if(countPass >= 4)
-            {
-                return true;
-            }
-            else
+            if(addressTextbox.Text.Length == 0 || catalogTextbox.Text.Length == 0)
             {
                 return false;
             }
+
+            return true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -93,12 +71,19 @@ namespace App_UI
             if (validateForm())
             {
                 Gateway g = Gateway.getInstance();
-                g.updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text);
-                MessageBox.Show("New Setting Saved");
+                if(g.updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
+                {
+                    MessageBox.Show("New Setting Saved");
+                }
+                else
+                {
+                    MessageBox.Show("Fail to connect");
+                }
+                
             }
             else
             {
-                MessageBox.Show("Fill in all Field");
+                MessageBox.Show("Fill in Address and Catalog");
             }
         }
 
