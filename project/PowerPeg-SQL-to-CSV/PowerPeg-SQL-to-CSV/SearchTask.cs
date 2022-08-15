@@ -14,7 +14,22 @@ namespace PowerPeg_SQL_to_CSV
 
         private Mode operationMode;
 
-        public Result outputResult { get; }
+        private Result resultOfSQL;
+
+        public string getTaskName()
+        {
+            return taskName;
+        }
+
+        public string getOutputFolderPath()
+        {
+            return outputLocation;
+        }
+
+        public Result getResult()
+        {
+            return resultOfSQL;
+        }
 
         public SearchTask(string outputLocation, Mode operationMode, string name = "Default")
         {
@@ -23,11 +38,24 @@ namespace PowerPeg_SQL_to_CSV
             this.operationMode = operationMode;
         }
 
-        public Result toRun()
+        public string createTaskName()
         {
-            return operationMode.toRun();
+            return this.taskName + "_" + this.resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_THH-mm-ss");
         }
 
+        public void toRun()
+        {
+            this.resultOfSQL = operationMode.runSearch();
+
+            Export.getInstance().dataTable_to_CSV(createTaskName(), this.outputLocation, this.resultOfSQL.getResultTable());
+        }
+
+        /// <summary>
+        /// Get the information of the search task settings
+        /// </summary>
+        /// <returns>
+        /// Return "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List"
+        /// </returns>
         public string[] getTaskInfo()
         {
             string[] task = { this.taskName, this.outputLocation };

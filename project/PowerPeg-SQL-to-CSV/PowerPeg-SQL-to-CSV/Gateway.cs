@@ -122,12 +122,12 @@ namespace PowerPeg_SQL_to_CSV
             //Use the stored cmd
             DataTable d = runSQLCommand("sp_gateway_get_table_1_col");
 
-            List<string> result = datatableToStringList(d);
+            List<string> result = datatableToString1DList(d);
 
             return result;
         }
 
-        public List<string> datatableToStringList(DataTable d)
+        public List<string> datatableToString1DList(DataTable d)
         {
             List<string> result = new List<string>();
 
@@ -138,6 +138,14 @@ namespace PowerPeg_SQL_to_CSV
             }
 
             return result;
+        }
+
+        public DataTable getDBTable01()
+        {
+            //Use the stored cmd
+            DataTable d = runSQLCommand("sp_gateway_get_table_1_col");
+
+            return d;
         }
 
         public void printDataTable(DataTable dt)
