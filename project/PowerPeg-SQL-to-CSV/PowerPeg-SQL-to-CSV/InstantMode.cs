@@ -20,6 +20,7 @@ namespace PowerPeg_SQL_to_CSV
         public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<String> selection)
         {
             this.modeName = "Insatant Mode";
+            //Last 30DAys
             this.startSearchDay = new DateOnly(startDate.Year,startDate.Month,startDate.Day);
             this.endSearchDay = new DateOnly(endDate.Year, endDate.Month, endDate.Day);
             this.triggerDateTime = triggerDate;
