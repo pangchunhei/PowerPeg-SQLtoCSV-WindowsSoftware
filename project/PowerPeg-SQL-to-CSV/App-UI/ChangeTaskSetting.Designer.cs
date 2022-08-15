@@ -33,7 +33,6 @@
             this.filePathDataLabel = new System.Windows.Forms.Label();
             this.generateBtn = new System.Windows.Forms.Button();
             this.outputLoactionLabel = new System.Windows.Forms.Label();
-            this.selectFieldListView = new System.Windows.Forms.ListView();
             this.selectFieldLabel = new System.Windows.Forms.Label();
             this.frequencyLabel = new System.Windows.Forms.Label();
             this.gernerationOptionLabel = new System.Windows.Forms.Label();
@@ -102,18 +101,6 @@
             this.outputLoactionLabel.Size = new System.Drawing.Size(164, 28);
             this.outputLoactionLabel.TabIndex = 26;
             this.outputLoactionLabel.Text = "Output Location: ";
-            // 
-            // selectFieldListView
-            // 
-            this.selectFieldListView.AccessibleName = "selectFieldListView";
-            this.selectFieldListView.CheckBoxes = true;
-            this.selectFieldListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.selectFieldListView.Location = new System.Drawing.Point(228, 338);
-            this.selectFieldListView.Name = "selectFieldListView";
-            this.selectFieldListView.Size = new System.Drawing.Size(494, 313);
-            this.selectFieldListView.TabIndex = 25;
-            this.selectFieldListView.UseCompatibleStateImageBehavior = false;
-            this.selectFieldListView.View = System.Windows.Forms.View.Details;
             // 
             // selectFieldLabel
             // 
@@ -248,7 +235,6 @@
             this.Controls.Add(this.filePathDataLabel);
             this.Controls.Add(this.generateBtn);
             this.Controls.Add(this.outputLoactionLabel);
-            this.Controls.Add(this.selectFieldListView);
             this.Controls.Add(this.selectFieldLabel);
             this.Controls.Add(this.frequencyLabel);
             this.Controls.Add(this.gernerationOptionLabel);
@@ -270,7 +256,6 @@
         private Label filePathDataLabel;
         private Button generateBtn;
         private Label outputLoactionLabel;
-        private ListView selectFieldListView;
         private Label selectFieldLabel;
         private Label frequencyLabel;
         private Label gernerationOptionLabel;

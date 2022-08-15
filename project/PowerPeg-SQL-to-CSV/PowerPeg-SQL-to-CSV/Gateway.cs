@@ -54,14 +54,14 @@ namespace PowerPeg_SQL_to_CSV
             return "Server=" + this.address + ";Database=" + this.catalog + ";Trusted_Connection=True; User Id="+ this.username +";Password=" + this.password +";";
         }
 
-        public bool updateGateway(String a, String c, String u, String p)
+        public bool updateGateway(string newAddress, string newCatalog, string newUsername, string newPassword)
         {
             Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-            configuration.AppSettings.Settings["Address"].Value = a;
-            configuration.AppSettings.Settings["Catalog"].Value = c;
-            configuration.AppSettings.Settings["Username"].Value = u;
-            configuration.AppSettings.Settings["Password"].Value = p;
+            configuration.AppSettings.Settings["Address"].Value = newAddress;
+            configuration.AppSettings.Settings["Catalog"].Value = newCatalog;
+            configuration.AppSettings.Settings["Username"].Value = newUsername;
+            configuration.AppSettings.Settings["Password"].Value = newPassword;
 
             configuration.Save(ConfigurationSaveMode.Full, true);
             ConfigurationManager.RefreshSection("appSettings");

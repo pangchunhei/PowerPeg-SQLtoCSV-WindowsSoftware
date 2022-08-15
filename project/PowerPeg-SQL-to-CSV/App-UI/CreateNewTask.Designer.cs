@@ -43,7 +43,6 @@
             this.header2Label = new System.Windows.Forms.Label();
             this.headerLabel = new System.Windows.Forms.Label();
             this.spaceLabel = new System.Windows.Forms.Label();
-            this.selectFieldListView = new System.Windows.Forms.ListView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -207,18 +206,6 @@
             this.spaceLabel.TabIndex = 51;
             this.spaceLabel.Text = "   ";
             // 
-            // selectFieldListView
-            // 
-            this.selectFieldListView.AccessibleName = "selectFieldListView";
-            this.selectFieldListView.CheckBoxes = true;
-            this.selectFieldListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.selectFieldListView.Location = new System.Drawing.Point(237, 350);
-            this.selectFieldListView.Name = "selectFieldListView";
-            this.selectFieldListView.Size = new System.Drawing.Size(494, 313);
-            this.selectFieldListView.TabIndex = 52;
-            this.selectFieldListView.UseCompatibleStateImageBehavior = false;
-            this.selectFieldListView.View = System.Windows.Forms.View.Details;
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -234,7 +221,6 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.selectFieldListView);
             this.Controls.Add(this.spaceLabel);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.dateTimePicker1);
@@ -274,7 +260,6 @@
         private Label header2Label;
         private Label headerLabel;
         private Label spaceLabel;
-        private ListView selectFieldListView;
         private TextBox textBox1;
     }
 }

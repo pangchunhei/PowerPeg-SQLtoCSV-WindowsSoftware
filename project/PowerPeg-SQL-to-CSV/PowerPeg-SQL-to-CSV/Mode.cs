@@ -9,7 +9,8 @@ namespace PowerPeg_SQL_to_CSV
     public interface Mode
     {
         public Result toRun();
+
+        public string[] getInfo();
         
-        public void changeModeConfig();
     }
 }

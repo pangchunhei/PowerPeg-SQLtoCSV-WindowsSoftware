@@ -37,13 +37,13 @@
             this.toDateLabel = new System.Windows.Forms.Label();
             this.toDateCalendar = new System.Windows.Forms.MonthCalendar();
             this.selectFieldLabel = new System.Windows.Forms.Label();
-            this.selectFieldListView = new System.Windows.Forms.ListView();
             this.outputLoactionLabel = new System.Windows.Forms.Label();
             this.generateBtn = new System.Windows.Forms.Button();
             this.filePathDataLabel = new System.Windows.Forms.Label();
             this.getFileExplorerBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.spaceLabel = new System.Windows.Forms.Label();
+            this.selectedColListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -108,6 +108,7 @@
             this.fromDateCalendar.Location = new System.Drawing.Point(153, 207);
             this.fromDateCalendar.Name = "fromDateCalendar";
             this.fromDateCalendar.TabIndex = 5;
+            this.fromDateCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.fromDateCalendar_DateChanged);
             // 
             // toDateLabel
             // 
@@ -126,6 +127,7 @@
             this.toDateCalendar.Location = new System.Drawing.Point(466, 207);
             this.toDateCalendar.Name = "toDateCalendar";
             this.toDateCalendar.TabIndex = 7;
+            this.toDateCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.toDateCalendar_DateChanged);
             // 
             // selectFieldLabel
             // 
@@ -137,18 +139,6 @@
             this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
             this.selectFieldLabel.TabIndex = 8;
             this.selectFieldLabel.Text = "Select Field: ";
-            // 
-            // selectFieldListView
-            // 
-            this.selectFieldListView.AccessibleName = "selectFieldListView";
-            this.selectFieldListView.CheckBoxes = true;
-            this.selectFieldListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.selectFieldListView.Location = new System.Drawing.Point(219, 434);
-            this.selectFieldListView.Name = "selectFieldListView";
-            this.selectFieldListView.Size = new System.Drawing.Size(490, 313);
-            this.selectFieldListView.TabIndex = 9;
-            this.selectFieldListView.UseCompatibleStateImageBehavior = false;
-            this.selectFieldListView.View = System.Windows.Forms.View.Details;
             // 
             // outputLoactionLabel
             // 
@@ -172,6 +162,7 @@
             this.generateBtn.TabIndex = 12;
             this.generateBtn.Text = "Generate";
             this.generateBtn.UseVisualStyleBackColor = false;
+            this.generateBtn.Click += new System.EventHandler(this.generateBtn_Click);
             // 
             // filePathDataLabel
             // 
@@ -183,6 +174,7 @@
             this.filePathDataLabel.Size = new System.Drawing.Size(70, 25);
             this.filePathDataLabel.TabIndex = 13;
             this.filePathDataLabel.Text = "<Path>";
+            this.filePathDataLabel.Click += new System.EventHandler(this.filePathDataLabel_Click);
             // 
             // getFileExplorerBtn
             // 
@@ -193,6 +185,7 @@
             this.getFileExplorerBtn.TabIndex = 14;
             this.getFileExplorerBtn.Text = "Open Folder";
             this.getFileExplorerBtn.UseVisualStyleBackColor = true;
+            this.getFileExplorerBtn.Click += new System.EventHandler(this.getFileExplorerBtn_Click);
             // 
             // cancelBtn
             // 
@@ -216,19 +209,31 @@
             this.spaceLabel.TabIndex = 36;
             this.spaceLabel.Text = "   ";
             // 
+            // selectedColListBox
+            // 
+            this.selectedColListBox.AccessibleName = "selectedColListBox";
+            this.selectedColListBox.FormattingEnabled = true;
+            this.selectedColListBox.ItemHeight = 20;
+            this.selectedColListBox.Location = new System.Drawing.Point(219, 434);
+            this.selectedColListBox.MultiColumn = true;
+            this.selectedColListBox.Name = "selectedColListBox";
+            this.selectedColListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.selectedColListBox.Size = new System.Drawing.Size(488, 324);
+            this.selectedColListBox.TabIndex = 37;
+            // 
             // InstantGenerationOptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.selectedColListBox);
             this.Controls.Add(this.spaceLabel);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.getFileExplorerBtn);
             this.Controls.Add(this.filePathDataLabel);
             this.Controls.Add(this.generateBtn);
             this.Controls.Add(this.outputLoactionLabel);
-            this.Controls.Add(this.selectFieldListView);
             this.Controls.Add(this.selectFieldLabel);
             this.Controls.Add(this.toDateCalendar);
             this.Controls.Add(this.toDateLabel);
@@ -257,12 +262,12 @@
         private Label toDateLabel;
         private MonthCalendar toDateCalendar;
         private Label selectFieldLabel;
-        private ListView selectFieldListView;
         private Label outputLoactionLabel;
         private Button generateBtn;
         private Label filePathDataLabel;
         private Button getFileExplorerBtn;
         private Button cancelBtn;
         private Label spaceLabel;
+        private ListBox selectedColListBox;
     }
 }
