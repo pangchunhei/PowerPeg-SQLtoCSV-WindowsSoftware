@@ -48,30 +48,36 @@ namespace PowerPeg_SQL_to_CSV
             this.username = ConfigurationManager.AppSettings["Username"];
             this.password = ConfigurationManager.AppSettings["Password"];
 
-            this.connectionString = createConnectionString();
+            this.connectionString = createConnectionString(this.address, this.catalog, this.username, this.password);
         }
 
-        public string createConnectionString()
+        public string createConnectionString(string address, string catalog, string username, string password)
         {
             // TODO -- location
-            return "Server=" + this.address + ";Database=" + this.catalog + ";Trusted_Connection=True; User Id="+ this.username +";Password=" + this.password +";";
+            return "Server=" + address + ";Database=" + catalog + ";Trusted_Connection=True; User Id="+ username +";Password=" + password +";";
         }
 
         public bool updateGateway(string newAddress, string newCatalog, string newUsername, string newPassword)
         {
-            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            if(isServerConnected(createConnectionString(newAddress, newCatalog, newUsername, newPassword))){
+                Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-            configuration.AppSettings.Settings["Address"].Value = newAddress;
-            configuration.AppSettings.Settings["Catalog"].Value = newCatalog;
-            configuration.AppSettings.Settings["Username"].Value = newUsername;
-            configuration.AppSettings.Settings["Password"].Value = newPassword;
+                configuration.AppSettings.Settings["Address"].Value = newAddress;
+                configuration.AppSettings.Settings["Catalog"].Value = newCatalog;
+                configuration.AppSettings.Settings["Username"].Value = newUsername;
+                configuration.AppSettings.Settings["Password"].Value = newPassword;
 
-            configuration.Save(ConfigurationSaveMode.Full, true);
-            ConfigurationManager.RefreshSection("appSettings");
+                configuration.Save(ConfigurationSaveMode.Full, true);
+                ConfigurationManager.RefreshSection("appSettings");
 
-            setGateway();
+                setGateway();
 
-            return isServerConnected(createConnectionString());
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public string[] getGatewayInfo()

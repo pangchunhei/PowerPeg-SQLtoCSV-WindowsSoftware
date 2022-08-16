@@ -25,7 +25,7 @@ namespace App_UI
             }
             selectedColListBox.SelectedItem = "-- All --";
 
-            GlobalFunction.statusUpdate(statusUpdateLabel, "User Creating Form", false);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
         private void label7_Click(object sender, EventArgs e)

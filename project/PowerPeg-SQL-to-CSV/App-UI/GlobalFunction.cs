@@ -1,6 +1,7 @@
 ﻿using PowerPeg_SQL_to_CSV;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,10 @@ namespace App_UI
 {
     public static class GlobalFunction
     {
-        public static void statusUpdate(Label statusUpdateLabel, string msg, bool alert)
+        public static void statusUpdate(Label updateLabel, string msg, bool alert)
         {
-            statusUpdateLabel.Text = msg;
+            updateLabel.Text = msg;
+            updateLabel.Refresh();
 
             if (alert)
             {

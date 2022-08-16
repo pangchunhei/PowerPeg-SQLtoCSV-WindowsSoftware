@@ -44,6 +44,8 @@ namespace App_UI
             catalogTextbox.Text = existingValue[1];
             usernameTextbox.Text = existingValue[2];
             passwordTextbox.Text = existingValue[3];
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "User updating form", false);
         }
 
         private void catalogTextbox_TextChanged(object sender, EventArgs e)
@@ -58,12 +60,12 @@ namespace App_UI
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+
             if (validateForm())
             {
-                GlobalFunction.statusUpdate(statusUpdateLabel, "Trying to update.......", false);
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Trying to update.........", false);
 
-                Gateway g = Gateway.getInstance();
-                if (g.updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
+                if (Gateway.getInstance().updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "New Setting Saved.", true);
                 }
