@@ -134,6 +134,18 @@ namespace PowerPeg_SQL_to_CSV
             return result;
         }
 
+        private string createSelectColString(List<string> selectColumn)
+        {
+            string output = "";
+            if(selectColumn.Contains("*")){
+                return "*";
+            }
+            else
+            {
+                return "[" + string.Join("],[", selectColumn) + "]";
+            }
+        }
+
         public DataTable getDBTable01(DateOnly startSearchDay, DateOnly endSearchDay, List<string> selectColumn)
         {
             //Use the stored procedure cmd
@@ -145,7 +157,7 @@ namespace PowerPeg_SQL_to_CSV
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     //Change to sql itemes formate
-                    cmd.Parameters.Add("@selectCol", SqlDbType.VarChar).Value = "[" + string.Join("],[", selectColumn) + "]";
+                    cmd.Parameters.Add("@selectCol", SqlDbType.VarChar).Value = createSelectColString(selectColumn);
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {

@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PowerPeg_SQL_to_CSV;
+﻿using PowerPeg_SQL_to_CSV;
 
 namespace App_UI
 {
@@ -21,9 +11,8 @@ namespace App_UI
 
         private bool validateForm()
         {
-            int countPass = 0;
 
-            if(addressTextbox.Text.Length == 0 || catalogTextbox.Text.Length == 0)
+            if (addressTextbox.Text.Length == 0 || catalogTextbox.Text.Length == 0)
             {
                 return false;
             }
@@ -50,6 +39,7 @@ namespace App_UI
         {
             Gateway g = Gateway.getInstance();
             string[] existingValue = g.getGatewayInfo();
+
             addressTextbox.Text = existingValue[0];
             catalogTextbox.Text = existingValue[1];
             usernameTextbox.Text = existingValue[2];
@@ -70,35 +60,27 @@ namespace App_UI
         {
             if (validateForm())
             {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Trying to update.......", false);
+
                 Gateway g = Gateway.getInstance();
-                if(g.updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
+                if (g.updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
                 {
-                    MessageBox.Show("New Setting Saved");
+                    GlobalFunction.statusUpdate(statusUpdateLabel, "New Setting Saved.", true);
                 }
                 else
                 {
-                    MessageBox.Show("Fail to connect");
+                    GlobalFunction.statusUpdate(statusUpdateLabel, "Fail to connect.", true);
                 }
-                
+
             }
             else
             {
-                MessageBox.Show("Fill in Address and Catalog");
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Fill in Address and Catalog.", true);
             }
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            Gateway g = Gateway.getInstance();
-            List<string> result = g.getDBTableColName();
-
-            string s = "";
-            foreach (var item in result)
-            {
-                s += item.ToString() + ", ";
-            }
-
-            Debug.WriteLine(s);
 
         }
     }
