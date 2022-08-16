@@ -34,7 +34,7 @@
             this.instantGenerationBtn = new System.Windows.Forms.Button();
             this.changeScheduleGenerationBtn = new System.Windows.Forms.Button();
             this.changeServerInfoBtn = new System.Windows.Forms.Button();
-            this.scheduleOutputFolderBtn = new System.Windows.Forms.Button();
+            this.reStartProgramBtn = new System.Windows.Forms.Button();
             this.checkLogFolderBtn = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.statusUpdateLabel = new System.Windows.Forms.Label();
@@ -90,16 +90,16 @@
             this.changeServerInfoBtn.UseVisualStyleBackColor = true;
             this.changeServerInfoBtn.Click += new System.EventHandler(this.changeServerInfoBtn_Click);
             // 
-            // scheduleOutputFolderBtn
+            // reStartProgramBtn
             // 
-            this.scheduleOutputFolderBtn.AccessibleName = "scheduleOutputFolderBtn";
-            this.scheduleOutputFolderBtn.Location = new System.Drawing.Point(237, 300);
-            this.scheduleOutputFolderBtn.Name = "scheduleOutputFolderBtn";
-            this.scheduleOutputFolderBtn.Size = new System.Drawing.Size(156, 52);
-            this.scheduleOutputFolderBtn.TabIndex = 4;
-            this.scheduleOutputFolderBtn.Text = "Schedule Output Folder";
-            this.scheduleOutputFolderBtn.UseVisualStyleBackColor = true;
-            this.scheduleOutputFolderBtn.Click += new System.EventHandler(this.scheduleOutputFolderBtn_Click);
+            this.reStartProgramBtn.AccessibleName = "reStartProgramBtn";
+            this.reStartProgramBtn.Location = new System.Drawing.Point(237, 300);
+            this.reStartProgramBtn.Name = "reStartProgramBtn";
+            this.reStartProgramBtn.Size = new System.Drawing.Size(156, 52);
+            this.reStartProgramBtn.TabIndex = 4;
+            this.reStartProgramBtn.Text = "Restart Program";
+            this.reStartProgramBtn.UseVisualStyleBackColor = true;
+            this.reStartProgramBtn.Click += new System.EventHandler(this.scheduleOutputFolderBtn_Click);
             // 
             // checkLogFolderBtn
             // 
@@ -115,7 +115,7 @@
             // notifyIcon
             // 
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "notifyIcon";
+            this.notifyIcon.Text = "PowerPeg";
             this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
             // 
             // statusUpdateLabel
@@ -123,7 +123,7 @@
             this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
             this.statusUpdateLabel.AutoSize = true;
             this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.statusUpdateLabel.Location = new System.Drawing.Point(326, 390);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(324, 391);
             this.statusUpdateLabel.Name = "statusUpdateLabel";
             this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
             this.statusUpdateLabel.TabIndex = 44;
@@ -134,7 +134,7 @@
             this.header3Label.AccessibleName = "header3Label";
             this.header3Label.AutoSize = true;
             this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.header3Label.Location = new System.Drawing.Point(157, 384);
+            this.header3Label.Location = new System.Drawing.Point(155, 385);
             this.header3Label.Name = "header3Label";
             this.header3Label.Size = new System.Drawing.Size(174, 31);
             this.header3Label.TabIndex = 43;
@@ -148,7 +148,7 @@
             this.Controls.Add(this.statusUpdateLabel);
             this.Controls.Add(this.header3Label);
             this.Controls.Add(this.checkLogFolderBtn);
-            this.Controls.Add(this.scheduleOutputFolderBtn);
+            this.Controls.Add(this.reStartProgramBtn);
             this.Controls.Add(this.changeServerInfoBtn);
             this.Controls.Add(this.changeScheduleGenerationBtn);
             this.Controls.Add(this.instantGenerationBtn);
@@ -169,7 +169,7 @@
         private Button instantGenerationBtn;
         private Button changeScheduleGenerationBtn;
         private Button changeServerInfoBtn;
-        private Button scheduleOutputFolderBtn;
+        private Button reStartProgramBtn;
         private Button checkLogFolderBtn;
         private NotifyIcon notifyIcon;
         private Label statusUpdateLabel;

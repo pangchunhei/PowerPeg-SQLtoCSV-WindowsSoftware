@@ -84,7 +84,7 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }

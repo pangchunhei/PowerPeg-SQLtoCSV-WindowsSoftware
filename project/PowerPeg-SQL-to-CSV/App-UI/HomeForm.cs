@@ -12,16 +12,11 @@ namespace App_UI
 {
     public partial class HomeForm : Form
     {
-        private ChangeServerInfo changeServerInfo;
-        private InstantGenerationOptionForm instantGeneration;
         
         public HomeForm()
         {
             InitializeComponent();
-
-            changeServerInfo = new ChangeServerInfo();
-            instantGeneration = new InstantGenerationOptionForm();
-
+ 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,6 +27,7 @@ namespace App_UI
         private void changeServerInfoBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            ChangeServerInfo changeServerInfo = new ChangeServerInfo();
             changeServerInfo.ShowDialog();
             this.Show();
         }
@@ -39,13 +35,17 @@ namespace App_UI
         private void instantGenerationBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            InstantGenerationOptionForm instantGeneration = new InstantGenerationOptionForm();
             instantGeneration.ShowDialog();
             this.Show();
         }
 
         private void changeScheduleGenerationBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ChangeScheduleGeneration changeScheduleGeneration = new ChangeScheduleGeneration();
+            changeScheduleGeneration.ShowDialog();
+            this.Show();
         }
 
         private void scheduleOutputFolderBtn_Click(object sender, EventArgs e)
