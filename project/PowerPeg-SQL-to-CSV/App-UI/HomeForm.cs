@@ -35,7 +35,7 @@ namespace App_UI
         private void instantGenerationBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InstantGenerationOptionForm instantGeneration = new InstantGenerationOptionForm();
+            InstantGenerationTask instantGeneration = new InstantGenerationTask();
             instantGeneration.ShowDialog();
             this.Show();
         }

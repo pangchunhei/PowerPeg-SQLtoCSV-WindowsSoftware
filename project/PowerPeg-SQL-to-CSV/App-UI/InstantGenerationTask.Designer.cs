@@ -1,6 +1,6 @@
 ﻿namespace App_UI
 {
-    partial class InstantGenerationOptionForm
+    partial class InstantGenerationTask
     {
         /// <summary>
         ///  Required designer variable.

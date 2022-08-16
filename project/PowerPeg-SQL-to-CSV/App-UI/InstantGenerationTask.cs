@@ -6,9 +6,9 @@ using PowerPeg_SQL_to_CSV;
 
 namespace App_UI
 {
-    public partial class InstantGenerationOptionForm : Form
+    public partial class InstantGenerationTask : Form
     {
-        public InstantGenerationOptionForm()
+        public InstantGenerationTask()
         {
             InitializeComponent();
             this.ControlBox = false;
@@ -62,7 +62,7 @@ namespace App_UI
 
         public void resetForm()
         {
-            Form NewForm = new InstantGenerationOptionForm();
+            Form NewForm = new InstantGenerationTask();
             NewForm.Show();
             this.Dispose(false);
         }
