@@ -1,4 +1,6 @@
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using PowerPeg_SQL_to_CSV;
 
@@ -15,8 +17,7 @@ namespace App_UI
         {
             serverInfoDataLabel.Text = Gateway.getInstance().getGatewayInfo()[0];
 
-            Gateway g = Gateway.getInstance();
-            List<string> col = g.getDBTableColName();
+            List<string> col = Gateway.getInstance().getDBTableColName();
             selectedColListBox.Items.Add("-- All --");
             foreach(string s in col)
             {
@@ -24,6 +25,7 @@ namespace App_UI
             }
             selectedColListBox.SelectedItem = "-- All --";
 
+            GlobalFunction.statusUpdate(statusUpdateLabel, "User Creating Form", false);
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -51,92 +53,43 @@ namespace App_UI
 
         }
 
-        private string exploreFilePath()
-        {
-            using (var fbd = new FolderBrowserDialog())
-            {
-                DialogResult result = fbd.ShowDialog();
-
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
-                {
-                    return fbd.SelectedPath;
-
-                    //System.Windows.Forms.MessageBox.Show("Files found: " + fbd.SelectedPath, "Message");
-                }
-            }
-
-            return null;
-        }
-
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
         {
-            filePathDataLabel.Text = exploreFilePath();
+            filePathDataLabel.Text = GlobalFunction.exploreFilePath();
 
         }
 
-        private List<string> convertListBoxSelected_to_List(ListBox.SelectedObjectCollection listBoxList)
+        public void resetForm()
         {
-            List<string> output = new List<string>();
-
-            foreach(var s in listBoxList)
-            {
-                if(s.ToString().Equals("-- All --"))
-                {
-                    output.Clear();
-                    output.Add("*");
-                    return output;
-                }
-                else
-                {
-                    output.Add(s.ToString());
-                }
-            }
-
-            return output;
-        }
-
-        private string searchTaskDetail_to_string(SearchTask t)
-        {
-            string msg = "";
-            string[] title = { "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List" };
-            int i = 0;
-            foreach (var s in t.getTaskInfo())
-            {
-                msg += title[i] + ": " + s + "\n";
-                i++;
-            }
-
-            return msg;
+            Form NewForm = new InstantGenerationOptionForm();
+            NewForm.Show();
+            this.Dispose(false);
         }
 
         private void generateBtn_Click(object sender, EventArgs e)
         {
-            if(filePathDataLabel.Text.Equals("<Select Path>"))
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Processing " + TypeDescriptor.GetClassName(this), false);
+
+            if (filePathDataLabel.Text.Equals("<Select Path>"))
             {
                 MessageBox.Show("Please select output folder.");
             }
             else
             {
-                Mode m = new InstantMode(fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start, DateTime.Now, convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
+                Mode m = new InstantMode(fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start, DateTime.Now, GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
                 SearchTask t = new SearchTask(filePathDataLabel.Text, m);
 
-                string msg = "Please check the task settings: \n" + searchTaskDetail_to_string(t);
-
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(msg, "Confirm", buttons);
-                if (result == DialogResult.Yes)
+                if (GlobalFunction.userCheckTaskDetail(t))
                 {
-                    //Trigger the task
-                    MessageBox.Show("Task created, now processing.");
-                    t.toRun();
-                    MessageBox.Show("Finished output.");
+                    GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
+                    MainFunction.runTask(t);
+                    GlobalFunction.statusUpdate(statusUpdateLabel, "Finished the task, please check the output csv.", true);
                 }
                 else
                 {
-                    MessageBox.Show("Task not created, please re enter.");
-                    Form NewForm = new InstantGenerationOptionForm();
-                    NewForm.Show();
-                    this.Dispose(false);
+                    GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the settings, discard task.", true);
+                    MainFunction.taskNotCreated();
+                    resetForm();
                 }
 
                 //Task t = new Task();

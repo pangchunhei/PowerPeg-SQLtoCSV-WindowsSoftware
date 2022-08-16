@@ -44,6 +44,8 @@
             this.cancelBtn = new System.Windows.Forms.Button();
             this.spaceLabel = new System.Windows.Forms.Label();
             this.selectedColListBox = new System.Windows.Forms.ListBox();
+            this.header3Label = new System.Windows.Forms.Label();
+            this.statusUpdateLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -202,7 +204,7 @@
             // 
             this.spaceLabel.AccessibleName = "spaceLabel";
             this.spaceLabel.AutoSize = true;
-            this.spaceLabel.Location = new System.Drawing.Point(391, 859);
+            this.spaceLabel.Location = new System.Drawing.Point(234, 918);
             this.spaceLabel.Name = "spaceLabel";
             this.spaceLabel.Size = new System.Drawing.Size(21, 20);
             this.spaceLabel.TabIndex = 36;
@@ -220,12 +222,36 @@
             this.selectedColListBox.Size = new System.Drawing.Size(488, 324);
             this.selectedColListBox.TabIndex = 37;
             // 
+            // header3Label
+            // 
+            this.header3Label.AccessibleName = "header3Label";
+            this.header3Label.AutoSize = true;
+            this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.header3Label.Location = new System.Drawing.Point(67, 887);
+            this.header3Label.Name = "header3Label";
+            this.header3Label.Size = new System.Drawing.Size(174, 31);
+            this.header3Label.TabIndex = 38;
+            this.header3Label.Text = "Process Status: ";
+            // 
+            // statusUpdateLabel
+            // 
+            this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
+            this.statusUpdateLabel.AutoSize = true;
+            this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(247, 892);
+            this.statusUpdateLabel.Name = "statusUpdateLabel";
+            this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
+            this.statusUpdateLabel.TabIndex = 39;
+            this.statusUpdateLabel.Text = "<Status Update>";
+            // 
             // InstantGenerationOptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statusUpdateLabel);
+            this.Controls.Add(this.header3Label);
             this.Controls.Add(this.selectedColListBox);
             this.Controls.Add(this.spaceLabel);
             this.Controls.Add(this.cancelBtn);
@@ -268,5 +294,7 @@
         private Button cancelBtn;
         private Label spaceLabel;
         private ListBox selectedColListBox;
+        private Label header3Label;
+        private Label statusUpdateLabel;
     }
 }

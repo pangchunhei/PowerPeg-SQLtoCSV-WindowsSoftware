@@ -31,6 +31,11 @@ namespace PowerPeg_SQL_to_CSV
             return resultOfSQL;
         }
 
+        public Mode getMode()
+        {
+            return operationMode;
+        }
+
         public SearchTask(string outputLocation, Mode operationMode, string name = "Default")
         {
             this.taskName = name;

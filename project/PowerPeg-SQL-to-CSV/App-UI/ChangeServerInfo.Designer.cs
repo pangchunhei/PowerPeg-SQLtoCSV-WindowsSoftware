@@ -39,6 +39,9 @@
             this.catalogTextbox = new System.Windows.Forms.TextBox();
             this.usernameTextbox = new System.Windows.Forms.TextBox();
             this.passwordTextbox = new System.Windows.Forms.TextBox();
+            this.statusUpdateLabel = new System.Windows.Forms.Label();
+            this.header3Label = new System.Windows.Forms.Label();
+            this.spaceLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -103,7 +106,7 @@
             this.saveBtn.AccessibleName = "saveBtn";
             this.saveBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.saveBtn.Location = new System.Drawing.Point(247, 371);
+            this.saveBtn.Location = new System.Drawing.Point(262, 347);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(120, 46);
             this.saveBtn.TabIndex = 7;
@@ -116,7 +119,7 @@
             this.cancelBtn.AccessibleName = "cancelBtn";
             this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(436, 371);
+            this.cancelBtn.Location = new System.Drawing.Point(446, 347);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(120, 46);
             this.cancelBtn.TabIndex = 8;
@@ -163,11 +166,47 @@
             this.passwordTextbox.Size = new System.Drawing.Size(452, 34);
             this.passwordTextbox.TabIndex = 12;
             // 
+            // statusUpdateLabel
+            // 
+            this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
+            this.statusUpdateLabel.AutoSize = true;
+            this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(262, 426);
+            this.statusUpdateLabel.Name = "statusUpdateLabel";
+            this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
+            this.statusUpdateLabel.TabIndex = 42;
+            this.statusUpdateLabel.Text = "<Status Update>";
+            // 
+            // header3Label
+            // 
+            this.header3Label.AccessibleName = "header3Label";
+            this.header3Label.AutoSize = true;
+            this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.header3Label.Location = new System.Drawing.Point(82, 421);
+            this.header3Label.Name = "header3Label";
+            this.header3Label.Size = new System.Drawing.Size(174, 31);
+            this.header3Label.TabIndex = 41;
+            this.header3Label.Text = "Process Status: ";
+            // 
+            // spaceLabel
+            // 
+            this.spaceLabel.AccessibleName = "spaceLabel";
+            this.spaceLabel.AutoSize = true;
+            this.spaceLabel.Location = new System.Drawing.Point(249, 452);
+            this.spaceLabel.Name = "spaceLabel";
+            this.spaceLabel.Size = new System.Drawing.Size(21, 20);
+            this.spaceLabel.TabIndex = 40;
+            this.spaceLabel.Text = "   ";
+            // 
             // ChangeServerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statusUpdateLabel);
+            this.Controls.Add(this.header3Label);
+            this.Controls.Add(this.spaceLabel);
             this.Controls.Add(this.passwordTextbox);
             this.Controls.Add(this.usernameTextbox);
             this.Controls.Add(this.catalogTextbox);
@@ -200,5 +239,8 @@
         private TextBox catalogTextbox;
         private TextBox usernameTextbox;
         private TextBox passwordTextbox;
+        private Label statusUpdateLabel;
+        private Label header3Label;
+        private Label spaceLabel;
     }
 }

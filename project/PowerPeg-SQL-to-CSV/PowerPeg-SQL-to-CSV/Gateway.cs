@@ -144,7 +144,7 @@ namespace PowerPeg_SQL_to_CSV
                 using (SqlCommand cmd = new SqlCommand("sp_gateway_search_table_1", sqlcon))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    //Change to sql items
+                    //Change to sql itemes formate
                     cmd.Parameters.Add("@selectCol", SqlDbType.VarChar).Value = "[" + string.Join("],[", selectColumn) + "]";
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
