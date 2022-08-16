@@ -39,6 +39,7 @@ namespace PowerPeg_SQL_to_CSV
         private string catalog;
         private string username;
         private string password;
+        string connectionString;
 
         public void setGateway()
         {
@@ -46,6 +47,8 @@ namespace PowerPeg_SQL_to_CSV
             this.catalog = ConfigurationManager.AppSettings["Catalog"];
             this.username = ConfigurationManager.AppSettings["Username"];
             this.password = ConfigurationManager.AppSettings["Password"];
+
+            this.connectionString = createConnectionString();
         }
 
         public string createConnectionString()
@@ -93,36 +96,27 @@ namespace PowerPeg_SQL_to_CSV
             }
         }
 
-        public DataTable runSQLCommand(string storedCmdName)
+        public List<string> getDBTableColName()
         {
-            string connectionString = createConnectionString();
-
-            DataTable dt;
+            //Use the stored procedure cmd
+            DataTable sqlOutput;
 
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand(storedCmdName, sqlcon))
+                using (SqlCommand cmd = new SqlCommand("sp_gateway_get_table_1_col", sqlcon))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
-                        dt = new DataTable();
+                        sqlOutput = new DataTable();
 
-                        da.Fill(dt);
+                        da.Fill(sqlOutput);
                     }
                 }
             }
 
-            return dt;
-        }
-
-        public List<string> getDBTableColName()
-        {
-            //Use the stored cmd
-            DataTable d = runSQLCommand("sp_gateway_get_table_1_col");
-
-            List<string> result = datatableToString1DList(d);
+            List<string> result = datatableToString1DList(sqlOutput);
 
             return result;
         }
@@ -140,12 +134,29 @@ namespace PowerPeg_SQL_to_CSV
             return result;
         }
 
-        public DataTable getDBTable01()
+        public DataTable getDBTable01(DateOnly startSearchDay, DateOnly endSearchDay, List<string> selectColumn)
         {
-            //Use the stored cmd
-            DataTable d = runSQLCommand("sp_gateway_get_table_1_col");
+            //Use the stored procedure cmd
+            DataTable sqlOutput;
 
-            return d;
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_gateway_search_table_1", sqlcon))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    //Change to sql items
+                    cmd.Parameters.Add("@selectCol", SqlDbType.VarChar).Value = "[" + string.Join("],[", selectColumn) + "]";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        sqlOutput = new DataTable();
+
+                        da.Fill(sqlOutput);
+                    }
+                }
+            }
+
+            return sqlOutput;
         }
 
         public void printDataTable(DataTable dt)

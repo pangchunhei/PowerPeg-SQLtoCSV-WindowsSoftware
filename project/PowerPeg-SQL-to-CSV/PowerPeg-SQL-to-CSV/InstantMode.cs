@@ -39,7 +39,8 @@ namespace PowerPeg_SQL_to_CSV
         {
             DateTime genTime = DateTime.Now;
             Gateway g = Gateway.getInstance();
-            DataTable dt = g.getDBTable01();
+
+            DataTable dt = g.getDBTable01(this.startSearchDay, this.endSearchDay, this.selectColumn);
 
             Result res = new Result(genTime, dt);
 

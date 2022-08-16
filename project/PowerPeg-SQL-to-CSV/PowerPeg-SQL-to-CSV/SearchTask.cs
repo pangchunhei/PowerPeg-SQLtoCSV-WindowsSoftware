@@ -40,7 +40,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public string createTaskName()
         {
-            return this.taskName + "_" + this.resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_THH-mm-ss");
+            return this.taskName + "_" + this.resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
         }
 
         public void toRun()
