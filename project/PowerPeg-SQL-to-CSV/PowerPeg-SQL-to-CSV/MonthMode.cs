@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PowerPeg_SQL_to_CSV
 {
-    public class InstantMode : Mode
+    public class MonthMode : Mode
     {
         private String modeName;
-        private DateTime startSearchDay;
-
-        private DateTime endSearchDay;
 
         private DateTime triggerDateTime;
 
@@ -25,12 +23,9 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="endDate"></param>
         /// <param name="triggerDate"></param>
         /// <param name="selection"></param>
-        public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<String> selection)
+        public MonthMode(DateTime triggerDate, List<String> selection)
         {
-            this.modeName = "Instant Mode";
-            //Last 30DAys
-            this.startSearchDay = startDate;
-            this.endSearchDay = endDate;
+            this.modeName = "Month Mode";
             this.triggerDateTime = triggerDate;
             this.selectColumn = selection;
         }
@@ -39,7 +34,16 @@ namespace PowerPeg_SQL_to_CSV
         {
             DateTime genTime = DateTime.Now;
 
-            DataTable dt = Gateway.getInstance().getDBTable01(this.startSearchDay, this.endSearchDay, this.selectColumn);
+            DateTime startSearchDay;
+            DateTime endSearchDay;
+            
+            endSearchDay = genTime;
+
+            int length = DateTime.DaysInMonth(endSearchDay.Year, endSearchDay.Month);
+
+            startSearchDay = endSearchDay.AddDays(-length);
+
+            DataTable dt = Gateway.getInstance().getDBTable01(startSearchDay, endSearchDay, this.selectColumn);
 
             Result res = new Result(genTime, dt);
 
@@ -50,7 +54,7 @@ namespace PowerPeg_SQL_to_CSV
         {
             string selectionStr = string.Join(",", selectColumn);
 
-            string[] output = {this.modeName, this.triggerDateTime.ToString(), this.startSearchDay.ToString(), this.endSearchDay.ToString(), selectionStr};
+            string[] output = {this.modeName, this.triggerDateTime.ToString(), selectionStr};
 
             return output;
         }

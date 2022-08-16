@@ -152,7 +152,7 @@ namespace PowerPeg_SQL_to_CSV
             }
         }
 
-        public DataTable getDBTable01(DateOnly startSearchDay, DateOnly endSearchDay, List<string> selectColumn)
+        public DataTable getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List<string> selectColumn)
         {
             //Use the stored procedure cmd
             DataTable sqlOutput;
