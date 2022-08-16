@@ -7,6 +7,7 @@ namespace App_UI
         public ChangeServerInfo()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         private bool validateForm()
@@ -83,7 +84,7 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
     }
 }

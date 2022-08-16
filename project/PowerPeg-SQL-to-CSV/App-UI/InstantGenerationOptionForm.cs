@@ -11,6 +11,7 @@ namespace App_UI
         public InstantGenerationOptionForm()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         private void InstantGenerationOptionForm_Load(object sender, EventArgs e)
@@ -99,6 +100,11 @@ namespace App_UI
             }
 
             
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

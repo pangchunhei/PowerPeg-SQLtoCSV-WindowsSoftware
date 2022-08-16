@@ -199,6 +199,7 @@
             this.cancelBtn.TabIndex = 15;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // spaceLabel
             // 
