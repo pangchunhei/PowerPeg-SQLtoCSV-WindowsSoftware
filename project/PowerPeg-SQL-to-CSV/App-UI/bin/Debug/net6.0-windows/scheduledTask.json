@@ -1,1 +1,39 @@
-{"$type":"System.Collections.Generic.List`1[[PowerPeg_SQL_to_CSV.SearchTask, PowerPeg-SQL-to-CSV]], System.Private.CoreLib","$values":[{"$type":"PowerPeg_SQL_to_CSV.SearchTask, PowerPeg-SQL-to-CSV","taskName":"Default","outputLocation":"C:\\Users\\elsto\\Desktop","operationMode":{"$type":"PowerPeg_SQL_to_CSV.MonthMode, PowerPeg-SQL-to-CSV","modeName":"Month Mode","triggerDateTime":"2022-08-17T00:00:00","selectColumn":{"$type":"System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib","$values":["*"]}},"resultOfSQL":null},{"$type":"PowerPeg_SQL_to_CSV.SearchTask, PowerPeg-SQL-to-CSV","taskName":"Default","outputLocation":"C:\\Users\\elsto\\Desktop","operationMode":{"$type":"PowerPeg_SQL_to_CSV.MonthMode, PowerPeg-SQL-to-CSV","modeName":"Month Mode","triggerDateTime":"2022-08-17T00:00:00","selectColumn":{"$type":"System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib","$values":["*"]}},"resultOfSQL":null},{"$type":"PowerPeg_SQL_to_CSV.SearchTask, PowerPeg-SQL-to-CSV","taskName":"Default","outputLocation":"C:\\Users\\elsto\\Desktop","operationMode":{"$type":"PowerPeg_SQL_to_CSV.MonthMode, PowerPeg-SQL-to-CSV","modeName":"Month Mode","triggerDateTime":"2022-08-17T00:00:00","selectColumn":{"$type":"System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib","$values":["new","try"]}},"resultOfSQL":null},{"$type":"PowerPeg_SQL_to_CSV.SearchTask, PowerPeg-SQL-to-CSV","taskName":"Default","outputLocation":"C:\\Users\\elsto","operationMode":{"$type":"PowerPeg_SQL_to_CSV.InstantMode, PowerPeg-SQL-to-CSV","modeName":"Instant Mode","startSearchDay":"2022-08-17T00:00:00","endSearchDay":"2022-08-17T00:00:00","triggerDateTime":"2022-08-17T00:00:00","selectColumn":{"$type":"System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib","$values":["new","try"]}},"resultOfSQL":null}]}
+{
+    "$type": "System.Collections.Generic.List`1[[PowerPeg_SQL_to_CSV.SearchTask, PowerPeg-SQL-to-CSV]], System.Private.CoreLib",
+    "$values": [
+        {
+            "$type": "PowerPeg_SQL_to_CSV.SearchTask, PowerPeg-SQL-to-CSV",
+            "taskName": "Default_2022-08-17_14-36-08",
+            "outputLocation": "C:\\Users\\elsto\\Desktop",
+            "operationMode": {
+                "$type": "PowerPeg_SQL_to_CSV.MonthMode, PowerPeg-SQL-to-CSV",
+                "modeName": "Month Mode",
+                "triggerDateTime": "2022-08-17T00:00:00",
+                "selectColumn": {
+                    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                    "$values": [
+                        "*"
+                    ]
+                }
+            },
+            "resultOfSQL": null
+        },
+        {
+            "$type": "PowerPeg_SQL_to_CSV.SearchTask, PowerPeg-SQL-to-CSV",
+            "taskName": "Default_2022-08-17_14-36-19",
+            "outputLocation": "C:\\Users\\elsto\\Desktop",
+            "operationMode": {
+                "$type": "PowerPeg_SQL_to_CSV.MonthMode, PowerPeg-SQL-to-CSV",
+                "modeName": "Month Mode",
+                "triggerDateTime": "2022-08-17T00:00:00",
+                "selectColumn": {
+                    "$type": "System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]], System.Private.CoreLib",
+                    "$values": [
+                        "*"
+                    ]
+                }
+            },
+            "resultOfSQL": null
+        }
+    ]
+}

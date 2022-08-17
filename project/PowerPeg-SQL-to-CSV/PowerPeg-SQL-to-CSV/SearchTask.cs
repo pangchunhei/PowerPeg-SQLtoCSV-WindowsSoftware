@@ -40,7 +40,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public SearchTask(string outputLocation, Mode operationMode, string name = "Default")
         {
-            this.taskName = name;
+            this.taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
             this.outputLocation = outputLocation;
             this.operationMode = operationMode;
         }

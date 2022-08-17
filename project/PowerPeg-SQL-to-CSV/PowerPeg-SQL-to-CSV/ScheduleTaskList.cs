@@ -21,9 +21,13 @@ namespace PowerPeg_SQL_to_CSV
             jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSON"];
             Debug.WriteLine(jsonPath);
 
-            searchTasksList = new List<SearchTask>();
+            searchTasksList = importTasklist();
 
-            
+            showTaskList();
+        }
+
+        private List<SearchTask> importTasklist()
+        {
             using (StreamReader file = File.OpenText(this.jsonPath))
             {
                 var settings = new JsonSerializerSettings()
@@ -34,13 +38,23 @@ namespace PowerPeg_SQL_to_CSV
                     TypeNameHandling = TypeNameHandling.All
                 };
                 JsonSerializer serializer = JsonSerializer.Create(settings);
-                searchTasksList = (List<SearchTask>)serializer.Deserialize(file, typeof(List<SearchTask>));
+
+                List<SearchTask> list = (List<SearchTask>)serializer.Deserialize(file, typeof(List<SearchTask>));
+
+                if(list == null)
+                {
+                    return new List<SearchTask>();
+                }
+                else
+                {
+                    return list;
+                }
             }
-            
+        }
 
-            test();
-
-            foreach(var task in searchTasksList)
+        private void showTaskList()
+        {
+            foreach (var task in searchTasksList)
             {
                 Debug.WriteLine("> " + String.Join(", ", task.getTaskInfo()));
             }
@@ -48,7 +62,6 @@ namespace PowerPeg_SQL_to_CSV
 
         public void addNewTask(SearchTask task)
         {
-            /*
             if(task.getMode().GetType() != typeof(InstantMode))
             {
                 searchTasksList.Add(task); 
@@ -57,9 +70,7 @@ namespace PowerPeg_SQL_to_CSV
             {
                 //TODO-- Exception
                 throw new Exception();
-            }*/
-
-            searchTasksList.Add(task);
+            }
 
             updateJSON();
         }
@@ -79,27 +90,12 @@ namespace PowerPeg_SQL_to_CSV
 
         public void removeTask(SearchTask task)
         {
-
+            this.searchTasksList.Remove(task);
         }
 
         public List<SearchTask> getCurrentTaskList()
         {
             return searchTasksList;
-        }
-
-        private void test()
-        {
-            List<string> s = new List<string>();
-            s.Add("*");
-            SearchTask t = new SearchTask("C:\\Users\\elsto\\Desktop", new MonthMode(new DateTime(2022, 08, 17, 00, 00, 00), s));
-
-            addNewTask(t);
-
-            s.Clear();
-            s.Add("new");
-            s.Add("try");
-            SearchTask t2 = new SearchTask("C:\\Users\\elsto", new InstantMode(new DateTime(2022, 08, 17, 00, 00, 00), new DateTime(2022, 08, 17, 00, 00, 00), new DateTime(2022, 08, 17, 00, 00, 00), s));
-            addNewTask(t2);
         }
     }
 
