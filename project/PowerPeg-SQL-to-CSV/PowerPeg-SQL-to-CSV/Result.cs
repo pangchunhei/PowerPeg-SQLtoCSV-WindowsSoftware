@@ -1,10 +1,12 @@
-﻿using System.Data;
+﻿using Newtonsoft.Json;
+using System.Data;
 
 namespace PowerPeg_SQL_to_CSV
 {
     public class Result
     {
         private DateTime generationTime;
+        
         private DataTable result;
 
         public Result(DateTime genTime, DataTable dt)

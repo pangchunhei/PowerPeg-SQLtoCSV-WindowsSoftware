@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -8,13 +9,17 @@ using System.Threading.Tasks;
 
 namespace PowerPeg_SQL_to_CSV
 {
+    [Serializable]
     public class MonthMode : Mode
     {
+        [JsonProperty]
         private String modeName;
 
+        [JsonProperty]
         private DateTime triggerDateTime;
 
-        private List<String> selectColumn = new List<String>();
+        [JsonProperty]
+        private IList<String> selectColumn = new List<String>();
 
         /// <summary>
         /// Create and change mode of InstantMode
@@ -23,7 +28,7 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="endDate"></param>
         /// <param name="triggerDate"></param>
         /// <param name="selection"></param>
-        public MonthMode(DateTime triggerDate, List<String> selection)
+        public MonthMode(DateTime triggerDate, IList<String> selection)
         {
             this.modeName = "Month Mode";
             this.triggerDateTime = triggerDate;
