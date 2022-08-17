@@ -19,15 +19,36 @@ namespace PowerPeg_SQL_to_CSV
         public ScheduleTaskList()
         {
             jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSON"];
-
             Debug.WriteLine(jsonPath);
 
             searchTasksList = new List<SearchTask>();
 
+            
+            using (StreamReader file = File.OpenText(this.jsonPath))
+            {
+                var settings = new JsonSerializerSettings()
+                {
+                    //Handle private var
+                    ContractResolver = new contractResolverSaveAll(),
+                    //Handle inharance
+                    TypeNameHandling = TypeNameHandling.All
+                };
+                JsonSerializer serializer = JsonSerializer.Create(settings);
+                searchTasksList = (List<SearchTask>)serializer.Deserialize(file, typeof(List<SearchTask>));
+            }
+            
+
             test();
+
+            foreach(var task in searchTasksList)
+            {
+                Debug.WriteLine("> " + String.Join(", ", task.getTaskInfo()));
+            }
         }
+
         public void addNewTask(SearchTask task)
         {
+            /*
             if(task.getMode().GetType() != typeof(InstantMode))
             {
                 searchTasksList.Add(task); 
@@ -36,18 +57,19 @@ namespace PowerPeg_SQL_to_CSV
             {
                 //TODO-- Exception
                 throw new Exception();
-            }
+            }*/
+
+            searchTasksList.Add(task);
 
             updateJSON();
         }
 
         private void updateJSON()
         {
-            var settings = new JsonSerializerSettings() { ContractResolver = new contractResolverSaveAll() };
-            //Debug.WriteLine(JsonConvert.SerializeObject(this.searchTasksList, settings));
-            //Debug.WriteLine(JsonConvert.SerializeObject(this.searchTasksList));
-            //File.WriteAllText(this.jsonPath, JsonConvert.SerializeObject(this.searchTasksList, settings));
-
+            var settings = new JsonSerializerSettings() { 
+                ContractResolver = new contractResolverSaveAll(),
+                TypeNameHandling = TypeNameHandling.All
+            };
             using (StreamWriter file = File.CreateText(this.jsonPath))
             {
                 JsonSerializer serializer = JsonSerializer.Create(settings);
@@ -72,6 +94,12 @@ namespace PowerPeg_SQL_to_CSV
             SearchTask t = new SearchTask("C:\\Users\\elsto\\Desktop", new MonthMode(new DateTime(2022, 08, 17, 00, 00, 00), s));
 
             addNewTask(t);
+
+            s.Clear();
+            s.Add("new");
+            s.Add("try");
+            SearchTask t2 = new SearchTask("C:\\Users\\elsto", new InstantMode(new DateTime(2022, 08, 17, 00, 00, 00), new DateTime(2022, 08, 17, 00, 00, 00), new DateTime(2022, 08, 17, 00, 00, 00), s));
+            addNewTask(t2);
         }
     }
 
