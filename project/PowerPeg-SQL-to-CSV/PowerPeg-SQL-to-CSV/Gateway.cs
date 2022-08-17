@@ -53,7 +53,6 @@ namespace PowerPeg_SQL_to_CSV
 
         public string createConnectionString(string address, string catalog, string username, string password)
         {
-            // TODO -- location
             return "Server=" + address + ";Database=" + catalog + ";Trusted_Connection=True; User Id="+ username +";Password=" + password +";";
         }
 
@@ -122,25 +121,19 @@ namespace PowerPeg_SQL_to_CSV
                 }
             }
 
-            List<string> result = datatableToString1DList(sqlOutput);
-
-            return result;
-        }
-
-        public List<string> datatableToString1DList(DataTable d)
-        {
             List<string> result = new List<string>();
 
-            foreach (DataRow dr in d.Rows)
+            foreach (DataRow dr in sqlOutput.Rows)
             {
                 //Debug.Write(dr[0]);
                 result.Add(dr[0].ToString());
             }
 
+
             return result;
         }
 
-        private string createSelectColString(List<string> selectColumn)
+        private string createSelectedColString(List<string> selectColumn)
         {
             string output = "";
             if(selectColumn.Contains("*")){
@@ -163,7 +156,7 @@ namespace PowerPeg_SQL_to_CSV
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     //Change to sql itemes formate
-                    cmd.Parameters.Add("@selectCol", SqlDbType.VarChar).Value = createSelectColString(selectColumn);
+                    cmd.Parameters.Add("@selectCol", SqlDbType.VarChar).Value = createSelectedColString(selectColumn);
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
