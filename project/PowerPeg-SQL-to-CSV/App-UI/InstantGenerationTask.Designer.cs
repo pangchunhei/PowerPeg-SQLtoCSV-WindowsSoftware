@@ -245,7 +245,7 @@
             this.statusUpdateLabel.TabIndex = 39;
             this.statusUpdateLabel.Text = "<Status Update>";
             // 
-            // InstantGenerationTask
+            // InstantGenerationOptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,7 +269,7 @@
             this.Controls.Add(this.serverInfoDataLabel);
             this.Controls.Add(this.header2Label);
             this.Controls.Add(this.headerLabel);
-            this.Name = "InstantGenerationTask";
+            this.Name = "InstantGenerationOptionForm";
             this.Text = "InstantGenerationOptionForm";
             this.Load += new System.EventHandler(this.InstantGenerationOptionForm_Load);
             this.ResumeLayout(false);

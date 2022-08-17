@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PowerPeg_SQL_to_CSV;
 
 namespace App_UI
 {
@@ -51,7 +50,7 @@ namespace App_UI
 
         private void scheduleOutputFolderBtn_Click(object sender, EventArgs e)
         {
-            ScheduleTaskList s = new ScheduleTaskList();
+
         }
 
         private void checkLogFolderBtn_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CJawnErBF9lLgRI9EP9sDmFYyoffQs2bpU56c1kAgdY1o1r2iTIzGMhRY3nKhs70/NR0vQ0Tt6uLxFMvMSKCDg==",
+  "dgSpecHash": "9IbWEJXsFBrjlD7HOStYUJmMge0MrZ0SMkW9lmox1kBscW49k83cAxxh/tdrm30TPl+b5O7Ody1xuYZxYkDlaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,6 @@
     "C:\\Users\\elsto\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\elsto\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

@@ -34,10 +34,12 @@
             this.generateBtn = new System.Windows.Forms.Button();
             this.outputLoactionLabel = new System.Windows.Forms.Label();
             this.selectFieldLabel = new System.Windows.Forms.Label();
+            this.frequencyLabel = new System.Windows.Forms.Label();
             this.gernerationOptionLabel = new System.Windows.Forms.Label();
             this.taskNameDataLabel = new System.Windows.Forms.Label();
             this.header2Label = new System.Windows.Forms.Label();
             this.headerLabel = new System.Windows.Forms.Label();
+            this.frequenctCombobox = new System.Windows.Forms.ComboBox();
             this.triggerDateLabel = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.deleteBtn = new System.Windows.Forms.Button();
@@ -105,11 +107,22 @@
             this.selectFieldLabel.AccessibleName = "selectFieldLabel";
             this.selectFieldLabel.AutoSize = true;
             this.selectFieldLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.selectFieldLabel.Location = new System.Drawing.Point(105, 271);
+            this.selectFieldLabel.Location = new System.Drawing.Point(105, 338);
             this.selectFieldLabel.Name = "selectFieldLabel";
             this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
             this.selectFieldLabel.TabIndex = 24;
             this.selectFieldLabel.Text = "Select Field: ";
+            // 
+            // frequencyLabel
+            // 
+            this.frequencyLabel.AccessibleName = "frequencyLabel";
+            this.frequencyLabel.AutoSize = true;
+            this.frequencyLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.frequencyLabel.Location = new System.Drawing.Point(102, 198);
+            this.frequencyLabel.Name = "frequencyLabel";
+            this.frequencyLabel.Size = new System.Drawing.Size(111, 28);
+            this.frequencyLabel.TabIndex = 20;
+            this.frequencyLabel.Text = "Frequency: ";
             // 
             // gernerationOptionLabel
             // 
@@ -156,12 +169,21 @@
             this.headerLabel.Text = "Change Task Setting";
             this.headerLabel.Click += new System.EventHandler(this.headerLabel_Click);
             // 
+            // frequenctCombobox
+            // 
+            this.frequenctCombobox.AccessibleName = "frequenctCombobox";
+            this.frequenctCombobox.FormattingEnabled = true;
+            this.frequenctCombobox.Location = new System.Drawing.Point(228, 202);
+            this.frequenctCombobox.Name = "frequenctCombobox";
+            this.frequenctCombobox.Size = new System.Drawing.Size(123, 28);
+            this.frequenctCombobox.TabIndex = 31;
+            // 
             // triggerDateLabel
             // 
             this.triggerDateLabel.AccessibleName = "triggerDateLabel";
             this.triggerDateLabel.AutoSize = true;
             this.triggerDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.triggerDateLabel.Location = new System.Drawing.Point(102, 200);
+            this.triggerDateLabel.Location = new System.Drawing.Point(102, 267);
             this.triggerDateLabel.Name = "triggerDateLabel";
             this.triggerDateLabel.Size = new System.Drawing.Size(123, 28);
             this.triggerDateLabel.TabIndex = 32;
@@ -169,9 +191,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(231, 202);
+            this.dateTimePicker1.Location = new System.Drawing.Point(231, 269);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(222, 27);
             this.dateTimePicker1.TabIndex = 33;
@@ -209,12 +229,14 @@
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.triggerDateLabel);
+            this.Controls.Add(this.frequenctCombobox);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.getFileExplorerBtn);
             this.Controls.Add(this.filePathDataLabel);
             this.Controls.Add(this.generateBtn);
             this.Controls.Add(this.outputLoactionLabel);
             this.Controls.Add(this.selectFieldLabel);
+            this.Controls.Add(this.frequencyLabel);
             this.Controls.Add(this.gernerationOptionLabel);
             this.Controls.Add(this.taskNameDataLabel);
             this.Controls.Add(this.header2Label);
@@ -235,10 +257,12 @@
         private Button generateBtn;
         private Label outputLoactionLabel;
         private Label selectFieldLabel;
+        private Label frequencyLabel;
         private Label gernerationOptionLabel;
         private Label taskNameDataLabel;
         private Label header2Label;
         private Label headerLabel;
+        private ComboBox frequenctCombobox;
         private Label triggerDateLabel;
         private DateTimePicker dateTimePicker1;
         private Button deleteBtn;

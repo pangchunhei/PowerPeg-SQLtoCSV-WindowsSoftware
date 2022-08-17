@@ -30,10 +30,5 @@ namespace PowerPeg_SQL_to_CSV
         {
             //Not implememeted
         }
-
-        public static void processScheduleTask()
-        {
-
-        }
     }
 }
