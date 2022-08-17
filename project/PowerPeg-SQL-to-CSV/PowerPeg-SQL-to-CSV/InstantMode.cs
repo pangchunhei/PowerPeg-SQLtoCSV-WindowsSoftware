@@ -10,6 +10,7 @@ namespace PowerPeg_SQL_to_CSV
     public class InstantMode : Mode
     {
         private String modeName;
+
         private DateTime startSearchDay;
 
         private DateTime endSearchDay;
@@ -53,6 +54,16 @@ namespace PowerPeg_SQL_to_CSV
             string[] output = {this.modeName, this.triggerDateTime.ToString(), this.startSearchDay.ToString(), this.endSearchDay.ToString(), selectionStr};
 
             return output;
+        }
+
+        public DateTime getTriggerDateTime()
+        {
+            return this.triggerDateTime;
+        }
+
+        public List<string> getSelectColumn()
+        {
+            return this.selectColumn;
         }
     }
 }

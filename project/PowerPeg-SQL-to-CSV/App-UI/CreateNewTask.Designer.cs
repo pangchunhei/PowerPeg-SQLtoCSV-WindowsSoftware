@@ -28,82 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.deleteBtn = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.triggerDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.triggerDateLabel = new System.Windows.Forms.Label();
-            this.frequenctCombobox = new System.Windows.Forms.ComboBox();
+            this.selectFieldLabel = new System.Windows.Forms.Label();
+            this.gernerationOptionLabel = new System.Windows.Forms.Label();
+            this.header2Label = new System.Windows.Forms.Label();
+            this.headerLabel = new System.Windows.Forms.Label();
+            this.deleteBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.getFileExplorerBtn = new System.Windows.Forms.Button();
             this.filePathDataLabel = new System.Windows.Forms.Label();
             this.generateBtn = new System.Windows.Forms.Button();
             this.outputLoactionLabel = new System.Windows.Forms.Label();
-            this.selectFieldLabel = new System.Windows.Forms.Label();
-            this.frequencyLabel = new System.Windows.Forms.Label();
-            this.gernerationOptionLabel = new System.Windows.Forms.Label();
-            this.header2Label = new System.Windows.Forms.Label();
-            this.headerLabel = new System.Windows.Forms.Label();
-            this.spaceLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.selectedColListBox = new System.Windows.Forms.ListBox();
+            this.statusUpdateLabel = new System.Windows.Forms.Label();
+            this.header3Label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // deleteBtn
+            // textBox1
             // 
-            this.deleteBtn.AccessibleName = "deleteBtn";
-            this.deleteBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.deleteBtn.Location = new System.Drawing.Point(359, 750);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(120, 48);
-            this.deleteBtn.TabIndex = 50;
-            this.deleteBtn.Text = "Delete";
-            this.deleteBtn.UseVisualStyleBackColor = false;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(223, 96);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(416, 34);
+            this.textBox1.TabIndex = 62;
             // 
-            // dateTimePicker1
+            // triggerDateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(237, 281);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(250, 27);
-            this.dateTimePicker1.TabIndex = 49;
+            this.triggerDateTimePicker.AccessibleName = "triggerDateTimePicker";
+            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy HH:mm";
+            this.triggerDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.triggerDateTimePicker.Location = new System.Drawing.Point(247, 212);
+            this.triggerDateTimePicker.Name = "triggerDateTimePicker";
+            this.triggerDateTimePicker.Size = new System.Drawing.Size(250, 27);
+            this.triggerDateTimePicker.TabIndex = 61;
             // 
             // triggerDateLabel
             // 
             this.triggerDateLabel.AccessibleName = "triggerDateLabel";
             this.triggerDateLabel.AutoSize = true;
             this.triggerDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.triggerDateLabel.Location = new System.Drawing.Point(108, 279);
+            this.triggerDateLabel.Location = new System.Drawing.Point(118, 210);
             this.triggerDateLabel.Name = "triggerDateLabel";
             this.triggerDateLabel.Size = new System.Drawing.Size(123, 28);
-            this.triggerDateLabel.TabIndex = 48;
+            this.triggerDateLabel.TabIndex = 60;
             this.triggerDateLabel.Text = "Trigger Date:";
             // 
-            // frequenctCombobox
+            // selectFieldLabel
             // 
-            this.frequenctCombobox.AccessibleName = "frequenctCombobox";
-            this.frequenctCombobox.FormattingEnabled = true;
-            this.frequenctCombobox.Location = new System.Drawing.Point(234, 214);
-            this.frequenctCombobox.Name = "frequenctCombobox";
-            this.frequenctCombobox.Size = new System.Drawing.Size(151, 28);
-            this.frequenctCombobox.TabIndex = 47;
+            this.selectFieldLabel.AccessibleName = "selectFieldLabel";
+            this.selectFieldLabel.AutoSize = true;
+            this.selectFieldLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.selectFieldLabel.Location = new System.Drawing.Point(118, 259);
+            this.selectFieldLabel.Name = "selectFieldLabel";
+            this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
+            this.selectFieldLabel.TabIndex = 58;
+            this.selectFieldLabel.Text = "Select Field: ";
+            // 
+            // gernerationOptionLabel
+            // 
+            this.gernerationOptionLabel.AccessibleName = "gernerationOptionLabel";
+            this.gernerationOptionLabel.AutoSize = true;
+            this.gernerationOptionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.gernerationOptionLabel.Location = new System.Drawing.Point(74, 163);
+            this.gernerationOptionLabel.Name = "gernerationOptionLabel";
+            this.gernerationOptionLabel.Size = new System.Drawing.Size(221, 31);
+            this.gernerationOptionLabel.TabIndex = 56;
+            this.gernerationOptionLabel.Text = "Generation Setting: ";
+            // 
+            // header2Label
+            // 
+            this.header2Label.AccessibleName = "header2Label";
+            this.header2Label.AutoSize = true;
+            this.header2Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.header2Label.Location = new System.Drawing.Point(74, 99);
+            this.header2Label.Name = "header2Label";
+            this.header2Label.Size = new System.Drawing.Size(143, 31);
+            this.header2Label.TabIndex = 55;
+            this.header2Label.Text = "Task Name: ";
+            // 
+            // headerLabel
+            // 
+            this.headerLabel.AccessibleName = "headerLabel";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.headerLabel.Location = new System.Drawing.Point(34, 28);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(281, 46);
+            this.headerLabel.TabIndex = 54;
+            this.headerLabel.Text = "Create New Task";
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.AccessibleName = "deleteBtn";
+            this.deleteBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.deleteBtn.Location = new System.Drawing.Point(369, 648);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(120, 48);
+            this.deleteBtn.TabIndex = 68;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.UseVisualStyleBackColor = false;
             // 
             // cancelBtn
             // 
             this.cancelBtn.AccessibleName = "cancelBtn";
             this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(508, 750);
+            this.cancelBtn.Location = new System.Drawing.Point(518, 648);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(120, 48);
-            this.cancelBtn.TabIndex = 46;
+            this.cancelBtn.TabIndex = 67;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
             // 
             // getFileExplorerBtn
             // 
             this.getFileExplorerBtn.AccessibleName = "getFileExplorerBtn";
-            this.getFileExplorerBtn.Location = new System.Drawing.Point(278, 697);
+            this.getFileExplorerBtn.Location = new System.Drawing.Point(288, 595);
             this.getFileExplorerBtn.Name = "getFileExplorerBtn";
             this.getFileExplorerBtn.Size = new System.Drawing.Size(134, 29);
-            this.getFileExplorerBtn.TabIndex = 45;
+            this.getFileExplorerBtn.TabIndex = 66;
             this.getFileExplorerBtn.Text = "Open Folder";
             this.getFileExplorerBtn.UseVisualStyleBackColor = true;
             // 
@@ -112,10 +159,10 @@
             this.filePathDataLabel.AccessibleName = "filePathLabel";
             this.filePathDataLabel.AutoSize = true;
             this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.filePathDataLabel.Location = new System.Drawing.Point(433, 697);
+            this.filePathDataLabel.Location = new System.Drawing.Point(443, 595);
             this.filePathDataLabel.Name = "filePathDataLabel";
             this.filePathDataLabel.Size = new System.Drawing.Size(70, 25);
-            this.filePathDataLabel.TabIndex = 44;
+            this.filePathDataLabel.TabIndex = 65;
             this.filePathDataLabel.Text = "<Path>";
             // 
             // generateBtn
@@ -123,10 +170,10 @@
             this.generateBtn.AccessibleName = "generateBtn";
             this.generateBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.generateBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generateBtn.Location = new System.Drawing.Point(204, 750);
+            this.generateBtn.Location = new System.Drawing.Point(214, 648);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(120, 48);
-            this.generateBtn.TabIndex = 43;
+            this.generateBtn.TabIndex = 64;
             this.generateBtn.Text = "Generate";
             this.generateBtn.UseVisualStyleBackColor = false;
             // 
@@ -135,84 +182,55 @@
             this.outputLoactionLabel.AccessibleName = "outputLoactionLabel";
             this.outputLoactionLabel.AutoSize = true;
             this.outputLoactionLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.outputLoactionLabel.Location = new System.Drawing.Point(108, 696);
+            this.outputLoactionLabel.Location = new System.Drawing.Point(118, 594);
             this.outputLoactionLabel.Name = "outputLoactionLabel";
             this.outputLoactionLabel.Size = new System.Drawing.Size(164, 28);
-            this.outputLoactionLabel.TabIndex = 42;
+            this.outputLoactionLabel.TabIndex = 63;
             this.outputLoactionLabel.Text = "Output Location: ";
             // 
-            // selectFieldLabel
+            // selectedColListBox
             // 
-            this.selectFieldLabel.AccessibleName = "selectFieldLabel";
-            this.selectFieldLabel.AutoSize = true;
-            this.selectFieldLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.selectFieldLabel.Location = new System.Drawing.Point(111, 350);
-            this.selectFieldLabel.Name = "selectFieldLabel";
-            this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
-            this.selectFieldLabel.TabIndex = 40;
-            this.selectFieldLabel.Text = "Select Field: ";
+            this.selectedColListBox.AccessibleName = "selectedColListBox";
+            this.selectedColListBox.FormattingEnabled = true;
+            this.selectedColListBox.ItemHeight = 20;
+            this.selectedColListBox.Location = new System.Drawing.Point(244, 259);
+            this.selectedColListBox.MultiColumn = true;
+            this.selectedColListBox.Name = "selectedColListBox";
+            this.selectedColListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.selectedColListBox.Size = new System.Drawing.Size(488, 324);
+            this.selectedColListBox.TabIndex = 70;
             // 
-            // frequencyLabel
+            // statusUpdateLabel
             // 
-            this.frequencyLabel.AccessibleName = "frequencyLabel";
-            this.frequencyLabel.AutoSize = true;
-            this.frequencyLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.frequencyLabel.Location = new System.Drawing.Point(108, 210);
-            this.frequencyLabel.Name = "frequencyLabel";
-            this.frequencyLabel.Size = new System.Drawing.Size(111, 28);
-            this.frequencyLabel.TabIndex = 39;
-            this.frequencyLabel.Text = "Frequency: ";
+            this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
+            this.statusUpdateLabel.AutoSize = true;
+            this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(254, 723);
+            this.statusUpdateLabel.Name = "statusUpdateLabel";
+            this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
+            this.statusUpdateLabel.TabIndex = 73;
+            this.statusUpdateLabel.Text = "<Status Update>";
             // 
-            // gernerationOptionLabel
+            // header3Label
             // 
-            this.gernerationOptionLabel.AccessibleName = "gernerationOptionLabel";
-            this.gernerationOptionLabel.AutoSize = true;
-            this.gernerationOptionLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.gernerationOptionLabel.Location = new System.Drawing.Point(64, 165);
-            this.gernerationOptionLabel.Name = "gernerationOptionLabel";
-            this.gernerationOptionLabel.Size = new System.Drawing.Size(221, 31);
-            this.gernerationOptionLabel.TabIndex = 38;
-            this.gernerationOptionLabel.Text = "Generation Setting: ";
+            this.header3Label.AccessibleName = "header3Label";
+            this.header3Label.AutoSize = true;
+            this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.header3Label.Location = new System.Drawing.Point(74, 718);
+            this.header3Label.Name = "header3Label";
+            this.header3Label.Size = new System.Drawing.Size(174, 31);
+            this.header3Label.TabIndex = 72;
+            this.header3Label.Text = "Process Status: ";
             // 
-            // header2Label
+            // label1
             // 
-            this.header2Label.AccessibleName = "header2Label";
-            this.header2Label.AutoSize = true;
-            this.header2Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.header2Label.Location = new System.Drawing.Point(64, 101);
-            this.header2Label.Name = "header2Label";
-            this.header2Label.Size = new System.Drawing.Size(143, 31);
-            this.header2Label.TabIndex = 36;
-            this.header2Label.Text = "Task Name: ";
-            // 
-            // headerLabel
-            // 
-            this.headerLabel.AccessibleName = "headerLabel";
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.headerLabel.Location = new System.Drawing.Point(24, 30);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(281, 46);
-            this.headerLabel.TabIndex = 35;
-            this.headerLabel.Text = "Create New Task";
-            // 
-            // spaceLabel
-            // 
-            this.spaceLabel.AccessibleName = "spaceLabel";
-            this.spaceLabel.AutoSize = true;
-            this.spaceLabel.Location = new System.Drawing.Point(482, 802);
-            this.spaceLabel.Name = "spaceLabel";
-            this.spaceLabel.Size = new System.Drawing.Size(21, 20);
-            this.spaceLabel.TabIndex = 51;
-            this.spaceLabel.Text = "   ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(213, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(416, 34);
-            this.textBox1.TabIndex = 53;
+            this.label1.AccessibleName = "spaceLabel";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(241, 749);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 20);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "   ";
             // 
             // CreateNewTask
             // 
@@ -220,19 +238,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.spaceLabel);
+            this.Controls.Add(this.statusUpdateLabel);
+            this.Controls.Add(this.header3Label);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.selectedColListBox);
             this.Controls.Add(this.deleteBtn);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.triggerDateLabel);
-            this.Controls.Add(this.frequenctCombobox);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.getFileExplorerBtn);
             this.Controls.Add(this.filePathDataLabel);
             this.Controls.Add(this.generateBtn);
             this.Controls.Add(this.outputLoactionLabel);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.triggerDateTimePicker);
+            this.Controls.Add(this.triggerDateLabel);
             this.Controls.Add(this.selectFieldLabel);
-            this.Controls.Add(this.frequencyLabel);
             this.Controls.Add(this.gernerationOptionLabel);
             this.Controls.Add(this.header2Label);
             this.Controls.Add(this.headerLabel);
@@ -245,21 +264,22 @@
 
         #endregion
 
-        private Button deleteBtn;
-        private DateTimePicker dateTimePicker1;
+        private TextBox textBox1;
+        private DateTimePicker triggerDateTimePicker;
         private Label triggerDateLabel;
-        private ComboBox frequenctCombobox;
+        private Label selectFieldLabel;
+        private Label gernerationOptionLabel;
+        private Label header2Label;
+        private Label headerLabel;
+        private Button deleteBtn;
         private Button cancelBtn;
         private Button getFileExplorerBtn;
         private Label filePathDataLabel;
         private Button generateBtn;
         private Label outputLoactionLabel;
-        private Label selectFieldLabel;
-        private Label frequencyLabel;
-        private Label gernerationOptionLabel;
-        private Label header2Label;
-        private Label headerLabel;
-        private Label spaceLabel;
-        private TextBox textBox1;
+        private ListBox selectedColListBox;
+        private Label statusUpdateLabel;
+        private Label header3Label;
+        private Label label1;
     }
 }

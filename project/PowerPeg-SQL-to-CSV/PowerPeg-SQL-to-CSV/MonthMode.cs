@@ -58,5 +58,15 @@ namespace PowerPeg_SQL_to_CSV
 
             return output;
         }
+
+        public DateTime getTriggerDateTime()
+        {
+            return this.triggerDateTime;
+        }
+
+        public List<string> getSelectColumn()
+        {
+            return this.selectColumn;
+        }
     }
 }

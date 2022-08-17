@@ -106,6 +106,7 @@
             this.selectBtn.TabIndex = 8;
             this.selectBtn.Text = "Select";
             this.selectBtn.UseVisualStyleBackColor = true;
+            this.selectBtn.Click += new System.EventHandler(this.selectBtn_Click);
             // 
             // selectTaskLabel
             // 
@@ -139,6 +140,7 @@
             this.createBtn.TabIndex = 11;
             this.createBtn.Text = "Create";
             this.createBtn.UseVisualStyleBackColor = true;
+            this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // cancelBtn
             // 
@@ -151,6 +153,7 @@
             this.cancelBtn.TabIndex = 16;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // ChangeScheduleGeneration
             // 
@@ -169,6 +172,7 @@
             this.Controls.Add(this.headerLabel);
             this.Name = "ChangeScheduleGeneration";
             this.Text = "ChangeScheduleGeneration";
+            this.Load += new System.EventHandler(this.ChangeScheduleGeneration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

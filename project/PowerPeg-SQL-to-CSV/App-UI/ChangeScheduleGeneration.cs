@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PowerPeg_SQL_to_CSV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace App_UI
         public ChangeScheduleGeneration()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,6 +42,79 @@ namespace App_UI
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void selectBtn_Click(object sender, EventArgs e)
+        {
+            string selectedName = selectTaskCoboBox.Text;
+
+            if(selectedName.Equals("-- No Scheduled Task --"))
+            {
+                createNew();
+            }
+            else
+            {
+                changeTaskSetting(selectedName);
+            }
+        }
+
+        private void ChangeScheduleGeneration_Load(object sender, EventArgs e)
+        {
+            serverInfoLabel.Text = Gateway.getInstance().getGatewayInfo()[0];
+
+            updateTaskListName();
+            
+        }
+
+        private void updateTaskListName()
+        {
+            List<string> currentTaskName = MainFunction.getCurrentTaskListName();
+
+            selectTaskCoboBox.Items.Clear();
+
+            if (currentTaskName.Count == 0)
+            {
+                selectTaskCoboBox.Items.Add("-- No Scheduled Task --");
+            }
+            else
+            {
+                foreach (string s in currentTaskName)
+                {
+                    selectTaskCoboBox.Items.Add(s);
+                }
+            }
+
+            selectTaskCoboBox.SelectedIndex = 0;
+        }
+
+        private void createBtn_Click(object sender, EventArgs e)
+        {
+            createNew();
+        }
+
+        private void createNew()
+        {
+            this.Hide();
+            CreateNewTask createNewTask = new CreateNewTask();
+            createNewTask.ShowDialog();
+
+            this.Show();
+            updateTaskListName();
+        }
+
+        private void changeTaskSetting(string selectedTaskName)
+        {
+            this.Hide();
+            ChangeTaskSetting changeTaskSetting = new ChangeTaskSetting(selectedTaskName);
+            changeTaskSetting.ShowDialog();
+
+            this.Show();
+            updateTaskListName();
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

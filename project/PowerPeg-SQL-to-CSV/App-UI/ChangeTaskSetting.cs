@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PowerPeg_SQL_to_CSV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,47 @@ namespace App_UI
 {
     public partial class ChangeTaskSetting : Form
     {
-        public ChangeTaskSetting()
+        private string selectedTaskName;
+        private SearchTask task;
+
+        public ChangeTaskSetting(string selectedTaskName)
         {
             InitializeComponent();
+            this.ControlBox = false;
+            this.selectedTaskName = selectedTaskName;
+        }
+
+        private void ChangeTaskSetting_Load(object sender, EventArgs e)
+        {
+            this.task = MainFunction.findSearchTask(selectedTaskName);
+
+            this.taskNameDataLabel.Text = task.getTaskName();
+            this.triggerDateTimePicker.Value = task.getMode().getTriggerDateTime();
+
+            List<string> col = Gateway.getInstance().getDBTableColName();
+            List<string> col2 = task.getMode().getSelectColumn();
+
+            bool isRan = true;
+            
+            selectedColListBox.Items.Add("-- All --");
+            foreach (string s in col)
+            {
+                selectedColListBox.Items.Add(s);
+            }
+
+            foreach (string s in col2)
+            {
+                if (s.Equals("*"))
+                {
+                    
+                    selectedColListBox.SelectedItems.Add("-- All --");
+                }
+                selectedColListBox.SelectedItems.Add(s);
+            }
+
+            filePathDataLabel.Text = task.getOutputFolderPath();
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
         private void headerLabel_Click(object sender, EventArgs e)
@@ -37,7 +76,66 @@ namespace App_UI
 
         }
 
-        private void ChangeTaskSetting_Load(object sender, EventArgs e)
+        private void getFileExplorerBtn_Click(object sender, EventArgs e)
+        {
+            filePathDataLabel.Text = GlobalFunction.exploreFilePath();
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Updating " + TypeDescriptor.GetClassName(this), false);
+            MainFunction.updateSearchTaskSetting(this.task, filePathDataLabel.Text, this.triggerDateTimePicker.Value, GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
+        }
+
+        private void selectedColListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            MainFunction.removeSearchTask(task);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task delated.", true);
+            this.Close();
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void filePathDataLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void outputLoactionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void triggerDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void triggerDateLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectFieldLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void header3Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusUpdateLabel_Click(object sender, EventArgs e)
         {
 
         }

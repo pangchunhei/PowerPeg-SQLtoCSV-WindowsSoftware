@@ -83,7 +83,7 @@ namespace App_UI
                 if (GlobalFunction.userCheckTaskDetail(t))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
-                    MainFunction.runTask(t);
+                    MainFunction.createTask(t);
                     GlobalFunction.statusUpdate(statusUpdateLabel, "Finished the task, please check the output csv.", true);
                 }
                 else

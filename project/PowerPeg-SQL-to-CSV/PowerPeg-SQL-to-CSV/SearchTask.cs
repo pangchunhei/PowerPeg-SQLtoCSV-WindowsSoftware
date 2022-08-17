@@ -70,5 +70,11 @@ namespace PowerPeg_SQL_to_CSV
 
             return task.Concat(mode).ToArray();
         }
+
+        public void updateSearchTask(string outputlocation, Mode mode)
+        {
+            this.outputLocation = outputlocation;
+            this.operationMode = mode;
+        }
     }
 }

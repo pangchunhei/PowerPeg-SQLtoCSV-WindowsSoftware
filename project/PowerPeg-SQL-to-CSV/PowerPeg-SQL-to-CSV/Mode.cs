@@ -17,6 +17,9 @@ namespace PowerPeg_SQL_to_CSV
         /// Return "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List"
         /// </returns>
         public string[] getInfo();
-        
+
+        public DateTime getTriggerDateTime();
+
+        public List<String> getSelectColumn();
     }
 }

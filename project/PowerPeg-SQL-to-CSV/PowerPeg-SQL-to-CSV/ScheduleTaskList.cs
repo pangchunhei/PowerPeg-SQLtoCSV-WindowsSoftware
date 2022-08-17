@@ -60,6 +60,19 @@ namespace PowerPeg_SQL_to_CSV
             }
         }
 
+        public SearchTask findSearchTask(string selectedTaskName)
+        {
+            foreach (var task in searchTasksList)
+            {
+                if (task.getTaskName().Equals(selectedTaskName))
+                {
+                    return task;
+                }
+            }
+
+            return null;
+        }
+
         public void addNewTask(SearchTask task)
         {
             if(task.getMode().GetType() != typeof(InstantMode))
@@ -90,7 +103,15 @@ namespace PowerPeg_SQL_to_CSV
 
         public void removeTask(SearchTask task)
         {
+
             this.searchTasksList.Remove(task);
+            updateJSON();
+        }
+
+        public void updateTask(SearchTask task)
+        {
+            removeTask(task);
+            addNewTask(task);
         }
 
         public List<SearchTask> getCurrentTaskList()

@@ -147,7 +147,7 @@
             this.outputLoactionLabel.AccessibleName = "outputLoactionLabel";
             this.outputLoactionLabel.AutoSize = true;
             this.outputLoactionLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.outputLoactionLabel.Location = new System.Drawing.Point(93, 763);
+            this.outputLoactionLabel.Location = new System.Drawing.Point(93, 769);
             this.outputLoactionLabel.Name = "outputLoactionLabel";
             this.outputLoactionLabel.Size = new System.Drawing.Size(164, 28);
             this.outputLoactionLabel.TabIndex = 10;
@@ -158,7 +158,7 @@
             this.generateBtn.AccessibleName = "generateBtn";
             this.generateBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.generateBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generateBtn.Location = new System.Drawing.Point(265, 813);
+            this.generateBtn.Location = new System.Drawing.Point(265, 819);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(120, 48);
             this.generateBtn.TabIndex = 12;
@@ -171,7 +171,7 @@
             this.filePathDataLabel.AccessibleName = "filePathLabel";
             this.filePathDataLabel.AutoSize = true;
             this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.filePathDataLabel.Location = new System.Drawing.Point(417, 768);
+            this.filePathDataLabel.Location = new System.Drawing.Point(417, 774);
             this.filePathDataLabel.Name = "filePathDataLabel";
             this.filePathDataLabel.Size = new System.Drawing.Size(121, 25);
             this.filePathDataLabel.TabIndex = 13;
@@ -180,7 +180,7 @@
             // getFileExplorerBtn
             // 
             this.getFileExplorerBtn.AccessibleName = "getFileExplorerBtn";
-            this.getFileExplorerBtn.Location = new System.Drawing.Point(263, 766);
+            this.getFileExplorerBtn.Location = new System.Drawing.Point(263, 772);
             this.getFileExplorerBtn.Name = "getFileExplorerBtn";
             this.getFileExplorerBtn.Size = new System.Drawing.Size(134, 29);
             this.getFileExplorerBtn.TabIndex = 14;
@@ -193,7 +193,7 @@
             this.cancelBtn.AccessibleName = "cancelBtn";
             this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(432, 813);
+            this.cancelBtn.Location = new System.Drawing.Point(432, 819);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(120, 48);
             this.cancelBtn.TabIndex = 15;
@@ -245,7 +245,7 @@
             this.statusUpdateLabel.TabIndex = 39;
             this.statusUpdateLabel.Text = "<Status Update>";
             // 
-            // InstantGenerationOptionForm
+            // InstantGenerationTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,7 +269,7 @@
             this.Controls.Add(this.serverInfoDataLabel);
             this.Controls.Add(this.header2Label);
             this.Controls.Add(this.headerLabel);
-            this.Name = "InstantGenerationOptionForm";
+            this.Name = "InstantGenerationTask";
             this.Text = "InstantGenerationOptionForm";
             this.Load += new System.EventHandler(this.InstantGenerationOptionForm_Load);
             this.ResumeLayout(false);
