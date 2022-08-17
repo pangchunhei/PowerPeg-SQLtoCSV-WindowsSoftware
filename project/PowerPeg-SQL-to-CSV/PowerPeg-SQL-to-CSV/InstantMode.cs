@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -8,23 +7,16 @@ using System.Threading.Tasks;
 
 namespace PowerPeg_SQL_to_CSV
 {
-    [Serializable]
     public class InstantMode : Mode
     {
-        [JsonProperty]
         private String modeName;
-
-        [JsonProperty]
         private DateTime startSearchDay;
 
-        [JsonProperty]
         private DateTime endSearchDay;
 
-        [JsonProperty]
         private DateTime triggerDateTime;
 
-        [JsonProperty]
-        private IList<String> selectColumn = new List<String>();
+        private List<String> selectColumn = new List<String>();
 
         /// <summary>
         /// Create and change mode of InstantMode
@@ -33,7 +25,7 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="endDate"></param>
         /// <param name="triggerDate"></param>
         /// <param name="selection"></param>
-        public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, IList<String> selection)
+        public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<String> selection)
         {
             this.modeName = "Instant Mode";
             //Last 30DAys

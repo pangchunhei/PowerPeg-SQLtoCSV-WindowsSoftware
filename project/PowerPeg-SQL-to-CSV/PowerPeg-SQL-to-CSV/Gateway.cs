@@ -133,7 +133,7 @@ namespace PowerPeg_SQL_to_CSV
             return result;
         }
 
-        private string createSelectedColString(IList<string> selectColumn)
+        private string createSelectedColString(List<string> selectColumn)
         {
             string output = "";
             if(selectColumn.Contains("*")){
@@ -145,7 +145,7 @@ namespace PowerPeg_SQL_to_CSV
             }
         }
 
-        public DataTable getDBTable01(DateTime startSearchDay, DateTime endSearchDay, IList<string> selectColumn)
+        public DataTable getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List<string> selectColumn)
         {
             //Use the stored procedure cmd
             DataTable sqlOutput;

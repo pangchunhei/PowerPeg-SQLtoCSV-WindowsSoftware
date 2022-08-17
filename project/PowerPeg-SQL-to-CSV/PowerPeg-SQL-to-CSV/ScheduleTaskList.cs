@@ -31,9 +31,9 @@ namespace PowerPeg_SQL_to_CSV
         {
             SearchTask s = registeredTask[0];
 
-            Debug.WriteLine("Hi");
-
-            Debug.WriteLine(JsonConvert.SerializeObject(registeredTask));
+            JsonSerializer serializer = new JsonSerializer();
+            StreamWriter file = File.CreateText(@"C:\Users\elsto\Desktop\payments.json");
+            serializer.Serialize(file, registeredTask);
         }
 
         public void addNewTask(SearchTask task)
@@ -51,9 +51,8 @@ namespace PowerPeg_SQL_to_CSV
 
         private void test()
         {
-            IList<string> s = new List<string>();
-            s.Add("test");
-            s.Add("r");
+            List<string> s = new List<string>();
+            s.Add("*");
             SearchTask t = new SearchTask("C:\\Users\\elsto\\Desktop", new MonthMode(new DateTime(2022, 08, 17, 00, 00, 00), s));
             
             addNewTask(t);
