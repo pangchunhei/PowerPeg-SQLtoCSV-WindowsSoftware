@@ -5,16 +5,18 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PowerPeg_SQL_to_CSV.Gateway;
+using PowerPeg_SQL_to_CSV.Task;
 
-namespace PowerPeg_SQL_to_CSV
+namespace PowerPeg_SQL_to_CSV.Mode
 {
-    public class MonthMode : Mode
+    public class MonthMode : IMode
     {
-        private String modeName;
+        private string modeName;
 
         private DateTime triggerDateTime;
 
-        private List<String> selectColumn = new List<String>();
+        private List<string> selectColumn = new List<string>();
 
         /// <summary>
         /// Create and change mode of InstantMode
@@ -23,11 +25,11 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="endDate"></param>
         /// <param name="triggerDate"></param>
         /// <param name="selection"></param>
-        public MonthMode(DateTime triggerDate, List<String> selection)
+        public MonthMode(DateTime triggerDate, List<string> selection)
         {
-            this.modeName = "Month Mode";
-            this.triggerDateTime = triggerDate;
-            this.selectColumn = selection;
+            modeName = "Month Mode";
+            triggerDateTime = triggerDate;
+            selectColumn = selection;
         }
 
         public Result runSearch()
@@ -36,14 +38,14 @@ namespace PowerPeg_SQL_to_CSV
 
             DateTime startSearchDay;
             DateTime endSearchDay;
-            
+
             endSearchDay = genTime;
 
             int length = DateTime.DaysInMonth(endSearchDay.Year, endSearchDay.Month);
 
             startSearchDay = endSearchDay.AddDays(-length);
 
-            DataTable dt = Gateway.getInstance().getDBTable01(startSearchDay, endSearchDay, this.selectColumn);
+            DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 
             Result res = new Result(genTime, dt);
 
@@ -54,19 +56,19 @@ namespace PowerPeg_SQL_to_CSV
         {
             string selectionStr = string.Join(",", selectColumn);
 
-            string[] output = {this.modeName, this.triggerDateTime.ToString(), selectionStr};
+            string[] output = { modeName, triggerDateTime.ToString(), selectionStr };
 
             return output;
         }
 
         public DateTime getTriggerDateTime()
         {
-            return this.triggerDateTime;
+            return triggerDateTime;
         }
 
         public List<string> getSelectColumn()
         {
-            return this.selectColumn;
+            return selectColumn;
         }
     }
 }

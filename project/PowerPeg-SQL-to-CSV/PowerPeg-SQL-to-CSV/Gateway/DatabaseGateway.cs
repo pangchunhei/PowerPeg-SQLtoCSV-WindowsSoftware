@@ -8,19 +8,19 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 
-namespace PowerPeg_SQL_to_CSV
+namespace PowerPeg_SQL_to_CSV.Gateway
 {
-    public sealed class Gateway
+    public sealed class DatabaseGateway
     {
-        private Gateway()
+        private DatabaseGateway()
         {
             setGateway();
         }
 
-        private static Gateway _instance;
+        private static DatabaseGateway _instance;
         private static readonly object _lock = new object();
 
-        public static Gateway getInstance()
+        public static DatabaseGateway getInstance()
         {
             if (_instance == null)
             {
@@ -28,7 +28,7 @@ namespace PowerPeg_SQL_to_CSV
                 {
                     if (_instance == null)
                     {
-                        _instance = new Gateway();
+                        _instance = new DatabaseGateway();
                     }
                 }
             }
@@ -43,23 +43,24 @@ namespace PowerPeg_SQL_to_CSV
 
         public void setGateway()
         {
-            this.address = ConfigurationManager.AppSettings["Address"];
-            this.catalog = ConfigurationManager.AppSettings["Catalog"];
-            this.username = ConfigurationManager.AppSettings["Username"];
-            this.password = ConfigurationManager.AppSettings["Password"];
+            address = ConfigurationManager.AppSettings["Address"];
+            catalog = ConfigurationManager.AppSettings["Catalog"];
+            username = ConfigurationManager.AppSettings["Username"];
+            password = ConfigurationManager.AppSettings["Password"];
 
-            this.connectionString = createConnectionString(this.address, this.catalog, this.username, this.password);
+            connectionString = createConnectionString(address, catalog, username, password);
         }
 
         public string createConnectionString(string address, string catalog, string username, string password)
         {
             // TODO -- location
-            return "Server=" + address + ";Database=" + catalog + ";Trusted_Connection=True; User Id="+ username +";Password=" + password +";";
+            return "Server=" + address + ";Database=" + catalog + ";Trusted_Connection=True; User Id=" + username + ";Password=" + password + ";";
         }
 
         public bool updateGateway(string newAddress, string newCatalog, string newUsername, string newPassword)
         {
-            if(isServerConnected(createConnectionString(newAddress, newCatalog, newUsername, newPassword))){
+            if (isServerConnected(createConnectionString(newAddress, newCatalog, newUsername, newPassword)))
+            {
                 Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
                 configuration.AppSettings.Settings["Address"].Value = newAddress;
@@ -82,7 +83,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public string[] getGatewayInfo()
         {
-            string[] currentSetting = { this.address, this.catalog, this.username, this.password };
+            string[] currentSetting = { address, catalog, username, password };
             return currentSetting;
         }
 
@@ -143,7 +144,8 @@ namespace PowerPeg_SQL_to_CSV
         private string createSelectColString(List<string> selectColumn)
         {
             string output = "";
-            if(selectColumn.Contains("*")){
+            if (selectColumn.Contains("*"))
+            {
                 return "*";
             }
             else

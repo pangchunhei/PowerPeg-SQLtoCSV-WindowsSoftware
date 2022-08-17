@@ -1,10 +1,15 @@
 ﻿using System.Collections.Generic;
+using PowerPeg_SQL_to_CSV.Mode;
+using PowerPeg_SQL_to_CSV.Gateway;
+using System.Data;
+using PowerPeg_SQL_to_CSV.Task;
 
 namespace PowerPeg_SQL_to_CSV
 {
     public static class MainFunction
     {
         public static ScheduleTaskList scheduleTaskList = new ScheduleTaskList();
+        public static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
 
         public static void createTask(SearchTask task)
         {
@@ -12,7 +17,7 @@ namespace PowerPeg_SQL_to_CSV
             if (task.getMode().GetType() == typeof(InstantMode))
             {
                 //Instant run
-                task.toRun();
+                task.toRunTask();
             }
             else
             {
@@ -45,22 +50,32 @@ namespace PowerPeg_SQL_to_CSV
             //Not implememeted
         }
 
-        public static void updateSearchTaskSetting(SearchTask task, string outputLocation, DateTime triggerDate, List<String> selection)
+        public static void updateTaskSetting(SearchTask task, string outputLocation, IMode mode)
         {
-            Mode mode = new MonthMode(triggerDate, selection);
-            task.updateSearchTask(outputLocation, mode);
+            task.updateTaskSetting(outputLocation, mode);
 
             scheduleTaskList.updateTask(task);
         }
 
-        public static SearchTask findSearchTask(string name)
+        private static SearchTask findTaskObject(string name)
         {
             return scheduleTaskList.findSearchTask(name);
         }
 
-        public static void removeSearchTask(SearchTask task)
+        public static void removeTask(SearchTask task)
         {
             scheduleTaskList.removeTask(task);
         }
+
+        public static string[] getDatabaseInformation()
+        {
+            return databaseGateway.getGatewayInfo();
+        }
+
+        public static List<string> getDatabaseColumnName()
+        {
+            return databaseGateway.getDBTableColName();
+        }
+            
     }
 }

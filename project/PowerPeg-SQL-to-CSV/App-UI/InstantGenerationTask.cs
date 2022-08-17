@@ -3,6 +3,9 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PowerPeg_SQL_to_CSV;
+using PowerPeg_SQL_to_CSV.Gateway;
+using PowerPeg_SQL_to_CSV.Mode;
+using PowerPeg_SQL_to_CSV.Task;
 
 namespace App_UI
 {
@@ -16,9 +19,9 @@ namespace App_UI
 
         private void InstantGenerationOptionForm_Load(object sender, EventArgs e)
         {
-            serverInfoDataLabel.Text = Gateway.getInstance().getGatewayInfo()[0];
+            serverInfoDataLabel.Text = DatabaseGateway.getInstance().getGatewayInfo()[0];
 
-            List<string> col = Gateway.getInstance().getDBTableColName();
+            List<string> col = DatabaseGateway.getInstance().getDBTableColName();
             selectedColListBox.Items.Add("-- All --");
             foreach(string s in col)
             {
@@ -77,7 +80,7 @@ namespace App_UI
             }
             else
             {
-                Mode m = new InstantMode(fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start, DateTime.Now, GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
+                IMode m = new InstantMode(fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start, DateTime.Now, GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
                 SearchTask t = new SearchTask(filePathDataLabel.Text, m);
 
                 if (GlobalFunction.userCheckTaskDetail(t))

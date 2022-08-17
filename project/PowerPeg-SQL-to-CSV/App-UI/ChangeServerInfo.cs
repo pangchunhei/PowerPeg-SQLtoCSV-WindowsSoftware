@@ -38,8 +38,7 @@ namespace App_UI
 
         private void ChangeServerInfo_Load(object sender, EventArgs e)
         {
-            Gateway g = Gateway.getInstance();
-            string[] existingValue = g.getGatewayInfo();
+            string[] existingValue = MainFunction.getDatabaseInformation();
 
             addressTextbox.Text = existingValue[0];
             catalogTextbox.Text = existingValue[1];
@@ -66,7 +65,7 @@ namespace App_UI
             {
                 GlobalFunction.statusUpdate(statusUpdateLabel, "Trying to update.........", false);
 
-                if (Gateway.getInstance().updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
+                if (DatabaseGateway.getInstance().updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "New Setting Saved.", true);
                 }

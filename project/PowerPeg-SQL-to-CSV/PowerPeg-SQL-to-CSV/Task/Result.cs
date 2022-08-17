@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace PowerPeg_SQL_to_CSV
+namespace PowerPeg_SQL_to_CSV.Task
 {
     public class Result
     {
@@ -9,18 +9,18 @@ namespace PowerPeg_SQL_to_CSV
 
         public Result(DateTime genTime, DataTable dt)
         {
-            this.generationTime = genTime;
-            this.result = dt;
+            generationTime = genTime;
+            result = dt;
         }
 
         public DateTime getGenerationTime()
         {
-            return this.generationTime;
+            return generationTime;
         }
 
         public DataTable getResultTable()
         {
-            return this.result;
+            return result;
         }
     }
 }

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PowerPeg_SQL_to_CSV.Task;
 
-namespace PowerPeg_SQL_to_CSV
+namespace PowerPeg_SQL_to_CSV.Mode
 {
-    public interface Mode
+    public interface IMode
     {
         public Result runSearch();
 
@@ -20,6 +21,6 @@ namespace PowerPeg_SQL_to_CSV
 
         public DateTime getTriggerDateTime();
 
-        public List<String> getSelectColumn();
+        public List<string> getSelectColumn();
     }
 }

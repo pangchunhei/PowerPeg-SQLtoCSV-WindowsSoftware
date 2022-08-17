@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PowerPeg_SQL_to_CSV.Mode;
+using PowerPeg_SQL_to_CSV.Gateway.Gateway;
 
-namespace PowerPeg_SQL_to_CSV
+namespace PowerPeg_SQL_to_CSV.Task
 {
     [Serializable]
     public class SearchTask
@@ -14,7 +16,7 @@ namespace PowerPeg_SQL_to_CSV
 
         private string outputLocation;
 
-        private Mode operationMode;
+        private IMode operationMode;
 
         private Result resultOfSQL;
 
@@ -33,28 +35,28 @@ namespace PowerPeg_SQL_to_CSV
             return resultOfSQL;
         }
 
-        public Mode getMode()
+        public IMode getMode()
         {
             return operationMode;
         }
 
-        public SearchTask(string outputLocation, Mode operationMode, string name = "Default")
+        public SearchTask(string outputLocation, IMode operationMode, string name = "Default")
         {
-            this.taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
+            taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
             this.outputLocation = outputLocation;
             this.operationMode = operationMode;
         }
 
         public string createTaskName()
         {
-            return this.taskName + "_" + this.resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
+            return taskName + "_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
         }
 
-        public void toRun()
+        public void toRunTask()
         {
-            this.resultOfSQL = operationMode.runSearch();
+            resultOfSQL = operationMode.runSearch();
 
-            Export.getInstance().dataTable_to_CSV(createTaskName(), this.outputLocation, this.resultOfSQL.getResultTable());
+            CSVGateway.getInstance().dataTable_to_CSV(createTaskName(), outputLocation, resultOfSQL.getResultTable());
         }
 
         /// <summary>
@@ -65,16 +67,16 @@ namespace PowerPeg_SQL_to_CSV
         /// </returns>
         public string[] getTaskInfo()
         {
-            string[] task = { this.taskName, this.outputLocation };
+            string[] task = { taskName, outputLocation };
             string[] mode = operationMode.getInfo();
 
             return task.Concat(mode).ToArray();
         }
 
-        public void updateSearchTask(string outputlocation, Mode mode)
+        public void updateTaskSetting(string outputlocation, IMode mode)
         {
-            this.outputLocation = outputlocation;
-            this.operationMode = mode;
+            outputLocation = outputlocation;
+            operationMode = mode;
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using PowerPeg_SQL_to_CSV;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PowerPeg_SQL_to_CSV;
 
 namespace App_UI
 {
@@ -60,7 +60,7 @@ namespace App_UI
 
         private void ChangeScheduleGeneration_Load(object sender, EventArgs e)
         {
-            serverInfoLabel.Text = Gateway.getInstance().getGatewayInfo()[0];
+            serverInfoLabel.Text = MainFunction.getDatabaseInformation()[0];
 
             updateTaskListName();
             

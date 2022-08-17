@@ -5,19 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PowerPeg_SQL_to_CSV
+namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
 {
-    public class Export
+    public class CSVGateway
     {
-        private Export()
+        private CSVGateway()
         {
-            
+
         }
 
-        private static Export _instance;
+        private static CSVGateway _instance;
         private static readonly object _lock = new object();
 
-        public static Export getInstance()
+        public static CSVGateway getInstance()
         {
             if (_instance == null)
             {
@@ -25,7 +25,7 @@ namespace PowerPeg_SQL_to_CSV
                 {
                     if (_instance == null)
                     {
-                        _instance = new Export();
+                        _instance = new CSVGateway();
                     }
                 }
             }
@@ -47,6 +47,6 @@ namespace PowerPeg_SQL_to_CSV
 
             File.WriteAllText(filePath + "\\" + fileName + ".csv", sb.ToString());
         }
-        
+
     }
 }

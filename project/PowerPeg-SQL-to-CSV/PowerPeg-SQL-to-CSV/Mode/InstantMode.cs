@@ -4,12 +4,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PowerPeg_SQL_to_CSV.Gateway;
+using PowerPeg_SQL_to_CSV.Task;
 
-namespace PowerPeg_SQL_to_CSV
+namespace PowerPeg_SQL_to_CSV.Mode
 {
-    public class InstantMode : Mode
+    public class InstantMode : IMode
     {
-        private String modeName;
+        private string modeName;
 
         private DateTime startSearchDay;
 
@@ -17,7 +19,7 @@ namespace PowerPeg_SQL_to_CSV
 
         private DateTime triggerDateTime;
 
-        private List<String> selectColumn = new List<String>();
+        private List<string> selectColumn = new List<string>();
 
         /// <summary>
         /// Create and change mode of InstantMode
@@ -26,21 +28,21 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="endDate"></param>
         /// <param name="triggerDate"></param>
         /// <param name="selection"></param>
-        public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<String> selection)
+        public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<string> selection)
         {
-            this.modeName = "Instant Mode";
+            modeName = "Instant Mode";
             //Last 30DAys
-            this.startSearchDay = startDate;
-            this.endSearchDay = endDate;
-            this.triggerDateTime = triggerDate;
-            this.selectColumn = selection;
+            startSearchDay = startDate;
+            endSearchDay = endDate;
+            triggerDateTime = triggerDate;
+            selectColumn = selection;
         }
 
         public Result runSearch()
         {
             DateTime genTime = DateTime.Now;
 
-            DataTable dt = Gateway.getInstance().getDBTable01(this.startSearchDay, this.endSearchDay, this.selectColumn);
+            DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 
             Result res = new Result(genTime, dt);
 
@@ -51,19 +53,19 @@ namespace PowerPeg_SQL_to_CSV
         {
             string selectionStr = string.Join(",", selectColumn);
 
-            string[] output = {this.modeName, this.triggerDateTime.ToString(), this.startSearchDay.ToString(), this.endSearchDay.ToString(), selectionStr};
+            string[] output = { modeName, triggerDateTime.ToString(), startSearchDay.ToString(), endSearchDay.ToString(), selectionStr };
 
             return output;
         }
 
         public DateTime getTriggerDateTime()
         {
-            return this.triggerDateTime;
+            return triggerDateTime;
         }
 
         public List<string> getSelectColumn()
         {
-            return this.selectColumn;
+            return selectColumn;
         }
     }
 }
