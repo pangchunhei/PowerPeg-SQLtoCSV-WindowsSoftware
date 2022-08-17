@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace PowerPeg_SQL_to_CSV
 {
+    [Serializable]
     public class SearchTask
     {
         private string taskName;
-        
+
         private string outputLocation;
 
         private Mode operationMode;
