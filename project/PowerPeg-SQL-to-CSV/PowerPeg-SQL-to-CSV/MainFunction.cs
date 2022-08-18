@@ -8,12 +8,13 @@ using System.Diagnostics;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
+using Coravel;
 
 namespace PowerPeg_SQL_to_CSV
 {
     public static class MainFunction
     {
-        public static ScheduleTaskList scheduleTaskList = new ScheduleTaskList();
+        public static ScheduleTasklist scheduleTaskList = new ScheduleTasklist();
         public static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
         
         private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
@@ -76,7 +77,6 @@ namespace PowerPeg_SQL_to_CSV
         {
             return scheduleTaskList.findSearchTask(name);
         }
-
         
         public static List<string> getCurrentTaskListName()
         {
@@ -97,12 +97,10 @@ namespace PowerPeg_SQL_to_CSV
             scheduleTaskList.addNewTask(task);
         }
 
-
         public static void removeTask(SearchTask task)
         {
             scheduleTaskList.removeTask(task);
         }
-
 
         public static bool updateDatabaseGateway(string address, string catalog, string username, string password)
         {
@@ -118,6 +116,5 @@ namespace PowerPeg_SQL_to_CSV
         {
             return databaseGateway.getDBTableColName();
         }
-            
     }
 }

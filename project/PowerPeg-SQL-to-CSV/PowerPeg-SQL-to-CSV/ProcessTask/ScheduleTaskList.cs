@@ -12,12 +12,12 @@ using PowerPeg_SQL_to_CSV.Mode;
 
 namespace PowerPeg_SQL_to_CSV.ProcessTask
 {
-    public class ScheduleTaskList
+    public class ScheduleTasklist
     {
         private List<SearchTask> searchTasksList;
         private string jsonPath;
 
-        public ScheduleTaskList()
+        public ScheduleTasklist()
         {
             jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSON"];
             Debug.WriteLine(jsonPath);
