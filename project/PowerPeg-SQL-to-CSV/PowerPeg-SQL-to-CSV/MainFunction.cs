@@ -1,17 +1,21 @@
-﻿using PowerPeg_SQL_to_CSV.Gateway;
-using PowerPeg_SQL_to_CSV.Mode;
+﻿using System.Collections.Generic;
+using PowerPeg_SQL_to_CSV.Gateway;
+using System.Data;
 using PowerPeg_SQL_to_CSV.ProcessTask;
+using PowerPeg_SQL_to_CSV.Mode;
+using System.Linq.Expressions;
+using System.Diagnostics;
+using System.Net.Sockets;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 namespace PowerPeg_SQL_to_CSV
 {
     public static class MainFunction
     {
         public static ScheduleTaskList scheduleTaskList = new ScheduleTaskList();
-        public static ProcessScheduleTask processing = new ProcessScheduleTask();
-
         public static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
-
+        
         private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
         {
             if (selectmode.Equals("Instant"))
@@ -25,8 +29,7 @@ namespace PowerPeg_SQL_to_CSV
                     //TODO-- incorrect data type for instant mode;
                     throw new Exception();
                 }
-            }
-            else if (selectmode.Equals("Month"))
+            }else if (selectmode.Equals("Month"))
             {
                 return new MonthMode(triggerdate, selectedcolumn);
             }
@@ -37,8 +40,7 @@ namespace PowerPeg_SQL_to_CSV
             }
         }
 
-        public static SearchTask CreateTask(string selectmodename, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, string taskname = "default")
-        {
+        public static SearchTask CreateTask(string selectmodename, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, string taskname = "default") {
             IMode m = CreateMode(selectmodename, triggerdate, selectedcolumn, startdate, enddate);
 
             string modifyName = Regex.Replace(taskname, @"(\s+|\.|\,|\:|\*|&|\?|\/|#|\\|%|\^|\$|@|!|\(|\))", "");
@@ -48,7 +50,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public static void runTaskNow(SearchTask task)
         {
-            task.toRunTask(DateTime.Now);
+            task.toRunTask();
         }
 
         public static void taskNotCreated()
@@ -75,7 +77,7 @@ namespace PowerPeg_SQL_to_CSV
             return scheduleTaskList.findSearchTask(name);
         }
 
-
+        
         public static List<string> getCurrentTaskListName()
         {
             List<SearchTask> list = scheduleTaskList.getCurrentTaskList();
@@ -116,12 +118,6 @@ namespace PowerPeg_SQL_to_CSV
         {
             return databaseGateway.getDBTableColName();
         }
-
-        public static void processScheduleTask()
-        {
-            ProcessScheduleTask processor = new ProcessScheduleTask();
-            processor.runAllScheduling(scheduleTaskList);
-        }
-
+            
     }
 }

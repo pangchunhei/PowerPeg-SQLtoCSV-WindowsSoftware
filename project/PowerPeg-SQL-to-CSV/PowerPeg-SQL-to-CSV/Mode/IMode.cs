@@ -9,7 +9,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 {
     public interface IMode
     {
-        public Result toRun(DateTime runDateTime);
+        public Result runSearch();
 
         /// <summary>
         /// Get the information of the mode settings

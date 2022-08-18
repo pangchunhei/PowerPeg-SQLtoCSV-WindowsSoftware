@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -16,8 +15,6 @@ namespace PowerPeg_SQL_to_CSV.Mode
         private string modeName;
 
         private DateTime triggerDateTime;
-
-        private DateTime lastRunDateTime;
 
         private List<string> selectColumn = new List<string>();
 
@@ -40,36 +37,14 @@ namespace PowerPeg_SQL_to_CSV.Mode
             return this.modeName;
         }
 
-        public void runScheduleTask(DateTime runDateTime)
+        public Result runSearch()
         {
-            if(runDateTime.Day == triggerDateTime.Day)
-            {
+            DateTime genTime = DateTime.Now;
 
-            }
-        }
-
-        private bool checkOnSchedule(DateTime runDateTime)
-        {
-            int needed = DateTime.DaysInMonth(runDateTime.Year, runDateTime.Month);
-            TimeSpan difference = runDateTime - this.lastRunDateTime;
-            int lengthFromLastRun = difference.Days;
-
-            if (lengthFromLastRun == needed)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        private Result runSearch(DateTime runDateTime)
-        {
             DateTime startSearchDay;
             DateTime endSearchDay;
 
-            endSearchDay = this.lastRunDateTime;
+            endSearchDay = genTime;
 
             int length = DateTime.DaysInMonth(endSearchDay.Year, endSearchDay.Month);
 
@@ -77,7 +52,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
             DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 
-            Result res = new Result(this.lastRunDateTime, dt);
+            Result res = new Result(genTime, dt);
 
             return res;
         }
@@ -99,20 +74,6 @@ namespace PowerPeg_SQL_to_CSV.Mode
         public List<string> getSelectColumn()
         {
             return selectColumn;
-        }
-
-        public Result toRun(DateTime runDateTime)
-        {
-            if (checkOnSchedule(runDateTime))
-            {
-                this.lastRunDateTime = runDateTime;
-                return runSearch(runDateTime);
-            }
-            else
-            {
-                //TODO-- Now need to run
-                throw new Exception();
-            }
         }
     }
 }

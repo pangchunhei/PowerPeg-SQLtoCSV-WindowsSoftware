@@ -17,7 +17,7 @@ namespace App_UI
         public HomeForm()
         {
             InitializeComponent();
-            //MessageBox.Show(String.Join(", ", MainFunction.getCurrentTaskListName()));
+ 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -47,7 +47,6 @@ namespace App_UI
             ChangeScheduleGeneration changeScheduleGeneration = new ChangeScheduleGeneration();
             changeScheduleGeneration.ShowDialog();
             this.Show();
-            //MessageBox.Show(String.Join(", ", MainFunction.getCurrentTaskListName()));
         }
 
         private void reStartProgramBtn_Click(object sender, EventArgs e)

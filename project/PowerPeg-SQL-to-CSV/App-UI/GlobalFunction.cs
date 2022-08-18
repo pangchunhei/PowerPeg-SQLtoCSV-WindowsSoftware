@@ -62,7 +62,7 @@ namespace App_UI
         public static string searchTaskDetail_to_string(SearchTask t)
         {
             string msg = "";
-            string[] title = { "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Last Run DateTime", "Start Search Date", "End Search Date", "Selected Column List" };
+            string[] title = { "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List" };
             int i = 0;
             foreach (var s in t.getTaskInfo())
             {

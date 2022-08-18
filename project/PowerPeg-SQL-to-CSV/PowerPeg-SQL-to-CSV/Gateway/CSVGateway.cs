@@ -31,7 +31,6 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
             }
             return _instance;
         }
-
         public void dataTable_to_CSV(string fileName, string filePath, DataTable dt)
         {
             StringBuilder sb = new StringBuilder();
