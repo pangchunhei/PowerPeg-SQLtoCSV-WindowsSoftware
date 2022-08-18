@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PowerPeg_SQL_to_CSV.Gateway;
+﻿using PowerPeg_SQL_to_CSV.Gateway;
 using PowerPeg_SQL_to_CSV.ProcessTask;
+using System.Data;
 
 namespace PowerPeg_SQL_to_CSV.Mode
 {
@@ -18,6 +13,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
         private DateTime endSearchDay;
 
         private DateTime triggerDateTime;
+
+        private DateTime lastRunDateTime;
 
         private List<string> selectColumn = new List<string>();
 
@@ -43,9 +40,14 @@ namespace PowerPeg_SQL_to_CSV.Mode
             return this.modeName;
         }
 
-        public Result runSearch()
+        private bool checkOnSchedule(DateTime runDateTime)
         {
-            DateTime genTime = DateTime.Now;
+            return true;
+        }
+
+        private Result runSearch(DateTime runDateTime)
+        {
+            DateTime genTime = runDateTime;
 
             DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 
@@ -58,7 +60,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             string selectionStr = string.Join(",", selectColumn);
 
-            string[] output = { modeName, triggerDateTime.ToString(), startSearchDay.ToString(), endSearchDay.ToString(), selectionStr };
+            string[] output = { modeName, triggerDateTime.ToString(), lastRunDateTime.ToString(), startSearchDay.ToString(), endSearchDay.ToString(), selectionStr };
 
             return output;
         }
@@ -71,6 +73,18 @@ namespace PowerPeg_SQL_to_CSV.Mode
         public List<string> getSelectColumn()
         {
             return selectColumn;
+        }
+
+        public Result toRun(DateTime runDateTime)
+        {
+            if (checkOnSchedule(runDateTime))
+            {
+                return runSearch(runDateTime);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

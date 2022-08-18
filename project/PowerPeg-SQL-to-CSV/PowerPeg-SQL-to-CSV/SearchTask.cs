@@ -33,9 +33,10 @@ namespace PowerPeg_SQL_to_CSV
             this.operationMode = operationMode;
         }
 
-        public void toRunTask()
+        public void toRunTask(DateTime runTime)
         {
-            Result resultOfSQL = operationMode.runSearch();
+
+            Result resultOfSQL = operationMode.toRun(runTime);
 
             string fileOutputFileName = taskName + "_generation_time_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
 
@@ -46,7 +47,7 @@ namespace PowerPeg_SQL_to_CSV
         /// Get the information of the search task settings
         /// </summary>
         /// <returns>
-        /// Return "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List"
+        /// Return "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Last Run DateTime", "Start Search Date", "End Search Date", "Selected Column List"
         /// </returns>
         public string[] getTaskInfo()
         {
