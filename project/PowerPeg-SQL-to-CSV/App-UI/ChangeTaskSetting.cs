@@ -32,8 +32,6 @@ namespace App_UI
 
             List<string> col = MainFunction.getDatabaseColumnName();
             List<string> col2 = task.getMode().getSelectColumn();
-
-            bool isRan = true;
             
             selectedColListBox.Items.Add("-- All --");
             foreach (string s in col)
@@ -84,8 +82,16 @@ namespace App_UI
         private void updateBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Updating " + TypeDescriptor.GetClassName(this), false);
-            //MainFunction.updateTaskSetting(this.task, filePathDataLabel.Text, this.triggerDateTimePicker.Value, GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
+            if (filePathDataLabel.Text.Equals("<Select Path>"))
+            {
+                MessageBox.Show("Please select output folder.");
+            }
+            else
+            {
+                List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
+                MainFunction.updateTaskSetting(this.task, "Month", filePathDataLabel.Text, this.triggerDateTimePicker.Value, selectCol);
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
+            }
         }
 
         private void selectedColListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,7 +101,7 @@ namespace App_UI
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            //MainFunction.removeTask(task);
+            MainFunction.removeTask(task);
             GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task delated.", true);
             this.Close();
         }

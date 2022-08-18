@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using PowerPeg_SQL_to_CSV.Gateway.Gateway;
 using PowerPeg_SQL_to_CSV.Mode;
 using PowerPeg_SQL_to_CSV.ProcessTask;
+using System.Text.RegularExpressions;
+using Newtonsoft.Json.Linq;
 
 namespace PowerPeg_SQL_to_CSV
 {
@@ -26,7 +28,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public SearchTask(string name, string outputLocation, IMode operationMode)
         {
-            taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
+            this.taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
             this.outputLocation = outputLocation;
             this.operationMode = operationMode;
         }

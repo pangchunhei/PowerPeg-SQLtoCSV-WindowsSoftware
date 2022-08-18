@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.taskNameDataLabel = new System.Windows.Forms.TextBox();
             this.triggerDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.triggerDateLabel = new System.Windows.Forms.Label();
             this.selectFieldLabel = new System.Windows.Forms.Label();
             this.gernerationOptionLabel = new System.Windows.Forms.Label();
             this.header2Label = new System.Windows.Forms.Label();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.deleteBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.getFileExplorerBtn = new System.Windows.Forms.Button();
             this.filePathDataLabel = new System.Windows.Forms.Label();
@@ -47,13 +46,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // taskNameDataLabel
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(223, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(416, 34);
-            this.textBox1.TabIndex = 62;
+            this.taskNameDataLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.taskNameDataLabel.Location = new System.Drawing.Point(223, 96);
+            this.taskNameDataLabel.Name = "taskNameDataLabel";
+            this.taskNameDataLabel.Size = new System.Drawing.Size(416, 34);
+            this.taskNameDataLabel.TabIndex = 62;
             // 
             // triggerDateTimePicker
             // 
@@ -120,29 +119,18 @@
             this.headerLabel.TabIndex = 54;
             this.headerLabel.Text = "Create New Task";
             // 
-            // deleteBtn
-            // 
-            this.deleteBtn.AccessibleName = "deleteBtn";
-            this.deleteBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.deleteBtn.Location = new System.Drawing.Point(369, 648);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(120, 48);
-            this.deleteBtn.TabIndex = 68;
-            this.deleteBtn.Text = "Delete";
-            this.deleteBtn.UseVisualStyleBackColor = false;
-            // 
             // cancelBtn
             // 
             this.cancelBtn.AccessibleName = "cancelBtn";
             this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(518, 648);
+            this.cancelBtn.Location = new System.Drawing.Point(443, 648);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(120, 48);
             this.cancelBtn.TabIndex = 67;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // getFileExplorerBtn
             // 
@@ -153,6 +141,7 @@
             this.getFileExplorerBtn.TabIndex = 66;
             this.getFileExplorerBtn.Text = "Open Folder";
             this.getFileExplorerBtn.UseVisualStyleBackColor = true;
+            this.getFileExplorerBtn.Click += new System.EventHandler(this.getFileExplorerBtn_Click);
             // 
             // filePathDataLabel
             // 
@@ -161,21 +150,22 @@
             this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.filePathDataLabel.Location = new System.Drawing.Point(443, 595);
             this.filePathDataLabel.Name = "filePathDataLabel";
-            this.filePathDataLabel.Size = new System.Drawing.Size(70, 25);
+            this.filePathDataLabel.Size = new System.Drawing.Size(121, 25);
             this.filePathDataLabel.TabIndex = 65;
-            this.filePathDataLabel.Text = "<Path>";
+            this.filePathDataLabel.Text = "<Select Path>";
             // 
             // generateBtn
             // 
             this.generateBtn.AccessibleName = "generateBtn";
             this.generateBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.generateBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generateBtn.Location = new System.Drawing.Point(214, 648);
+            this.generateBtn.Location = new System.Drawing.Point(275, 648);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(120, 48);
             this.generateBtn.TabIndex = 64;
             this.generateBtn.Text = "Generate";
             this.generateBtn.UseVisualStyleBackColor = false;
+            this.generateBtn.Click += new System.EventHandler(this.generateBtn_Click);
             // 
             // outputLoactionLabel
             // 
@@ -242,13 +232,12 @@
             this.Controls.Add(this.header3Label);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.selectedColListBox);
-            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.getFileExplorerBtn);
             this.Controls.Add(this.filePathDataLabel);
             this.Controls.Add(this.generateBtn);
             this.Controls.Add(this.outputLoactionLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.taskNameDataLabel);
             this.Controls.Add(this.triggerDateTimePicker);
             this.Controls.Add(this.triggerDateLabel);
             this.Controls.Add(this.selectFieldLabel);
@@ -257,6 +246,7 @@
             this.Controls.Add(this.headerLabel);
             this.Name = "CreateNewTask";
             this.Text = "CreateNewTask";
+            this.Load += new System.EventHandler(this.CreateNewTask_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,14 +254,13 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox taskNameDataLabel;
         private DateTimePicker triggerDateTimePicker;
         private Label triggerDateLabel;
         private Label selectFieldLabel;
         private Label gernerationOptionLabel;
         private Label header2Label;
         private Label headerLabel;
-        private Button deleteBtn;
         private Button cancelBtn;
         private Button getFileExplorerBtn;
         private Label filePathDataLabel;

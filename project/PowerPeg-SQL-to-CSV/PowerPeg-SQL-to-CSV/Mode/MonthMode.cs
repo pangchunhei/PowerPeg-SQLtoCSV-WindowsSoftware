@@ -32,6 +32,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
             selectColumn = selection;
         }
 
+        public override string ToString()
+        {
+            return this.modeName;
+        }
+
         public Result runSearch()
         {
             DateTime genTime = DateTime.Now;

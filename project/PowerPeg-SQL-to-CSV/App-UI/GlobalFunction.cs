@@ -35,7 +35,7 @@ namespace App_UI
                 }
             }
 
-            return null;
+            return "<Select Path>";
         }
 
         public static List<string> convertListBoxSelected_to_List(ListBox.SelectedObjectCollection listBoxList)

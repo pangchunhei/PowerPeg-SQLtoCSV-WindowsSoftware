@@ -162,9 +162,9 @@
             this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.filePathDataLabel.Location = new System.Drawing.Point(427, 566);
             this.filePathDataLabel.Name = "filePathDataLabel";
-            this.filePathDataLabel.Size = new System.Drawing.Size(70, 25);
+            this.filePathDataLabel.Size = new System.Drawing.Size(121, 25);
             this.filePathDataLabel.TabIndex = 80;
-            this.filePathDataLabel.Text = "<Path>";
+            this.filePathDataLabel.Text = "<Select Path>";
             this.filePathDataLabel.Click += new System.EventHandler(this.filePathDataLabel_Click);
             // 
             // updateBtn
