@@ -3,9 +3,6 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PowerPeg_SQL_to_CSV;
-using PowerPeg_SQL_to_CSV.Gateway;
-using PowerPeg_SQL_to_CSV.Mode;
-using PowerPeg_SQL_to_CSV.Task;
 
 namespace App_UI
 {
@@ -19,9 +16,9 @@ namespace App_UI
 
         private void InstantGenerationOptionForm_Load(object sender, EventArgs e)
         {
-            serverInfoDataLabel.Text = DatabaseGateway.getInstance().getGatewayInfo()[0];
+            serverInfoDataLabel.Text = MainFunction.getDatabaseInformation()[0];
 
-            List<string> col = DatabaseGateway.getInstance().getDBTableColName();
+            List<string> col = MainFunction.getDatabaseColumnName();
             selectedColListBox.Items.Add("-- All --");
             foreach(string s in col)
             {
@@ -80,13 +77,13 @@ namespace App_UI
             }
             else
             {
-                IMode m = new InstantMode(fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start, DateTime.Now, GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
-                SearchTask t = new SearchTask(filePathDataLabel.Text, m);
+                List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
+                SearchTask t = MainFunction.CreateTask(1, filePathDataLabel.Text, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
 
                 if (GlobalFunction.userCheckTaskDetail(t))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
-                    MainFunction.createTask(t);
+                    MainFunction.runTaskNow(t);
                     GlobalFunction.statusUpdate(statusUpdateLabel, "Finished the task, please check the output csv.", true);
                 }
                 else

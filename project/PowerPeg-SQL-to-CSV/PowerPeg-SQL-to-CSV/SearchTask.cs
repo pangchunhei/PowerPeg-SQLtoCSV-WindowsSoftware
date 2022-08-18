@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PowerPeg_SQL_to_CSV.Mode;
 using PowerPeg_SQL_to_CSV.Gateway.Gateway;
+using PowerPeg_SQL_to_CSV.Mode;
+using PowerPeg_SQL_to_CSV.ProcessTask;
 
-namespace PowerPeg_SQL_to_CSV.Task
+namespace PowerPeg_SQL_to_CSV
 {
     [Serializable]
     public class SearchTask
@@ -18,45 +19,25 @@ namespace PowerPeg_SQL_to_CSV.Task
 
         private IMode operationMode;
 
-        private Result resultOfSQL;
-
-        public string getTaskName()
-        {
-            return taskName;
-        }
-
-        public string getOutputFolderPath()
-        {
-            return outputLocation;
-        }
-
-        public Result getResult()
-        {
-            return resultOfSQL;
-        }
-
         public IMode getMode()
         {
             return operationMode;
         }
 
-        public SearchTask(string outputLocation, IMode operationMode, string name = "Default")
+        public SearchTask(string name, string outputLocation, IMode operationMode)
         {
             taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
             this.outputLocation = outputLocation;
             this.operationMode = operationMode;
         }
 
-        public string createTaskName()
-        {
-            return taskName + "_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
-        }
-
         public void toRunTask()
         {
-            resultOfSQL = operationMode.runSearch();
+            Result resultOfSQL = operationMode.runSearch();
 
-            CSVGateway.getInstance().dataTable_to_CSV(createTaskName(), outputLocation, resultOfSQL.getResultTable());
+            string fileOutputFileName = taskName + "_generation_time_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
+
+            CSVGateway.getInstance().dataTable_to_CSV(fileOutputFileName, outputLocation, resultOfSQL.getResultTable());
         }
 
         /// <summary>

@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PowerPeg_SQL_to_CSV.Mode;
 
-namespace PowerPeg_SQL_to_CSV.Task
+namespace PowerPeg_SQL_to_CSV.ProcessTask
 {
     public class ScheduleTaskList
     {
@@ -65,7 +65,7 @@ namespace PowerPeg_SQL_to_CSV.Task
         {
             foreach (var task in searchTasksList)
             {
-                if (task.getTaskName().Equals(selectedTaskName))
+                if (task.getTaskInfo()[0].Equals(selectedTaskName))
                 {
                     return task;
                 }

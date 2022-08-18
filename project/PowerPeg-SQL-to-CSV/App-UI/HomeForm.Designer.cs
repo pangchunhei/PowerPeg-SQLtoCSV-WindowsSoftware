@@ -99,7 +99,7 @@
             this.reStartProgramBtn.TabIndex = 4;
             this.reStartProgramBtn.Text = "Restart Program";
             this.reStartProgramBtn.UseVisualStyleBackColor = true;
-            this.reStartProgramBtn.Click += new System.EventHandler(this.scheduleOutputFolderBtn_Click);
+            this.reStartProgramBtn.Click += new System.EventHandler(this.reStartProgramBtn_Click);
             // 
             // checkLogFolderBtn
             // 

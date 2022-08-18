@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace PowerPeg_SQL_to_CSV.Task
+namespace PowerPeg_SQL_to_CSV.ProcessTask
 {
     public class Result
     {

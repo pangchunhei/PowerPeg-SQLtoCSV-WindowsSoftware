@@ -65,7 +65,7 @@ namespace App_UI
             {
                 GlobalFunction.statusUpdate(statusUpdateLabel, "Trying to update.........", false);
 
-                if (DatabaseGateway.getInstance().updateGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
+                if (MainFunction.updateDatabaseGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "New Setting Saved.", true);
                 }

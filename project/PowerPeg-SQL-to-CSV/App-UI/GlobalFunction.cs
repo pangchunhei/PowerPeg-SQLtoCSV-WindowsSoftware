@@ -58,7 +58,7 @@ namespace App_UI
 
             return output;
         }
-
+        
         public static string searchTaskDetail_to_string(SearchTask t)
         {
             string msg = "";
@@ -72,7 +72,7 @@ namespace App_UI
 
             return msg;
         }
-
+        
         public static bool userCheckTaskDetail(SearchTask task)
         {
             string msg = "Please check the task settings: \n" + GlobalFunction.searchTaskDetail_to_string(task);

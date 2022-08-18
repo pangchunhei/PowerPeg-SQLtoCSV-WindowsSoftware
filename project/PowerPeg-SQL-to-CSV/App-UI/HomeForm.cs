@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PowerPeg_SQL_to_CSV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,9 +49,9 @@ namespace App_UI
             this.Show();
         }
 
-        private void scheduleOutputFolderBtn_Click(object sender, EventArgs e)
+        private void reStartProgramBtn_Click(object sender, EventArgs e)
         {
-            ScheduleTaskList s = new ScheduleTaskList();
+            //TODO-- ScheduleTaskList s = new ScheduleTaskList();
         }
 
         private void checkLogFolderBtn_Click(object sender, EventArgs e)

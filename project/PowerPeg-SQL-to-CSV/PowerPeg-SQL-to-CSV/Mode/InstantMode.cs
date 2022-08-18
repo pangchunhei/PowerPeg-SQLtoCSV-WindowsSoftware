@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PowerPeg_SQL_to_CSV.Gateway;
-using PowerPeg_SQL_to_CSV.Task;
+using PowerPeg_SQL_to_CSV.ProcessTask;
 
 namespace PowerPeg_SQL_to_CSV.Mode
 {

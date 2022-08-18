@@ -27,7 +27,7 @@ namespace App_UI
         {
             this.task = MainFunction.findTaskObject(selectedTaskName);
 
-            this.taskNameDataLabel.Text = task.getTaskName();
+            this.taskNameDataLabel.Text = task.getTaskInfo()[0];
             this.triggerDateTimePicker.Value = task.getMode().getTriggerDateTime();
 
             List<string> col = MainFunction.getDatabaseColumnName();
@@ -51,7 +51,7 @@ namespace App_UI
                 selectedColListBox.SelectedItems.Add(s);
             }
 
-            filePathDataLabel.Text = task.getOutputFolderPath();
+            filePathDataLabel.Text = task.getTaskInfo()[1];
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
@@ -84,7 +84,7 @@ namespace App_UI
         private void updateBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Updating " + TypeDescriptor.GetClassName(this), false);
-            MainFunction.updateTaskSetting(this.task, filePathDataLabel.Text, this.triggerDateTimePicker.Value, GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
+            //MainFunction.updateTaskSetting(this.task, filePathDataLabel.Text, this.triggerDateTimePicker.Value, GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems));
             GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
         }
 
@@ -95,7 +95,7 @@ namespace App_UI
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            MainFunction.removeTask(task);
+            //MainFunction.removeTask(task);
             GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task delated.", true);
             this.Close();
         }
