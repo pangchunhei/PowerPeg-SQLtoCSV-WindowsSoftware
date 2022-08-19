@@ -10,7 +10,7 @@ namespace PowerPeg_SQL_to_CSV
     {
         private static ScheduleSearchTasklist scheduleSearchTasklist = new ScheduleSearchTasklist();
         
-        private static BackgroundScheduler backgroundScheduler = new BackgroundScheduler();
+        private static BackgroundScheduler backgroundScheduler = null;
         
         private static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
         
@@ -122,6 +122,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public static void startBackgroundJob()
         {
+            backgroundScheduler = new BackgroundScheduler()
             _ = backgroundScheduler.runAsync();
         }
 
@@ -135,7 +136,12 @@ namespace PowerPeg_SQL_to_CSV
 
         public static async void stopAllBackgroundJob()
         {
-            await backgroundScheduler.stopAsync();
+            if(backgroundScheduler == null){
+                await backgroundScheduler.stopAsync();
+                backgroundScheduler = null;
+            }else{
+                //No task to stop
+            }
         }
     }
 }
