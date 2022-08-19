@@ -1,11 +1,4 @@
 ﻿using Newtonsoft.Json;
-using PowerPeg_SQL_to_CSV.ProcessTask;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Configuration;
 using System.Diagnostics;
@@ -17,7 +10,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
     {
         private JSONGateway()
         {
-            setGateway();
+            this.jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSON"];
+            Debug.WriteLine(jsonPath);
         }
 
         private static JSONGateway _instance;
@@ -39,12 +33,6 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         }
 
         private string jsonPath;
-
-        private void setGateway()
-        {
-            this.jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSON"];
-            Debug.WriteLine(jsonPath);
-        }
 
         public List<SearchTask> importTasklist()
         {

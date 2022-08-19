@@ -101,7 +101,7 @@ namespace App_UI
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            MainFunction.removeTask(task);
+            MainFunction.removeScheduleTask(task);
             GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task delated.", true);
             this.Close();
         }

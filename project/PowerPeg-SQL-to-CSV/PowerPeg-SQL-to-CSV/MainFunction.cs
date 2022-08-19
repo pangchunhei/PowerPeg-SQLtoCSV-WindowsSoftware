@@ -14,7 +14,7 @@ namespace PowerPeg_SQL_to_CSV
 {
     public static class MainFunction
     {
-        public static ScheduleTasklist scheduleTaskList = new ScheduleTasklist();
+        public static ScheduleSearchTasklist scheduleSearchTasklist = new ScheduleSearchTasklist();
         public static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
 
         private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
@@ -66,42 +66,42 @@ namespace PowerPeg_SQL_to_CSV
             //Not implememeted
         }
 
-        public static void updateTaskSetting(SearchTask task, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn)
+        public static void updateTaskSetting(SearchTask searchtask, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn)
         {
             IMode m = CreateMode(selectmode, triggerdate, selectedcolumn);
 
-            task.updateTaskSetting(outputlocation, m);
+            searchtask.updateTaskSetting(outputlocation, m);
 
-            scheduleTaskList.updateTask(task);
+            scheduleSearchTasklist.updateTask(searchtask);
         }
 
         public static SearchTask findTaskObject(string name)
         {
-            return scheduleTaskList.findSearchTask(name);
+            return scheduleSearchTasklist.findSearchTask(name);
         }
 
         public static List<string> getCurrentTaskListName()
         {
-            List<SearchTask> list = scheduleTaskList.getCurrentTaskList();
+            List<SearchTask> list = scheduleSearchTasklist.getCurrentTaskList();
 
             List<string> listName = new List<string>();
 
-            foreach (SearchTask task in list)
+            foreach (SearchTask searchtask in list)
             {
-                listName.Add(task.getTaskInfo()[0]);
+                listName.Add(searchtask.getTaskInfo()[0]);
             }
 
             return listName;
         }
 
-        public static void addScheduleTask(SearchTask task)
+        public static void addScheduleTask(SearchTask searchtask)
         {
-            scheduleTaskList.addNewTask(task);
+            scheduleSearchTasklist.addNewTask(searchtask);
         }
 
-        public static void removeTask(SearchTask task)
+        public static void removeScheduleTask(SearchTask searchtask)
         {
-            scheduleTaskList.removeTask(task);
+            scheduleSearchTasklist.removeTask(searchtask);
         }
 
         public static bool updateDatabaseGateway(string address, string catalog, string username, string password)
