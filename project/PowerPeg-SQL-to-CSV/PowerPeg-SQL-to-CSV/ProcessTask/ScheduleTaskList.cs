@@ -6,51 +6,24 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using PowerPeg_SQL_to_CSV.Mode;
+using PowerPeg_SQL_to_CSV.Gateway;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using PowerPeg_SQL_to_CSV.Mode;
 
 namespace PowerPeg_SQL_to_CSV.ProcessTask
 {
     public class ScheduleTasklist
     {
         private List<SearchTask> searchTasksList;
-        private string jsonPath;
-
+        private JSONGateway jsonGateway;
         public ScheduleTasklist()
         {
-            jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSON"];
-            Debug.WriteLine(jsonPath);
+            this.jsonGateway = JSONGateway.getInstance();
 
-            searchTasksList = importTasklist();
+            searchTasksList = jsonGateway.importTasklist();
 
             showTaskList();
-        }
-
-        private List<SearchTask> importTasklist()
-        {
-            using (StreamReader file = File.OpenText(jsonPath))
-            {
-                var settings = new JsonSerializerSettings()
-                {
-                    //Handle private var
-                    ContractResolver = new contractResolverSaveAll(),
-                    //Handle inharance
-                    TypeNameHandling = TypeNameHandling.All
-                };
-                JsonSerializer serializer = JsonSerializer.Create(settings);
-
-                List<SearchTask> list = (List<SearchTask>)serializer.Deserialize(file, typeof(List<SearchTask>));
-
-                if (list == null)
-                {
-                    return new List<SearchTask>();
-                }
-                else
-                {
-                    return list;
-                }
-            }
         }
 
         private void showTaskList()
@@ -86,28 +59,14 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
                 throw new Exception();
             }
 
-            updateJSON();
-        }
-
-        private void updateJSON()
-        {
-            var settings = new JsonSerializerSettings()
-            {
-                ContractResolver = new contractResolverSaveAll(),
-                TypeNameHandling = TypeNameHandling.All
-            };
-            using (StreamWriter file = File.CreateText(jsonPath))
-            {
-                JsonSerializer serializer = JsonSerializer.Create(settings);
-                serializer.Serialize(file, searchTasksList);
-            }
+            jsonGateway.updateJSON(searchTasksList);
         }
 
         public void removeTask(SearchTask task)
         {
 
             searchTasksList.Remove(task);
-            updateJSON();
+            jsonGateway.updateJSON(searchTasksList);
         }
 
         public void updateTask(SearchTask task)
@@ -119,20 +78,6 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         public List<SearchTask> getCurrentTaskList()
         {
             return searchTasksList;
-        }
-    }
-
-    public class contractResolverSaveAll : DefaultContractResolver
-    {
-        protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
-        {
-            var props = type.GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
-                            .Select(p => base.CreateProperty(p, memberSerialization))
-                        .Union(type.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
-                                   .Select(f => base.CreateProperty(f, memberSerialization)))
-                        .ToList();
-            props.ForEach(p => { p.Writable = true; p.Readable = true; });
-            return props;
         }
     }
 }
