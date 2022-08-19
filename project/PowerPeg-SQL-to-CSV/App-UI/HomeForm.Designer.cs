@@ -35,7 +35,7 @@
             this.changeScheduleGenerationBtn = new System.Windows.Forms.Button();
             this.changeServerInfoBtn = new System.Windows.Forms.Button();
             this.reStartProgramBtn = new System.Windows.Forms.Button();
-            this.checkLogFolderBtn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.statusUpdateLabel = new System.Windows.Forms.Label();
             this.header3Label = new System.Windows.Forms.Label();
@@ -97,20 +97,20 @@
             this.reStartProgramBtn.Name = "reStartProgramBtn";
             this.reStartProgramBtn.Size = new System.Drawing.Size(156, 52);
             this.reStartProgramBtn.TabIndex = 4;
-            this.reStartProgramBtn.Text = "Restart Program";
+            this.reStartProgramBtn.Text = "Restart Background Task";
             this.reStartProgramBtn.UseVisualStyleBackColor = true;
             this.reStartProgramBtn.Click += new System.EventHandler(this.reStartProgramBtn_Click);
             // 
-            // checkLogFolderBtn
+            // exitBtn
             // 
-            this.checkLogFolderBtn.AccessibleName = "checkLogFolderBtn";
-            this.checkLogFolderBtn.Location = new System.Drawing.Point(408, 300);
-            this.checkLogFolderBtn.Name = "checkLogFolderBtn";
-            this.checkLogFolderBtn.Size = new System.Drawing.Size(156, 52);
-            this.checkLogFolderBtn.TabIndex = 5;
-            this.checkLogFolderBtn.Text = "Check Log Folder";
-            this.checkLogFolderBtn.UseVisualStyleBackColor = true;
-            this.checkLogFolderBtn.Click += new System.EventHandler(this.checkLogFolderBtn_Click);
+            this.exitBtn.AccessibleName = "checkLogFolderBtn";
+            this.exitBtn.Location = new System.Drawing.Point(408, 300);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(156, 52);
+            this.exitBtn.TabIndex = 5;
+            this.exitBtn.Text = "Exit Program";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // notifyIcon
             // 
@@ -147,7 +147,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusUpdateLabel);
             this.Controls.Add(this.header3Label);
-            this.Controls.Add(this.checkLogFolderBtn);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.reStartProgramBtn);
             this.Controls.Add(this.changeServerInfoBtn);
             this.Controls.Add(this.changeScheduleGenerationBtn);
@@ -170,7 +170,7 @@
         private Button changeScheduleGenerationBtn;
         private Button changeServerInfoBtn;
         private Button reStartProgramBtn;
-        private Button checkLogFolderBtn;
+        private Button exitBtn;
         private NotifyIcon notifyIcon;
         private Label statusUpdateLabel;
         private Label header3Label;

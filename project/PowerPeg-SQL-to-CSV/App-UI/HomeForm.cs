@@ -1,4 +1,5 @@
 ﻿using PowerPeg_SQL_to_CSV;
+using PowerPeg_SQL_to_CSV.ProcessTask;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace App_UI
         public HomeForm()
         {
             InitializeComponent();
- 
+            MainFunction.startBackgroundJob();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace App_UI
 
         private void changeScheduleGenerationBtn_Click(object sender, EventArgs e)
         {
+            MainFunction.stopAllBackgroundJob();
             this.Hide();
             ChangeScheduleGeneration changeScheduleGeneration = new ChangeScheduleGeneration();
             changeScheduleGeneration.ShowDialog();
@@ -52,11 +54,13 @@ namespace App_UI
         private void reStartProgramBtn_Click(object sender, EventArgs e)
         {
             //TODO-- ScheduleTaskList s = new ScheduleTaskList();
+            MainFunction.reStartBackgroundJob();
         }
 
-        private void checkLogFolderBtn_Click(object sender, EventArgs e)
+        private void exitBtn_Click(object sender, EventArgs e)
         {
-
+            MainFunction.stopAllBackgroundJob();
+            this.Close();
         }
 
         private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)

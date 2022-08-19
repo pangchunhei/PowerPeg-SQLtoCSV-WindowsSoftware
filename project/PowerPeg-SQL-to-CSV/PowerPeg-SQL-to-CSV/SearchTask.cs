@@ -33,13 +33,20 @@ namespace PowerPeg_SQL_to_CSV
             this.operationMode = operationMode;
         }
 
-        public void toRunTask()
+        public void toRunTask(DateTime runDateTime)
         {
-            Result resultOfSQL = operationMode.runSearch();
+            Result resultOfSQL = operationMode.runSearch(runDateTime);
 
-            string fileOutputFileName = taskName + "_generation_time_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
+            if(resultOfSQL != null)
+            {
+                string fileOutputFileName = taskName + "_generation_time_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
 
-            CSVGateway.getInstance().dataTable_to_CSV(fileOutputFileName, outputLocation, resultOfSQL.getResultTable());
+                CSVGateway.getInstance().dataTable_to_CSV(fileOutputFileName, outputLocation, resultOfSQL.getResultTable());
+            }
+            else
+            {
+                //TODO-- log
+            }
         }
 
         /// <summary>

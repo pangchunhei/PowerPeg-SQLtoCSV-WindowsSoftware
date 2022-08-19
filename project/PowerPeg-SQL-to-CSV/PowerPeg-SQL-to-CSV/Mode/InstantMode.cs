@@ -38,13 +38,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
             return this.modeName;
         }
 
-        public Result runSearch()
+        public Result runSearch(DateTime runDateTime)
         {
-            DateTime genTime = DateTime.Now;
-
             DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 
-            Result res = new Result(genTime, dt);
+            Result res = new Result(runDateTime, dt);
 
             return res;
         }

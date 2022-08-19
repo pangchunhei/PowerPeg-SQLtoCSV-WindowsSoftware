@@ -1,22 +1,19 @@
-﻿using System.Collections.Generic;
-using PowerPeg_SQL_to_CSV.Gateway;
-using System.Data;
-using PowerPeg_SQL_to_CSV.ProcessTask;
+﻿using PowerPeg_SQL_to_CSV.Gateway;
 using PowerPeg_SQL_to_CSV.Mode;
-using System.Linq.Expressions;
+using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Diagnostics;
-using System.Net.Sockets;
 using System.Text.RegularExpressions;
-using System.Xml.Linq;
-using Coravel;
 
 namespace PowerPeg_SQL_to_CSV
 {
     public static class MainFunction
     {
-        public static ScheduleSearchTasklist scheduleSearchTasklist = new ScheduleSearchTasklist();
-        public static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
-
+        private static ScheduleSearchTasklist scheduleSearchTasklist = new ScheduleSearchTasklist();
+        
+        private static BackgroundScheduler backgroundScheduler = new BackgroundScheduler();
+        
+        private static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
+        
         private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
         {
             if (selectmode.Equals("Instant"))
@@ -53,7 +50,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public static void runTaskNow(SearchTask task)
         {
-            task.toRunTask();
+            task.toRunTask(DateTime.Now);
         }
 
         public static void taskNotCreated()
@@ -117,6 +114,24 @@ namespace PowerPeg_SQL_to_CSV
         public static List<string> getDatabaseColumnName()
         {
             return databaseGateway.getDBTableColName();
+        }
+
+        public static void startBackgroundJob()
+        {
+            _ = backgroundScheduler.runAsync();
+        }
+
+        public static async void reStartBackgroundJob()
+        {
+            await backgroundScheduler.stopAsync();
+
+            backgroundScheduler = new BackgroundScheduler();
+            _ = backgroundScheduler.runAsync();
+        }
+
+        public static void stopAllBackgroundJob()
+        {
+            _ = backgroundScheduler.stopAsync();
         }
     }
 }

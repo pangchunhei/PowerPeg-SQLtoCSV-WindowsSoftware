@@ -10,6 +10,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         private DateTime triggerDateTime;
 
+        private DateTime lastRunDateTime;
+
         private List<string> selectColumn = new List<string>();
 
         /// <summary>
@@ -24,6 +26,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
             modeName = "Month Mode";
             triggerDateTime = triggerDate;
             selectColumn = selection;
+            lastRunDateTime = new DateTime(1999, triggerDate.Month,triggerDate.Day, triggerDate.Hour, triggerDate.Minute, triggerDate.Second);
         }
 
         public override string ToString()
@@ -31,24 +34,47 @@ namespace PowerPeg_SQL_to_CSV.Mode
             return this.modeName;
         }
 
-        public Result runSearch()
+        private bool needRun(DateTime runDateTime)
         {
-            DateTime genTime = DateTime.Now;
+            int monthLength = DateTime.DaysInMonth(runDateTime.Year, runDateTime.Month);
 
-            DateTime startSearchDay;
-            DateTime endSearchDay;
+            int daysFromLastRun = (runDateTime - triggerDateTime).Days;
 
-            endSearchDay = genTime;
+            if (daysFromLastRun >= monthLength)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-            int length = DateTime.DaysInMonth(endSearchDay.Year, endSearchDay.Month);
+        public Result runSearch(DateTime runDateTime)
+        {
+            if (needRun(runDateTime))
+            {
+                DateTime startSearchDay;
+                DateTime endSearchDay;
 
-            startSearchDay = endSearchDay.AddDays(-length);
+                endSearchDay = runDateTime;
+                this.lastRunDateTime = runDateTime;
 
-            DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
+                int length = DateTime.DaysInMonth(endSearchDay.Year, endSearchDay.Month);
 
-            Result res = new Result(genTime, dt);
+                startSearchDay = endSearchDay.AddDays(-length);
 
-            return res;
+                DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
+
+                Result res = new Result(runDateTime, dt);
+
+                return res;
+            }
+            else
+            {
+                return null;
+            }
+            
         }
 
         public string[] getInfo()
