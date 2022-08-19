@@ -151,6 +151,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         public DataTable getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List<string> selectColumn)
         {
+            Debug.WriteLine("Get search Table 01");
+
             //Use the stored procedure cmd
             DataTable sqlOutput;
 

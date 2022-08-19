@@ -32,6 +32,10 @@ namespace PowerPeg_SQL_to_CSV
             {
                 return new MonthMode(triggerdate, selectedcolumn);
             }
+            else if (selectmode.Equals("Minute"))
+            {
+                return new MinuteMode(triggerdate, selectedcolumn);
+            }
             else
             {
                 //TODO-- No mode
@@ -129,9 +133,9 @@ namespace PowerPeg_SQL_to_CSV
             _ = backgroundScheduler.runAsync();
         }
 
-        public static void stopAllBackgroundJob()
+        public static async void stopAllBackgroundJob()
         {
-            _ = backgroundScheduler.stopAsync();
+            await backgroundScheduler.stopAsync();
         }
     }
 }

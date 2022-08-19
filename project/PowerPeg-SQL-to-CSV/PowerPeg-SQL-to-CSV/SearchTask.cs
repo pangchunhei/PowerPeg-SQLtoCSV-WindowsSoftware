@@ -9,6 +9,7 @@ using PowerPeg_SQL_to_CSV.Mode;
 using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace PowerPeg_SQL_to_CSV
 {
@@ -35,10 +36,14 @@ namespace PowerPeg_SQL_to_CSV
 
         public void toRunTask(DateTime runDateTime)
         {
+            Debug.WriteLine($"toRunTask: {this.taskName}");
+
             Result resultOfSQL = operationMode.runSearch(runDateTime);
 
             if(resultOfSQL != null)
             {
+                Debug.WriteLine($"Generate file: {this.taskName}");
+
                 string fileOutputFileName = taskName + "_generation_time_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
 
                 CSVGateway.getInstance().dataTable_to_CSV(fileOutputFileName, outputLocation, resultOfSQL.getResultTable());
@@ -46,6 +51,7 @@ namespace PowerPeg_SQL_to_CSV
             else
             {
                 //TODO-- log
+                Debug.WriteLine($"No need to process: {this.taskName}");
             }
         }
 

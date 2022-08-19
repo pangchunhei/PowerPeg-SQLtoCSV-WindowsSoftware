@@ -14,11 +14,15 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
 
         public async Task Execute(IJobExecutionContext context)
         {
-            testJob(context);
+            //testJob(context);
+
+            processTask(context);
         }
 
         private void processTask(IJobExecutionContext context)
         {
+            Debug.WriteLine($"> {DateTime.Now} Background Job is running");
+
             searchTasklist = new ScheduleSearchTasklist();
 
             scheduleRunlist = searchTasklist.getCurrentTaskList();
@@ -27,6 +31,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
 
             foreach (SearchTask searchTask in scheduleRunlist)
             {
+                Debug.WriteLine($"Search Task is {searchTask.getTaskInfo()[0]}");
                 searchTask.toRunTask(bwCurrentDateTime);
             }
 

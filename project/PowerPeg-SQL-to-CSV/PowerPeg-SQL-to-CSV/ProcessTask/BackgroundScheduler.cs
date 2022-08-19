@@ -51,7 +51,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
                 Debug.WriteLine(await this.scheduler.Interrupt(context.JobDetail.Key));
             }
 
-            Debug.WriteLine("Stop creating new Job");
+            Debug.WriteLine("Stop scheduler");
             await scheduler.Shutdown(true);
         }
     }

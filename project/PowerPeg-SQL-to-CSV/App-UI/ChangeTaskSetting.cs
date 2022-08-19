@@ -89,7 +89,9 @@ namespace App_UI
             else
             {
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-                MainFunction.updateTaskSetting(this.task, "Month", filePathDataLabel.Text, this.triggerDateTimePicker.Value, selectCol);
+                //Test
+                MainFunction.updateTaskSetting(this.task, "Minute", filePathDataLabel.Text, this.triggerDateTimePicker.Value, selectCol);
+                //MainFunction.updateTaskSetting(this.task, "Month", filePathDataLabel.Text, this.triggerDateTimePicker.Value, selectCol);
                 GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
             }
         }

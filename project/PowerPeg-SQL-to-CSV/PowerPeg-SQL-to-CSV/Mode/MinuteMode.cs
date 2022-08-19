@@ -5,7 +5,10 @@ using System.Diagnostics;
 
 namespace PowerPeg_SQL_to_CSV.Mode
 {
-    public class MonthMode : IMode
+    /// <summary>
+    /// For testing async
+    /// </summary>
+    public class MinuteMode : IMode
     {
         private string modeName;
 
@@ -22,9 +25,9 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <param name="endDate"></param>
         /// <param name="triggerDate"></param>
         /// <param name="selection"></param>
-        public MonthMode(DateTime triggerDate, List<string> selection)
+        public MinuteMode(DateTime triggerDate, List<string> selection)
         {
-            modeName = "Month Mode";
+            modeName = "Minute Mode";
             triggerDateTime = triggerDate;
             selectColumn = selection;
             lastRunDateTime = new DateTime(1999, triggerDate.Month,triggerDate.Day, triggerDate.Hour, triggerDate.Minute, triggerDate.Second);
@@ -37,18 +40,18 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         private bool needRun(DateTime runDateTime)
         {
-            int monthLength = DateTime.DaysInMonth(runDateTime.Year, runDateTime.Month);
+            int minuteLength = 1;
 
-            int daysFromLastRun = (runDateTime - this.lastRunDateTime).Days;
+            int minuteFromLastRun = (runDateTime - this.lastRunDateTime).Minutes;
 
-            if (daysFromLastRun >= monthLength)
+            if (minuteFromLastRun >= minuteLength)
             {
-                Debug.WriteLine($"Run search {this.lastRunDateTime} Day: {monthLength}");
+                Debug.WriteLine($"Run search {this.lastRunDateTime} Minutes: {minuteFromLastRun}");
                 return true;
             }
             else
             {
-                Debug.WriteLine($"No need search {this.lastRunDateTime} Day: {monthLength}");
+                Debug.WriteLine($"No need search {this.lastRunDateTime} Minutes: {minuteFromLastRun}");
                 return false;
             }
         }

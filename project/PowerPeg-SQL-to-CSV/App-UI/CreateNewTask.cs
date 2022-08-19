@@ -36,7 +36,12 @@ namespace App_UI
             else
             {
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-                SearchTask t = MainFunction.CreateTask("Month", filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
+
+                //Testing
+                SearchTask t = MainFunction.CreateTask("Minute", filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
+
+                //Real
+                //SearchTask t = MainFunction.CreateTask("Month", filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
 
                 if (GlobalFunction.userCheckTaskDetail(t))
                 {

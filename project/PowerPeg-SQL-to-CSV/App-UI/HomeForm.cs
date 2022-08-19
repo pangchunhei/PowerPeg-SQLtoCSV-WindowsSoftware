@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -49,6 +50,9 @@ namespace App_UI
             ChangeScheduleGeneration changeScheduleGeneration = new ChangeScheduleGeneration();
             changeScheduleGeneration.ShowDialog();
             this.Show();
+            Thread.Sleep(500);
+            Debug.WriteLine("=== Restart ===");
+            MainFunction.startBackgroundJob();
         }
 
         private void reStartProgramBtn_Click(object sender, EventArgs e)
@@ -60,7 +64,8 @@ namespace App_UI
         private void exitBtn_Click(object sender, EventArgs e)
         {
             MainFunction.stopAllBackgroundJob();
-            this.Close();
+
+            Application.Exit();
         }
 
         private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
