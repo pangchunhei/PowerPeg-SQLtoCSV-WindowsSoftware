@@ -122,21 +122,20 @@ namespace PowerPeg_SQL_to_CSV
 
         public static void startBackgroundJob()
         {
-            backgroundScheduler = new BackgroundScheduler()
+            backgroundScheduler = new BackgroundScheduler();
             _ = backgroundScheduler.runAsync();
         }
 
         public static async void reStartBackgroundJob()
         {
-            await backgroundScheduler.stopAsync();
+            stopBackgroundJob();
 
-            backgroundScheduler = new BackgroundScheduler();
-            _ = backgroundScheduler.runAsync();
+            startBackgroundJob();
         }
 
-        public static async void stopAllBackgroundJob()
+        public static async void stopBackgroundJob()
         {
-            if(backgroundScheduler == null){
+            if(backgroundScheduler != null){
                 await backgroundScheduler.stopAsync();
                 backgroundScheduler = null;
             }else{

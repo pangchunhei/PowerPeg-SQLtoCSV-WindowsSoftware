@@ -15,11 +15,14 @@ namespace App_UI
     {
         public CreateNewTask()
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading CreateNewTask.", false);
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         public void resetForm()
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Resetting form CreateNewTask.", false);
             Form NewForm = new CreateNewTask();
             NewForm.Show();
             this.Dispose(false);
@@ -39,7 +42,6 @@ namespace App_UI
 
                 //Testing
                 SearchTask t = MainFunction.CreateTask("Minute", filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
-
                 //Real
                 //SearchTask t = MainFunction.CreateTask("Month", filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
 
@@ -79,6 +81,8 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Cancel and back to previous page.", false);
+
             this.Close();
         }
     }

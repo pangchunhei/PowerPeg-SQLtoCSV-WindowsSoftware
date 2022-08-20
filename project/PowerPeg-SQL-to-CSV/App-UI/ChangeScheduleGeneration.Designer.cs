@@ -37,7 +37,9 @@
             this.selectTaskLabel = new System.Windows.Forms.Label();
             this.createNewTaskLabel = new System.Windows.Forms.Label();
             this.createBtn = new System.Windows.Forms.Button();
-            this.cancelBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.statusUpdateLabel = new System.Windows.Forms.Label();
+            this.header3Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // serverInfoLabel
@@ -50,7 +52,6 @@
             this.serverInfoLabel.Size = new System.Drawing.Size(170, 28);
             this.serverInfoLabel.TabIndex = 5;
             this.serverInfoLabel.Text = "<Server Address>";
-            this.serverInfoLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // header2Label
             // 
@@ -62,7 +63,6 @@
             this.header2Label.Size = new System.Drawing.Size(222, 31);
             this.header2Label.TabIndex = 4;
             this.header2Label.Text = "Server Information: ";
-            this.header2Label.Click += new System.EventHandler(this.label2_Click);
             // 
             // headerLabel
             // 
@@ -74,7 +74,6 @@
             this.headerLabel.Size = new System.Drawing.Size(478, 46);
             this.headerLabel.TabIndex = 3;
             this.headerLabel.Text = "Change Schedule Generation";
-            this.headerLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // changeTaskSettingLabel
             // 
@@ -86,7 +85,6 @@
             this.changeTaskSettingLabel.Size = new System.Drawing.Size(248, 31);
             this.changeTaskSettingLabel.TabIndex = 6;
             this.changeTaskSettingLabel.Text = "Change Tasks Setting: ";
-            this.changeTaskSettingLabel.Click += new System.EventHandler(this.label4_Click);
             // 
             // selectTaskCoboBox
             // 
@@ -129,7 +127,6 @@
             this.createNewTaskLabel.Size = new System.Drawing.Size(202, 31);
             this.createNewTaskLabel.TabIndex = 10;
             this.createNewTaskLabel.Text = "Create New Task: ";
-            this.createNewTaskLabel.Click += new System.EventHandler(this.label6_Click);
             // 
             // createBtn
             // 
@@ -142,25 +139,49 @@
             this.createBtn.UseVisualStyleBackColor = true;
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
-            // cancelBtn
+            // backBtn
             // 
-            this.cancelBtn.AccessibleName = "cancelBtn";
-            this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(340, 343);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(120, 48);
-            this.cancelBtn.TabIndex = 16;
-            this.cancelBtn.Text = "Cancel";
-            this.cancelBtn.UseVisualStyleBackColor = false;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            this.backBtn.AccessibleName = "backBtn";
+            this.backBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.backBtn.Location = new System.Drawing.Point(340, 329);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(120, 47);
+            this.backBtn.TabIndex = 16;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // statusUpdateLabel
+            // 
+            this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
+            this.statusUpdateLabel.AutoSize = true;
+            this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(250, 411);
+            this.statusUpdateLabel.Name = "statusUpdateLabel";
+            this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
+            this.statusUpdateLabel.TabIndex = 46;
+            this.statusUpdateLabel.Text = "<Status Update>";
+            // 
+            // header3Label
+            // 
+            this.header3Label.AccessibleName = "header3Label";
+            this.header3Label.AutoSize = true;
+            this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.header3Label.Location = new System.Drawing.Point(81, 405);
+            this.header3Label.Name = "header3Label";
+            this.header3Label.Size = new System.Drawing.Size(174, 31);
+            this.header3Label.TabIndex = 45;
+            this.header3Label.Text = "Process Status: ";
             // 
             // ChangeScheduleGeneration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.statusUpdateLabel);
+            this.Controls.Add(this.header3Label);
+            this.Controls.Add(this.backBtn);
             this.Controls.Add(this.createBtn);
             this.Controls.Add(this.createNewTaskLabel);
             this.Controls.Add(this.selectTaskLabel);
@@ -189,6 +210,8 @@
         private Label selectTaskLabel;
         private Label createNewTaskLabel;
         private Button createBtn;
-        private Button cancelBtn;
+        private Button backBtn;
+        private Label statusUpdateLabel;
+        private Label header3Label;
     }
 }

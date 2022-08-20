@@ -18,7 +18,12 @@ namespace App_UI
         
         public HomeForm()
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Initializing appication.", false);
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading HomeForm.", false);
             InitializeComponent();
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Starting background task.", false);
             MainFunction.startBackgroundJob();
         }
 
@@ -45,7 +50,7 @@ namespace App_UI
 
         private void changeScheduleGenerationBtn_Click(object sender, EventArgs e)
         {
-            MainFunction.stopAllBackgroundJob();
+            MainFunction.stopBackgroundJob();
             this.Hide();
             ChangeScheduleGeneration changeScheduleGeneration = new ChangeScheduleGeneration();
             changeScheduleGeneration.ShowDialog();
@@ -63,8 +68,11 @@ namespace App_UI
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            MainFunction.stopAllBackgroundJob();
+            MainFunction.stopBackgroundJob();
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Closing background task.", false);
+            Thread.Sleep(3000);
 
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Allication closing.", false);
             Application.Exit();
         }
 

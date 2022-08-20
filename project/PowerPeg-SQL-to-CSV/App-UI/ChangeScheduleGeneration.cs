@@ -15,33 +15,9 @@ namespace App_UI
     {
         public ChangeScheduleGeneration()
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading ChangeScheduleGeneration.", false);
             InitializeComponent();
             this.ControlBox = false;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void selectBtn_Click(object sender, EventArgs e)
@@ -60,17 +36,20 @@ namespace App_UI
 
         private void ChangeScheduleGeneration_Load(object sender, EventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading Database information.", false);
             serverInfoLabel.Text = MainFunction.getDatabaseInformation()[0];
 
             updateTaskListName();
-            
         }
 
         private void updateTaskListName()
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading current scheduled tasklist.", false);
+
             List<string> currentTaskName = MainFunction.getCurrentTaskListName();
 
             selectTaskCoboBox.Items.Clear();
+            selectTaskCoboBox.Sorted = true;
 
             if (currentTaskName.Count == 0)
             {
@@ -94,6 +73,8 @@ namespace App_UI
 
         private void createNew()
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Request create new schedule task.", false);
+
             this.Hide();
             CreateNewTask createNewTask = new CreateNewTask();
             createNewTask.ShowDialog();
@@ -104,6 +85,8 @@ namespace App_UI
 
         private void changeTaskSetting(string selectedTaskName)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Request update existing schedule task setting.", false);
+
             this.Hide();
             ChangeTaskSetting changeTaskSetting = new ChangeTaskSetting(selectedTaskName);
             changeTaskSetting.ShowDialog();
@@ -112,8 +95,10 @@ namespace App_UI
             updateTaskListName();
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Go back to previous page.", false);
+
             this.Close();
         }
     }
