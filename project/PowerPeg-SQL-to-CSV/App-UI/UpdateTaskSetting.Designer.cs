@@ -1,6 +1,6 @@
 ﻿namespace App_UI
 {
-    partial class ChangeTaskSetting
+    partial class UpdateTaskSetting
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,6 @@
             this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
             this.statusUpdateLabel.TabIndex = 86;
             this.statusUpdateLabel.Text = "<Status Update>";
-            this.statusUpdateLabel.Click += new System.EventHandler(this.statusUpdateLabel_Click);
             // 
             // header3Label
             // 
@@ -104,7 +103,6 @@
             this.header3Label.Size = new System.Drawing.Size(174, 31);
             this.header3Label.TabIndex = 85;
             this.header3Label.Text = "Process Status: ";
-            this.header3Label.Click += new System.EventHandler(this.header3Label_Click);
             // 
             // selectedColListBox
             // 
@@ -165,7 +163,6 @@
             this.filePathDataLabel.Size = new System.Drawing.Size(121, 25);
             this.filePathDataLabel.TabIndex = 80;
             this.filePathDataLabel.Text = "<Select Path>";
-            this.filePathDataLabel.Click += new System.EventHandler(this.filePathDataLabel_Click);
             // 
             // updateBtn
             // 
@@ -190,7 +187,6 @@
             this.outputLoactionLabel.Size = new System.Drawing.Size(164, 28);
             this.outputLoactionLabel.TabIndex = 78;
             this.outputLoactionLabel.Text = "Output Location: ";
-            this.outputLoactionLabel.Click += new System.EventHandler(this.outputLoactionLabel_Click);
             // 
             // triggerDateTimePicker
             // 
@@ -201,7 +197,6 @@
             this.triggerDateTimePicker.Name = "triggerDateTimePicker";
             this.triggerDateTimePicker.Size = new System.Drawing.Size(250, 27);
             this.triggerDateTimePicker.TabIndex = 77;
-            this.triggerDateTimePicker.ValueChanged += new System.EventHandler(this.triggerDateTimePicker_ValueChanged);
             // 
             // triggerDateLabel
             // 
@@ -213,7 +208,6 @@
             this.triggerDateLabel.Size = new System.Drawing.Size(123, 28);
             this.triggerDateLabel.TabIndex = 76;
             this.triggerDateLabel.Text = "Trigger Date:";
-            this.triggerDateLabel.Click += new System.EventHandler(this.triggerDateLabel_Click);
             // 
             // selectFieldLabel
             // 
@@ -225,7 +219,6 @@
             this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
             this.selectFieldLabel.TabIndex = 75;
             this.selectFieldLabel.Text = "Select Field: ";
-            this.selectFieldLabel.Click += new System.EventHandler(this.selectFieldLabel_Click);
             // 
             // gernerationOptionLabel
             // 

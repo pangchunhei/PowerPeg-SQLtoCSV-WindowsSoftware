@@ -38,7 +38,7 @@ namespace PowerPeg_SQL_to_CSV
             }
             else
             {
-                //TODO-- No mode
+                //TODO-- No such mode
                 throw new Exception();
             }
         }
@@ -55,16 +55,6 @@ namespace PowerPeg_SQL_to_CSV
         public static void runTaskNow(SearchTask task)
         {
             task.toRunTask(DateTime.Now);
-        }
-
-        public static void taskNotCreated()
-        {
-            //Not implememeted
-        }
-
-        public static void discardTask()
-        {
-            //Not implememeted
         }
 
         public static void updateTaskSetting(SearchTask searchtask, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn)

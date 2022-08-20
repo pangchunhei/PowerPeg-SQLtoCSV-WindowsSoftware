@@ -32,7 +32,7 @@ namespace App_UI
         private void generateBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing" + TypeDescriptor.GetClassName(this), false);
-            //TODO-- Gen
+
             if (filePathDataLabel.Text.Equals("<Select Path>"))
             {
                 MessageBox.Show("Please select output folder.");
@@ -52,7 +52,6 @@ namespace App_UI
                 else
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the settings, discard task.", true);
-                    MainFunction.taskNotCreated();
                     resetForm();
                 }
             }
@@ -88,7 +87,6 @@ namespace App_UI
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Cancel and back to previous page.", false);
-
             this.Close();
         }
     }

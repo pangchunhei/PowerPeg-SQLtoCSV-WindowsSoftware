@@ -1,7 +1,6 @@
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App-UI.csproj.AssemblyReference.cache
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.ChangeScheduleGeneration.resources
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.ChangeServerInfo.resources
-C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.ChangeTaskSetting.resources
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.CreateNewTask.resources
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.HomeForm.resources
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App-UI.csproj.GenerateResource.cache
@@ -68,3 +67,4 @@ C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\Quartz.dll
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.UpdateTaskSetting.resources

@@ -88,7 +88,7 @@ namespace App_UI
             GlobalFunction.statusUpdate(statusUpdateLabel, "Requesting to update existing schedule task setting.", false);
 
             this.Hide();
-            ChangeTaskSetting changeTaskSetting = new ChangeTaskSetting(selectedTaskName);
+            UpdateTaskSetting changeTaskSetting = new UpdateTaskSetting(selectedTaskName);
             changeTaskSetting.ShowDialog();
 
             this.Show();

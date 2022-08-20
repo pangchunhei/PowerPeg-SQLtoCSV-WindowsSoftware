@@ -46,6 +46,10 @@
             this.selectedColListBox = new System.Windows.Forms.ListBox();
             this.header3Label = new System.Windows.Forms.Label();
             this.statusUpdateLabel = new System.Windows.Forms.Label();
+            this.quickSelectLabel = new System.Windows.Forms.Label();
+            this.past30Btn = new System.Windows.Forms.Button();
+            this.past60Btn = new System.Windows.Forms.Button();
+            this.past90Btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -58,7 +62,6 @@
             this.headerLabel.Size = new System.Drawing.Size(319, 46);
             this.headerLabel.TabIndex = 0;
             this.headerLabel.Text = "Instant Generation";
-            this.headerLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // header2Label
             // 
@@ -98,7 +101,7 @@
             this.fromDateLabel.AccessibleName = "fromDateLabel";
             this.fromDateLabel.AutoSize = true;
             this.fromDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fromDateLabel.Location = new System.Drawing.Point(93, 206);
+            this.fromDateLabel.Location = new System.Drawing.Point(93, 248);
             this.fromDateLabel.Name = "fromDateLabel";
             this.fromDateLabel.Size = new System.Drawing.Size(62, 28);
             this.fromDateLabel.TabIndex = 4;
@@ -107,17 +110,17 @@
             // fromDateCalendar
             // 
             this.fromDateCalendar.AccessibleName = "fromDateCal";
-            this.fromDateCalendar.Location = new System.Drawing.Point(153, 207);
+            this.fromDateCalendar.Location = new System.Drawing.Point(153, 249);
+            this.fromDateCalendar.MaxSelectionCount = 1;
             this.fromDateCalendar.Name = "fromDateCalendar";
             this.fromDateCalendar.TabIndex = 5;
-            this.fromDateCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.fromDateCalendar_DateChanged);
             // 
             // toDateLabel
             // 
             this.toDateLabel.AccessibleName = "toDateLabel";
             this.toDateLabel.AutoSize = true;
             this.toDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.toDateLabel.Location = new System.Drawing.Point(430, 206);
+            this.toDateLabel.Location = new System.Drawing.Point(430, 248);
             this.toDateLabel.Name = "toDateLabel";
             this.toDateLabel.Size = new System.Drawing.Size(36, 28);
             this.toDateLabel.TabIndex = 6;
@@ -126,17 +129,17 @@
             // toDateCalendar
             // 
             this.toDateCalendar.AccessibleName = "toDateCal";
-            this.toDateCalendar.Location = new System.Drawing.Point(466, 207);
+            this.toDateCalendar.Location = new System.Drawing.Point(466, 249);
+            this.toDateCalendar.MaxSelectionCount = 1;
             this.toDateCalendar.Name = "toDateCalendar";
             this.toDateCalendar.TabIndex = 7;
-            this.toDateCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.toDateCalendar_DateChanged);
             // 
             // selectFieldLabel
             // 
             this.selectFieldLabel.AccessibleName = "selectFieldLabel";
             this.selectFieldLabel.AutoSize = true;
             this.selectFieldLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.selectFieldLabel.Location = new System.Drawing.Point(93, 434);
+            this.selectFieldLabel.Location = new System.Drawing.Point(93, 476);
             this.selectFieldLabel.Name = "selectFieldLabel";
             this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
             this.selectFieldLabel.TabIndex = 8;
@@ -147,7 +150,7 @@
             this.outputLoactionLabel.AccessibleName = "outputLoactionLabel";
             this.outputLoactionLabel.AutoSize = true;
             this.outputLoactionLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.outputLoactionLabel.Location = new System.Drawing.Point(93, 769);
+            this.outputLoactionLabel.Location = new System.Drawing.Point(93, 811);
             this.outputLoactionLabel.Name = "outputLoactionLabel";
             this.outputLoactionLabel.Size = new System.Drawing.Size(164, 28);
             this.outputLoactionLabel.TabIndex = 10;
@@ -158,7 +161,7 @@
             this.generateBtn.AccessibleName = "generateBtn";
             this.generateBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.generateBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generateBtn.Location = new System.Drawing.Point(265, 819);
+            this.generateBtn.Location = new System.Drawing.Point(265, 860);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(120, 48);
             this.generateBtn.TabIndex = 12;
@@ -171,7 +174,7 @@
             this.filePathDataLabel.AccessibleName = "filePathLabel";
             this.filePathDataLabel.AutoSize = true;
             this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.filePathDataLabel.Location = new System.Drawing.Point(417, 774);
+            this.filePathDataLabel.Location = new System.Drawing.Point(417, 816);
             this.filePathDataLabel.Name = "filePathDataLabel";
             this.filePathDataLabel.Size = new System.Drawing.Size(121, 25);
             this.filePathDataLabel.TabIndex = 13;
@@ -180,7 +183,7 @@
             // getFileExplorerBtn
             // 
             this.getFileExplorerBtn.AccessibleName = "getFileExplorerBtn";
-            this.getFileExplorerBtn.Location = new System.Drawing.Point(263, 772);
+            this.getFileExplorerBtn.Location = new System.Drawing.Point(263, 814);
             this.getFileExplorerBtn.Name = "getFileExplorerBtn";
             this.getFileExplorerBtn.Size = new System.Drawing.Size(134, 29);
             this.getFileExplorerBtn.TabIndex = 14;
@@ -193,11 +196,11 @@
             this.cancelBtn.AccessibleName = "cancelBtn";
             this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(432, 819);
+            this.cancelBtn.Location = new System.Drawing.Point(432, 860);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(120, 48);
             this.cancelBtn.TabIndex = 15;
-            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.Text = "Back";
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
@@ -205,7 +208,7 @@
             // 
             this.spaceLabel.AccessibleName = "spaceLabel";
             this.spaceLabel.AutoSize = true;
-            this.spaceLabel.Location = new System.Drawing.Point(234, 918);
+            this.spaceLabel.Location = new System.Drawing.Point(234, 952);
             this.spaceLabel.Name = "spaceLabel";
             this.spaceLabel.Size = new System.Drawing.Size(21, 20);
             this.spaceLabel.TabIndex = 36;
@@ -216,7 +219,7 @@
             this.selectedColListBox.AccessibleName = "selectedColListBox";
             this.selectedColListBox.FormattingEnabled = true;
             this.selectedColListBox.ItemHeight = 20;
-            this.selectedColListBox.Location = new System.Drawing.Point(219, 434);
+            this.selectedColListBox.Location = new System.Drawing.Point(219, 476);
             this.selectedColListBox.MultiColumn = true;
             this.selectedColListBox.Name = "selectedColListBox";
             this.selectedColListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -228,7 +231,7 @@
             this.header3Label.AccessibleName = "header3Label";
             this.header3Label.AutoSize = true;
             this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.header3Label.Location = new System.Drawing.Point(67, 887);
+            this.header3Label.Location = new System.Drawing.Point(67, 925);
             this.header3Label.Name = "header3Label";
             this.header3Label.Size = new System.Drawing.Size(174, 31);
             this.header3Label.TabIndex = 38;
@@ -239,11 +242,55 @@
             this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
             this.statusUpdateLabel.AutoSize = true;
             this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.statusUpdateLabel.Location = new System.Drawing.Point(247, 892);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(247, 930);
             this.statusUpdateLabel.Name = "statusUpdateLabel";
             this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
             this.statusUpdateLabel.TabIndex = 39;
             this.statusUpdateLabel.Text = "<Status Update>";
+            // 
+            // quickSelectLabel
+            // 
+            this.quickSelectLabel.AccessibleName = "quickSelectLabel";
+            this.quickSelectLabel.AutoSize = true;
+            this.quickSelectLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.quickSelectLabel.Location = new System.Drawing.Point(93, 207);
+            this.quickSelectLabel.Name = "quickSelectLabel";
+            this.quickSelectLabel.Size = new System.Drawing.Size(123, 28);
+            this.quickSelectLabel.TabIndex = 40;
+            this.quickSelectLabel.Text = "Quick Select:";
+            // 
+            // past30Btn
+            // 
+            this.past30Btn.AccessibleName = "past30Btn";
+            this.past30Btn.Location = new System.Drawing.Point(222, 210);
+            this.past30Btn.Name = "past30Btn";
+            this.past30Btn.Size = new System.Drawing.Size(111, 29);
+            this.past30Btn.TabIndex = 41;
+            this.past30Btn.Text = "Past 30 Days";
+            this.past30Btn.UseVisualStyleBackColor = true;
+            this.past30Btn.Click += new System.EventHandler(this.past30Btn_Click);
+            // 
+            // past60Btn
+            // 
+            this.past60Btn.AccessibleName = "past60Btn";
+            this.past60Btn.Location = new System.Drawing.Point(354, 210);
+            this.past60Btn.Name = "past60Btn";
+            this.past60Btn.Size = new System.Drawing.Size(111, 29);
+            this.past60Btn.TabIndex = 42;
+            this.past60Btn.Text = "Past 60 Days";
+            this.past60Btn.UseVisualStyleBackColor = true;
+            this.past60Btn.Click += new System.EventHandler(this.past60Btn_Click);
+            // 
+            // past90Btn
+            // 
+            this.past90Btn.AccessibleName = "past90Btn";
+            this.past90Btn.Location = new System.Drawing.Point(487, 210);
+            this.past90Btn.Name = "past90Btn";
+            this.past90Btn.Size = new System.Drawing.Size(111, 29);
+            this.past90Btn.TabIndex = 43;
+            this.past90Btn.Text = "Past 90 Days";
+            this.past90Btn.UseVisualStyleBackColor = true;
+            this.past90Btn.Click += new System.EventHandler(this.past90Btn_Click);
             // 
             // InstantGenerationTask
             // 
@@ -251,6 +298,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.past90Btn);
+            this.Controls.Add(this.past60Btn);
+            this.Controls.Add(this.past30Btn);
+            this.Controls.Add(this.quickSelectLabel);
             this.Controls.Add(this.statusUpdateLabel);
             this.Controls.Add(this.header3Label);
             this.Controls.Add(this.selectedColListBox);
@@ -297,5 +348,9 @@
         private ListBox selectedColListBox;
         private Label header3Label;
         private Label statusUpdateLabel;
+        private Label quickSelectLabel;
+        private Button past30Btn;
+        private Button past60Btn;
+        private Button past90Btn;
     }
 }

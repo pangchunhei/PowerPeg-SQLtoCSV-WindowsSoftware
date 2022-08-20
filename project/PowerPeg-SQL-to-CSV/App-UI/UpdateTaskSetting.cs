@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace App_UI
 {
-    public partial class ChangeTaskSetting : Form
+    public partial class UpdateTaskSetting : Form
     {
         private string selectedTaskName;
         private SearchTask task;
 
-        public ChangeTaskSetting(string selectedTaskName)
+        public UpdateTaskSetting(string selectedTaskName)
         {
             InitializeComponent();
             this.ControlBox = false;
@@ -80,9 +80,7 @@ namespace App_UI
             else
             {
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-                //Test
-                MainFunction.updateTaskSetting(this.task, "Minute", filePathDataLabel.Text, this.triggerDateTimePicker.Value, selectCol);
-                //MainFunction.updateTaskSetting(this.task, "Month", filePathDataLabel.Text, this.triggerDateTimePicker.Value, selectCol);
+                MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, this.filePathDataLabel.Text, this.triggerDateTimePicker.Value, selectCol);
                 GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
             }
         }
@@ -96,43 +94,8 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Cancel and back to previous page.", false);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Back to previous page.", false);
             this.Close();
-        }
-
-        private void filePathDataLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void outputLoactionLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void triggerDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void triggerDateLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void selectFieldLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void header3Label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void statusUpdateLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

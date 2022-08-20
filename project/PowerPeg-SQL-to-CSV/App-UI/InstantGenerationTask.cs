@@ -29,31 +29,6 @@ namespace App_UI
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fromDateCalendar_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void toDateCalendar_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void selectFieldListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
         {
             filePathDataLabel.Text = GlobalFunction.exploreFilePath();
@@ -89,7 +64,6 @@ namespace App_UI
                 else
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the settings, discard task.", true);
-                    MainFunction.taskNotCreated();
                     resetForm();
                 }
 
@@ -104,7 +78,26 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Back to previous page.", false);
             this.Close();
+        }
+
+        private void past30Btn_Click(object sender, EventArgs e)
+        {
+            fromDateCalendar.SetDate(DateTime.Now.AddDays(-30));
+            toDateCalendar.SetDate(DateTime.Now);
+        }
+
+        private void past60Btn_Click(object sender, EventArgs e)
+        {
+            fromDateCalendar.SetDate(DateTime.Now.AddDays(-60));
+            toDateCalendar.SetDate(DateTime.Now);
+        }
+
+        private void past90Btn_Click(object sender, EventArgs e)
+        {
+            fromDateCalendar.SetDate(DateTime.Now.AddDays(-90));
+            toDateCalendar.SetDate(DateTime.Now);
         }
     }
 }

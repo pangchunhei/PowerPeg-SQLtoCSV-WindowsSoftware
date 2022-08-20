@@ -48,7 +48,6 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         public string createConnectionString(string address, string catalog, string username, string password)
         {
-            // TODO -- location
             return "Server=" + address + ";Database=" + catalog + ";Trusted_Connection=True; User Id=" + username + ";Password=" + password + ";";
         }
 
