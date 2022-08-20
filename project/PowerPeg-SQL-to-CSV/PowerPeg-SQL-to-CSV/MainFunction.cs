@@ -16,7 +16,7 @@ namespace PowerPeg_SQL_to_CSV
         
         private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
         {
-            if (selectmode.Equals("Instant"))
+            if (selectmode.Equals("InstantMode"))
             {
                 if (startdate != null && enddate != null)
                 {
@@ -28,11 +28,11 @@ namespace PowerPeg_SQL_to_CSV
                     throw new Exception();
                 }
             }
-            else if (selectmode.Equals("Month"))
+            else if (selectmode.Equals("MonthMode"))
             {
                 return new MonthMode(triggerdate, selectedcolumn);
             }
-            else if (selectmode.Equals("Minute"))
+            else if (selectmode.Equals("MinuteMode"))
             {
                 return new MinuteMode(triggerdate, selectedcolumn);
             }
@@ -141,6 +141,29 @@ namespace PowerPeg_SQL_to_CSV
             }else{
                 //No task to stop
             }
+        }
+
+        public static List<string> getGenerationScheduledModeName()
+        {
+            List<string> modeNamelist = new List<string>();
+
+            var type = typeof(IMode);
+            var objectTypeList = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes()).Where(p => type.IsAssignableFrom(p));
+
+            foreach(var m in objectTypeList)
+            {
+                modeNamelist.Add(m.Name);
+            }
+
+            modeNamelist.Remove("InstantMode");
+            modeNamelist.Remove("IMode");
+
+            //Debug.WriteLine("==========================");
+            Debug.WriteLine(string.Join("' ", modeNamelist));
+
+
+
+            return modeNamelist;
         }
     }
 }

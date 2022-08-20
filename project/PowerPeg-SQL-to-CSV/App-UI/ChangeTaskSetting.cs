@@ -21,6 +21,7 @@ namespace App_UI
             InitializeComponent();
             this.ControlBox = false;
             this.selectedTaskName = selectedTaskName;
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading ChangeTaskSetting.", false);
         }
 
         private void ChangeTaskSetting_Load(object sender, EventArgs e)
@@ -49,29 +50,19 @@ namespace App_UI
                 selectedColListBox.SelectedItems.Add(s);
             }
 
+            List<string> col3 = MainFunction.getGenerationScheduledModeName();
+
+            foreach (string s in col3)
+            {
+                frequencyCoboBox.Items.Add(s);
+            }
+            frequencyCoboBox.SelectedIndex = 0;
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
+
             filePathDataLabel.Text = task.getTaskInfo()[1];
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
-        }
-
-        private void headerLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fromDateLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fromDateLabel_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
@@ -96,11 +87,6 @@ namespace App_UI
             }
         }
 
-        private void selectedColListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             MainFunction.removeScheduleTask(task);
@@ -110,6 +96,7 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Cancel and back to previous page.", false);
             this.Close();
         }
 

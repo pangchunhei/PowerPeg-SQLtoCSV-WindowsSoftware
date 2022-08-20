@@ -15,9 +15,10 @@ namespace App_UI
     {
         public CreateNewTask()
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading CreateNewTask.", false);
             InitializeComponent();
             this.ControlBox = false;
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading CreateNewTask.", false);
+
         }
 
         public void resetForm()
@@ -40,10 +41,7 @@ namespace App_UI
             {
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
 
-                //Testing
-                SearchTask t = MainFunction.CreateTask("Minute", filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
-                //Real
-                //SearchTask t = MainFunction.CreateTask("Month", filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
+                SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
 
                 if (GlobalFunction.userCheckTaskDetail(t))
                 {
@@ -70,6 +68,14 @@ namespace App_UI
                 selectedColListBox.Items.Add(s);
             }
             selectedColListBox.SelectedItem = "-- All --";
+
+            List<string> col2 = MainFunction.getGenerationScheduledModeName();
+
+            foreach (string s in col2)
+            {
+                frequencyCoboBox.Items.Add(s);
+            }
+            frequencyCoboBox.SelectedIndex = 0;
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }

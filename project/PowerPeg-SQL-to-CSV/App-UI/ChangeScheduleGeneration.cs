@@ -15,9 +15,9 @@ namespace App_UI
     {
         public ChangeScheduleGeneration()
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading ChangeScheduleGeneration.", false);
             InitializeComponent();
             this.ControlBox = false;
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading ChangeScheduleGeneration.", false);
         }
 
         private void selectBtn_Click(object sender, EventArgs e)
@@ -39,10 +39,10 @@ namespace App_UI
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading Database information.", false);
             serverInfoLabel.Text = MainFunction.getDatabaseInformation()[0];
 
-            updateTaskListName();
+            updateTasklistName();
         }
 
-        private void updateTaskListName()
+        private void updateTasklistName()
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading current scheduled tasklist.", false);
 
@@ -73,32 +73,31 @@ namespace App_UI
 
         private void createNew()
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Request create new schedule task.", false);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Requesting to create new schedule task.", false);
 
             this.Hide();
             CreateNewTask createNewTask = new CreateNewTask();
             createNewTask.ShowDialog();
 
             this.Show();
-            updateTaskListName();
+            updateTasklistName();
         }
 
         private void changeTaskSetting(string selectedTaskName)
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Request update existing schedule task setting.", false);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Requesting to update existing schedule task setting.", false);
 
             this.Hide();
             ChangeTaskSetting changeTaskSetting = new ChangeTaskSetting(selectedTaskName);
             changeTaskSetting.ShowDialog();
 
             this.Show();
-            updateTaskListName();
+            updateTasklistName();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Go back to previous page.", false);
-
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Close ChnageSchedukeGeneration and Go back to previous page.", false);
             this.Close();
         }
     }

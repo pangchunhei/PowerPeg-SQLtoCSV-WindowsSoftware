@@ -8,32 +8,19 @@ namespace App_UI
         {
             InitializeComponent();
             this.ControlBox = false;
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading ChangeServerInfo.", false);
         }
 
         private bool validateForm()
         {
-
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Validate input.", false);
             if (addressTextbox.Text.Length == 0 || catalogTextbox.Text.Length == 0)
             {
                 return false;
             }
 
             return true;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addressTextbox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void ChangeServerInfo_Load(object sender, EventArgs e)
@@ -46,16 +33,6 @@ namespace App_UI
             passwordTextbox.Text = existingValue[3];
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User updating form", false);
-        }
-
-        private void catalogTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameTextbox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -83,6 +60,7 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Closing ChangeServerInfo and Go back to previous page..", false);
             this.Close();
         }
     }

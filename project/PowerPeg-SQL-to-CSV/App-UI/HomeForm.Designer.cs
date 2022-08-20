@@ -38,7 +38,7 @@
             this.exitBtn = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.statusUpdateLabel = new System.Windows.Forms.Label();
-            this.header3Label = new System.Windows.Forms.Label();
+            this.header2Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -129,16 +129,16 @@
             this.statusUpdateLabel.TabIndex = 44;
             this.statusUpdateLabel.Text = "<Status Update>";
             // 
-            // header3Label
+            // header2Label
             // 
-            this.header3Label.AccessibleName = "header3Label";
-            this.header3Label.AutoSize = true;
-            this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.header3Label.Location = new System.Drawing.Point(155, 385);
-            this.header3Label.Name = "header3Label";
-            this.header3Label.Size = new System.Drawing.Size(174, 31);
-            this.header3Label.TabIndex = 43;
-            this.header3Label.Text = "Process Status: ";
+            this.header2Label.AccessibleName = "header2Label";
+            this.header2Label.AutoSize = true;
+            this.header2Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.header2Label.Location = new System.Drawing.Point(155, 385);
+            this.header2Label.Name = "header2Label";
+            this.header2Label.Size = new System.Drawing.Size(174, 31);
+            this.header2Label.TabIndex = 43;
+            this.header2Label.Text = "Process Status: ";
             // 
             // HomeForm
             // 
@@ -146,7 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusUpdateLabel);
-            this.Controls.Add(this.header3Label);
+            this.Controls.Add(this.header2Label);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.reStartProgramBtn);
             this.Controls.Add(this.changeServerInfoBtn);
@@ -173,6 +173,6 @@
         private Button exitBtn;
         private NotifyIcon notifyIcon;
         private Label statusUpdateLabel;
-        private Label header3Label;
+        private Label header2Label;
     }
 }

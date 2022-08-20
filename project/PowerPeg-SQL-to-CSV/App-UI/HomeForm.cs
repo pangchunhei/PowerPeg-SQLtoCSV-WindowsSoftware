@@ -18,13 +18,15 @@ namespace App_UI
         
         public HomeForm()
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Initializing appication.", false);
-
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading HomeForm.", false);
             InitializeComponent();
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Initializing UI Application.", false);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading HomeForm.", false);
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Starting background task.", false);
             MainFunction.startBackgroundJob();
+
+            //MainFunction.getGenerationScheduledModeName();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -50,29 +52,38 @@ namespace App_UI
 
         private void changeScheduleGenerationBtn_Click(object sender, EventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Stopping background task.", false);
             MainFunction.stopBackgroundJob();
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Starting background task.", false);
             this.Hide();
             ChangeScheduleGeneration changeScheduleGeneration = new ChangeScheduleGeneration();
             changeScheduleGeneration.ShowDialog();
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Showing background task.", false);
             this.Show();
+            
+            //Update time gap for sync
             Thread.Sleep(500);
-            Debug.WriteLine("=== Restart ===");
+
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Restarting background task.", false);
             MainFunction.startBackgroundJob();
         }
 
         private void reStartProgramBtn_Click(object sender, EventArgs e)
         {
-            //TODO-- ScheduleTaskList s = new ScheduleTaskList();
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Restarting background task.", false);
             MainFunction.reStartBackgroundJob();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            MainFunction.stopBackgroundJob();
             GlobalFunction.statusUpdate(statusUpdateLabel, "Closing background task.", false);
+            MainFunction.stopBackgroundJob();
+            //Giving time to close
             Thread.Sleep(3000);
 
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Allication closing.", false);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Appication closing.", false);
             Application.Exit();
         }
 
@@ -80,6 +91,7 @@ namespace App_UI
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Putting HomeForm to System Tray.", false);
                 notifyIcon.Visible = true;
                 this.Hide();
 
@@ -93,6 +105,7 @@ namespace App_UI
 
         private void notifyIcon_MouseClick(object sender, MouseEventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Opening HomeForm from System Tray.", false);
             this.Show();
             this.WindowState = FormWindowState.Normal;
             notifyIcon.Visible = false;

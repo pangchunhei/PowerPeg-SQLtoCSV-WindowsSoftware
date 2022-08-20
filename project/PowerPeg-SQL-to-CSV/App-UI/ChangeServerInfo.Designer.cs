@@ -54,7 +54,6 @@
             this.headerLabel.Size = new System.Drawing.Size(453, 46);
             this.headerLabel.TabIndex = 1;
             this.headerLabel.Text = "Change Server Information";
-            this.headerLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // addressLabel
             // 
@@ -77,7 +76,6 @@
             this.catalogLabel.Size = new System.Drawing.Size(108, 31);
             this.catalogLabel.TabIndex = 4;
             this.catalogLabel.Text = "Catalog: ";
-            this.catalogLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // usernameLabel
             // 
@@ -135,7 +133,6 @@
             this.addressTextbox.Name = "addressTextbox";
             this.addressTextbox.Size = new System.Drawing.Size(452, 34);
             this.addressTextbox.TabIndex = 9;
-            this.addressTextbox.TextChanged += new System.EventHandler(this.addressTextbox_TextChanged);
             // 
             // catalogTextbox
             // 
@@ -145,7 +142,6 @@
             this.catalogTextbox.Name = "catalogTextbox";
             this.catalogTextbox.Size = new System.Drawing.Size(452, 34);
             this.catalogTextbox.TabIndex = 10;
-            this.catalogTextbox.TextChanged += new System.EventHandler(this.catalogTextbox_TextChanged);
             // 
             // usernameTextbox
             // 
@@ -155,7 +151,6 @@
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(452, 34);
             this.usernameTextbox.TabIndex = 11;
-            this.usernameTextbox.TextChanged += new System.EventHandler(this.usernameTextbox_TextChanged);
             // 
             // passwordTextbox
             // 
