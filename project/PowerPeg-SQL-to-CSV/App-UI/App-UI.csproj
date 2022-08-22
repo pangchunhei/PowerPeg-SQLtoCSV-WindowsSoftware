@@ -10,6 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV.csproj" />
   </ItemGroup>
 

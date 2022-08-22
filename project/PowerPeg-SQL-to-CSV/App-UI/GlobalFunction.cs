@@ -1,24 +1,24 @@
-﻿using PowerPeg_SQL_to_CSV;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using log4net;
+using PowerPeg_SQL_to_CSV;
+using PowerPeg_SQL_to_CSV.Log;
 
 namespace App_UI
 {
     public static class GlobalFunction
     {
-        public static void statusUpdate(Label updateLabel, string msg, bool alert)
+        private static readonly ILog log = LogHelper.getLogger();
+
+        public static void statusUpdate(Label updateLabel, string msg, bool needAlertBox)
         {
             updateLabel.Text = msg;
             updateLabel.Refresh();
 
-            if (alert)
+            if (needAlertBox)
             {
                 MessageBox.Show(msg);
             }
+
+            log.Info(msg);
         }
 
         public static string exploreFilePath()

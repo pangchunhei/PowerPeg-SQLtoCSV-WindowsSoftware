@@ -1,14 +1,6 @@
-﻿using Microsoft.Extensions.Hosting;
-using Quartz;
+﻿using Quartz;
 using Quartz.Impl;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using static Quartz.Logging.OperationName;
 
 namespace PowerPeg_SQL_to_CSV.ProcessTask
 {

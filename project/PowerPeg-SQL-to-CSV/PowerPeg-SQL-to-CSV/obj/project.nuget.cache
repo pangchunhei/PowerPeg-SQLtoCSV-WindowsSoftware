@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3mFH4Rg1NAmCVTFni/LeIutmdf8EWEOA2xL6RZVFqhzjc6M+JfIk2RImDSWqza4VrhP0gBhHyeN2S+OAXuC9hQ==",
+  "dgSpecHash": "FQ5H/8YnK7+VikKnMGNBoBGwagZjXogu6rwcKAdjF/sVdSrH2LgsJOHzvRJ+PME9YNJ0XO7zEtc0IwPwp86gfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elsto\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\elsto\\.nuget\\packages\\log4net\\2.0.15\\log4net.2.0.15.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\microsoft.extensions.configuration.binder\\6.0.0\\microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",

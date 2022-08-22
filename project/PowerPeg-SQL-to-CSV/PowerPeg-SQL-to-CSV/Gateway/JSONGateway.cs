@@ -62,18 +62,20 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         public void updateJSON(List<SearchTask> searchTasksList)
         {
-            var settings = new JsonSerializerSettings()
+            lock (_lock)
             {
-                ContractResolver = new contractResolverSaveAll(),
-                TypeNameHandling = TypeNameHandling.All
-            };
-            using (StreamWriter file = File.CreateText(this.jsonPath))
-            {
-                JsonSerializer serializer = JsonSerializer.Create(settings);
-                serializer.Serialize(file, searchTasksList);
+                var settings = new JsonSerializerSettings()
+                {
+                    ContractResolver = new contractResolverSaveAll(),
+                    TypeNameHandling = TypeNameHandling.All
+                };
+                using (StreamWriter file = File.CreateText(this.jsonPath))
+                {
+                    JsonSerializer serializer = JsonSerializer.Create(settings);
+                    serializer.Serialize(file, searchTasksList);
+                }
             }
         }
-
     }
 
     public class contractResolverSaveAll : DefaultContractResolver

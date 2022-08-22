@@ -29,19 +29,22 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
         }
         public void dataTable_to_CSV(string fileName, string filePath, DataTable dt)
         {
-            StringBuilder sb = new StringBuilder();
-
-            IEnumerable<string> columnNames = dt.Columns.Cast<DataColumn>().Select(column => column.ColumnName);
-            sb.AppendLine(string.Join(",", columnNames));
-
-            foreach (DataRow row in dt.Rows)
+            lock (_lock)
             {
-                IEnumerable<string> fields = row.ItemArray.Select(field =>
-                  string.Concat("\"", field.ToString().Replace("\"", "\"\""), "\""));
-                sb.AppendLine(string.Join(",", fields));
-            }
+                StringBuilder sb = new StringBuilder();
 
-            File.WriteAllText(filePath + "\\" + fileName + ".csv", sb.ToString());
+                IEnumerable<string> columnNames = dt.Columns.Cast<DataColumn>().Select(column => column.ColumnName);
+                sb.AppendLine(string.Join(",", columnNames));
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    IEnumerable<string> fields = row.ItemArray.Select(field =>
+                      string.Concat("\"", field.ToString().Replace("\"", "\"\""), "\""));
+                    sb.AppendLine(string.Join(",", fields));
+                }
+
+                File.WriteAllText(filePath + "\\" + fileName + ".csv", sb.ToString());
+            }
         }
 
     }

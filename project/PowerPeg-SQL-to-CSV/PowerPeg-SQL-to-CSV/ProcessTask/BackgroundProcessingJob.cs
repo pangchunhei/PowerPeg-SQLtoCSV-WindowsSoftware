@@ -1,7 +1,6 @@
 ﻿using PowerPeg_SQL_to_CSV.Gateway;
 using Quartz;
 using System.Diagnostics;
-using System.Threading;
 
 namespace PowerPeg_SQL_to_CSV.ProcessTask
 {

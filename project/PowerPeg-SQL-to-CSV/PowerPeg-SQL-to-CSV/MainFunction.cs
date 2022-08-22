@@ -1,13 +1,19 @@
-﻿using PowerPeg_SQL_to_CSV.Gateway;
+﻿using log4net;
+using PowerPeg_SQL_to_CSV.Gateway;
 using PowerPeg_SQL_to_CSV.Mode;
 using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
+using PowerPeg_SQL_to_CSV.Log;
+
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
 
 namespace PowerPeg_SQL_to_CSV
 {
     public static class MainFunction
     {
+        private static readonly ILog log = LogHelper.getLogger();
+
         private static ScheduleSearchTasklist scheduleSearchTasklist = new ScheduleSearchTasklist();
         
         private static BackgroundScheduler backgroundScheduler = null;
@@ -16,6 +22,8 @@ namespace PowerPeg_SQL_to_CSV
         
         private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
         {
+            log.Debug("Creating mode");
+
             if (selectmode.Equals("InstantMode"))
             {
                 if (startdate != null && enddate != null)

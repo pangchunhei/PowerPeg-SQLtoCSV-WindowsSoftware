@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "App-UI/1.0.0": {
         "dependencies": {
-          "PowerPeg-SQL-to-CSV": "1.0.0"
+          "PowerPeg-SQL-to-CSV": "1.0.0",
+          "log4net": "2.0.15"
         },
         "runtime": {
           "App-UI.dll": {}
@@ -19,6 +20,17 @@
           "lib/net5.0/Dapper.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.123.33578"
+          }
+        }
+      },
+      "log4net/2.0.15": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {
+            "assemblyVersion": "2.0.15.0",
+            "fileVersion": "2.0.15.0"
           }
         }
       },
@@ -565,7 +577,8 @@
           "System.Collections": "4.3.0",
           "System.Configuration.ConfigurationManager": "6.0.0",
           "System.Data.SqlClient": "4.8.3",
-          "TaskScheduler": "2.10.1"
+          "TaskScheduler": "2.10.1",
+          "log4net": "2.0.15"
         },
         "runtime": {
           "PowerPeg-SQL-to-CSV.dll": {}
@@ -585,6 +598,13 @@
       "sha512": "sha512-RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
       "path": "dapper/2.0.123",
       "hashPath": "dapper.2.0.123.nupkg.sha512"
+    },
+    "log4net/2.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GahnO9ZgFka+xYcFwAfIFjW+k86P2nxFoaEpH6t3v4hiGj7tv2ksVZphxCVIHmJxoySS0HeU3dgCW+bSCcfD0A==",
+      "path": "log4net/2.0.15",
+      "hashPath": "log4net.2.0.15.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/6.0.0": {
       "type": "package",
