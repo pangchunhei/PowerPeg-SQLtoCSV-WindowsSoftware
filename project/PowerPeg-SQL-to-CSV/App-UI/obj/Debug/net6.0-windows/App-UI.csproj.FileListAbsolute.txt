@@ -69,4 +69,3 @@ C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\obj\Debug\net6.0-windows\App_UI.UpdateTaskSetting.resources
 C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\log4net.dll
-C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\PowerPeg-SQL-to-CSV.dll.config

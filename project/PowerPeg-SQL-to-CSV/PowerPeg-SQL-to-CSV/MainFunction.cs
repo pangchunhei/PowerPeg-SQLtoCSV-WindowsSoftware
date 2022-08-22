@@ -128,24 +128,24 @@ namespace PowerPeg_SQL_to_CSV
             return databaseGateway.getDBTableColName();
         }
 
-        public static void startBackgroundJob()
+        public static async Task startBackgroundJob()
         {
             log.Debug("Run startBackgroundJob");
 
             backgroundScheduler = new BackgroundScheduler();
-            _ = backgroundScheduler.runAsync();
+            await backgroundScheduler.runAsync();
         }
 
-        public static async void reStartBackgroundJob()
+        public static async Task reStartBackgroundJob()
         {
             log.Debug("Run reStartBackgroundJob");
 
-            stopBackgroundJob();
+            await stopBackgroundJob();
 
-            startBackgroundJob();
+            await startBackgroundJob();
         }
 
-        public static async void stopBackgroundJob()
+        public static async Task stopBackgroundJob()
         {
             log.Debug("Run stopBackgroundJob");
 
