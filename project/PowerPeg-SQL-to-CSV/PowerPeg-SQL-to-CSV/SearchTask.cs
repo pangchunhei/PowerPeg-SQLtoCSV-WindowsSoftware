@@ -10,12 +10,16 @@ using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
+using log4net;
+using PowerPeg_SQL_to_CSV.Log;
 
 namespace PowerPeg_SQL_to_CSV
 {
     [Serializable]
     public class SearchTask
     {
+        private static readonly ILog log = LogHelper.getLogger();
+
         private string taskName;
 
         private string outputLocation;
@@ -32,17 +36,19 @@ namespace PowerPeg_SQL_to_CSV
             this.taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
             this.outputLocation = outputLocation;
             this.operationMode = operationMode;
+
+            log.Debug("Created search class" + string.Join(",", this.getTaskInfo()));
         }
 
         public void toRunTask(DateTime runDateTime)
         {
-            Debug.WriteLine($"toRunTask: {this.taskName}");
+            log.Info($"Runing search on {this.taskName}");
 
             Result resultOfSQL = operationMode.runSearch(runDateTime);
 
             if(resultOfSQL != null)
             {
-                Debug.WriteLine($"Generate file: {this.taskName}");
+                log.Info($"Search task result generated, generate file: {this.taskName}");
 
                 string fileOutputFileName = taskName + "_generation_time_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
 
@@ -51,7 +57,7 @@ namespace PowerPeg_SQL_to_CSV
             else
             {
                 //TODO-- log
-                Debug.WriteLine($"No need to process: {this.taskName}");
+                log.Info($"No need to process the search task: {this.taskName}");
             }
         }
 
@@ -71,8 +77,12 @@ namespace PowerPeg_SQL_to_CSV
 
         public void updateTaskSetting(string outputlocation, IMode mode)
         {
+            log.Debug("Orginal search task setting" + string.Join(",", this.getTaskInfo()));
+
             outputLocation = outputlocation;
             operationMode = mode;
+            
+            log.Debug("New search task setting updated" + string.Join(",", this.getTaskInfo()));
         }
     }
 }

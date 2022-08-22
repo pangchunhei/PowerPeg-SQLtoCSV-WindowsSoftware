@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using log4net;
+using PowerPeg_SQL_to_CSV.Log;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -14,6 +16,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         private static DatabaseGateway _instance;
         private static readonly object _lock = new object();
+        private static readonly ILog log = LogHelper.getLogger();
 
         public static DatabaseGateway getInstance()
         {
@@ -44,6 +47,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             password = ConfigurationManager.AppSettings["Password"];
 
             connectionString = createConnectionString(address, catalog, username, password);
+
+            log.Info($"Setup the Database gateway and create connection string: {connectionString}");
         }
 
         public string createConnectionString(string address, string catalog, string username, string password)
@@ -53,6 +58,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         public bool updateGateway(string newAddress, string newCatalog, string newUsername, string newPassword)
         {
+            log.Debug("Update gateway");
+
             if (isServerConnected(createConnectionString(newAddress, newCatalog, newUsername, newPassword)))
             {
                 Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -87,11 +94,13 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             {
                 try
                 {
+                    log.Info("Able to connect to SQL server");
                     connection.Open();
                     return true;
                 }
                 catch (SqlException)
                 {
+                    log.Error("Fail to connect to the SQL server");
                     return false;
                 }
             }
@@ -99,6 +108,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         public List<string> getDBTableColName()
         {
+            log.Info("Request Database for Table column infomation.");
+
             //Use the stored procedure cmd
             DataTable sqlOutput;
 
@@ -128,7 +139,6 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
             foreach (DataRow dr in d.Rows)
             {
-                //Debug.Write(dr[0]);
                 result.Add(dr[0].ToString());
             }
 
@@ -150,7 +160,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         public DataTable getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List<string> selectColumn)
         {
-            Debug.WriteLine("Get search Table 01");
+            log.Info("Request Database for Table data.");
 
             //Use the stored procedure cmd
             DataTable sqlOutput;
@@ -174,18 +184,5 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
             return sqlOutput;
         }
-
-        public void printDataTable(DataTable dt)
-        {
-            foreach (DataRow dataRow in dt.Rows)
-            {
-                foreach (var item in dataRow.ItemArray)
-                {
-                    Debug.Write(item + "\t");
-                }
-                Debug.WriteLine("");
-            }
-        }
     }
-
 }

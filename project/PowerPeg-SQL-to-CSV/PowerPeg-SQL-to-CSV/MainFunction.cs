@@ -6,8 +6,6 @@ using System.Diagnostics;
 using System.Text.RegularExpressions;
 using PowerPeg_SQL_to_CSV.Log;
 
-[assembly: log4net.Config.XmlConfigurator(Watch = true)]
-
 namespace PowerPeg_SQL_to_CSV
 {
     public static class MainFunction
@@ -22,7 +20,7 @@ namespace PowerPeg_SQL_to_CSV
         
         private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
         {
-            log.Debug("Creating mode");
+            log.Debug("Run CreateMode");
 
             if (selectmode.Equals("InstantMode"))
             {
@@ -53,6 +51,8 @@ namespace PowerPeg_SQL_to_CSV
 
         public static SearchTask CreateTask(string selectmodename, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, string taskname = "default")
         {
+            log.Debug("Run CreateTask");
+
             IMode m = CreateMode(selectmodename, triggerdate, selectedcolumn, startdate, enddate);
 
             string modifyName = Regex.Replace(taskname, @"(\s+|\.|\,|\:|\*|&|\?|\/|#|\\|%|\^|\$|@|!|\(|\))", "");
@@ -62,11 +62,15 @@ namespace PowerPeg_SQL_to_CSV
 
         public static void runTaskNow(SearchTask task)
         {
+            log.Debug("Run runTaskNow");
+
             task.toRunTask(DateTime.Now);
         }
 
         public static void updateTaskSetting(SearchTask searchtask, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn)
         {
+            log.Debug("Run updateTaskSetting");
+
             IMode m = CreateMode(selectmode, triggerdate, selectedcolumn);
 
             searchtask.updateTaskSetting(outputlocation, m);
@@ -95,16 +99,22 @@ namespace PowerPeg_SQL_to_CSV
 
         public static void addScheduleTask(SearchTask searchtask)
         {
+            log.Debug("Run addScheduleTask");
+
             scheduleSearchTasklist.addNewTask(searchtask);
         }
 
         public static void removeScheduleTask(SearchTask searchtask)
         {
+            log.Debug("Run removeScheduleTask");
+
             scheduleSearchTasklist.removeTask(searchtask);
         }
 
         public static bool updateDatabaseGateway(string address, string catalog, string username, string password)
         {
+            log.Debug("Run updateDatabaseGateway");
+
             return databaseGateway.updateGateway(address, catalog, username, password);
         }
 
@@ -120,12 +130,16 @@ namespace PowerPeg_SQL_to_CSV
 
         public static void startBackgroundJob()
         {
+            log.Debug("Run startBackgroundJob");
+
             backgroundScheduler = new BackgroundScheduler();
             _ = backgroundScheduler.runAsync();
         }
 
         public static async void reStartBackgroundJob()
         {
+            log.Debug("Run reStartBackgroundJob");
+
             stopBackgroundJob();
 
             startBackgroundJob();
@@ -133,11 +147,16 @@ namespace PowerPeg_SQL_to_CSV
 
         public static async void stopBackgroundJob()
         {
-            if(backgroundScheduler != null){
+            log.Debug("Run stopBackgroundJob");
+
+            if (backgroundScheduler != null){
+                log.Debug("Have background task, stopping background task");
+
                 await backgroundScheduler.stopAsync();
                 backgroundScheduler = null;
             }else{
                 //No task to stop
+                log.Debug("No background task to stop");
             }
         }
 
@@ -153,13 +172,10 @@ namespace PowerPeg_SQL_to_CSV
                 modeNamelist.Add(m.Name);
             }
 
+            log.Debug("Mode list: " + string.Join(", ", modeNamelist));
+            
             modeNamelist.Remove("InstantMode");
             modeNamelist.Remove("IMode");
-
-            //Debug.WriteLine("==========================");
-            Debug.WriteLine(string.Join("' ", modeNamelist));
-
-
 
             return modeNamelist;
         }

@@ -1,4 +1,6 @@
-﻿using PowerPeg_SQL_to_CSV.Gateway;
+﻿using log4net;
+using PowerPeg_SQL_to_CSV.Gateway;
+using PowerPeg_SQL_to_CSV.Log;
 using Quartz;
 using System.Diagnostics;
 
@@ -10,6 +12,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
     {
         private ScheduleSearchTasklist searchTasklist;
         private List<SearchTask> scheduleRunlist;
+        private static readonly ILog log = LogHelper.getLogger();
 
         public async Task Execute(IJobExecutionContext context)
         {
@@ -20,7 +23,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
 
         private void processTask(IJobExecutionContext context)
         {
-            Debug.WriteLine($"> {DateTime.Now} Background Job is running");
+            log.Info($"Backround job is created and running");
 
             searchTasklist = new ScheduleSearchTasklist();
 
@@ -30,18 +33,18 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
 
             foreach (SearchTask searchTask in scheduleRunlist)
             {
-                Debug.WriteLine($"Search Task is {searchTask.getTaskInfo()[0]}");
+                log.Debug($"Background job process search task of {searchTask.getTaskInfo()[0]}");
                 searchTask.toRunTask(bwCurrentDateTime);
             }
 
             if (context.CancellationToken.IsCancellationRequested)
             {
                 //Interrrupt triggered
-                Debug.WriteLine("Background Job interrupted");
+                log.Info("Background Job interrupted");
             }
             else
             {
-                Debug.WriteLine("State saved");
+                log.Info("Finished background job, save the search task state");
                 JSONGateway jsonGateway = JSONGateway.getInstance();
                 jsonGateway.updateJSON(this.scheduleRunlist);
             }
@@ -49,17 +52,17 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
 
         private void testJob(IJobExecutionContext context)
         {
-            Debug.WriteLine("> " + DateTime.Now + " Test Job is executing. ");
+            log.Info("Test Job is executing");
             for (int i = 0; i < 10; i++)
             {
-                Debug.WriteLine("> " + i);
+                log.Debug("> " + i);
                 Thread.Sleep(1000);
             }
 
             //Interrrupt triggered
             if (context.CancellationToken.IsCancellationRequested)
             {
-                Debug.WriteLine("Test Job interrupted");
+                log.Debug("Test Job interrupted");
             }
         }
     }

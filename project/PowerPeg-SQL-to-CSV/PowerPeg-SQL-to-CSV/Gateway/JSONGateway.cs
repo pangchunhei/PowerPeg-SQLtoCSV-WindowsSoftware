@@ -1,5 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using log4net;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using PowerPeg_SQL_to_CSV.Log;
 using System.Configuration;
 using System.Diagnostics;
 using System.Reflection;
@@ -11,11 +13,12 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         private JSONGateway()
         {
             this.jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSON"];
-            Debug.WriteLine(jsonPath);
+            log.Debug($"Setup SDON app data filepath {jsonPath}");
         }
 
         private static JSONGateway _instance;
         private static readonly object _lock = new object();
+        private static readonly ILog log = LogHelper.getLogger();
 
         public static JSONGateway getInstance()
         {
@@ -36,6 +39,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         public List<SearchTask> importTasklist()
         {
+            log.Info($"Import JSON app data");
+
             using (StreamReader file = File.OpenText(jsonPath))
             {
                 var settings = new JsonSerializerSettings()
@@ -62,6 +67,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
         public void updateJSON(List<SearchTask> searchTasksList)
         {
+            log.Info($"Update JSON app data");
+
             lock (_lock)
             {
                 var settings = new JsonSerializerSettings()

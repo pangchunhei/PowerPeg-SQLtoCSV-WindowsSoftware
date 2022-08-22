@@ -1,4 +1,6 @@
-﻿using PowerPeg_SQL_to_CSV.Gateway;
+﻿using log4net;
+using PowerPeg_SQL_to_CSV.Gateway;
+using PowerPeg_SQL_to_CSV.Log;
 using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Data;
 
@@ -7,14 +9,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
     public class InstantMode : IMode
     {
         private string modeName;
-
         private DateTime startSearchDay;
-
         private DateTime endSearchDay;
-
         private DateTime triggerDateTime;
-
         private List<string> selectColumn = new List<string>();
+        private static readonly ILog log = LogHelper.getLogger();
 
         /// <summary>
         /// Create and change mode of InstantMode
@@ -40,6 +39,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         public Result runSearch(DateTime runDateTime)
         {
+            log.Info($"Trigger instant mode search: " + String.Join(", ", getInfo()));
+
             DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 
             Result res = new Result(runDateTime, dt);

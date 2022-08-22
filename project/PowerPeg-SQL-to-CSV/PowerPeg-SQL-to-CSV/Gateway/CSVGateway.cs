@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using log4net;
+using PowerPeg_SQL_to_CSV.Log;
+using System.Data;
 using System.Text;
 
 namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
@@ -12,6 +14,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
 
         private static CSVGateway _instance;
         private static readonly object _lock = new object();
+        private static readonly ILog log = LogHelper.getLogger();
 
         public static CSVGateway getInstance()
         {
@@ -31,6 +34,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
         {
             lock (_lock)
             {
+                log.Info($"Processing result to CSV: {fileName}");
+
                 StringBuilder sb = new StringBuilder();
 
                 IEnumerable<string> columnNames = dt.Columns.Cast<DataColumn>().Select(column => column.ColumnName);
@@ -43,6 +48,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
                     sb.AppendLine(string.Join(",", fields));
                 }
 
+                log.Debug($"Store the CSV of the Result to {filePath}");
                 File.WriteAllText(filePath + "\\" + fileName + ".csv", sb.ToString());
             }
         }

@@ -1,4 +1,6 @@
-﻿using Quartz;
+﻿using log4net;
+using PowerPeg_SQL_to_CSV.Log;
+using Quartz;
 using Quartz.Impl;
 using System.Diagnostics;
 
@@ -8,6 +10,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
     {
         private StdSchedulerFactory schedulerFactory;
         private IScheduler scheduler;
+        private static readonly ILog log = LogHelper.getLogger();
 
         public async Task runAsync()
         {
@@ -15,7 +18,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             scheduler = await schedulerFactory.GetScheduler();
             await scheduler.Start();
 
-            Debug.WriteLine("Background Scheduler is running");
+            log.Debug("Background Scheduler is running");
 
             //创建作业和触发器 .WithIdentity("Backgroud-Schedule-Search")
             IJobDetail jobDetail = JobBuilder.Create<BackgroundProcessingJob>().Build();
@@ -39,11 +42,11 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             IReadOnlyCollection<IJobExecutionContext> jobs = await this.scheduler.GetCurrentlyExecutingJobs();
             foreach (IJobExecutionContext context in jobs)
             {
-                Debug.WriteLine($"Trying to interrupt job {context.JobDetail}");
-                Debug.WriteLine(await this.scheduler.Interrupt(context.JobDetail.Key));
+                log.Debug($"Trying to interrupt job: {context.JobDetail}");
+                log.Debug("Interrupt status: " + await this.scheduler.Interrupt(context.JobDetail.Key));
             }
 
-            Debug.WriteLine("Stop scheduler");
+            log.Debug("Stop scheduler");
             await scheduler.Shutdown(true);
         }
     }
