@@ -13,6 +13,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         private DatabaseGateway()
         {
             setGateway();
+            this.selectedTableList = JSONGateway.getInstance().importTable();
         }
 
         private static DatabaseGateway _instance;
@@ -35,6 +36,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         }
 
         private string connectionString;
+        private List<string> selectedTableList;
 
         public void setGateway()
         {
@@ -57,7 +59,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                 ConfigurationManager.RefreshSection("appSettings");
 
                 setGateway();
-                
+
                 return true;
             }
             else
@@ -78,7 +80,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             string[] currentSetting = { decoder.DataSource, decoder.InitialCatalog, this.connectionString };
             return currentSetting;
         }
-         private bool isServerConnected(string connectionString)
+        private bool isServerConnected(string connectionString)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -118,16 +120,9 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                 }
             }
 
-            List<string> result = datatableToString1DList(sqlOutput);
-
-            return result;
-        }
-
-        public List<string> datatableToString1DList(DataTable d)
-        {
             List<string> result = new List<string>();
 
-            foreach (DataRow dr in d.Rows)
+            foreach (DataRow dr in sqlOutput.Rows)
             {
                 result.Add(dr[0].ToString());
             }
@@ -173,6 +168,17 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             }
 
             return sqlOutput;
+        }
+
+        public List<string> getSelectedTable()
+        {
+            return this.selectedTableList;
+        }
+
+        public void setSelectedTable(List<string> tableName)
+        {
+            this.selectedTableList = tableName;
+            JSONGateway.getInstance().updateTableJSON(tableName);
         }
     }
 }
