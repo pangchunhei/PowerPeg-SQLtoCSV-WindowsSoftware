@@ -13,8 +13,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         private JSONGateway()
         {
             this.tasklistJsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["Tasklist"];
-            this.tableJsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["Table"];
-            log.Debug($"Setup JSON app data filepath {tasklistJsonPath}, {tableJsonPath}");
+            this.tableJsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["SelectedTable"];
+            log.Debug($"JSON app data filepath {tasklistJsonPath}, {tableJsonPath}");
         }
 
         private static JSONGateway _instance;
@@ -47,10 +47,12 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
             if (list == null)
             {
+                log.Info($"No import data");
                 return new List<SearchTask>();
             }
             else
             {
+                log.Info($"Finished import");
                 return list;
             }
         }
@@ -58,24 +60,25 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         public List<string> importTable()
         {
             log.Info($"Import table data");
-
             List<string> list = (List<string>)importJson(typeof(List<string>), this.tableJsonPath);
 
             if (list == null)
             {
+                log.Info($"No import data");
                 return new List<string>();
             }
             else
             {
+                log.Info($"Finished import");
                 return list;
             }
         }
 
-        private object importJson(Type type, string filepath)
+        private object? importJson(Type type, string filepath)
         {
             log.Info($"Import {filepath} Json data");
 
-            using (StreamReader file = File.OpenText(tasklistJsonPath))
+            using (StreamReader file = File.OpenText(filepath))
             {
                 var settings = new JsonSerializerSettings()
                 {
@@ -85,8 +88,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                     TypeNameHandling = TypeNameHandling.All
                 };
                 JsonSerializer serializer = JsonSerializer.Create(settings);
-
-                return serializer.Deserialize(file, type);
+                
+                return serializer.Deserialize(file, type);                
             }
         }
 

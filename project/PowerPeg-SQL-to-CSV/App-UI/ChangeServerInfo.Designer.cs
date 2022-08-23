@@ -67,7 +67,7 @@
             this.saveBtn.AccessibleName = "saveBtn";
             this.saveBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.saveBtn.Location = new System.Drawing.Point(251, 352);
+            this.saveBtn.Location = new System.Drawing.Point(278, 444);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(120, 46);
             this.saveBtn.TabIndex = 7;
@@ -80,7 +80,7 @@
             this.cancelBtn.AccessibleName = "cancelBtn";
             this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(435, 352);
+            this.cancelBtn.Location = new System.Drawing.Point(433, 444);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(120, 46);
             this.cancelBtn.TabIndex = 8;
@@ -95,17 +95,17 @@
             this.connectionStrTextbox.Location = new System.Drawing.Point(287, 103);
             this.connectionStrTextbox.Multiline = true;
             this.connectionStrTextbox.Name = "connectionStrTextbox";
-            this.connectionStrTextbox.Size = new System.Drawing.Size(419, 88);
+            this.connectionStrTextbox.Size = new System.Drawing.Size(419, 156);
             this.connectionStrTextbox.TabIndex = 9;
             // 
             // tableTextbox
             // 
             this.tableTextbox.AccessibleName = "tableTextbox";
             this.tableTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tableTextbox.Location = new System.Drawing.Point(254, 207);
+            this.tableTextbox.Location = new System.Drawing.Point(254, 265);
             this.tableTextbox.Multiline = true;
             this.tableTextbox.Name = "tableTextbox";
-            this.tableTextbox.Size = new System.Drawing.Size(452, 138);
+            this.tableTextbox.Size = new System.Drawing.Size(452, 170);
             this.tableTextbox.TabIndex = 10;
             // 
             // statusUpdateLabel
@@ -113,7 +113,7 @@
             this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
             this.statusUpdateLabel.AutoSize = true;
             this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.statusUpdateLabel.Location = new System.Drawing.Point(251, 404);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(251, 493);
             this.statusUpdateLabel.Name = "statusUpdateLabel";
             this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
             this.statusUpdateLabel.TabIndex = 42;
@@ -124,7 +124,7 @@
             this.header3Label.AccessibleName = "header3Label";
             this.header3Label.AutoSize = true;
             this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.header3Label.Location = new System.Drawing.Point(82, 398);
+            this.header3Label.Location = new System.Drawing.Point(82, 487);
             this.header3Label.Name = "header3Label";
             this.header3Label.Size = new System.Drawing.Size(174, 31);
             this.header3Label.TabIndex = 41;
@@ -134,7 +134,7 @@
             // 
             this.spaceLabel.AccessibleName = "spaceLabel";
             this.spaceLabel.AutoSize = true;
-            this.spaceLabel.Location = new System.Drawing.Point(236, 429);
+            this.spaceLabel.Location = new System.Drawing.Point(237, 518);
             this.spaceLabel.Name = "spaceLabel";
             this.spaceLabel.Size = new System.Drawing.Size(21, 20);
             this.spaceLabel.TabIndex = 40;
@@ -145,7 +145,7 @@
             this.tableLabel.AccessibleName = "tableLabel";
             this.tableLabel.AutoSize = true;
             this.tableLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.tableLabel.Location = new System.Drawing.Point(82, 207);
+            this.tableLabel.Location = new System.Drawing.Point(82, 265);
             this.tableLabel.Name = "tableLabel";
             this.tableLabel.Size = new System.Drawing.Size(176, 31);
             this.tableLabel.TabIndex = 4;

@@ -183,5 +183,15 @@ namespace PowerPeg_SQL_to_CSV
 
             return modeNamelist;
         }
+
+        public static void updateDatabaseSelectedTable(List<string> selectedTableNameList)
+        {
+            databaseGateway.setSelectedTable(selectedTableNameList);
+        }
+
+        public static List<string> getDatabaseSelectedTable()
+        {
+            return databaseGateway.getSelectedTable();
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace App_UI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+            Thread.Sleep(500);
             Application.Run(new HomeForm());
 
             log.Info("UI Application ending.");

@@ -27,9 +27,7 @@ namespace App_UI
         {
 
             connectionStrTextbox.Text = MainFunction.getDatabaseInformation()[2];
-
-            //TODO-- table select
-            tableTextbox.Text = "To DO";
+            tableTextbox.Text = string.Join("\r\n",MainFunction.getDatabaseSelectedTable());
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User updating form", false);
         }
@@ -43,6 +41,10 @@ namespace App_UI
 
                 if (MainFunction.updateDatabaseGateway(connectionStrTextbox.Text))
                 {
+                    string[] str = tableTextbox.Text.Split("\r\n");
+                    List<string> strList = new List<string>(str);
+
+                    MainFunction.updateDatabaseSelectedTable(strList);
                     GlobalFunction.statusUpdate(statusUpdateLabel, "New Setting Saved.", true);
                 }
                 else
