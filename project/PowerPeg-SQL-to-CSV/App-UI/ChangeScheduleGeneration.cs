@@ -37,7 +37,8 @@ namespace App_UI
         private void ChangeScheduleGeneration_Load(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading Database information.", false);
-            serverInfoLabel.Text = MainFunction.getDatabaseInformation()[0];
+            string[] info = MainFunction.getDatabaseInformation();
+            serverInfoLabel.Text = info[0] + " - " + info[1];
 
             updateTasklistName();
         }

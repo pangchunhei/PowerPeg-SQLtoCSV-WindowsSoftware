@@ -12,8 +12,9 @@ namespace PowerPeg_SQL_to_CSV.Gateway
     {
         private JSONGateway()
         {
-            this.jsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["JSON"];
-            log.Debug($"Setup SDON app data filepath {jsonPath}");
+            this.tasklistJsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["Tasklist"];
+            this.tableJsonPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["Table"];
+            log.Debug($"Setup JSON app data filepath {tasklistJsonPath}, {tableJsonPath}");
         }
 
         private static JSONGateway _instance;
@@ -35,13 +36,14 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             return _instance;
         }
 
-        private string jsonPath;
+        private string tasklistJsonPath;
+        private string tableJsonPath;   
 
         public List<SearchTask> importTasklist()
         {
-            log.Info($"Import JSON app data");
+            log.Info($"Import JSON tasklist data");
 
-            using (StreamReader file = File.OpenText(jsonPath))
+            using (StreamReader file = File.OpenText(tasklistJsonPath))
             {
                 var settings = new JsonSerializerSettings()
                 {
@@ -65,9 +67,37 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             }
         }
 
-        public void updateJSON(List<SearchTask> searchTasksList)
+        public List<string> importTable()
         {
-            log.Info($"Update JSON app data");
+            log.Info($"Import Table tasklist data");
+
+            using (StreamReader file = File.OpenText(tasklistJsonPath))
+            {
+                var settings = new JsonSerializerSettings()
+                {
+                    //Handle private var
+                    ContractResolver = new contractResolverSaveAll(),
+                    //Handle inharance
+                    TypeNameHandling = TypeNameHandling.All
+                };
+                JsonSerializer serializer = JsonSerializer.Create(settings);
+
+                List<string> list = (List<string>)serializer.Deserialize(file, typeof(List<string>));
+
+                if (list == null)
+                {
+                    return new List<string>();
+                }
+                else
+                {
+                    return list;
+                }
+            }
+        }
+
+        public void updateTasklistJSON(List<SearchTask> searchTasksList)
+        {
+            log.Info($"Update JSON tasklist data");
 
             lock (_lock)
             {
@@ -76,10 +106,36 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                     ContractResolver = new contractResolverSaveAll(),
                     TypeNameHandling = TypeNameHandling.All
                 };
-                using (StreamWriter file = File.CreateText(this.jsonPath))
+                using (StreamWriter file = File.CreateText(this.tasklistJsonPath))
                 {
                     JsonSerializer serializer = JsonSerializer.Create(settings);
                     serializer.Serialize(file, searchTasksList);
+                }
+            }
+        }
+
+        public void updateTableJSON(List<string> tableList)
+        {
+            log.Info($"Update JSON table data");
+
+            updateJSON(tableList, this.tableJsonPath);
+        }
+
+        public void updateJSON(object list, string filepath)
+        {
+            lock (_lock)
+            {
+                var settings = new JsonSerializerSettings()
+                {
+                    ContractResolver = new contractResolverSaveAll(),
+                    TypeNameHandling = TypeNameHandling.All
+                };
+                using (StreamWriter file = File.CreateText(filepath))
+                {
+                    log.Info($"Update {filepath} JSON data");
+
+                    JsonSerializer serializer = JsonSerializer.Create(settings);
+                    serializer.Serialize(file, list);
                 }
             }
         }

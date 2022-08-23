@@ -46,7 +46,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             {
                 log.Info("Finished background job, save the search task state");
                 JSONGateway jsonGateway = JSONGateway.getInstance();
-                jsonGateway.updateJSON(this.scheduleRunlist);
+                jsonGateway.updateTasklistJSON(this.scheduleRunlist);
             }
         }
 

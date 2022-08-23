@@ -16,7 +16,8 @@ namespace App_UI
 
         private void InstantGenerationOptionForm_Load(object sender, EventArgs e)
         {
-            serverInfoDataLabel.Text = MainFunction.getDatabaseInformation()[0];
+            string[] info = MainFunction.getDatabaseInformation();
+            serverInfoDataLabel.Text = info[0] + " - " + info[1];
 
             List<string> col = MainFunction.getDatabaseColumnName();
             selectedColListBox.Items.Add("-- All --");

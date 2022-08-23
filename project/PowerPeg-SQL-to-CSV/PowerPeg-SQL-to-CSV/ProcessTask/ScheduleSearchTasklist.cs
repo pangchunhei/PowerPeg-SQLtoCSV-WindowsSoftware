@@ -52,14 +52,14 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
                 throw new Exception();
             }
 
-            jsonGateway.updateJSON(searchTaskslist);
+            jsonGateway.updateTasklistJSON(searchTaskslist);
         }
 
         public void removeTask(SearchTask searchtask)
         {
 
             searchTaskslist.Remove(searchtask);
-            jsonGateway.updateJSON(searchTaskslist);
+            jsonGateway.updateTasklistJSON(searchTaskslist);
         }
 
         public void updateTask(SearchTask searchtasktask)

@@ -111,13 +111,17 @@ namespace PowerPeg_SQL_to_CSV
             scheduleSearchTasklist.removeTask(searchtask);
         }
 
-        public static bool updateDatabaseGateway(string address, string catalog, string username, string password)
+        public static bool updateDatabaseGateway(string connectionString)
         {
             log.Debug("Run updateDatabaseGateway");
 
-            return databaseGateway.updateGateway(address, catalog, username, password);
+            return databaseGateway.updateGateway(connectionString);
         }
 
+        /// <summary>
+        /// Get the current connection information
+        /// </summary>
+        /// <returns>Return the value of "Address", "Catalog", "full string"</returns>
         public static string[] getDatabaseInformation()
         {
             return databaseGateway.getGatewayInfo();

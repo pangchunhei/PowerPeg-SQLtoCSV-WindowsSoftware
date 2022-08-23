@@ -15,7 +15,7 @@ namespace App_UI
         private bool validateForm()
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Validate input.", false);
-            if (addressTextbox.Text.Length == 0 || catalogTextbox.Text.Length == 0)
+            if (connectionStrTextbox.Text.Length == 0 || tableTextbox.Text.Length == 0)
             {
                 return false;
             }
@@ -25,12 +25,11 @@ namespace App_UI
 
         private void ChangeServerInfo_Load(object sender, EventArgs e)
         {
-            string[] existingValue = MainFunction.getDatabaseInformation();
 
-            addressTextbox.Text = existingValue[0];
-            catalogTextbox.Text = existingValue[1];
-            usernameTextbox.Text = existingValue[2];
-            passwordTextbox.Text = existingValue[3];
+            connectionStrTextbox.Text = MainFunction.getDatabaseInformation()[2];
+
+            //TODO-- table select
+            tableTextbox.Text = "To DO";
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User updating form", false);
         }
@@ -42,7 +41,7 @@ namespace App_UI
             {
                 GlobalFunction.statusUpdate(statusUpdateLabel, "Trying to update.........", false);
 
-                if (MainFunction.updateDatabaseGateway(addressTextbox.Text, catalogTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
+                if (MainFunction.updateDatabaseGateway(connectionStrTextbox.Text))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "New Setting Saved.", true);
                 }

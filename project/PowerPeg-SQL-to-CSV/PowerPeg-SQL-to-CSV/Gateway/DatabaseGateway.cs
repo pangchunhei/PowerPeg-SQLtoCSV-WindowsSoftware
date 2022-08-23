@@ -1,5 +1,6 @@
 ﻿using log4net;
 using PowerPeg_SQL_to_CSV.Log;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -33,47 +34,30 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             return _instance;
         }
 
-        private string address;
-        private string catalog;
-        private string username;
-        private string password;
-        string connectionString;
+        private string connectionString;
 
         public void setGateway()
         {
-            address = ConfigurationManager.AppSettings["Address"];
-            catalog = ConfigurationManager.AppSettings["Catalog"];
-            username = ConfigurationManager.AppSettings["Username"];
-            password = ConfigurationManager.AppSettings["Password"];
+            this.connectionString = ConfigurationManager.AppSettings["ConnectionString"];
 
-            connectionString = createConnectionString(address, catalog, username, password);
-
-            log.Info($"Setup the Database gateway and create connection string: {connectionString}");
+            log.Info($"Setup the Database gateway: {this.connectionString}");
         }
 
-        public string createConnectionString(string address, string catalog, string username, string password)
-        {
-            return "Server=" + address + ";Database=" + catalog + ";Trusted_Connection=True; User Id=" + username + ";Password=" + password + ";";
-        }
-
-        public bool updateGateway(string newAddress, string newCatalog, string newUsername, string newPassword)
+        public bool updateGateway(string newConnectionString)
         {
             log.Debug("Update gateway");
 
-            if (isServerConnected(createConnectionString(newAddress, newCatalog, newUsername, newPassword)))
+            if (isServerConnected(this.connectionString))
             {
                 Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-                configuration.AppSettings.Settings["Address"].Value = newAddress;
-                configuration.AppSettings.Settings["Catalog"].Value = newCatalog;
-                configuration.AppSettings.Settings["Username"].Value = newUsername;
-                configuration.AppSettings.Settings["Password"].Value = newPassword;
+                configuration.AppSettings.Settings["ConnectionString"].Value = newConnectionString;
 
                 configuration.Save(ConfigurationSaveMode.Full, true);
                 ConfigurationManager.RefreshSection("appSettings");
 
                 setGateway();
-
+                
                 return true;
             }
             else
@@ -82,13 +66,19 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             }
         }
 
+        /// <summary>
+        /// Get the current connection information
+        /// </summary>
+        /// <returns>Return the value of "Address", "Catalog", "full string"</returns>
         public string[] getGatewayInfo()
         {
-            string[] currentSetting = { address, catalog, username, password };
+
+            SqlConnectionStringBuilder decoder = new SqlConnectionStringBuilder(this.connectionString);
+
+            string[] currentSetting = { decoder.DataSource, decoder.InitialCatalog, this.connectionString };
             return currentSetting;
         }
-
-        private bool isServerConnected(string connectionString)
+         private bool isServerConnected(string connectionString)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -100,7 +90,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                 }
                 catch (SqlException)
                 {
-                    log.Error("Fail to connect to the SQL server");
+                    log.Warn("Fail to connect to the SQL server");
                     return false;
                 }
             }
