@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using PowerPeg_SQL_to_CSV.Log;
 using System.Configuration;
-using System.Diagnostics;
 using System.Reflection;
 
 namespace PowerPeg_SQL_to_CSV.Gateway
@@ -88,8 +87,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                     TypeNameHandling = TypeNameHandling.All
                 };
                 JsonSerializer serializer = JsonSerializer.Create(settings);
-                
-                return serializer.Deserialize(file, type);                
+
+                return serializer.Deserialize(file, type);
             }
         }
 

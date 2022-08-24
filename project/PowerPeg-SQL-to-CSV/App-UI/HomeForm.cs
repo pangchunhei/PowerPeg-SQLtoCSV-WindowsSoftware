@@ -24,9 +24,9 @@ namespace App_UI
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading HomeForm.", false);
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Starting background task.", false);
-            MainFunction.startBackgroundJob();
+            //TODO-- no comment
+            //MainFunction.startBackgroundJob();
 
-            //MainFunction.getGenerationScheduledModeName();
         }
 
         private void label1_Click(object sender, EventArgs e)

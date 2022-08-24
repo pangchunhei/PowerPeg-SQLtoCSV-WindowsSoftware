@@ -186,7 +186,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public static void updateDatabaseSelectedTable(List<string> selectedTableNameList)
         {
-            databaseGateway.setSelectedTable(selectedTableNameList);
+            databaseGateway.updateSelectedTableList(selectedTableNameList);
         }
 
         public static List<string> getDatabaseSelectedTable()

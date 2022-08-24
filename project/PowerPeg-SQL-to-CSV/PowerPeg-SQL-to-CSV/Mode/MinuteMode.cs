@@ -87,7 +87,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         public string[] getInfo()
         {
-            string selectionStr = string.Join(",", selectColumn);
+            string selectionStr = string.Join(", ", selectColumn);
 
             string[] output = { modeName, triggerDateTime.ToString(), selectionStr };
 
