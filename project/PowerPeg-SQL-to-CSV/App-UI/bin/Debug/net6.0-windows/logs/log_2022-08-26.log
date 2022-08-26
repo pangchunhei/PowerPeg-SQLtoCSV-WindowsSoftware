@@ -1,0 +1,2058 @@
+2022-08-26 12:14:47,400: INFO - UI Application starting. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] 
+2022-08-26 12:14:48,179: INFO - Initializing UI Application. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:14:48,181: INFO - Loading HomeForm. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:14:48,183: INFO - Starting background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:14:51,117: INFO - Loading ChangeServerInfo. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:14:51,147: DEBUG - JSON app data filepath C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json, C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:14:51,150: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:14:51,183: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:14:51,452: DEBUG - Created search class_2022-08-26_12-14-51,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,Unit [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:14:51,454: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:14:51,455: INFO - Setup the Database gateway: Data Source=192.168.0.212\ION;Database=SYP_8F_AC_Plant_RM;User ID=EMSD;Password=Emsd$1234;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:14:51,457: INFO - Import table data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:14:51,459: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:14:51,462: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:14:51,463: INFO - Setup the selected Database Table, number of tables: 91 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:14:51,546: INFO - User updating form [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:00,807: INFO - Validate input. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:00,809: INFO - Trying to update......... [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:00,810: DEBUG - Run updateDatabaseGateway [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:15:00,811: DEBUG - Update gateway [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:15:00,906: INFO - Able to connect to SQL server [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:15:01,143: INFO - Setup the Database gateway: Data Source=DELL-INSPIRON14;Database=mainDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:15:01,147: INFO - Update JSON table data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:15:01,149: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:15:01,168: INFO - Import table data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:15:01,170: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:15:01,173: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:15:01,175: INFO - Setup the selected Database Table, number of tables: 91 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:15:02,236: INFO - New Setting Saved. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:02,941: INFO - Closing ChangeServerInfo and Go back to previous page.. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:06,215: INFO - Stopping background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:06,216: DEBUG - Run stopBackgroundJob [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:15:06,217: DEBUG - No background task to stop [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:15:06,219: INFO - Starting background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:06,233: INFO - Loading ChangeScheduleGeneration. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:06,255: INFO - Loading Database information. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:06,258: INFO - Loading current scheduled tasklist. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:09,514: INFO - Requesting to update existing schedule task setting. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:09,530: INFO - Loading ChangeTaskSetting. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:15:09,563: INFO - Request Database for Table column infomation. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:16:53,865: INFO - UI Application starting. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] 
+2022-08-26 12:16:54,811: INFO - Initializing UI Application. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:54,814: INFO - Loading HomeForm. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:54,816: INFO - Starting background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:57,183: INFO - Stopping background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:57,186: DEBUG - JSON app data filepath C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json, C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:16:57,188: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:16:57,199: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:16:57,380: DEBUG - Created search class_2022-08-26_12-16-57,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,Unit [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:16:57,383: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:16:57,385: INFO - Setup the Database gateway: Data Source=DELL-INSPIRON14;Database=mainDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:16:57,387: INFO - Import table data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:16:57,388: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:16:57,390: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:16:57,391: INFO - Setup the selected Database Table, number of tables: 91 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:16:57,393: DEBUG - Run stopBackgroundJob [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:16:57,394: DEBUG - No background task to stop [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:16:57,397: INFO - Starting background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:57,415: INFO - Loading ChangeScheduleGeneration. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:57,438: INFO - Loading Database information. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:57,488: INFO - Loading current scheduled tasklist. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:58,541: INFO - Requesting to update existing schedule task setting. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:58,558: INFO - Loading ChangeTaskSetting. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:58,597: INFO - Request Database for Table column infomation. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:16:59,127: DEBUG - Mode list: IMode, InstantMode, MinuteMode, MonthMode [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:16:59,133: INFO - User creating form [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:16:59,135: INFO - User creating form [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:17:17,749: INFO - Updating App_UI.UpdateTaskSetting [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:17:17,751: DEBUG - Run updateTaskSetting [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:17:17,752: DEBUG - Run CreateMode [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:17:17,753: DEBUG - Orginal search task settingtestMin01_2022-08-23_16-58-40,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,Unit [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:17,754: DEBUG - New search task setting updatedtestMin01_2022-08-23_16-58-40,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,* [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:17,755: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:17,757: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:17,773: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:17,775: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:18,780: INFO - Update finished. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:17:19,184: INFO - Back to previous page. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:17:19,224: INFO - Loading current scheduled tasklist. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:17:20,205: INFO - Close ChnageSchedukeGeneration and Go back to previous page. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:17:20,219: INFO - Showing background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:17:20,742: INFO - Restarting background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:17:20,744: DEBUG - Run startBackgroundJob [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:17:20,793: INFO - Default Quartz.NET properties loaded from embedded resource file [Quartz.Impl.StdSchedulerFactory] 
+2022-08-26 12:17:20,828: DEBUG - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler. [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:17:20,862: INFO - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl [Quartz.Core.SchedulerSignalerImpl] 
+2022-08-26 12:17:20,866: INFO - Quartz Scheduler created [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:17:20,868: INFO - RAMJobStore initialized. [Quartz.Simpl.RAMJobStore] 
+2022-08-26 12:17:20,871: INFO - Scheduler meta-data: Quartz Scheduler (v3.4.0.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:17:20,873: INFO - Quartz scheduler 'DefaultQuartzScheduler' initialized [Quartz.Impl.StdSchedulerFactory] 
+2022-08-26 12:17:20,874: INFO - Quartz scheduler version: 3.4.0.0 [Quartz.Impl.StdSchedulerFactory] 
+2022-08-26 12:17:20,883: INFO - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:17:20,885: DEBUG - Background Scheduler is running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] 
+2022-08-26 12:17:20,893: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:20,905: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:20,915: DEBUG - Producing instance of Job 'DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:17:20,921: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:20,941: DEBUG - Calling Execute on job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:20,945: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:17:20,947: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:20,949: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:20,952: DEBUG - Created search class_2022-08-26_12-17-20,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,* [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:20,953: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:20,954: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:17:20,955: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:20,957: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, * [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:17:20,958: INFO - Need to run search as last run time: 8/23/1999 4:58:40 PM time from last run: 18 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:17:20,960: INFO - Request Database for Table data. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:17:29,054: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+ [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:29,152: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16]
+ [Quartz.Core.ErrorLogger] 
+2022-08-26 12:17:29,164: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:29,170: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:30,889: DEBUG - Producing instance of Job 'DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:17:30,892: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:30,893: DEBUG - Calling Execute on job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:30,894: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:17:30,895: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:30,896: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:30,900: DEBUG - Created search class_2022-08-26_12-17-30,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,* [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:30,901: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:30,902: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:17:30,903: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:30,904: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, * [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:17:30,905: INFO - Need to run search as last run time: 8/23/1999 4:58:40 PM time from last run: 18 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:17:30,906: INFO - Request Database for Table data. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:17:30,924: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+ [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:30,927: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16]
+ [Quartz.Core.ErrorLogger] 
+2022-08-26 12:17:30,932: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:30,933: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:40,900: DEBUG - Producing instance of Job 'DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:17:40,903: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:40,903: DEBUG - Calling Execute on job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:40,905: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:17:40,906: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:40,908: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:40,911: DEBUG - Created search class_2022-08-26_12-17-40,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,* [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:40,913: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:40,914: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:17:40,915: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:40,916: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, * [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:17:40,917: INFO - Need to run search as last run time: 8/23/1999 4:58:40 PM time from last run: 19 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:17:40,918: INFO - Request Database for Table data. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:17:40,935: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+ [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:40,938: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16]
+ [Quartz.Core.ErrorLogger] 
+2022-08-26 12:17:40,942: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:40,943: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:50,903: DEBUG - Producing instance of Job 'DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:17:50,906: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:17:50,907: DEBUG - Calling Execute on job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:50,909: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:17:50,910: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:50,912: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:50,915: DEBUG - Created search class_2022-08-26_12-17-50,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,* [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:50,916: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:17:50,917: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:17:50,918: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:17:50,919: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, * [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:17:50,920: INFO - Need to run search as last run time: 8/23/1999 4:58:40 PM time from last run: 19 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:17:50,921: INFO - Request Database for Table data. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:17:50,939: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+ [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:50,941: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16]
+ [Quartz.Core.ErrorLogger] 
+2022-08-26 12:17:50,952: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:17:50,953: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:00,898: DEBUG - Producing instance of Job 'DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:18:00,901: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:00,902: DEBUG - Calling Execute on job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:00,904: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:00,905: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:00,906: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:00,910: DEBUG - Created search class_2022-08-26_12-18-00,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,* [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:00,911: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:00,912: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:00,913: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:00,915: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, * [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:18:00,916: INFO - Need to run search as last run time: 8/23/1999 4:58:40 PM time from last run: 19 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:18:00,917: INFO - Request Database for Table data. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:18:00,935: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+ [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:00,937: ERROR - Job DEFAULT.5a7e8c30-c887-41e8-a0db-fb1ff21ae025 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): Invalid column name '3000STL10'.
+Invalid column name '3000STL11'.
+Invalid column name '3000STL12'.
+Invalid column name '3000STL14'.
+Invalid column name '3000STL15'.
+Invalid column name '3000STL16'.
+Invalid column name '3000STL17'.
+Invalid column name '3000STL18'.
+Invalid column name '3000STL19'.
+Invalid column name '3000STL20'.
+Invalid column name '3000STL21'.
+Invalid column name '3000STL22'.
+Invalid column name '3000STL23'.
+Invalid column name '3000STL24'.
+Invalid column name '3000STL25'.
+Invalid column name '3000STL39'.
+Invalid column name '3000STL40'.
+Invalid column name '3000STL41'.
+Invalid column name '3000STL42'.
+Invalid column name '3000STL297'.
+Invalid column name '3000STL298'.
+Invalid column name '3000STL299'.
+Invalid column name '3000STL300'.
+Invalid column name '3000STL49'.
+Invalid column name '3000STL50'.
+Invalid column name '3000STL51'.
+Invalid column name '3000STL52'.
+Invalid column name '3000STL58'.
+Invalid column name '3000STL59'.
+Invalid column name '3000STL60'.
+Invalid column name '3000STL61'.
+Invalid column name '3000STL67'.
+Invalid column name '3000STL68'.
+Invalid column name '3000STL69'.
+Invalid column name '3000STL70'.
+Invalid column name '3000STL76'.
+Invalid column name '3000STL77'.
+Invalid column name '3000STL78'.
+Invalid column name '3000STL79'.
+Invalid column name '3000STL93'.
+Invalid column name '3000STL94'.
+Invalid column name '3000STL95'.
+Invalid column name '3000STL96'.
+Invalid column name '3000STL97'.
+Invalid column name '3000STL98'.
+Invalid column name '3000STL99'.
+Invalid column name '3000STL110'.
+Invalid column name '3000STL111'.
+Invalid column name '3000STL112'.
+Invalid column name '3000STL113'.
+Invalid column name '3000STL114'.
+Invalid column name '3000STL115'.
+Invalid column name '3000STL116'.
+Invalid column name '3000STL117'.
+Invalid column name '3000STL128'.
+Invalid column name '3000STL129'.
+Invalid column name '3000STL130'.
+Invalid column name '3000STL131'.
+Invalid column name '3000STL132'.
+Invalid column name '3000STL133'.
+Invalid column name '3000STL134'.
+Invalid column name '3000STL135'.
+Invalid column name '3000STL146'.
+Invalid column name '3000STL147'.
+Invalid column name '3000STL148'.
+Invalid column name '3000STL149'.
+Invalid column name '3000STL150'.
+Invalid column name '3000STL151'.
+Invalid column name '3000STL152'.
+Invalid column name '3000STL153'.
+Invalid column name '3000STL164'.
+Invalid column name '4000STL273'.
+Invalid column name '4000STL274'.
+Invalid column name '4000STL275'.
+Invalid column name '4000STL276'.
+Invalid column name '4000STL277'.
+Invalid column name '4000STL278'.
+Invalid column name '4000STL279'.
+Invalid column name '4000STL280'.
+Invalid column name '4000STL281'.
+Invalid column name '4000STL282'.
+Invalid column name '4000STL283'.
+Invalid column name '4000STL284'.
+Invalid column name '4000STL285'.
+Invalid column name '4000STL286'.
+Invalid column name '4000STL287'.
+Invalid column name '4000STL288'.
+Invalid column name '4000STL289'.
+Invalid column name '4000STL290'.
+Invalid column name '4000STL291'.
+Invalid column name '4000STL292'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 218
+   at PowerPeg_SQL_to_CSV.Mode.MinuteMode.runSearch(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs:line 78
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask(DateTime runDateTime) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 47
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:84c9ffc6-c3fe-4359-b9c6-e53fa1f94333
+Error Number:207,State:1,Class:16]
+ [Quartz.Core.ErrorLogger] 
+2022-08-26 12:18:00,942: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:00,943: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:05,340: INFO - Stopping background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:05,341: DEBUG - Run stopBackgroundJob [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:18:05,342: DEBUG - Have background task, stopping background task [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:18:05,344: DEBUG - Stop scheduler [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] 
+2022-08-26 12:18:05,349: INFO - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down. [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:18:05,352: INFO - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused. [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:18:05,357: INFO - Starting background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:05,358: DEBUG - Shutting down threadpool... [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:18:05,360: DEBUG - Waiting for 0 threads to complete. [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:18:05,361: DEBUG - No executing jobs remaining, all threads stopped. [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:18:05,362: DEBUG - Shutdown of threadpool complete. [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:18:05,369: INFO - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete. [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:18:05,373: INFO - Loading ChangeScheduleGeneration. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:05,397: INFO - Loading Database information. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:05,404: INFO - Loading current scheduled tasklist. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:18,174: INFO - Requesting to update existing schedule task setting. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:18,183: INFO - Loading ChangeTaskSetting. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:18,218: INFO - Request Database for Table column infomation. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:18:18,369: DEBUG - Mode list: IMode, InstantMode, MinuteMode, MonthMode [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:18:18,374: INFO - User creating form [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:18,375: INFO - User creating form [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:28,449: INFO - Updating App_UI.UpdateTaskSetting [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:28,450: DEBUG - Run updateTaskSetting [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:18:28,451: DEBUG - Run CreateMode [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:18:28,452: DEBUG - Orginal search task settingtestMin01_2022-08-23_16-58-40,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,* [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:28,453: DEBUG - New search task setting updatedtestMin01_2022-08-23_16-58-40,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:28,454: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:28,456: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:28,458: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:28,461: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:29,518: INFO - Update finished. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:30,433: INFO - Back to previous page. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:30,461: INFO - Loading current scheduled tasklist. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:31,708: INFO - Close ChnageSchedukeGeneration and Go back to previous page. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:31,722: INFO - Showing background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:32,262: INFO - Restarting background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:18:32,264: DEBUG - Run startBackgroundJob [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:18:32,265: INFO - Default Quartz.NET properties loaded from embedded resource file [Quartz.Impl.StdSchedulerFactory] 
+2022-08-26 12:18:32,267: DEBUG - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler. [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:18:32,269: INFO - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl [Quartz.Core.SchedulerSignalerImpl] 
+2022-08-26 12:18:32,272: INFO - Quartz Scheduler created [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:18:32,274: INFO - RAMJobStore initialized. [Quartz.Simpl.RAMJobStore] 
+2022-08-26 12:18:32,279: INFO - Scheduler meta-data: Quartz Scheduler (v3.4.0.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:18:32,281: INFO - Quartz scheduler 'DefaultQuartzScheduler' initialized [Quartz.Impl.StdSchedulerFactory] 
+2022-08-26 12:18:32,282: INFO - Quartz scheduler version: 3.4.0.0 [Quartz.Impl.StdSchedulerFactory] 
+2022-08-26 12:18:32,283: INFO - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:18:32,283: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:32,285: DEBUG - Background Scheduler is running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] 
+2022-08-26 12:18:32,286: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:32,288: DEBUG - Producing instance of Job 'DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:18:32,289: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:32,291: DEBUG - Calling Execute on job DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2 [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:32,297: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:32,298: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:32,300: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:32,303: DEBUG - Created search class_2022-08-26_12-18-32,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:32,305: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:32,306: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:32,308: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:32,309: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:18:32,310: INFO - Need to run search as last run time: 8/23/1999 4:58:40 PM time from last run: 19 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:18:32,312: INFO - Request Database for Table data. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:18:32,317: INFO - Search task result generated, generate file: testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:32,319: INFO - Processing result to CSV: testMin01_2022-08-23_16-58-40_generation_time_2022-08-26_12-18-32 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\CSVGateway.cs] 
+2022-08-26 12:18:32,321: DEBUG - Store the CSV of the Result to C:\Users\elsto\Desktop\New folder [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\CSVGateway.cs] 
+2022-08-26 12:18:32,323: INFO - Finished background job, save the search task state [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:32,324: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:32,325: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:32,329: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:32,330: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:42,291: DEBUG - Producing instance of Job 'DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:18:42,294: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:42,295: DEBUG - Calling Execute on job DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2 [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:42,297: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:42,298: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:42,299: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:42,303: DEBUG - Created search class_2022-08-26_12-18-42,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:42,304: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:42,305: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:42,307: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:42,308: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:18:42,309: INFO - No need to run search as last run time: 8/26/2022 12:18:32 PM time from last run: 0 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:18:42,310: INFO - No need to process the search task: testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:42,312: INFO - Finished background job, save the search task state [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:42,313: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:42,314: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:42,318: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:42,320: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:52,290: DEBUG - Producing instance of Job 'DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:18:52,293: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:18:52,294: DEBUG - Calling Execute on job DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2 [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:52,296: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:52,297: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:52,298: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:52,302: DEBUG - Created search class_2022-08-26_12-18-52,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:52,303: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:52,305: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:52,306: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:52,307: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:18:52,309: INFO - No need to run search as last run time: 8/26/2022 12:18:32 PM time from last run: 0 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:18:52,310: INFO - No need to process the search task: testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:18:52,311: INFO - Finished background job, save the search task state [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:18:52,312: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:52,313: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:18:52,317: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:18:52,321: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:02,286: DEBUG - Producing instance of Job 'DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:19:02,289: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:02,290: DEBUG - Calling Execute on job DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2 [Quartz.Core.JobRunShell] 
+2022-08-26 12:19:02,292: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:02,293: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:02,294: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:02,298: DEBUG - Created search class_2022-08-26_12-19-02,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:02,299: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:02,300: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:02,301: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:02,302: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:19:02,303: INFO - No need to run search as last run time: 8/26/2022 12:18:32 PM time from last run: 0 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:19:02,304: INFO - No need to process the search task: testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:02,305: INFO - Finished background job, save the search task state [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:02,306: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:02,307: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:02,311: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:19:02,312: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:12,301: DEBUG - Producing instance of Job 'DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:19:12,303: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:12,304: DEBUG - Calling Execute on job DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2 [Quartz.Core.JobRunShell] 
+2022-08-26 12:19:12,307: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:12,308: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:12,309: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:12,313: DEBUG - Created search class_2022-08-26_12-19-12,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:12,314: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:12,315: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:12,316: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:12,317: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:19:12,318: INFO - No need to run search as last run time: 8/26/2022 12:18:32 PM time from last run: 0 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:19:12,319: INFO - No need to process the search task: testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:12,320: INFO - Finished background job, save the search task state [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:12,321: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:12,322: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:12,326: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:19:12,330: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:22,289: DEBUG - Producing instance of Job 'DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:19:22,290: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:22,291: DEBUG - Calling Execute on job DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2 [Quartz.Core.JobRunShell] 
+2022-08-26 12:19:22,293: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:22,294: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:22,295: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:22,299: DEBUG - Created search class_2022-08-26_12-19-22,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:22,300: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:22,301: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:22,302: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:22,303: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:19:22,304: INFO - No need to run search as last run time: 8/26/2022 12:18:32 PM time from last run: 0 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:19:22,305: INFO - No need to process the search task: testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:22,306: INFO - Finished background job, save the search task state [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:22,307: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:22,308: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:22,313: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:19:22,314: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:32,301: DEBUG - Producing instance of Job 'DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundProcessingJob [Quartz.Simpl.SimpleJobFactory] 
+2022-08-26 12:19:32,303: DEBUG - Batch acquisition of 0 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:32,304: DEBUG - Calling Execute on job DEFAULT.e054bdb2-8320-41e4-941b-b957d87fe9a2 [Quartz.Core.JobRunShell] 
+2022-08-26 12:19:32,306: INFO - Backround job is created and running [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:32,307: INFO - Import tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:32,308: INFO - Import C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json Json data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:32,311: DEBUG - Created search class_2022-08-26_12-19-32,C:\Users\elsto\Desktop\New folder,Minute Mode,8/23/2022 4:58:40 PM,OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:32,313: INFO - Finished import [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:32,314: DEBUG - Background job process search task of testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:32,315: INFO - Runing search on testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:32,316: INFO - Trigger minute mode search: Minute Mode, 8/23/2022 4:58:40 PM, OrderDate, Region [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:19:32,317: INFO - Need to run search as last run time: 8/26/2022 12:18:32 PM time from last run: 1 minutes [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MinuteMode.cs] 
+2022-08-26 12:19:32,318: INFO - Request Database for Table data. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] 
+2022-08-26 12:19:32,320: INFO - Search task result generated, generate file: testMin01_2022-08-23_16-58-40 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] 
+2022-08-26 12:19:32,321: INFO - Processing result to CSV: testMin01_2022-08-23_16-58-40_generation_time_2022-08-26_12-19-32 [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\CSVGateway.cs] 
+2022-08-26 12:19:32,322: DEBUG - Store the CSV of the Result to C:\Users\elsto\Desktop\New folder [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\CSVGateway.cs] 
+2022-08-26 12:19:32,323: INFO - Finished background job, save the search task state [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundProcessingJob.cs] 
+2022-08-26 12:19:32,324: INFO - Update JSON tasklist data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:32,326: INFO - Update C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json JSON data [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] 
+2022-08-26 12:19:32,332: DEBUG - Trigger instruction : NoInstruction [Quartz.Core.JobRunShell] 
+2022-08-26 12:19:32,335: DEBUG - Batch acquisition of 1 triggers [Quartz.Core.QuartzSchedulerThread] 
+2022-08-26 12:19:39,042: INFO - Closing background task. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:19:39,043: DEBUG - Run stopBackgroundJob [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:19:39,044: DEBUG - Have background task, stopping background task [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] 
+2022-08-26 12:19:39,045: DEBUG - Stop scheduler [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] 
+2022-08-26 12:19:39,046: INFO - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down. [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:19:39,047: INFO - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused. [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:19:39,049: DEBUG - Shutting down threadpool... [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:19:39,050: DEBUG - Waiting for 0 threads to complete. [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:19:39,051: DEBUG - No executing jobs remaining, all threads stopped. [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:19:39,052: DEBUG - Shutdown of threadpool complete. [Quartz.Simpl.TaskSchedulingThreadPool] 
+2022-08-26 12:19:39,053: INFO - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete. [Quartz.Core.QuartzScheduler] 
+2022-08-26 12:19:42,073: INFO - Appication closing. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] 
+2022-08-26 12:19:42,094: INFO - UI Application ending. [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] 
