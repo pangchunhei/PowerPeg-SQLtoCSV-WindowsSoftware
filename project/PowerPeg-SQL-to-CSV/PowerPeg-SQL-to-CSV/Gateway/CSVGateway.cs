@@ -16,6 +16,10 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
         private static readonly object _lock = new object();
         private static readonly ILog log = LogHelper.getLogger();
 
+        /// <summary>
+        /// Get CSVGateway instance
+        /// </summary>
+        /// <returns>Singleton of CSVGateway object</returns>
         public static CSVGateway getInstance()
         {
             if (_instance == null)
@@ -30,6 +34,13 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
             }
             return _instance;
         }
+
+        /// <summary>
+        /// Convert the DataTable and store to CSV file
+        /// </summary>
+        /// <param name="fileName">CSV filename</param>
+        /// <param name="filePath">CSV filepath</param>
+        /// <param name="dt">DataTable for storage</param>
         public void dataTable_to_CSV(string fileName, string filePath, DataTable dt)
         {
             lock (_lock)

@@ -20,6 +20,10 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         private static readonly object _lock = new object();
         private static readonly ILog log = LogHelper.getLogger();
 
+        /// <summary>
+        /// Get JSONGateway instance
+        /// </summary>
+        /// <returns>Singleton of JSONGateway object</returns>
         public static JSONGateway getInstance()
         {
             if (_instance == null)
@@ -38,6 +42,10 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         private string tasklistJsonPath;
         private string tableJsonPath;
 
+        /// <summary>
+        /// Import the current search tasklist setting from JSON
+        /// </summary>
+        /// <returns>Provide the list of SearchTask</returns>
         public List<SearchTask> importTasklist()
         {
             log.Info($"Import tasklist data");
@@ -56,6 +64,10 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             }
         }
 
+        /// <summary>
+        /// Import the current search included database table name from JSON
+        /// </summary>
+        /// <returns>Provide the list of String of Database Table name</returns>
         public List<string> importTable()
         {
             log.Info($"Import table data");
@@ -73,6 +85,12 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             }
         }
 
+        /// <summary>
+        /// Deserialize the object from JSON file
+        /// </summary>
+        /// <param name="type">Type of return object type</param>
+        /// <param name="filepath">Filepath of JSON file</param>
+        /// <returns></returns>
         private object? importJson(Type type, string filepath)
         {
             log.Info($"Import {filepath} Json data");
@@ -92,6 +110,10 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             }
         }
 
+        /// <summary>
+        /// Update the current list of search task to JSON file
+        /// </summary>
+        /// <param name="searchTasksList">The new list of search task</param>
         public void updateTasklistJSON(List<SearchTask> searchTasksList)
         {
             log.Info($"Update JSON tasklist data");
@@ -99,6 +121,10 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             updateJSON(searchTasksList, this.tasklistJsonPath);
         }
 
+        /// <summary>
+        /// Update the current search included database table name to JSON file
+        /// </summary>
+        /// <param name="tableList">The new database table name list</param>
         public void updateTableJSON(List<string> tableList)
         {
             log.Info($"Update JSON table data");
@@ -106,6 +132,11 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             updateJSON(tableList, this.tableJsonPath);
         }
 
+        /// <summary>
+        /// Serialize the list of program object into JSON file
+        /// </summary>
+        /// <param name="list">List of object</param>
+        /// <param name="filepath">JSON filepath</param>
         private void updateJSON(object list, string filepath)
         {
             lock (_lock)
