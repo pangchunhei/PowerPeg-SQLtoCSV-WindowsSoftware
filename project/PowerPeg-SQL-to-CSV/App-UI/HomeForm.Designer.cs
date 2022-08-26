@@ -37,8 +37,8 @@
             this.reStartProgramBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.statusUpdateLabel = new System.Windows.Forms.Label();
             this.header2Label = new System.Windows.Forms.Label();
+            this.statusUpdateLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -47,7 +47,7 @@
             this.headerLabel.AutoSize = true;
             this.headerLabel.BackColor = System.Drawing.SystemColors.Control;
             this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.headerLabel.Location = new System.Drawing.Point(161, 30);
+            this.headerLabel.Location = new System.Drawing.Point(161, 23);
             this.headerLabel.Name = "headerLabel";
             this.headerLabel.Size = new System.Drawing.Size(482, 62);
             this.headerLabel.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             this.instantGenerationBtn.AccessibleName = "instantGenerationBtn";
             this.instantGenerationBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.instantGenerationBtn.Location = new System.Drawing.Point(237, 180);
+            this.instantGenerationBtn.Location = new System.Drawing.Point(237, 173);
             this.instantGenerationBtn.Name = "instantGenerationBtn";
             this.instantGenerationBtn.Size = new System.Drawing.Size(327, 42);
             this.instantGenerationBtn.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             this.changeScheduleGenerationBtn.AccessibleName = "changeScheduleGenerationBtn";
             this.changeScheduleGenerationBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.changeScheduleGenerationBtn.Location = new System.Drawing.Point(237, 239);
+            this.changeScheduleGenerationBtn.Location = new System.Drawing.Point(237, 232);
             this.changeScheduleGenerationBtn.Name = "changeScheduleGenerationBtn";
             this.changeScheduleGenerationBtn.Size = new System.Drawing.Size(327, 42);
             this.changeScheduleGenerationBtn.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.changeServerInfoBtn.AccessibleName = "changeServerInfoBtn";
             this.changeServerInfoBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.changeServerInfoBtn.Location = new System.Drawing.Point(237, 123);
+            this.changeServerInfoBtn.Location = new System.Drawing.Point(237, 116);
             this.changeServerInfoBtn.Name = "changeServerInfoBtn";
             this.changeServerInfoBtn.Size = new System.Drawing.Size(327, 42);
             this.changeServerInfoBtn.TabIndex = 3;
@@ -93,7 +93,7 @@
             // reStartProgramBtn
             // 
             this.reStartProgramBtn.AccessibleName = "reStartProgramBtn";
-            this.reStartProgramBtn.Location = new System.Drawing.Point(237, 300);
+            this.reStartProgramBtn.Location = new System.Drawing.Point(237, 293);
             this.reStartProgramBtn.Name = "reStartProgramBtn";
             this.reStartProgramBtn.Size = new System.Drawing.Size(156, 52);
             this.reStartProgramBtn.TabIndex = 4;
@@ -104,7 +104,7 @@
             // exitBtn
             // 
             this.exitBtn.AccessibleName = "checkLogFolderBtn";
-            this.exitBtn.Location = new System.Drawing.Point(408, 300);
+            this.exitBtn.Location = new System.Drawing.Point(408, 293);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(156, 52);
             this.exitBtn.TabIndex = 5;
@@ -118,32 +118,33 @@
             this.notifyIcon.Text = "PowerPeg";
             this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
             // 
-            // statusUpdateLabel
-            // 
-            this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
-            this.statusUpdateLabel.AutoSize = true;
-            this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.statusUpdateLabel.Location = new System.Drawing.Point(324, 391);
-            this.statusUpdateLabel.Name = "statusUpdateLabel";
-            this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
-            this.statusUpdateLabel.TabIndex = 44;
-            this.statusUpdateLabel.Text = "<Status Update>";
-            // 
             // header2Label
             // 
             this.header2Label.AccessibleName = "header2Label";
             this.header2Label.AutoSize = true;
             this.header2Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.header2Label.Location = new System.Drawing.Point(155, 385);
+            this.header2Label.Location = new System.Drawing.Point(155, 377);
             this.header2Label.Name = "header2Label";
             this.header2Label.Size = new System.Drawing.Size(174, 31);
             this.header2Label.TabIndex = 43;
             this.header2Label.Text = "Process Status: ";
             // 
+            // statusUpdateLabel
+            // 
+            this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
+            this.statusUpdateLabel.AutoSize = true;
+            this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(324, 383);
+            this.statusUpdateLabel.Name = "statusUpdateLabel";
+            this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
+            this.statusUpdateLabel.TabIndex = 44;
+            this.statusUpdateLabel.Text = "<Status Update>";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusUpdateLabel);
             this.Controls.Add(this.header2Label);
@@ -158,6 +159,7 @@
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomeForm_FormClosing);
+            this.Load += new System.EventHandler(this.HomeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,7 +174,7 @@
         private Button reStartProgramBtn;
         private Button exitBtn;
         private NotifyIcon notifyIcon;
-        private Label statusUpdateLabel;
         private Label header2Label;
+        private Label statusUpdateLabel;
     }
 }

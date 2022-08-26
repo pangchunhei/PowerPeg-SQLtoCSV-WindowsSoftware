@@ -191,7 +191,7 @@
             // triggerDateTimePicker
             // 
             this.triggerDateTimePicker.AccessibleName = "triggerDateTimePicker";
-            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy HH:mm";
+            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy";
             this.triggerDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.triggerDateTimePicker.Location = new System.Drawing.Point(231, 231);
             this.triggerDateTimePicker.Name = "triggerDateTimePicker";
@@ -261,7 +261,7 @@
             this.frequenceLabel.TabIndex = 88;
             this.frequenceLabel.Text = "Frequency:";
             // 
-            // ChangeTaskSetting
+            // UpdateTaskSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -286,7 +286,7 @@
             this.Controls.Add(this.taskNameDataLabel);
             this.Controls.Add(this.header2Label);
             this.Controls.Add(this.headerLabel);
-            this.Name = "ChangeTaskSetting";
+            this.Name = "UpdateTaskSetting";
             this.Text = "ChangeTaskSetting";
             this.Load += new System.EventHandler(this.ChangeTaskSetting_Load);
             this.ResumeLayout(false);

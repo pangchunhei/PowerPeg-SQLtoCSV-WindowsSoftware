@@ -25,22 +25,40 @@ namespace PowerPeg_SQL_to_CSV.Mode
         public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<string> selection)
         {
             modeName = "Instant Mode";
-            //Last 30DAys
-            startSearchDay = startDate;
-            endSearchDay = endDate;
+            startSearchDay = new DateTime(startDate.Year, startDate.Month, startDate.Day, 00, 00, 00);
+            endSearchDay = new DateTime(endDate.Year, endDate.Month, endDate.Day, 23, 59, 59);
             triggerDateTime = triggerDate;
             selectColumn = selection;
+        }
+
+        private Result processAllDBTable(Result res)
+        {
+            List<string> selectedTableName = DatabaseGateway.getInstance().getSelectedTable();
+
+            foreach(string name in selectedTableName)
+            {
+
+                DataTable output = DatabaseGateway.getInstance().getDBTableData(this.startSearchDay, this.endSearchDay, name);
+
+                res.mergeDataTable(output);
+            }
+
+            //TODO-- Remove Column
+
+
+            return res;
         }
 
         public Result runSearch(DateTime runDateTime)
         {
             log.Info($"Trigger instant mode search: " + String.Join(", ", getInfo()));
 
-            DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
+            //UAT
+            //DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 
-            Result res = new Result(runDateTime, dt);
-
-            return res;
+            Result res = new Result(runDateTime);
+            
+            return processAllDBTable(res);
         }
 
         public string[] getInfo()

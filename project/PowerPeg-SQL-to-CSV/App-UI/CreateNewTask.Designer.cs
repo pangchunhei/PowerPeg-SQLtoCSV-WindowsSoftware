@@ -59,7 +59,7 @@
             // triggerDateTimePicker
             // 
             this.triggerDateTimePicker.AccessibleName = "triggerDateTimePicker";
-            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy HH:mm";
+            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy";
             this.triggerDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.triggerDateTimePicker.Location = new System.Drawing.Point(247, 245);
             this.triggerDateTimePicker.Name = "triggerDateTimePicker";

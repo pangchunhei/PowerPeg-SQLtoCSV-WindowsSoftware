@@ -187,7 +187,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         }
 
         /// <summary>
-        /// Run the stored procedures search and Get the DataTable of the result
+        /// Test (Only 1 Table)
         /// </summary>
         /// <returns>DataTable of the search result</returns>
         public DataTable getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List<string> selectColumn)
@@ -202,14 +202,43 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                 using (SqlCommand cmd = new SqlCommand("sp_gateway_search_table_1", sqlcon))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
-                    //UAT Prod
-                    if (selectColumn[0].Equals("*")){
-                        selectColumn = this.selectedTableList;
-                    }
                     
                     //Change to sql itemes formate
                     cmd.Parameters.Add("@selectCol", SqlDbType.VarChar).Value = createSelectStatementString(selectColumn);
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        sqlOutput = new DataTable();
+
+                        da.Fill(sqlOutput);
+                    }
+                }
+            }
+
+            return sqlOutput;
+        }
+
+        /// <summary>
+        /// Run the stored procedures search and Get the DataTable of the result (Only 1 Table)
+        /// </summary>
+        /// <returns>DataTable of the search result</returns>
+        public DataTable getDBTableData(DateTime startSearchDate, DateTime endSearchDate, string tableName)
+        {
+            log.Info("Request Database for Table data.");
+
+            //Use the stored procedure cmd
+            DataTable sqlOutput;
+
+            using (SqlConnection sqlcon = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_Gateway_SearchTable", sqlcon))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    //Change to sql itemes formate
+                    cmd.Parameters.Add("@table", SqlDbType.VarChar).Value = tableName;
+                    cmd.Parameters.Add("@startDateTime", SqlDbType.DateTime).Value = startSearchDate;
+                    cmd.Parameters.Add("@endDateTime", SqlDbType.DateTime).Value = endSearchDate;
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {

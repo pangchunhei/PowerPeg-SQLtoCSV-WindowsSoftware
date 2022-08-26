@@ -24,8 +24,7 @@ namespace App_UI
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading HomeForm.", false);
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Starting background task.", false);
-            //TODO-- no comment
-            //MainFunction.startBackgroundJob();
+            _ = MainFunction.startBackgroundJob();
 
         }
 
@@ -53,7 +52,7 @@ namespace App_UI
         private void changeScheduleGenerationBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Stopping background task.", false);
-            MainFunction.stopBackgroundJob();
+            _ = MainFunction.stopBackgroundJob();
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Starting background task.", false);
             this.Hide();
@@ -67,19 +66,19 @@ namespace App_UI
             Thread.Sleep(500);
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Restarting background task.", false);
-            MainFunction.startBackgroundJob();
+            _ = MainFunction.startBackgroundJob();
         }
 
         private void reStartProgramBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Restarting background task.", false);
-            MainFunction.reStartBackgroundJob();
+            _ = MainFunction.reStartBackgroundJob();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Closing background task.", false);
-            MainFunction.stopBackgroundJob();
+            _ = MainFunction.stopBackgroundJob();
             //Giving time to close
             Thread.Sleep(3000);
 
@@ -109,6 +108,11 @@ namespace App_UI
             this.Show();
             this.WindowState = FormWindowState.Normal;
             notifyIcon.Visible = false;
+        }
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

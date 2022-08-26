@@ -72,9 +72,13 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                 startSearchDay = endSearchDay.AddDays(-length);
 
-                DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
+                DateTime pStartSearchDay = new DateTime(startSearchDay.Year,startSearchDay.Month,startSearchDay.Day,00,00,00);
+                DateTime pEndSearchDay = new DateTime(endSearchDay.Year, endSearchDay.Month, endSearchDay.Day, 23, 59, 59);
 
-                Result res = new Result(runDateTime, dt);
+                DataTable dt = DatabaseGateway.getInstance().getDBTable01(pStartSearchDay, pEndSearchDay, selectColumn);
+
+                Result res = new Result(runDateTime);
+                res.mergeDataTable(dt);
 
                 return res;
             }

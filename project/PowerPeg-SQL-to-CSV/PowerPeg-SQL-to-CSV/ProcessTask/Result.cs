@@ -12,10 +12,15 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         /// </summary>
         /// <param name="genTime">Result generation time</param>
         /// <param name="dt">DataTable of the result</param>
-        public Result(DateTime genTime, DataTable dt)
+        public Result(DateTime genTime)
         {
             generationTime = genTime;
-            result = dt;
+            result = new DataTable();
+        }
+
+        public void mergeDataTable(DataTable addDataTable)
+        {
+            this.result.Merge(addDataTable);
         }
 
         /// <summary>
