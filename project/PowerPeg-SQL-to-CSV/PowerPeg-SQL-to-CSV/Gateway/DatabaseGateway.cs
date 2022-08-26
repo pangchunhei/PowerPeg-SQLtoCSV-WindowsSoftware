@@ -142,13 +142,13 @@ namespace PowerPeg_SQL_to_CSV.Gateway
             using (SqlConnection sqlcon = new SqlConnection(connectionString))
             {
                 //Local test
-                using (SqlCommand cmd = new SqlCommand("sp_gateway_get_table_1_col", sqlcon))
+                //using (SqlCommand cmd = new SqlCommand("sp_gateway_get_table_1_col", sqlcon))
                 //Prod
-                //using (SqlCommand cmd = new SqlCommand("sp_Gateway_GetSelectedTable_ColumnName", sqlcon))
+                using (SqlCommand cmd = new SqlCommand("sp_Gateway_GetSelectedTable_ColumnName", sqlcon))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     //Prod
-                    //cmd.Parameters.Add("@tableName", SqlDbType.VarChar).Value = createSelectedTableStatementString();
+                    cmd.Parameters.Add("@tableName", SqlDbType.VarChar).Value = createSelectedTableStatementString();
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
