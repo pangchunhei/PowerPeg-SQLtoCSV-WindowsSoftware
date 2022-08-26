@@ -19,6 +19,9 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             searchTaskslist = jsonGateway.importTasklist();
         }
 
+        /// <summary>
+        /// Show all the tasklist's seatch task name
+        /// </summary>
         private void showSearchTasklist()
         {
             foreach (var task in searchTaskslist)
@@ -27,6 +30,11 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             }
         }
 
+        /// <summary>
+        /// Find the seatch task object from name
+        /// </summary>
+        /// <param name="selectedSearchTaskName">Name of the search task</param>
+        /// <returns>Return SearchTask object from the tasklist</returns>
         public SearchTask findSearchTask(string selectedSearchTaskName)
         {
             foreach (var searchtask in searchTaskslist)
@@ -40,6 +48,11 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             return null;
         }
 
+        /// <summary>
+        /// Add new search task into tasklist
+        /// </summary>
+        /// <param name="searchtask">New search task</param>
+        /// <exception cref="Exception"></exception>
         public void addNewTask(SearchTask searchtask)
         {
             if (searchtask.getMode().GetType() != typeof(InstantMode))
@@ -55,6 +68,10 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             jsonGateway.updateTasklistJSON(searchTaskslist);
         }
 
+        /// <summary>
+        /// Remove search task from tasklist
+        /// </summary>
+        /// <param name="searchtask">Search task that want to be removed</param>
         public void removeTask(SearchTask searchtask)
         {
 
@@ -62,12 +79,20 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             jsonGateway.updateTasklistJSON(searchTaskslist);
         }
 
+        /// <summary>
+        /// Update the search task setting
+        /// </summary>
+        /// <param name="searchtasktask">Search task that just updated</param>
         public void updateTask(SearchTask searchtasktask)
         {
             removeTask(searchtasktask);
             addNewTask(searchtasktask);
         }
 
+        /// <summary>
+        /// Get the list of search tasks
+        /// </summary>
+        /// <returns>Return the list of Search Task</returns>
         public List<SearchTask> getCurrentTaskList()
         {
             return searchTaskslist;

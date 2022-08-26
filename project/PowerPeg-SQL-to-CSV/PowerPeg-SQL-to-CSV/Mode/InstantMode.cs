@@ -18,10 +18,10 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <summary>
         /// Create and change mode of InstantMode
         /// </summary>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="triggerDate"></param>
-        /// <param name="selection"></param>
+        /// <param name="startDate">Start DateTime of the search</param>
+        /// <param name="endDate">End DateTime of the search</param>
+        /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
+        /// <param name="selection">List of selected column name</param>
         public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<string> selection)
         {
             modeName = "Instant Mode";
@@ -30,11 +30,6 @@ namespace PowerPeg_SQL_to_CSV.Mode
             endSearchDay = endDate;
             triggerDateTime = triggerDate;
             selectColumn = selection;
-        }
-
-        public override string ToString()
-        {
-            return this.modeName;
         }
 
         public Result runSearch(DateTime runDateTime)

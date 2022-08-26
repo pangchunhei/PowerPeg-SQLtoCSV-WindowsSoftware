@@ -12,6 +12,10 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         private IScheduler scheduler;
         private static readonly ILog log = LogHelper.getLogger();
 
+        /// <summary>
+        /// Enable to running of background job in the background
+        /// </summary>
+        /// <returns></returns>
         public async Task runAsync()
         {
             schedulerFactory = new StdSchedulerFactory();
@@ -36,6 +40,10 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
 
         }
 
+        /// <summary>
+        /// Stop the running of the background job
+        /// </summary>
+        /// <returns></returns>
         public async Task stopAsync()
         {
 

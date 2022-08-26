@@ -6,6 +6,7 @@ using System.Diagnostics;
 
 namespace PowerPeg_SQL_to_CSV.ProcessTask
 {
+    //Background Job
     //Only run 1 instance at a time
     [DisallowConcurrentExecution]
     public class BackgroundProcessingJob : IJob
@@ -14,6 +15,11 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         private List<SearchTask> scheduleRunlist;
         private static readonly ILog log = LogHelper.getLogger();
 
+        /// <summary>
+        /// Run the background job's function
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public async Task Execute(IJobExecutionContext context)
         {
             //testJob(context);
@@ -21,6 +27,10 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             processTask(context);
         }
 
+        /// <summary>
+        /// Detail of the background job
+        /// </summary>
+        /// <param name="context"></param>
         private void processTask(IJobExecutionContext context)
         {
             log.Info($"Backround job is created and running");
@@ -50,6 +60,10 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             }
         }
 
+        /// <summary>
+        /// Detail of the testing background job
+        /// </summary>
+        /// <param name="context"></param>
         private void testJob(IJobExecutionContext context)
         {
             log.Info("Test Job is executing");

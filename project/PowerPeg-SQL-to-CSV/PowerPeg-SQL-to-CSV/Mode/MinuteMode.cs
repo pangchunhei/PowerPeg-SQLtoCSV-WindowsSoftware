@@ -19,12 +19,10 @@ namespace PowerPeg_SQL_to_CSV.Mode
         private static readonly ILog log = LogHelper.getLogger();
 
         /// <summary>
-        /// Create and change mode of InstantMode
+        /// Create and change mode of Minutes Testing Mode
         /// </summary>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="triggerDate"></param>
-        /// <param name="selection"></param>
+        /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
+        /// <param name="selection">List of selected column name</param>
         public MinuteMode(DateTime triggerDate, List<string> selection)
         {
             modeName = "Minute Mode";
@@ -38,6 +36,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
             return this.modeName;
         }
 
+        /// <summary>
+        /// Check if the provided time is needed to run the function
+        /// </summary>
+        /// <param name="runDateTime"></param>
+        /// <returns>Return bool</returns>
         private bool needRun(DateTime runDateTime)
         {
             int minuteLength = 1;

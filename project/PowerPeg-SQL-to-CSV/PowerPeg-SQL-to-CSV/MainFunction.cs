@@ -17,7 +17,17 @@ namespace PowerPeg_SQL_to_CSV
         private static BackgroundScheduler backgroundScheduler = null;
         
         private static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
-        
+
+        /// <summary>
+        /// Create the mode object
+        /// </summary>
+        /// <param name="selectmode">Select the mode of "InstantMode" or "MonthMode" or "MinuteMode"(For testing)</param>
+        /// <param name="triggerdate">Select the first time to trigger datetime</param>
+        /// <param name="selectedcolumn">Provide the list of selected column name</param>
+        /// <param name="startdate">(For instant mode) Select the specific start datetime</param>
+        /// <param name="enddate">(For instant mode)Select the specific end datetime</param>
+        /// <returns>Return the specific mode object</returns>
+        /// <exception cref="Exception"></exception>
         private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
         {
             log.Debug("Run CreateMode");
@@ -49,6 +59,17 @@ namespace PowerPeg_SQL_to_CSV
             }
         }
 
+        /// <summary>
+        /// Create new search task
+        /// </summary>
+        /// <param name="selectmodename">Select the mode of "InstantMode" or "MonthMode" or "MinuteMode"(For testing)</param>
+        /// <param name="outputlocation">Select the wanted CSV location</param>
+        /// <param name="triggerdate">Select the first time to trigger datetime</param>
+        /// <param name="selectedcolumn">Provide the list of selected column name</param>
+        /// <param name="startdate">(For instant mode) Select the specific start datetime</param>
+        /// <param name="enddate">(For instant mode) Select the specific end datetime</param>
+        /// <param name="taskname">(Optional) Search task name</param>
+        /// <returns>Return search task object</returns>
         public static SearchTask CreateTask(string selectmodename, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, string taskname = "default")
         {
             log.Debug("Run CreateTask");
@@ -60,6 +81,10 @@ namespace PowerPeg_SQL_to_CSV
             return new SearchTask(modifyName, outputlocation, m);
         }
 
+        /// <summary>
+        /// Trigger the running if the task in the currnt time
+        /// </summary>
+        /// <param name="task">Search task that wanted to run now</param>
         public static void runTaskNow(SearchTask task)
         {
             log.Debug("Run runTaskNow");
@@ -67,6 +92,14 @@ namespace PowerPeg_SQL_to_CSV
             task.toRunTask(DateTime.Now);
         }
 
+        /// <summary>
+        /// Update the search task setting
+        /// </summary>
+        /// <param name="searchtask">Search task object that wanted to be updated</param>
+        /// <param name="selectmode">Updated mode</param>
+        /// <param name="outputlocation">Updated CSV file location</param>
+        /// <param name="triggerdate">Updated first time trigger date</param>
+        /// <param name="selectedcolumn">Updated list of selected column</param>
         public static void updateTaskSetting(SearchTask searchtask, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn)
         {
             log.Debug("Run updateTaskSetting");
@@ -78,11 +111,20 @@ namespace PowerPeg_SQL_to_CSV
             scheduleSearchTasklist.updateTask(searchtask);
         }
 
+        /// <summary>
+        /// Find the seatch task object from name
+        /// </summary>
+        /// <param name="name">Name of the search task</param>
+        /// <returns>Return SearchTask object from the tasklist</returns>
         public static SearchTask findTaskObject(string name)
         {
             return scheduleSearchTasklist.findSearchTask(name);
         }
 
+        /// <summary>
+        /// Get the lsit of current search task in tasklist
+        /// </summary>
+        /// <returns>List of search task's name</returns>
         public static List<string> getCurrentTaskListName()
         {
             List<SearchTask> list = scheduleSearchTasklist.getCurrentTaskList();
@@ -97,6 +139,10 @@ namespace PowerPeg_SQL_to_CSV
             return listName;
         }
 
+        /// <summary>
+        /// Add new search task into tasklist
+        /// </summary>
+        /// <param name="searchtask">New search task</param>
         public static void addScheduleTask(SearchTask searchtask)
         {
             log.Debug("Run addScheduleTask");
@@ -104,6 +150,10 @@ namespace PowerPeg_SQL_to_CSV
             scheduleSearchTasklist.addNewTask(searchtask);
         }
 
+        /// <summary>
+        /// Remove search task from tasklist
+        /// </summary>
+        /// <param name="searchtask">Search task that want to be removed</param>
         public static void removeScheduleTask(SearchTask searchtask)
         {
             log.Debug("Run removeScheduleTask");
@@ -111,6 +161,11 @@ namespace PowerPeg_SQL_to_CSV
             scheduleSearchTasklist.removeTask(searchtask);
         }
 
+        /// <summary>
+        /// Update and test the Database communcation setting with new connection string.
+        /// </summary>
+        /// <param name="newConnectionString">The updated connection string</param>
+        /// <returns></returns>
         public static bool updateDatabaseGateway(string connectionString)
         {
             log.Debug("Run updateDatabaseGateway");
@@ -127,11 +182,19 @@ namespace PowerPeg_SQL_to_CSV
             return databaseGateway.getGatewayInfo();
         }
 
+        /// <summary>
+        /// Run the stored procedures search and Get the list of the database column name
+        /// </summary>
+        /// <returns>List of database column name string</returns>
         public static List<string> getDatabaseColumnName()
         {
             return databaseGateway.getDBTableColName();
         }
 
+        /// <summary>
+        /// Start the running of the background jobs
+        /// </summary>
+        /// <returns></returns>
         public static async Task startBackgroundJob()
         {
             log.Debug("Run startBackgroundJob");
@@ -140,6 +203,10 @@ namespace PowerPeg_SQL_to_CSV
             await backgroundScheduler.runAsync();
         }
 
+        /// <summary>
+        /// Restart the running of the background jobs
+        /// </summary>
+        /// <returns></returns>
         public static async Task reStartBackgroundJob()
         {
             log.Debug("Run reStartBackgroundJob");
@@ -149,6 +216,10 @@ namespace PowerPeg_SQL_to_CSV
             await startBackgroundJob();
         }
 
+        /// <summary>
+        /// Stop the running of the background jobs
+        /// </summary>
+        /// <returns></returns>
         public static async Task stopBackgroundJob()
         {
             log.Debug("Run stopBackgroundJob");
@@ -164,6 +235,10 @@ namespace PowerPeg_SQL_to_CSV
             }
         }
 
+        /// <summary>
+        /// Create a list of mode name that users can select
+        /// </summary>
+        /// <returns></returns>
         public static List<string> getGenerationScheduledModeName()
         {
             List<string> modeNamelist = new List<string>();
@@ -184,11 +259,19 @@ namespace PowerPeg_SQL_to_CSV
             return modeNamelist;
         }
 
+        /// <summary>
+        /// Update the selected Database table list
+        /// </summary>
+        /// <param name="selectedTableNameList">Name of the table</param>
         public static void updateDatabaseSelectedTable(List<string> selectedTableNameList)
         {
             databaseGateway.updateSelectedTableList(selectedTableNameList);
         }
 
+        /// <summary>
+        /// Get the list of selected Database table
+        /// </summary>
+        /// <returns>List of selected Database table name string</returns>
         public static List<string> getDatabaseSelectedTable()
         {
             return databaseGateway.getSelectedTable();

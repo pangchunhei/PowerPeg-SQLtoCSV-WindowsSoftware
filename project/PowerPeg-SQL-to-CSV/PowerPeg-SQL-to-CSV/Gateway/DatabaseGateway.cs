@@ -223,16 +223,16 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         }
 
         /// <summary>
-        /// Get the list of selected table
+        /// Get the list of selected Database table
         /// </summary>
-        /// <returns>List of selected table name string</returns>
+        /// <returns>List of selected Database table name string</returns>
         public List<string> getSelectedTable()
         {
             return this.selectedTableList;
         }
 
         /// <summary>
-        /// Update the selected table list
+        /// Update the selected Database table list
         /// </summary>
         /// <param name="tableName">Name of the table</param>
         public void updateSelectedTableList(List<string> tableName)

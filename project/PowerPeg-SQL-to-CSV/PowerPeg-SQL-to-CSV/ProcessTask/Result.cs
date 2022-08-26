@@ -7,17 +7,30 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         private DateTime generationTime;
         private DataTable result;
 
+        /// <summary>
+        /// Create a result object
+        /// </summary>
+        /// <param name="genTime">Result generation time</param>
+        /// <param name="dt">DataTable of the result</param>
         public Result(DateTime genTime, DataTable dt)
         {
             generationTime = genTime;
             result = dt;
         }
 
+        /// <summary>
+        /// Get the generation time
+        /// </summary>
+        /// <returns>Return of DataTime</returns>
         public DateTime getGenerationTime()
         {
             return generationTime;
         }
 
+        /// <summary>
+        /// Get the Result of the DataTable
+        /// </summary>
+        /// <returns>Return of DataTable</returns>
         public DataTable getResultTable()
         {
             return result;
