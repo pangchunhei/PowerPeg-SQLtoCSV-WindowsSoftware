@@ -59,6 +59,9 @@ namespace App_UI
 
         private void CreateNewTask_Load(object sender, EventArgs e)
         {
+            /*
+            TODO-- Select specific device
+            
             List<string> col = MainFunction.getDatabaseColumnName();
 
             selectedColListBox.Items.Add("-- All --");
@@ -67,7 +70,10 @@ namespace App_UI
                 selectedColListBox.Items.Add(s);
             }
             selectedColListBox.SelectedItem = "-- All --";
+            */
 
+            selectedColListBox.SelectedItem = "-- All --";
+            
             List<string> col2 = MainFunction.getGenerationScheduledModeName();
 
             foreach (string s in col2)
@@ -75,7 +81,7 @@ namespace App_UI
                 frequencyCoboBox.Items.Add(s);
             }
             frequencyCoboBox.SelectedIndex = 0;
-
+            
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 

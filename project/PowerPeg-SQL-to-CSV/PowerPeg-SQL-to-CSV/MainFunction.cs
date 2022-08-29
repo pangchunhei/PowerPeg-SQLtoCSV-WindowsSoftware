@@ -186,10 +186,12 @@ namespace PowerPeg_SQL_to_CSV
         /// Run the stored procedures search and Get the list of the database column name
         /// </summary>
         /// <returns>List of database column name string</returns>
+        /*
         public static List<string> getDatabaseColumnName()
         {
             return databaseGateway.getDBTableColName();
         }
+        */
 
         /// <summary>
         /// Start the running of the background jobs

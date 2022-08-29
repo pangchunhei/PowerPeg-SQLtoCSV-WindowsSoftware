@@ -31,15 +31,18 @@ namespace App_UI
             this.taskNameDataLabel.Text = task.getTaskInfo()[0];
             this.triggerDateTimePicker.Value = task.getMode().getTriggerDateTime();
 
+            /*
+            TODO-- Select specific device
             List<string> col = MainFunction.getDatabaseColumnName();
-            List<string> col2 = task.getMode().getSelectColumn();
+            
             
             selectedColListBox.Items.Add("-- All --");
             foreach (string s in col)
             {
                 selectedColListBox.Items.Add(s);
             }
-
+            
+            List<string> col2 = task.getMode().getSelectColumn();
             foreach (string s in col2)
             {
                 if (s.Equals("*"))
@@ -49,6 +52,9 @@ namespace App_UI
                 }
                 selectedColListBox.SelectedItems.Add(s);
             }
+            */
+            selectedColListBox.Items.Add("-- All --");
+            selectedColListBox.SelectedItems.Add("-- All --");
 
             List<string> col3 = MainFunction.getGenerationScheduledModeName();
 

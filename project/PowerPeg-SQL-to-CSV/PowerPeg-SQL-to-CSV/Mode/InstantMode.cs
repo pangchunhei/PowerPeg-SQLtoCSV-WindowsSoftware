@@ -1,5 +1,6 @@
 ﻿using log4net;
 using PowerPeg_SQL_to_CSV.Gateway;
+using PowerPeg_SQL_to_CSV.Gateway.Gateway;
 using PowerPeg_SQL_to_CSV.Log;
 using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Data;
@@ -35,16 +36,23 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             List<string> selectedTableName = DatabaseGateway.getInstance().getSelectedTable();
 
-            foreach(string name in selectedTableName)
+            foreach (string name in selectedTableName)
             {
+                if (this.selectColumn.Contains(name) || selectColumn[0] == "*")
+                {
+                    //TODO-- Check if select such column
+                    DataTable output = DatabaseGateway.getInstance().getDBTableData(this.startSearchDay, this.endSearchDay, name);
 
-                DataTable output = DatabaseGateway.getInstance().getDBTableData(this.startSearchDay, this.endSearchDay, name);
+                    //Remove column
+                    output.Columns.Remove("ID");
+                    output.Columns.Remove("TimeChange");
+                    output.Columns.Remove("LogStatus");
+                    output.Columns.Remove("StatusFlags");
 
-                res.mergeDataTable(output);
+                    res.mergeDataTable(output); 
+                }
+
             }
-
-            //TODO-- Remove Column
-
 
             return res;
         }

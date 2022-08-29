@@ -19,12 +19,17 @@ namespace App_UI
             string[] info = MainFunction.getDatabaseInformation();
             serverInfoDataLabel.Text = info[0] + " - " + info[1];
 
+            /*
+            TODO-- Select specific device
             List<string> col = MainFunction.getDatabaseColumnName();
             selectedColListBox.Items.Add("-- All --");
             foreach(string s in col)
             {
                 selectedColListBox.Items.Add(s);
             }
+            */
+
+            selectedColListBox.Items.Add("-- All --");
             selectedColListBox.SelectedItem = "-- All --";
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);

@@ -1,5 +1,6 @@
 ﻿using log4net;
 using PowerPeg_SQL_to_CSV.Log;
+using System.Configuration;
 using System.Data;
 using System.Text;
 
@@ -9,7 +10,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
     {
         private CSVGateway()
         {
-
+            this.csvPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["Mapping"];
+            log.Debug($"CSV mapping data filepath {csvPath}");
         }
 
         private static CSVGateway _instance;
@@ -34,6 +36,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
             }
             return _instance;
         }
+
+        private string csvPath;
 
         /// <summary>
         /// Convert the DataTable and store to CSV file

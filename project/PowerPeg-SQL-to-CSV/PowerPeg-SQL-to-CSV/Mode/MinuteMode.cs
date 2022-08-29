@@ -59,6 +59,32 @@ namespace PowerPeg_SQL_to_CSV.Mode
             }
         }
 
+        private Result processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, Result res)
+        {
+            List<string> selectedTableName = DatabaseGateway.getInstance().getSelectedTable();
+
+            foreach (string name in selectedTableName)
+            {
+                if (this.selectColumn.Contains(name) || selectColumn[0] == "*")
+                {
+                    //TODO-- Check if select such column
+                    DataTable output = DatabaseGateway.getInstance().getDBTableData(startSearchDay, endSearchDay, name);
+
+                    //Remove column
+                    output.Columns.Remove("ID");
+                    output.Columns.Remove("TimeChange");
+                    output.Columns.Remove("LogStatus");
+                    output.Columns.Remove("StatusFlags");
+
+
+                    res.mergeDataTable(output);
+                }
+
+            }
+
+            return res;
+        }
+
         public Result runSearch(DateTime runDateTime)
         {
             log.Info($"Trigger minute mode search: " + String.Join(", ", getInfo()));
@@ -78,12 +104,9 @@ namespace PowerPeg_SQL_to_CSV.Mode
                 DateTime pStartSearchDay = new DateTime(startSearchDay.Year, startSearchDay.Month, startSearchDay.Day, 00, 00, 00);
                 DateTime pEndSearchDay = new DateTime(endSearchDay.Year, endSearchDay.Month, endSearchDay.Day, 23, 59, 59);
 
-                DataTable dt = DatabaseGateway.getInstance().getDBTable01(pStartSearchDay, pEndSearchDay, selectColumn);
-
                 Result res = new Result(runDateTime);
-                res.mergeDataTable(dt);
 
-                return res;
+                return processAllDBTable(pStartSearchDay, pEndSearchDay, res);
             }
             else
             {
