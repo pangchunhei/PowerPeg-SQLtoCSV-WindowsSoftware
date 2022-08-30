@@ -44,8 +44,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
         /// </summary>
         /// <param name="fileName">CSV filename</param>
         /// <param name="filePath">CSV filepath</param>
-        /// <param name="dt">DataTable for storage</param>
-        public void dataTable_to_CSV(string fileName, string filePath, DataTable dt)
+        /// <param name="datatable">DataTable for storage</param>
+        public void dataTable_to_CSV(string fileName, string filePath, DataTable datatable)
         {
             lock (_lock)
             {
@@ -53,10 +53,10 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
 
                 StringBuilder sb = new StringBuilder();
 
-                IEnumerable<string> columnNames = dt.Columns.Cast<DataColumn>().Select(column => column.ColumnName);
+                IEnumerable<string> columnNames = datatable.Columns.Cast<DataColumn>().Select(column => column.ColumnName);
                 sb.AppendLine(string.Join(",", columnNames));
 
-                foreach (DataRow row in dt.Rows)
+                foreach (DataRow row in datatable.Rows)
                 {
                     IEnumerable<string> fields = row.ItemArray.Select(field =>
                       string.Concat("\"", field.ToString().Replace("\"", "\"\""), "\""));

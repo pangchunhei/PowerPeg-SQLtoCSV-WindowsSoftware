@@ -48,9 +48,9 @@ namespace PowerPeg_SQL_to_CSV
             {
                 return new MonthMode(triggerdate, selectedcolumn);
             }
-            else if (selectmode.Equals("MinuteMode"))
+            else if (selectmode.Equals("MinuteTestMode"))
             {
-                return new MinuteMode(triggerdate, selectedcolumn);
+                return new MinuteTestMode(triggerdate, selectedcolumn);
             }
             else
             {

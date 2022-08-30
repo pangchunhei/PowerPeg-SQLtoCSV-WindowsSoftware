@@ -1,6 +1,7 @@
 ﻿using log4net;
 using PowerPeg_SQL_to_CSV;
 using PowerPeg_SQL_to_CSV.Log;
+using System.Text;
 
 namespace App_UI
 {

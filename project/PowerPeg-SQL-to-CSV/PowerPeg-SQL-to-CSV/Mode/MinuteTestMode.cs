@@ -8,9 +8,9 @@ using System.Diagnostics;
 namespace PowerPeg_SQL_to_CSV.Mode
 {
     /// <summary>
-    /// For testing async
+    /// For testing async and background
     /// </summary>
-    public class MinuteMode : IMode
+    public class MinuteTestMode : IMode
     {
         private string modeName;
         private DateTime triggerDateTime;
@@ -23,17 +23,12 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// </summary>
         /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
         /// <param name="selection">List of selected column name</param>
-        public MinuteMode(DateTime triggerDate, List<string> selection)
+        public MinuteTestMode(DateTime triggerDate, List<string> selection)
         {
             modeName = "Minute Mode";
             triggerDateTime = triggerDate;
             selectColumn = selection;
             lastRunDateTime = new DateTime(1999, triggerDate.Month,triggerDate.Day, triggerDate.Hour, triggerDate.Minute, triggerDate.Second);
-        }
-
-        public override string ToString()
-        {
-            return this.modeName;
         }
 
         /// <summary>
@@ -65,22 +60,17 @@ namespace PowerPeg_SQL_to_CSV.Mode
             
             if (needRun(runDateTime))
             {
-                DateTime startSearchDay;
-                DateTime endSearchDay;
 
-                endSearchDay = runDateTime;
-                this.lastRunDateTime = runDateTime;
-
-                int length = DateTime.DaysInMonth(endSearchDay.Year, endSearchDay.Month);
-
-                startSearchDay = endSearchDay.AddMinutes(-1);
-
-                DateTime pStartSearchDay = new DateTime(startSearchDay.Year, startSearchDay.Month, startSearchDay.Day, 00, 00, 00);
-                DateTime pEndSearchDay = new DateTime(endSearchDay.Year, endSearchDay.Month, endSearchDay.Day, 23, 59, 59);
-
+                DateTime startSearchDay = new DateTime(2022, 8, 1, 00, 00, 00);
+                DateTime endSearchDay = new DateTime(2022, 8, 23, 23, 59, 59);
+                
                 Result res = new Result(runDateTime);
 
-                return ProcessDataTable.processAllDBTable(pStartSearchDay, pEndSearchDay, this.selectColumn, res);
+                res = SQLProcessFunction.processAllDBTable(startSearchDay, endSearchDay, this.selectColumn, res);
+
+                this.lastRunDateTime = runDateTime;
+
+                return res;
             }
             else
             {

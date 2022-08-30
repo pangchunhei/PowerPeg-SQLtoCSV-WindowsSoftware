@@ -66,7 +66,6 @@ namespace PowerPeg_SQL_to_CSV.Mode
                 DateTime endSearchDay;
 
                 endSearchDay = runDateTime;
-                this.lastRunDateTime = runDateTime;
 
                 int length = DateTime.DaysInMonth(endSearchDay.Year, endSearchDay.Month);
 
@@ -75,10 +74,13 @@ namespace PowerPeg_SQL_to_CSV.Mode
                 DateTime pStartSearchDay = new DateTime(startSearchDay.Year,startSearchDay.Month,startSearchDay.Day,00,00,00);
                 DateTime pEndSearchDay = new DateTime(endSearchDay.Year, endSearchDay.Month, endSearchDay.Day, 23, 59, 59);
 
-                
                 Result res = new Result(runDateTime);
 
-                return ProcessDataTable.processAllDBTable(pStartSearchDay, pEndSearchDay, this.selectColumn, res);
+                res = SQLProcessFunction.processAllDBTable(startSearchDay, endSearchDay, this.selectColumn, res);
+
+                this.lastRunDateTime = runDateTime;
+                
+                return res;
             }
             else
             {

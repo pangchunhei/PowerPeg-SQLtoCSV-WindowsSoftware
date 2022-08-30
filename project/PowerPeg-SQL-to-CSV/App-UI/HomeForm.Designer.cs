@@ -123,7 +123,7 @@
             this.header2Label.AccessibleName = "header2Label";
             this.header2Label.AutoSize = true;
             this.header2Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.header2Label.Location = new System.Drawing.Point(155, 377);
+            this.header2Label.Location = new System.Drawing.Point(70, 377);
             this.header2Label.Name = "header2Label";
             this.header2Label.Size = new System.Drawing.Size(174, 31);
             this.header2Label.TabIndex = 43;
@@ -134,10 +134,10 @@
             this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
             this.statusUpdateLabel.AutoSize = true;
             this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.statusUpdateLabel.Location = new System.Drawing.Point(324, 383);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(250, 383);
             this.statusUpdateLabel.Name = "statusUpdateLabel";
             this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
-            this.statusUpdateLabel.TabIndex = 44;
+            this.statusUpdateLabel.TabIndex = 47;
             this.statusUpdateLabel.Text = "<Status Update>";
             // 
             // HomeForm

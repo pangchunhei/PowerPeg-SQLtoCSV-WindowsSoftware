@@ -40,8 +40,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
             //DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 
             Result res = new Result(runDateTime);
-            
-            return ProcessDataTable.processAllDBTable(this.startSearchDay, this.endSearchDay, this.selectColumn, res);
+
+            return SQLProcessFunction.processAllDBTable(this.startSearchDay, this.endSearchDay, this.selectColumn, res);
         }
 
         public string[] getInfo()

@@ -1,5 +1,6 @@
 using PowerPeg_SQL_to_CSV.Log;
 using log4net;
+using System.Runtime.InteropServices;
 //Use xml configuration from app config
 //Put this line at the start of the file
 [assembly: log4net.Config.XmlConfigurator(Watch=true)]

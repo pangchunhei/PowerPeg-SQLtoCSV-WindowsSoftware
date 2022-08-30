@@ -72,6 +72,7 @@ namespace App_UI
             selectedColListBox.SelectedItem = "-- All --";
             */
 
+            selectedColListBox.Items.Add("-- All --");
             selectedColListBox.SelectedItem = "-- All --";
             
             List<string> col2 = MainFunction.getGenerationScheduledModeName();

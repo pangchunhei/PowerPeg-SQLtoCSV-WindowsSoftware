@@ -157,6 +157,9 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         }
     }
 
+    /// <summary>
+    /// To make the serialize and deserialize operation
+    /// </summary>
     public class contractResolverSaveAll : DefaultContractResolver
     {
         protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
