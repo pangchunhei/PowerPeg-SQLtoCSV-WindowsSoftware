@@ -32,31 +32,6 @@ namespace PowerPeg_SQL_to_CSV.Mode
             selectColumn = selection;
         }
 
-        private Result processAllDBTable(Result res)
-        {
-            List<string> selectedTableName = DatabaseGateway.getInstance().getSelectedTable();
-
-            foreach (string name in selectedTableName)
-            {
-                if (this.selectColumn.Contains(name) || selectColumn[0] == "*")
-                {
-                    //TODO-- Check if select such column
-                    DataTable output = DatabaseGateway.getInstance().getDBTableData(this.startSearchDay, this.endSearchDay, name);
-
-                    //Remove column
-                    output.Columns.Remove("ID");
-                    output.Columns.Remove("TimeChange");
-                    output.Columns.Remove("LogStatus");
-                    output.Columns.Remove("StatusFlags");
-
-                    res.mergeDataTable(output); 
-                }
-
-            }
-
-            return res;
-        }
-
         public Result runSearch(DateTime runDateTime)
         {
             log.Info($"Trigger instant mode search: " + String.Join(", ", getInfo()));
@@ -66,7 +41,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
             Result res = new Result(runDateTime);
             
-            return processAllDBTable(res);
+            return ProcessDataTable.processAllDBTable(this.startSearchDay, this.endSearchDay, this.selectColumn, res);
         }
 
         public string[] getInfo()

@@ -116,6 +116,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "ChoETL": {
+              "target": "Package",
+              "version": "[1.2.1.48, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"

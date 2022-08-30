@@ -18,9 +18,9 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             result = new DataTable();
         }
 
-        public void mergeDataTable(DataTable addDataTable)
+        public void updateDataTable(DataTable newDataTable)
         {
-            this.result.Merge(addDataTable);
+            this.result = newDataTable;
         }
 
         /// <summary>

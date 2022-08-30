@@ -10,7 +10,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
     {
         private CSVGateway()
         {
-            this.csvPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["Mapping"];
+            this.csvPath = AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["Map"];
             log.Debug($"CSV mapping data filepath {csvPath}");
         }
 
@@ -66,6 +66,25 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
                 log.Debug($"Store the CSV of the Result to {filePath}");
                 File.WriteAllText(filePath + "\\" + fileName + ".csv", sb.ToString());
             }
+        }
+
+        public List<string[]> importCSV()
+        {
+            log.Info($"Importing CSV mapping lookup: {this.csvPath}");
+
+            StreamReader sr = new StreamReader(this.csvPath);
+            var lines = new List<string[]>();
+            int Row = 0;
+            while (!sr.EndOfStream)
+            {
+                string[] Line = sr.ReadLine().Split(',');
+                lines.Add(Line);
+                Row++;
+            }
+
+            log.Info($"Finished CSV mapping lookup import");
+
+            return lines;
         }
 
     }
