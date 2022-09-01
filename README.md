@@ -41,7 +41,7 @@ Step 3
 Step 4
 - In local machine
 ```bash
-  Create the App-UI.exe shortcut and place to 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\\Startup'
+  Create the App-UI.exe shortcut and place to 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup'
 ```
 
 Step 5
