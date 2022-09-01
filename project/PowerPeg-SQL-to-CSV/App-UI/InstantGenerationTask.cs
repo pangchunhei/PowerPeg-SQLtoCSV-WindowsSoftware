@@ -48,15 +48,28 @@ namespace App_UI
             this.Dispose(false);
         }
 
+        private bool validate()
+        {
+            if (filePathDataLabel.Text.Equals("<Select Path>"))
+            {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Please select output folder.", true);
+                return false;
+            }
+            
+            if (!(fromDateCalendar.SelectionRange.Start < toDateCalendar.SelectionRange.Start))
+            {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "From date need to be earlier than To date.", true);
+                return false;
+            }
+
+            return true;
+        }
+
         private void generateBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing " + TypeDescriptor.GetClassName(this), false);
 
-            if (filePathDataLabel.Text.Equals("<Select Path>"))
-            {
-                MessageBox.Show("Please select output folder.");
-            }
-            else
+            if (validate())
             {
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
                 SearchTask t = MainFunction.CreateTask("InstantMode", filePathDataLabel.Text, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
@@ -72,14 +85,7 @@ namespace App_UI
                     GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the settings, discard task.", true);
                     resetForm();
                 }
-
-                //Task t = new Task();
-                //Debug.WriteLine("[{0}]", string.Join(", ", yourArray);
-
-                //Debug.WriteLine(fromDateCalendar.SelectionRange.Start.GetType() + " " + fromDateCalendar.SelectionRange.Start.ToString());
             }
-
-            
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
