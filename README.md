@@ -2,10 +2,8 @@
 ## Installation
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/pangchunhei/PowerPeg-SQLtoCSV-WindowsSoftware/tree/integration-with-EMSD-db/release)
 
-<!-- BEGIN LATEST DOWNLOAD BUTTON -->
 With a single click of the button below, a zip of this repository will start downloading.
 [![Download zip](https://custom-icon-badges.herokuapp.com/badge/-Download-blue?style=for-the-badge&logo=download&logoColor=white "Download zip")](hhttps://github.com/pangchunhei/PowerPeg-SQLtoCSV-WindowsSoftware/tree/integration-with-EMSD-db/release)
-<!-- END LATEST DOWNLOAD BUTTON -->
 
 Step 1
 - In local machine
