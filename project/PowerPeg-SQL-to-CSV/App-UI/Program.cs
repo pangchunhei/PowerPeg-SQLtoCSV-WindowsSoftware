@@ -16,7 +16,7 @@ namespace App_UI
         private static readonly ILog log = LogHelper.getLogger();
 
         //Single instance
-        static Mutex mutex = new Mutex(false, "some-unique-id");
+        static Mutex mutex = new Mutex(false, "powerpeg-db-csv");
 
         /// <summary>
         ///  The main entry point for the application.
