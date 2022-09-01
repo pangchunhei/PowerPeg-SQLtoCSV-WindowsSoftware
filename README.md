@@ -15,16 +15,16 @@ Step 1
 Step 2
 - In local machine
 ```bash
-  Update the the MappingTable.csv
-  - Only need to update if there's changes in the Mapping Table
+  Update the the 'MappingTable.csv'
+  - Only need to update if there is changes in the Mapping Table
 ```
 
 Step 3
 - In Database Server (Access via SQL server management studio)
 ```bash
   Installation of the stored procedure and function
-  - Prod - SplitForIN.sql
-  - Prod - SQLQuerySearchSpecificCol.sql
+  - 'Prod - SplitForIN.sql'
+  - 'Prod - SQLQuerySearchSpecificCol.sql'
 ```
 
 Step 4
