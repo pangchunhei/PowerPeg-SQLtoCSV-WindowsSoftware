@@ -21,11 +21,11 @@ jobs:
 
       - name: Readme Download Button Action
         env:
-          GITHUB_USER: "DenverCoder1"
-          REPO: "readme-download-button-action"
+          GITHUB_USER: "pangchunhei"
+          REPO: "PowerPeg-SQLtoCSV-WindowsSoftware"
           FORMAT: "zip"
           VERSION: "${{ steps.get-latest-release.outputs.tag_name }}"
-          COLOR: "blue"
+          COLOR: "limegreen"
           BEGIN_TAG: "\n\n<!-- BEGIN LATEST DOWNLOAD BUTTON -->"
           END_TAG: "<!-- END LATEST DOWNLOAD BUTTON -->"
         run: |
