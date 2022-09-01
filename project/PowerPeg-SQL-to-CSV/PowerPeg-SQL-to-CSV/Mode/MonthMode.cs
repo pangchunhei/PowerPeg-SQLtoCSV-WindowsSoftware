@@ -13,24 +13,35 @@ namespace PowerPeg_SQL_to_CSV.Mode
         private DateTime triggerDateTime;
         private DateTime lastRunDateTime;
         private List<string> selectColumn = new List<string>();
+        private bool selectThisMonth;
+
         private static readonly ILog log = LogHelper.getLogger();
 
         /// <summary>
         /// Create and change mode of Month Mode
         /// </summary>
         /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
+        /// <param name="selectThis">Select the number of days, for the true: trigger month's day; for false, the trigger month's previous month day</param>
         /// <param name="selection">List of selected column name</param>
-        public MonthMode(DateTime triggerDate, List<string> selection)
+        public MonthMode(DateTime triggerDate, bool selectThis, List<string> selection)
         {
             modeName = "Month Mode";
             triggerDateTime = triggerDate;
+            this.selectThisMonth = selectThis;
             selectColumn = selection;
             lastRunDateTime = new DateTime(1999, triggerDate.Month,triggerDate.Day, triggerDate.Hour, triggerDate.Minute, triggerDate.Second);
         }
 
-        public override string ToString()
+        private int getMonthLength(DateTime runDateTime)
         {
-            return this.modeName;
+            if (selectThisMonth)
+            {
+                return DateTime.DaysInMonth(runDateTime.Year, runDateTime.Month);
+            }
+            else
+            {
+                return DateTime.DaysInMonth(runDateTime.AddMonths(-1).Year, runDateTime.AddMonths(-1).Month);
+            }
         }
 
         /// <summary>
@@ -40,7 +51,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <returns>Return bool</returns>
         private bool needRun(DateTime runDateTime)
         {
-            int monthLength = DateTime.DaysInMonth(runDateTime.Year, runDateTime.Month);
+            int monthLength = getMonthLength(runDateTime);
 
             int daysFromLastRun = (runDateTime - this.lastRunDateTime).Days;
 
@@ -67,7 +78,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                 endSearchDay = runDateTime;
 
-                int length = DateTime.DaysInMonth(endSearchDay.Year, endSearchDay.Month);
+                int length = getMonthLength(runDateTime);
 
                 startSearchDay = endSearchDay.AddDays(-length);
 
@@ -76,10 +87,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                 Result res = new Result(runDateTime);
 
-                res = SQLProcessFunction.processAllDBTable(startSearchDay, endSearchDay, this.selectColumn, res);
+                res = SQLProcessFunction.processAllDBTable(pStartSearchDay, pEndSearchDay, this.selectColumn, res);
 
-                this.lastRunDateTime = runDateTime;
-                
+                //TODO--No need min/sec
+                this.lastRunDateTime = new DateTime(runDateTime.Year, runDateTime.Month, runDateTime.Day, this.lastRunDateTime.Hour, this.lastRunDateTime.Minute, this.lastRunDateTime.Second);
+
                 return res;
             }
             else

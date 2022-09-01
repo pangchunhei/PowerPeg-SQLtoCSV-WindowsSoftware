@@ -4,7 +4,7 @@
     <Compile Update="ChangeScheduleGeneration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ChangeServerInfo.cs">
+    <Compile Update="ShowServerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UpdateTaskSetting.cs">

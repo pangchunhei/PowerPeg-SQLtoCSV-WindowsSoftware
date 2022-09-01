@@ -47,7 +47,7 @@
             this.serverInfoLabel.AccessibleName = "serverInfoLabel";
             this.serverInfoLabel.AutoSize = true;
             this.serverInfoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.serverInfoLabel.Location = new System.Drawing.Point(309, 107);
+            this.serverInfoLabel.Location = new System.Drawing.Point(284, 110);
             this.serverInfoLabel.Name = "serverInfoLabel";
             this.serverInfoLabel.Size = new System.Drawing.Size(170, 28);
             this.serverInfoLabel.TabIndex = 5;
@@ -60,9 +60,9 @@
             this.header2Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.header2Label.Location = new System.Drawing.Point(81, 107);
             this.header2Label.Name = "header2Label";
-            this.header2Label.Size = new System.Drawing.Size(222, 31);
+            this.header2Label.Size = new System.Drawing.Size(197, 31);
             this.header2Label.TabIndex = 4;
-            this.header2Label.Text = "Server Information: ";
+            this.header2Label.Text = "Database Server: ";
             // 
             // headerLabel
             // 

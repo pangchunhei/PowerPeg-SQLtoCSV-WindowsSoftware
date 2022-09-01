@@ -68,7 +68,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                 res = SQLProcessFunction.processAllDBTable(startSearchDay, endSearchDay, this.selectColumn, res);
 
-                this.lastRunDateTime = runDateTime;
+                this.lastRunDateTime = new DateTime(runDateTime.Year, runDateTime.Month, runDateTime.Day, runDateTime.Hour, runDateTime.Minute, this.lastRunDateTime.Second);
 
                 return res;
             }

@@ -2,14 +2,14 @@
 
 namespace App_UI
 {
-    public partial class ChangeServerInfo : Form
+    public partial class ShowServerInfo : Form
     {
-        public ChangeServerInfo()
+        public ShowServerInfo()
         {
             InitializeComponent();
             this.ControlBox = false;
 
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading ChangeServerInfo.", false);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Loading ShowServerInfo.", false);
         }
 
         private bool validateForm()
@@ -25,8 +25,8 @@ namespace App_UI
 
         private void ChangeServerInfo_Load(object sender, EventArgs e)
         {
-
-            connectionStrTextbox.Text = MainFunction.getDatabaseInformation()[2];
+            //TODO--No seeing
+            connectionStrTextbox.Text = MainFunction.getDatabaseInformation()[0] + "\r\n" + MainFunction.getDatabaseInformation()[1];
             tableTextbox.Text = string.Join("\r\n",MainFunction.getDatabaseSelectedTable());
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User updating form", false);
@@ -59,9 +59,9 @@ namespace App_UI
             }
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Closing ChangeServerInfo and Go back to previous page..", false);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Closing ShowServerInfo and Go back to previous page..", false);
             this.Close();
         }
     }

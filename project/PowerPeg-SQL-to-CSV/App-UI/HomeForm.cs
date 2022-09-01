@@ -40,10 +40,10 @@ namespace App_UI
 
         }
 
-        private void changeServerInfoBtn_Click(object sender, EventArgs e)
+        private void showServerInfoBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChangeServerInfo changeServerInfo = new ChangeServerInfo();
+            ShowServerInfo changeServerInfo = new ShowServerInfo();
             changeServerInfo.ShowDialog();
             this.Show();
         }

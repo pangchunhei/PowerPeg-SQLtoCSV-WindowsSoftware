@@ -33,7 +33,7 @@
             this.headerLabel = new System.Windows.Forms.Label();
             this.instantGenerationBtn = new System.Windows.Forms.Button();
             this.changeScheduleGenerationBtn = new System.Windows.Forms.Button();
-            this.changeServerInfoBtn = new System.Windows.Forms.Button();
+            this.showServerInfoBtn = new System.Windows.Forms.Button();
             this.reStartProgramBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
@@ -80,17 +80,17 @@
             this.changeScheduleGenerationBtn.UseVisualStyleBackColor = true;
             this.changeScheduleGenerationBtn.Click += new System.EventHandler(this.changeScheduleGenerationBtn_Click);
             // 
-            // changeServerInfoBtn
+            // showServerInfoBtn
             // 
-            this.changeServerInfoBtn.AccessibleName = "changeServerInfoBtn";
-            this.changeServerInfoBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.changeServerInfoBtn.Location = new System.Drawing.Point(237, 116);
-            this.changeServerInfoBtn.Name = "changeServerInfoBtn";
-            this.changeServerInfoBtn.Size = new System.Drawing.Size(327, 42);
-            this.changeServerInfoBtn.TabIndex = 3;
-            this.changeServerInfoBtn.Text = "Change Server Information";
-            this.changeServerInfoBtn.UseVisualStyleBackColor = true;
-            this.changeServerInfoBtn.Click += new System.EventHandler(this.changeServerInfoBtn_Click);
+            this.showServerInfoBtn.AccessibleName = "showServerInfoBtn";
+            this.showServerInfoBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.showServerInfoBtn.Location = new System.Drawing.Point(237, 116);
+            this.showServerInfoBtn.Name = "showServerInfoBtn";
+            this.showServerInfoBtn.Size = new System.Drawing.Size(327, 42);
+            this.showServerInfoBtn.TabIndex = 3;
+            this.showServerInfoBtn.Text = "Show Server Information";
+            this.showServerInfoBtn.UseVisualStyleBackColor = true;
+            this.showServerInfoBtn.Click += new System.EventHandler(this.showServerInfoBtn_Click);
             // 
             // reStartProgramBtn
             // 
@@ -175,7 +175,7 @@
             this.Controls.Add(this.header2Label);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.reStartProgramBtn);
-            this.Controls.Add(this.changeServerInfoBtn);
+            this.Controls.Add(this.showServerInfoBtn);
             this.Controls.Add(this.changeScheduleGenerationBtn);
             this.Controls.Add(this.instantGenerationBtn);
             this.Controls.Add(this.headerLabel);
@@ -195,7 +195,7 @@
         private Label headerLabel;
         private Button instantGenerationBtn;
         private Button changeScheduleGenerationBtn;
-        private Button changeServerInfoBtn;
+        private Button showServerInfoBtn;
         private Button reStartProgramBtn;
         private Button exitBtn;
         private NotifyIcon notifyIcon;

@@ -1,6 +1,6 @@
 ﻿namespace App_UI
 {
-    partial class ChangeServerInfo
+    partial class ShowServerInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.headerLabel = new System.Windows.Forms.Label();
             this.connectionStrLabel = new System.Windows.Forms.Label();
-            this.saveBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.connectionStrTextbox = new System.Windows.Forms.TextBox();
             this.tableTextbox = new System.Windows.Forms.TextBox();
@@ -47,9 +46,9 @@
             this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.headerLabel.Location = new System.Drawing.Point(33, 24);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(453, 46);
+            this.headerLabel.Size = new System.Drawing.Size(421, 46);
             this.headerLabel.TabIndex = 1;
-            this.headerLabel.Text = "Change Server Information";
+            this.headerLabel.Text = "Show Server Information";
             // 
             // connectionStrLabel
             // 
@@ -58,44 +57,32 @@
             this.connectionStrLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.connectionStrLabel.Location = new System.Drawing.Point(82, 103);
             this.connectionStrLabel.Name = "connectionStrLabel";
-            this.connectionStrLabel.Size = new System.Drawing.Size(211, 31);
+            this.connectionStrLabel.Size = new System.Drawing.Size(223, 31);
             this.connectionStrLabel.TabIndex = 3;
-            this.connectionStrLabel.Text = "Connection String: ";
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.AccessibleName = "saveBtn";
-            this.saveBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.saveBtn.Location = new System.Drawing.Point(278, 444);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(120, 46);
-            this.saveBtn.TabIndex = 7;
-            this.saveBtn.Text = "Save";
-            this.saveBtn.UseVisualStyleBackColor = false;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.connectionStrLabel.Text = "Connection Details: ";
             // 
             // cancelBtn
             // 
             this.cancelBtn.AccessibleName = "cancelBtn";
             this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(433, 444);
+            this.cancelBtn.Location = new System.Drawing.Point(360, 441);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(120, 46);
             this.cancelBtn.TabIndex = 8;
-            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.Text = "Back";
             this.cancelBtn.UseVisualStyleBackColor = false;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            this.cancelBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // connectionStrTextbox
             // 
             this.connectionStrTextbox.AccessibleName = "connectionStrTextbox";
             this.connectionStrTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.connectionStrTextbox.Location = new System.Drawing.Point(287, 103);
+            this.connectionStrTextbox.Location = new System.Drawing.Point(311, 103);
             this.connectionStrTextbox.Multiline = true;
             this.connectionStrTextbox.Name = "connectionStrTextbox";
-            this.connectionStrTextbox.Size = new System.Drawing.Size(419, 156);
+            this.connectionStrTextbox.ReadOnly = true;
+            this.connectionStrTextbox.Size = new System.Drawing.Size(395, 156);
             this.connectionStrTextbox.TabIndex = 9;
             // 
             // tableTextbox
@@ -152,7 +139,7 @@
             this.tableLabel.TabIndex = 4;
             this.tableLabel.Text = "Selected Table: ";
             // 
-            // ChangeServerInfo
+            // ShowServerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,11 +151,10 @@
             this.Controls.Add(this.tableTextbox);
             this.Controls.Add(this.connectionStrTextbox);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.tableLabel);
             this.Controls.Add(this.connectionStrLabel);
             this.Controls.Add(this.headerLabel);
-            this.Name = "ChangeServerInfo";
+            this.Name = "ShowServerInfo";
             this.Text = "ChangeServerInfo";
             this.Load += new System.EventHandler(this.ChangeServerInfo_Load);
             this.ResumeLayout(false);
@@ -180,7 +166,6 @@
 
         private Label headerLabel;
         private Label connectionStrLabel;
-        private Button saveBtn;
         private Button cancelBtn;
         private TextBox connectionStrTextbox;
         private TextBox tableTextbox;
