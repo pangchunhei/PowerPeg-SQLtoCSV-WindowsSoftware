@@ -1,6 +1,5 @@
 USE [SYP_8F_AC_Plant_RM]
 GO
-
 /****** Object:  StoredProcedure [dbo].[sp_Gateway_get_Table_1_Col]    Script Date: 8/10/2022 3:47:14 PM ******/
 SET ANSI_NULLS ON
 GO
