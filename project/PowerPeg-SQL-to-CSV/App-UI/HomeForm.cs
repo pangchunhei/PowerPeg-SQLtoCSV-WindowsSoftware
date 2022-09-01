@@ -1,16 +1,22 @@
-﻿using PowerPeg_SQL_to_CSV;
+﻿using ChoETL;
+using Newtonsoft.Json.Linq;
+using PowerPeg_SQL_to_CSV;
 using PowerPeg_SQL_to_CSV.ProcessTask;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace App_UI
 {
@@ -78,12 +84,15 @@ namespace App_UI
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
+
             GlobalFunction.statusUpdate(statusUpdateLabel, "Closing background task.", false);
+
             _ = MainFunction.stopBackgroundJob();
             //Giving time to close
             Thread.Sleep(3000);
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Appication closing.", false);
+
             Application.Exit();
         }
 

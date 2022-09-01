@@ -54,12 +54,12 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
             if (list == null)
             {
-                log.Info($"No import data");
+                log.Info($"No tasklist imported");
                 return new List<SearchTask>();
             }
             else
             {
-                log.Info($"Finished import");
+                log.Info($"Finished import tasklist");
                 return list;
             }
         }
@@ -70,17 +70,17 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         /// <returns>Provide the list of String of Database Table name</returns>
         public List<string> importTable()
         {
-            log.Info($"Import table data");
+            log.Info($"Import included table data");
             List<string> list = (List<string>)importJson(typeof(List<string>), this.tableJsonPath);
 
             if (list == null)
             {
-                log.Info($"No import data");
+                log.Info($"No included table imported");
                 return new List<string>();
             }
             else
             {
-                log.Info($"Finished import");
+                log.Info($"Finished import included table");
                 return list;
             }
         }
@@ -127,7 +127,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         /// <param name="tableList">The new database table name list</param>
         public void updateTableJSON(List<string> tableList)
         {
-            log.Info($"Update JSON table data");
+            log.Info($"Update JSON included table data");
 
             updateJSON(tableList, this.tableJsonPath);
         }
@@ -148,7 +148,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                 };
                 using (StreamWriter file = File.CreateText(filepath))
                 {
-                    log.Info($"Update {filepath} JSON data");
+                    log.Debug($"Update {filepath} JSON data");
 
                     JsonSerializer serializer = JsonSerializer.Create(settings);
                     serializer.Serialize(file, list);

@@ -82,7 +82,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
                 Row++;
             }
 
-            log.Info($"Finished CSV mapping lookup import");
+            log.Debug($"Finished CSV mapping lookup import");
 
             return lines;
         }

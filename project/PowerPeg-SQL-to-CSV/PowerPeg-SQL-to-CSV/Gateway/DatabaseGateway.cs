@@ -71,7 +71,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         /// <returns></returns>
         public bool updateGateway(string newConnectionString)
         {
-            log.Debug("Update gateway");
+            log.Info("Update gateway");
 
             if (isServerConnected(this.connectionString))
             {
@@ -129,102 +129,12 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         }
 
         /// <summary>
-        /// Run the stored procedures search and Get the list of the database column name
-        /// </summary>
-        /// <returns>List of database column name string</returns>
-        public List<string> getDBTableColName()
-        {
-            log.Info("Request Database for Table column infomation.");
-
-            //Use the stored procedure cmd
-            DataTable sqlOutput;
-
-            using (SqlConnection sqlcon = new SqlConnection(connectionString))
-            {
-                //Local test
-                //using (SqlCommand cmd = new SqlCommand("sp_gateway_get_table_1_col", sqlcon))
-                //Prod
-                using (SqlCommand cmd = new SqlCommand("sp_Gateway_GetSelectedTable_ColumnName", sqlcon))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    //Prod
-                    cmd.Parameters.Add("@tableName", SqlDbType.VarChar).Value = createSelectedTableStatementString();
-
-                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                    {
-                        sqlOutput = new DataTable();
-
-                        da.Fill(sqlOutput);
-                    }
-                }
-            }
-
-            List<string> result = new List<string>();
-
-            foreach (DataRow dr in sqlOutput.Rows)
-            {
-                result.Add(dr[0].ToString());
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Create the SQL selecte statement [column name 1],[column name 2], .....
-        /// </summary>
-        /// <returns>SQL string</returns>
-        private string createSelectStatementString(List<string> selectColumn)
-        {
-            string output = "";
-            if (selectColumn.Contains("*"))
-            {
-                return "*";
-            }
-            else
-            {
-                return "[" + string.Join("],[", selectColumn) + "]";
-            }
-        }
-
-        /// <summary>
-        /// Test (Only 1 Table)
-        /// </summary>
-        /// <returns>DataTable of the search result</returns>
-        public DataTable getDBTable01(DateTime startSearchDay, DateTime endSearchDay, List<string> selectColumn)
-        {
-            log.Info("Request Database for Table data.");
-
-            //Use the stored procedure cmd
-            DataTable sqlOutput;
-
-            using (SqlConnection sqlcon = new SqlConnection(connectionString))
-            {
-                using (SqlCommand cmd = new SqlCommand("sp_gateway_search_table_1", sqlcon))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    
-                    //Change to sql itemes formate
-                    cmd.Parameters.Add("@selectCol", SqlDbType.VarChar).Value = createSelectStatementString(selectColumn);
-
-                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                    {
-                        sqlOutput = new DataTable();
-
-                        da.Fill(sqlOutput);
-                    }
-                }
-            }
-
-            return sqlOutput;
-        }
-
-        /// <summary>
         /// Run the stored procedures search and Get the DataTable of the result (Only 1 Table)
         /// </summary>
         /// <returns>DataTable of the search result</returns>
-        public DataTable getDBTableData(DateTime startSearchDate, DateTime endSearchDate, string tableName)
+        public DataTable searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, string tableName)
         {
-            log.Info($"Request Database data of: {tableName}, {startSearchDate}, {endSearchDate}");
+            log.Debug($"Request Database data of: {tableName}, {startSearchDate}, {endSearchDate}");
 
             //Use the stored procedure cmd
             DataTable sqlOutput;
@@ -245,6 +155,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                         sqlOutput = new DataTable();
 
                         da.Fill(sqlOutput);
+
+                        log.Info($"Recieved Database data of: {tableName}, {startSearchDate}, {endSearchDate}");
                     }
                 }
             }
@@ -269,16 +181,6 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         {
             JSONGateway.getInstance().updateTableJSON(tableName);
             setSelectTableList();
-        }
-
-        /// <summary>
-        /// Create the SQL table statement 'Table Name 1','Table Name 2', .....
-        /// </summary>
-        /// <returns>SQL string</returns>
-        private string createSelectedTableStatementString()
-        {
-            //return "\'" + string.Join("\', \' ", this.selectedTableList) + "\'";
-            return string.Join(",", this.selectedTableList);
         }
     }
 }

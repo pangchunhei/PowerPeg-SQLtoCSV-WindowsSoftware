@@ -105,6 +105,7 @@
             this.tableTextbox.Location = new System.Drawing.Point(254, 265);
             this.tableTextbox.Multiline = true;
             this.tableTextbox.Name = "tableTextbox";
+            this.tableTextbox.ReadOnly = true;
             this.tableTextbox.Size = new System.Drawing.Size(452, 170);
             this.tableTextbox.TabIndex = 10;
             // 

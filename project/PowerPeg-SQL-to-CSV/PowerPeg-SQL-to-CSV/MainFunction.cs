@@ -20,6 +20,7 @@ namespace PowerPeg_SQL_to_CSV
 
         /// <summary>
         /// Create the mode object
+        /// TODO-- If have new mode, need to update here
         /// </summary>
         /// <param name="selectmode">Select the mode of "InstantMode" or "MonthMode" or "MinuteMode"(For testing)</param>
         /// <param name="triggerdate">Select the first time to trigger datetime</param>
@@ -164,7 +165,7 @@ namespace PowerPeg_SQL_to_CSV
         /// <summary>
         /// Update and test the Database communcation setting with new connection string.
         /// </summary>
-        /// <param name="newConnectionString">The updated connection string</param>
+        /// <param name="connectionString">The updated connection string</param>
         /// <returns></returns>
         public static bool updateDatabaseGateway(string connectionString)
         {

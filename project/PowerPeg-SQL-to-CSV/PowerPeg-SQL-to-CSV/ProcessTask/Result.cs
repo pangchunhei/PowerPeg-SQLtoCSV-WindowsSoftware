@@ -18,6 +18,10 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             result = new DataTable();
         }
 
+        /// <summary>
+        /// Update the result of the SQL DataTable
+        /// </summary>
+        /// <param name="newDataTable"></param>
         public void updateDataTable(DataTable newDataTable)
         {
             this.result = newDataTable;

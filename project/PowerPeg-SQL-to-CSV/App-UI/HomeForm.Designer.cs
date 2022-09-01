@@ -39,6 +39,8 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.header2Label = new System.Windows.Forms.Label();
             this.statusUpdateLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtConsole = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -134,11 +136,32 @@
             this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
             this.statusUpdateLabel.AutoSize = true;
             this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.statusUpdateLabel.Location = new System.Drawing.Point(250, 383);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(297, 429);
             this.statusUpdateLabel.Name = "statusUpdateLabel";
             this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
             this.statusUpdateLabel.TabIndex = 47;
             this.statusUpdateLabel.Text = "<Status Update>";
+            // 
+            // label1
+            // 
+            this.label1.AccessibleName = "spaceLabel";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(309, 762);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 20);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "   ";
+            // 
+            // txtConsole
+            // 
+            this.txtConsole.Location = new System.Drawing.Point(70, 411);
+            this.txtConsole.Multiline = true;
+            this.txtConsole.Name = "txtConsole";
+            this.txtConsole.ReadOnly = true;
+            this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtConsole.Size = new System.Drawing.Size(658, 359);
+            this.txtConsole.TabIndex = 73;
+            this.txtConsole.WordWrap = false;
             // 
             // HomeForm
             // 
@@ -146,6 +169,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtConsole);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusUpdateLabel);
             this.Controls.Add(this.header2Label);
             this.Controls.Add(this.exitBtn);
@@ -176,5 +201,7 @@
         private NotifyIcon notifyIcon;
         private Label header2Label;
         private Label statusUpdateLabel;
+        private Label label1;
+        private TextBox txtConsole;
     }
 }

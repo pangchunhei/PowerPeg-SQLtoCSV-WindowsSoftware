@@ -40,6 +40,10 @@ namespace PowerPeg_SQL_to_CSV
             log.Debug("Created search class" + string.Join(",", this.getTaskInfo()));
         }
 
+        /// <summary>
+        /// Trigger the running of the search task
+        /// </summary>
+        /// <param name="runDateTime">Trigger DateTime</param>
         public void toRunTask(DateTime runDateTime)
         {
             log.Info($"Runing search on {this.taskName}");
@@ -75,6 +79,11 @@ namespace PowerPeg_SQL_to_CSV
             return task.Concat(mode).ToArray();
         }
 
+        /// <summary>
+        /// Update the search task setting
+        /// </summary>
+        /// <param name="outputlocation">CSV file outputpath</param>
+        /// <param name="mode">Mode of the search task</param>
         public void updateTaskSetting(string outputlocation, IMode mode)
         {
             log.Debug("Orginal search task setting" + string.Join(",", this.getTaskInfo()));
