@@ -5,6 +5,10 @@ using PowerPeg_SQL_to_CSV.Log;
 
 namespace App_UI
 {
+    //https://stackoverflow.com/questions/14114614/configuring-log4net-textboxappender-custom-appender-via-xml-file
+    /// <summary>
+    /// Show the log4net inside the application text box
+    /// </summary>
     public class TextBoxAppender : AppenderSkeleton
     {
         private TextBox _textBox;
