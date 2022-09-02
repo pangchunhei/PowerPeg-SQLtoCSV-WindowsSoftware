@@ -153,9 +153,9 @@
             this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.filePathDataLabel.Location = new System.Drawing.Point(443, 332);
             this.filePathDataLabel.Name = "filePathDataLabel";
-            this.filePathDataLabel.Size = new System.Drawing.Size(121, 25);
+            this.filePathDataLabel.Size = new System.Drawing.Size(183, 25);
             this.filePathDataLabel.TabIndex = 65;
-            this.filePathDataLabel.Text = "<Select Path>";
+            this.filePathDataLabel.Text = "<Select Default Path>";
             // 
             // generateBtn
             // 

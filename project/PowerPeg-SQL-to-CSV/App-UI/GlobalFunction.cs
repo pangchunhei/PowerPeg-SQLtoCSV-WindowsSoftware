@@ -1,6 +1,8 @@
 ﻿using log4net;
 using PowerPeg_SQL_to_CSV;
 using PowerPeg_SQL_to_CSV.Log;
+using PowerPeg_SQL_to_CSV.Mode;
+using System.Configuration;
 using System.Text;
 
 namespace App_UI
@@ -59,12 +61,12 @@ namespace App_UI
 
             return output;
         }
-        
+
         public static string searchTaskDetail_to_string(SearchTask t)
         {
             return t.ToString();
         }
-        
+
         public static bool userCheckTaskDetail(string question, SearchTask task)
         {
             string msg = question + "\n" + GlobalFunction.searchTaskDetail_to_string(task);
@@ -79,6 +81,37 @@ namespace App_UI
             {
                 return false;
             }
+        }
+
+        public static string getDefaultFilePath(string mode)
+        {
+            string path;
+
+            if (mode.Equals("InstantMode"))
+            {
+                path = ConfigurationManager.AppSettings["InstantGenPath"] + "\\";
+            }
+            else
+            {
+                path = ConfigurationManager.AppSettings["AutoGenPath"] + "\\";
+            }
+
+            try
+            {
+                FileInfo file = new FileInfo(path);
+                file.Directory.Create();
+                return path;
+            }
+            catch (IOException ex)
+            {
+                path = AppDomain.CurrentDomain.BaseDirectory + "\\output\\";
+
+                FileInfo file = new FileInfo(path);
+                file.Directory.Create();
+
+                return path;
+            }
+
         }
     }
 }

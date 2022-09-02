@@ -96,7 +96,7 @@ namespace PowerPeg_SQL_to_CSV
 
         public override string ToString()
         {
-            return $"Task Name: {this.taskName}\n Output Location: {this.outputLocation}\n {this.operationMode.ToString()}";
+            return $"Task Name: {this.taskName}\r\nOutput Location: {this.outputLocation}\r\n{this.operationMode.ToString()}";
         }
     }
 }

@@ -79,16 +79,18 @@ namespace App_UI
         private void updateBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Updating " + TypeDescriptor.GetClassName(this), false);
-            if (filePathDataLabel.Text.Equals("<Select Path>"))
+
+            string filepath = this.filePathDataLabel.Text;
+
+            if (filepath.Equals("<Select Default Path>"))
             {
-                MessageBox.Show("Please select output folder.");
+                GlobalFunction.statusUpdate(statusUpdateLabel, "System will select the default path.", true);
+                filepath = GlobalFunction.getDefaultFilePath(this.task.getMode().getInfo()[0]);
             }
-            else
-            {
-                List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-                MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, this.filePathDataLabel.Text, this.triggerDateTimePicker.Value, selectCol);
-                GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
-            }
+
+            List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
+            MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol);
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -102,7 +104,7 @@ namespace App_UI
             }
             else
             {
-                GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task not delated.", true);
+                GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the deletion, schedule Task not deleted.", true);
             }
         }
 

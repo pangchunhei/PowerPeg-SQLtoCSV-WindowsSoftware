@@ -150,7 +150,7 @@
             this.outputLoactionLabel.AccessibleName = "outputLoactionLabel";
             this.outputLoactionLabel.AutoSize = true;
             this.outputLoactionLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.outputLoactionLabel.Location = new System.Drawing.Point(93, 811);
+            this.outputLoactionLabel.Location = new System.Drawing.Point(93, 518);
             this.outputLoactionLabel.Name = "outputLoactionLabel";
             this.outputLoactionLabel.Size = new System.Drawing.Size(164, 28);
             this.outputLoactionLabel.TabIndex = 10;
@@ -161,7 +161,7 @@
             this.generateBtn.AccessibleName = "generateBtn";
             this.generateBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.generateBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.generateBtn.Location = new System.Drawing.Point(265, 860);
+            this.generateBtn.Location = new System.Drawing.Point(265, 567);
             this.generateBtn.Name = "generateBtn";
             this.generateBtn.Size = new System.Drawing.Size(120, 48);
             this.generateBtn.TabIndex = 12;
@@ -174,16 +174,16 @@
             this.filePathDataLabel.AccessibleName = "filePathLabel";
             this.filePathDataLabel.AutoSize = true;
             this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.filePathDataLabel.Location = new System.Drawing.Point(417, 816);
+            this.filePathDataLabel.Location = new System.Drawing.Point(417, 523);
             this.filePathDataLabel.Name = "filePathDataLabel";
-            this.filePathDataLabel.Size = new System.Drawing.Size(121, 25);
+            this.filePathDataLabel.Size = new System.Drawing.Size(183, 25);
             this.filePathDataLabel.TabIndex = 13;
-            this.filePathDataLabel.Text = "<Select Path>";
+            this.filePathDataLabel.Text = "<Select Default Path>";
             // 
             // getFileExplorerBtn
             // 
             this.getFileExplorerBtn.AccessibleName = "getFileExplorerBtn";
-            this.getFileExplorerBtn.Location = new System.Drawing.Point(263, 814);
+            this.getFileExplorerBtn.Location = new System.Drawing.Point(263, 521);
             this.getFileExplorerBtn.Name = "getFileExplorerBtn";
             this.getFileExplorerBtn.Size = new System.Drawing.Size(134, 29);
             this.getFileExplorerBtn.TabIndex = 14;
@@ -196,7 +196,7 @@
             this.cancelBtn.AccessibleName = "cancelBtn";
             this.cancelBtn.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cancelBtn.Location = new System.Drawing.Point(432, 860);
+            this.cancelBtn.Location = new System.Drawing.Point(432, 567);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(120, 48);
             this.cancelBtn.TabIndex = 15;
@@ -208,7 +208,7 @@
             // 
             this.spaceLabel.AccessibleName = "spaceLabel";
             this.spaceLabel.AutoSize = true;
-            this.spaceLabel.Location = new System.Drawing.Point(234, 952);
+            this.spaceLabel.Location = new System.Drawing.Point(234, 659);
             this.spaceLabel.Name = "spaceLabel";
             this.spaceLabel.Size = new System.Drawing.Size(21, 20);
             this.spaceLabel.TabIndex = 36;
@@ -219,11 +219,11 @@
             this.selectedColListBox.AccessibleName = "selectedColListBox";
             this.selectedColListBox.FormattingEnabled = true;
             this.selectedColListBox.ItemHeight = 20;
-            this.selectedColListBox.Location = new System.Drawing.Point(219, 476);
+            this.selectedColListBox.Location = new System.Drawing.Point(219, 480);
             this.selectedColListBox.MultiColumn = true;
             this.selectedColListBox.Name = "selectedColListBox";
             this.selectedColListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.selectedColListBox.Size = new System.Drawing.Size(488, 324);
+            this.selectedColListBox.Size = new System.Drawing.Size(217, 24);
             this.selectedColListBox.TabIndex = 37;
             // 
             // header3Label
@@ -231,7 +231,7 @@
             this.header3Label.AccessibleName = "header3Label";
             this.header3Label.AutoSize = true;
             this.header3Label.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.header3Label.Location = new System.Drawing.Point(67, 925);
+            this.header3Label.Location = new System.Drawing.Point(67, 632);
             this.header3Label.Name = "header3Label";
             this.header3Label.Size = new System.Drawing.Size(174, 31);
             this.header3Label.TabIndex = 38;
@@ -242,7 +242,7 @@
             this.statusUpdateLabel.AccessibleName = "statusUpdateLabel";
             this.statusUpdateLabel.AutoSize = true;
             this.statusUpdateLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.statusUpdateLabel.Location = new System.Drawing.Point(247, 930);
+            this.statusUpdateLabel.Location = new System.Drawing.Point(247, 637);
             this.statusUpdateLabel.Name = "statusUpdateLabel";
             this.statusUpdateLabel.Size = new System.Drawing.Size(147, 25);
             this.statusUpdateLabel.TabIndex = 39;

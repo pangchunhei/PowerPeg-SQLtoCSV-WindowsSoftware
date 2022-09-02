@@ -50,12 +50,14 @@ namespace App_UI
 
         private bool validate()
         {
-            if (filePathDataLabel.Text.Equals("<Select Path>"))
+            string filepath = this.filePathDataLabel.Text;
+
+            if (filepath.Equals("<Select Default Path>"))
             {
-                GlobalFunction.statusUpdate(statusUpdateLabel, "Please select output folder.", true);
-                return false;
+                GlobalFunction.statusUpdate(statusUpdateLabel, "System will select the default path.", true);
+                filepath = GlobalFunction.getDefaultFilePath("InstantMode");
             }
-            
+
             if (!(fromDateCalendar.SelectionRange.Start < toDateCalendar.SelectionRange.Start))
             {
                 GlobalFunction.statusUpdate(statusUpdateLabel, "From date need to be earlier than To date.", true);
@@ -69,10 +71,22 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing " + TypeDescriptor.GetClassName(this), false);
 
-            if (validate())
+            if (!(fromDateCalendar.SelectionRange.Start < toDateCalendar.SelectionRange.Start))
             {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "From date need to be earlier than To date.", true);
+            }
+            else
+            {
+                string filepath = this.filePathDataLabel.Text;
+
+                if (filepath.Equals("<Select Default Path>"))
+                {
+                    GlobalFunction.statusUpdate(statusUpdateLabel, "System will select the default path.", true);
+                    filepath = GlobalFunction.getDefaultFilePath("InstantMode");
+                }
+
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-                SearchTask t = MainFunction.CreateTask("InstantMode", filePathDataLabel.Text, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
+                SearchTask t = MainFunction.CreateTask("InstantMode", filepath, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
 
                 if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
                 {

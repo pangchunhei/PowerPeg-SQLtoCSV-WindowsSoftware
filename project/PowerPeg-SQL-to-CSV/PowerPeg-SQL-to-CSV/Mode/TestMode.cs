@@ -25,7 +25,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <param name="selection">List of selected column name</param>
         public TestMode(DateTime triggerDate, List<string> selection)
         {
-            modeName = "Test Mode";
+            modeName = "TestMode";
             triggerDateTime = triggerDate;
             selectColumn = selection;
             lastRunDateTime = new DateTime(1999, triggerDate.Month,triggerDate.Day, triggerDate.Hour, triggerDate.Minute, triggerDate.Second);
@@ -100,7 +100,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         public override string ToString()
         {
-            return $"Mode: {this.modeName}\nFirst trigger Day: {this.triggerDateTime.ToString()}\nLast Search Day: {this.lastRunDateTime.ToString()}\nSelected Column: {string.Join(",", this.selectColumn)}";
+            return $"Mode: {this.modeName}\r\nFirst trigger Day: {this.triggerDateTime.ToString()}\r\nLast Search Day: {this.lastRunDateTime.ToString()}\r\nSelected Column: {string.Join(",", this.selectColumn)}";
         }
     }
 }

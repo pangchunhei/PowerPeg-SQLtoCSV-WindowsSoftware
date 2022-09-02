@@ -64,6 +64,8 @@ namespace PowerPeg_SQL_to_CSV.Gateway.Gateway
                 }
 
                 log.Debug($"Store the CSV of the Result to {filePath}");
+                FileInfo file = new FileInfo(filePath);
+                file.Directory.Create();
                 File.WriteAllText(filePath + "\\" + fileName + ".csv", sb.ToString());
             }
         }

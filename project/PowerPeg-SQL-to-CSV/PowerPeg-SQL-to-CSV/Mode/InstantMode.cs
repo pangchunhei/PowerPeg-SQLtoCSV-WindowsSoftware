@@ -25,7 +25,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <param name="selection">List of selected column name</param>
         public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<string> selection)
         {
-            modeName = "Instant Mode";
+            modeName = "InstantMode";
             startSearchDay = new DateTime(startDate.Year, startDate.Month, startDate.Day, 00, 00, 00);
             endSearchDay = new DateTime(endDate.Year, endDate.Month, endDate.Day, 23, 59, 59);
             triggerDateTime = triggerDate;
@@ -65,7 +65,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         public override string ToString()
         {
-            return $"Mode: {this.modeName}\nStart Search Day: {this.startSearchDay.ToString()}\nEnd Search Day: {this.endSearchDay.ToString()}\nSelected Column: {string.Join(",", this.selectColumn)}";
+            return $"Mode: {this.modeName}\r\nStart Search Day: {this.startSearchDay.ToString()}\r\nEnd Search Day: {this.endSearchDay.ToString()}\r\nSelected Column: {string.Join(",", this.selectColumn)}";
         }
     }
 }
