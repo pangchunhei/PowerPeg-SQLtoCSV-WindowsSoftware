@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace App_UI
 {
@@ -40,7 +41,7 @@ namespace App_UI
             {
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
 
-                SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filePathDataLabel.Text, DateTime.Now, selectCol, selectThis: Convert.ToBoolean(selectThisCoboBox.SelectedItem), taskname: taskNameDataLabel.Text);
+                SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filePathDataLabel.Text, DateTime.Now, selectCol, selectThis: ((KeyValuePair<string, bool>)this.selectThisCoboBox.SelectedItem).Value, taskname: taskNameDataLabel.Text);
 
                 if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
                 {
@@ -100,12 +101,15 @@ namespace App_UI
         {
             if (frequencyCoboBox.Text.Equals("MonthMode")){
                 this.selectThisCoboBox.Visible = true;
+                Dictionary<string, bool> comboSource = new Dictionary<string, bool>();
+                comboSource.Add("Use trigger month's day as month duration", true);
+                comboSource.Add("Use trigger month's previrous's month's day as month duration", false);
 
                 this.selectThisCoboBox.Items.Clear();
-                //True
-                this.selectThisCoboBox.Items.Insert(Convert.ToInt32(true), "Use trigger month's day as month duration");
-                //False
-                this.selectThisCoboBox.Items.Insert(Convert.ToInt32(false), "Use trigger month's previrous's month's day as month duration");
+                this.selectThisCoboBox.DataSource = new BindingSource(comboSource, null);
+                this.selectThisCoboBox.DisplayMember = "Value";
+                this.selectThisCoboBox.ValueMember = "Key";
+
                 this.selectThisCoboBox.SelectedIndex = 0;
             }
             else

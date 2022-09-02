@@ -253,7 +253,7 @@
             this.selectThisCoboBox.FormattingEnabled = true;
             this.selectThisCoboBox.Location = new System.Drawing.Point(404, 205);
             this.selectThisCoboBox.Name = "selectThisCoboBox";
-            this.selectThisCoboBox.Size = new System.Drawing.Size(151, 28);
+            this.selectThisCoboBox.Size = new System.Drawing.Size(293, 28);
             this.selectThisCoboBox.TabIndex = 76;
             // 
             // CreateNewTask

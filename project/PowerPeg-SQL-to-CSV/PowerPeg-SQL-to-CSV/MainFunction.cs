@@ -110,12 +110,14 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="selectmode">Updated mode</param>
         /// <param name="outputlocation">Updated CSV file location</param>
         /// <param name="triggerdate">Updated first time trigger date</param>
+        /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
         /// <param name="selectedcolumn">Updated list of selected column</param>
-        public static void updateTaskSetting(SearchTask searchtask, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn)
+        public static void updateTaskSetting(SearchTask searchtask, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, bool? selectThis = null)
         {
+            //TODO--UPDATE
             log.Debug("Run updateTaskSetting");
 
-            IMode m = CreateMode(selectmode, triggerdate, selectedcolumn);
+            IMode m = CreateMode(selectmode, triggerdate, selectedcolumn, selectThis: selectThis);
 
             searchtask.updateTaskSetting(outputlocation, m);
 

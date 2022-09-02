@@ -141,9 +141,9 @@
             this.selectFieldLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.selectFieldLabel.Location = new System.Drawing.Point(93, 476);
             this.selectFieldLabel.Name = "selectFieldLabel";
-            this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
+            this.selectFieldLabel.Size = new System.Drawing.Size(142, 28);
             this.selectFieldLabel.TabIndex = 8;
-            this.selectFieldLabel.Text = "Select Field: ";
+            this.selectFieldLabel.Text = "Selected Field: ";
             // 
             // outputLoactionLabel
             // 
@@ -219,7 +219,7 @@
             this.selectedColListBox.AccessibleName = "selectedColListBox";
             this.selectedColListBox.FormattingEnabled = true;
             this.selectedColListBox.ItemHeight = 20;
-            this.selectedColListBox.Location = new System.Drawing.Point(219, 480);
+            this.selectedColListBox.Location = new System.Drawing.Point(241, 480);
             this.selectedColListBox.MultiColumn = true;
             this.selectedColListBox.Name = "selectedColListBox";
             this.selectedColListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;

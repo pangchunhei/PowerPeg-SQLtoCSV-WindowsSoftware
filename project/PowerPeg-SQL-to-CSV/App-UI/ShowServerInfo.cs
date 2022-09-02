@@ -25,7 +25,6 @@ namespace App_UI
 
         private void ChangeServerInfo_Load(object sender, EventArgs e)
         {
-            //TODO--No seeing
             connectionStrTextbox.Text = MainFunction.getDatabaseInformation()[0] + "\r\n" + MainFunction.getDatabaseInformation()[1];
             tableTextbox.Text = string.Join("\r\n",MainFunction.getDatabaseSelectedTable());
 

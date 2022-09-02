@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace App_UI
 {
@@ -89,7 +90,7 @@ namespace App_UI
             }
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-            MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol);
+            MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool>)this.selectThisCoboBox.SelectedItem).Value);
             GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
         }
 
@@ -112,6 +113,28 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Back to previous page.", false);
             this.Close();
+        }
+
+        private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (frequencyCoboBox.Text.Equals("MonthMode"))
+            {
+                this.selectThisCoboBox.Visible = true;
+                this.selectThisCoboBox.DisplayMember = "Text";
+                this.selectThisCoboBox.ValueMember = "Value";
+
+                this.selectThisCoboBox.Items.Clear();
+                //True
+                this.selectThisCoboBox.Items.Add(new { Text = "Use trigger month's day as month duration", Value = Convert.ToInt32(true) });
+                //False
+                this.selectThisCoboBox.Items.Add(new { Text = "Use trigger month's previrous's month's day as month duration", Value = Convert.ToInt32(false) });
+                this.selectThisCoboBox.SelectedIndex = 0;
+            }
+            else
+            {
+                this.selectThisCoboBox.Visible = false;
+                this.selectThisCoboBox.Items.Clear();
+            }
         }
     }
 }

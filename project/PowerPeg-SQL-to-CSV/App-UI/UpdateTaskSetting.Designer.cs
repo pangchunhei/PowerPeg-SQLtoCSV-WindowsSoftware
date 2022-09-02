@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.frequencyCoboBox = new System.Windows.Forms.ComboBox();
             this.frequenceLabel = new System.Windows.Forms.Label();
+            this.selectThisCoboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // taskNameDataLabel
@@ -109,7 +110,7 @@
             this.selectedColListBox.AccessibleName = "selectedColListBox";
             this.selectedColListBox.FormattingEnabled = true;
             this.selectedColListBox.ItemHeight = 20;
-            this.selectedColListBox.Location = new System.Drawing.Point(231, 274);
+            this.selectedColListBox.Location = new System.Drawing.Point(238, 276);
             this.selectedColListBox.MultiColumn = true;
             this.selectedColListBox.Name = "selectedColListBox";
             this.selectedColListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -160,9 +161,9 @@
             this.filePathDataLabel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.filePathDataLabel.Location = new System.Drawing.Point(427, 319);
             this.filePathDataLabel.Name = "filePathDataLabel";
-            this.filePathDataLabel.Size = new System.Drawing.Size(121, 25);
+            this.filePathDataLabel.Size = new System.Drawing.Size(183, 25);
             this.filePathDataLabel.TabIndex = 80;
-            this.filePathDataLabel.Text = "<Select Path>";
+            this.filePathDataLabel.Text = "<Select Default Path>";
             // 
             // updateBtn
             // 
@@ -216,9 +217,9 @@
             this.selectFieldLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.selectFieldLabel.Location = new System.Drawing.Point(102, 272);
             this.selectFieldLabel.Name = "selectFieldLabel";
-            this.selectFieldLabel.Size = new System.Drawing.Size(120, 28);
+            this.selectFieldLabel.Size = new System.Drawing.Size(142, 28);
             this.selectFieldLabel.TabIndex = 75;
-            this.selectFieldLabel.Text = "Select Field: ";
+            this.selectFieldLabel.Text = "Selected Field: ";
             // 
             // gernerationOptionLabel
             // 
@@ -249,6 +250,7 @@
             this.frequencyCoboBox.Name = "frequencyCoboBox";
             this.frequencyCoboBox.Size = new System.Drawing.Size(151, 28);
             this.frequencyCoboBox.TabIndex = 89;
+            this.frequencyCoboBox.SelectedIndexChanged += new System.EventHandler(this.frequencyCoboBox_SelectedIndexChanged);
             // 
             // frequenceLabel
             // 
@@ -261,12 +263,23 @@
             this.frequenceLabel.TabIndex = 88;
             this.frequenceLabel.Text = "Frequency:";
             // 
+            // selectThisCoboBox
+            // 
+            this.selectThisCoboBox.AccessibleName = "selectThisCoboBox";
+            this.selectThisCoboBox.FormattingEnabled = true;
+            this.selectThisCoboBox.Location = new System.Drawing.Point(388, 188);
+            this.selectThisCoboBox.Name = "selectThisCoboBox";
+            this.selectThisCoboBox.Size = new System.Drawing.Size(340, 28);
+            this.selectThisCoboBox.TabIndex = 90;
+            this.selectThisCoboBox.Visible = false;
+            // 
             // UpdateTaskSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.selectThisCoboBox);
             this.Controls.Add(this.frequencyCoboBox);
             this.Controls.Add(this.frequenceLabel);
             this.Controls.Add(this.label1);
@@ -314,5 +327,6 @@
         private Label label1;
         private ComboBox frequencyCoboBox;
         private Label frequenceLabel;
+        private ComboBox selectThisCoboBox;
     }
 }
