@@ -62,5 +62,10 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             return selectColumn;
         }
+
+        public override string ToString()
+        {
+            return $"Mode: {this.modeName}\nStart Search Day: {this.startSearchDay.ToString()}\nEnd Search Day: {this.endSearchDay.ToString()}\nSelected Column: {string.Join(",", this.selectColumn)}";
+        }
     }
 }

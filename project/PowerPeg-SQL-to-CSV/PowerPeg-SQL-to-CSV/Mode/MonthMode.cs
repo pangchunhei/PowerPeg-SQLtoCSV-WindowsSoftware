@@ -12,8 +12,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
         private string modeName;
         private DateTime triggerDateTime;
         private DateTime lastRunDateTime;
-        private List<string> selectColumn = new List<string>();
         private bool selectThisMonth;
+        private List<string> selectColumn = new List<string>();
 
         private static readonly ILog log = LogHelper.getLogger();
 
@@ -21,7 +21,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// Create and change mode of Month Mode
         /// </summary>
         /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
-        /// <param name="selectThis">Select the number of days, for the true: trigger month's day; for false, the trigger month's previous month day</param>
+        /// <param name="selectThis">Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
         /// <param name="selection">List of selected column name</param>
         public MonthMode(DateTime triggerDate, bool selectThis, List<string> selection)
         {
@@ -105,7 +105,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             string selectionStr = string.Join(", ", selectColumn);
 
-            string[] output = { modeName, triggerDateTime.ToString(), selectionStr };
+            string[] output = { modeName, triggerDateTime.ToString(), selectionStr, selectThisMonth.ToString() };
 
             return output;
         }
@@ -118,6 +118,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
         public List<string> getSelectColumn()
         {
             return selectColumn;
+        }
+
+        public override string ToString()
+        {
+            return $"Mode: {this.modeName}\nFirst trigger Day: {this.triggerDateTime.ToString()}\nLast Search Day: {this.lastRunDateTime.ToString()}\nSelect day duration of current trigger month: {this.selectThisMonth.ToString()}\nSelected Column: {string.Join(",", this.selectColumn)}";
         }
     }
 }

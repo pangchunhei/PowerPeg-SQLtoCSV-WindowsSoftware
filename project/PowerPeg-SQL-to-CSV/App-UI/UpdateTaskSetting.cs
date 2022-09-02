@@ -93,9 +93,17 @@ namespace App_UI
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            MainFunction.removeScheduleTask(task);
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task delated.", true);
-            this.Close();
+            if (GlobalFunction.userCheckTaskDetail("Do you want to delete the folloing task: ", task))
+            {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm to delete task.", false);
+                MainFunction.removeScheduleTask(task);
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task delated.", true);
+                this.Close();
+            }
+            else
+            {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task not delated.", true);
+            }
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)

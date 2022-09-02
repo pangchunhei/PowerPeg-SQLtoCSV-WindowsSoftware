@@ -74,7 +74,7 @@ namespace App_UI
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
                 SearchTask t = MainFunction.CreateTask("InstantMode", filePathDataLabel.Text, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
 
-                if (GlobalFunction.userCheckTaskDetail(t))
+                if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
                     MainFunction.runTaskNow(t);

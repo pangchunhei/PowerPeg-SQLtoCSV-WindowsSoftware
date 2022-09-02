@@ -18,7 +18,6 @@ namespace App_UI
             InitializeComponent();
             this.ControlBox = false;
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading CreateNewTask.", false);
-
         }
 
         public void resetForm()
@@ -41,9 +40,9 @@ namespace App_UI
             {
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
 
-                SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filePathDataLabel.Text, DateTime.Now, selectCol, taskname: taskNameDataLabel.Text);
+                SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filePathDataLabel.Text, DateTime.Now, selectCol, selectThis: Convert.ToBoolean(selectThisCoboBox.SelectedItem), taskname: taskNameDataLabel.Text);
 
-                if (GlobalFunction.userCheckTaskDetail(t))
+                if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
                     MainFunction.addScheduleTask(t);
@@ -95,6 +94,25 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Cancel and back to previous page.", false);
             this.Close();
+        }
+
+        private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (frequencyCoboBox.Text.Equals("MonthMode")){
+                this.selectThisCoboBox.Visible = true;
+
+                this.selectThisCoboBox.Items.Clear();
+                //True
+                this.selectThisCoboBox.Items.Insert(Convert.ToInt32(true), "Use trigger month's day as month duration");
+                //False
+                this.selectThisCoboBox.Items.Insert(Convert.ToInt32(false), "Use trigger month's previrous's month's day as month duration");
+                this.selectThisCoboBox.SelectedIndex = 0;
+            }
+            else
+            {
+                this.selectThisCoboBox.Visible = false;
+                this.selectThisCoboBox.Items.Clear();
+            }
         }
     }
 }

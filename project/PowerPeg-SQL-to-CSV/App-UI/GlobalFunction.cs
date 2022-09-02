@@ -62,21 +62,12 @@ namespace App_UI
         
         public static string searchTaskDetail_to_string(SearchTask t)
         {
-            string msg = "";
-            string[] title = { "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List" };
-            int i = 0;
-            foreach (var s in t.getTaskInfo())
-            {
-                msg += title[i] + ": " + s + "\n";
-                i++;
-            }
-
-            return msg;
+            return t.ToString();
         }
         
-        public static bool userCheckTaskDetail(SearchTask task)
+        public static bool userCheckTaskDetail(string question, SearchTask task)
         {
-            string msg = "Please check the task settings: \n" + GlobalFunction.searchTaskDetail_to_string(task);
+            string msg = question + "\n" + GlobalFunction.searchTaskDetail_to_string(task);
 
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show(msg, "Confirm", buttons);

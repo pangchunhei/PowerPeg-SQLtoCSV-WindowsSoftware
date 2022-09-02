@@ -10,7 +10,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
     /// <summary>
     /// For testing async and background
     /// </summary>
-    public class MinuteTestMode : IMode
+    public class TestMode : IMode
     {
         private string modeName;
         private DateTime triggerDateTime;
@@ -23,9 +23,9 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// </summary>
         /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
         /// <param name="selection">List of selected column name</param>
-        public MinuteTestMode(DateTime triggerDate, List<string> selection)
+        public TestMode(DateTime triggerDate, List<string> selection)
         {
-            modeName = "Minute Mode";
+            modeName = "Test Mode";
             triggerDateTime = triggerDate;
             selectColumn = selection;
             lastRunDateTime = new DateTime(1999, triggerDate.Month,triggerDate.Day, triggerDate.Hour, triggerDate.Minute, triggerDate.Second);
@@ -96,6 +96,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
         public List<string> getSelectColumn()
         {
             return selectColumn;
+        }
+
+        public override string ToString()
+        {
+            return $"Mode: {this.modeName}\nFirst trigger Day: {this.triggerDateTime.ToString()}\nLast Search Day: {this.lastRunDateTime.ToString()}\nSelected Column: {string.Join(",", this.selectColumn)}";
         }
     }
 }

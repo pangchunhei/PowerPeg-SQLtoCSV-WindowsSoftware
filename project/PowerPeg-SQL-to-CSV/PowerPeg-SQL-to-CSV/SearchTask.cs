@@ -69,7 +69,7 @@ namespace PowerPeg_SQL_to_CSV
         /// Get the information of the search task settings
         /// </summary>
         /// <returns>
-        /// Return "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List"
+        /// Return "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List, "(Select This)"
         /// </returns>
         public string[] getTaskInfo()
         {
@@ -92,6 +92,11 @@ namespace PowerPeg_SQL_to_CSV
             operationMode = mode;
             
             log.Debug("New search task setting updated" + string.Join(",", this.getTaskInfo()));
+        }
+
+        public override string ToString()
+        {
+            return $"Task Name: {this.taskName}\n Output Location: {this.outputLocation}\n {this.operationMode.ToString()}";
         }
     }
 }

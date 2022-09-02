@@ -27,9 +27,10 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="selectedcolumn">Provide the list of selected column name</param>
         /// <param name="startdate">(For instant mode) Select the specific start datetime</param>
         /// <param name="enddate">(For instant mode)Select the specific end datetime</param>
+        /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
         /// <returns>Return the specific mode object</returns>
         /// <exception cref="Exception"></exception>
-        private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null)
+        private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, bool? selectThis = null)
         {
             log.Debug("Run CreateMode");
 
@@ -47,11 +48,19 @@ namespace PowerPeg_SQL_to_CSV
             }
             else if (selectmode.Equals("MonthMode"))
             {
-                return new MonthMode(triggerdate, selectedcolumn);
+                if(selectThis != null)
+                {
+                    return new MonthMode(triggerdate, (bool)selectThis, selectedcolumn);
+                }
+                else
+                {
+                    //TODO-- need select para
+                    throw new Exception();
+                }
             }
-            else if (selectmode.Equals("MinuteTestMode"))
+            else if (selectmode.Equals("TestMode"))
             {
-                return new MinuteTestMode(triggerdate, selectedcolumn);
+                return new TestMode(triggerdate, selectedcolumn);
             }
             else
             {
@@ -63,19 +72,20 @@ namespace PowerPeg_SQL_to_CSV
         /// <summary>
         /// Create new search task
         /// </summary>
-        /// <param name="selectmodename">Select the mode of "InstantMode" or "MonthMode" or "MinuteMode"(For testing)</param>
+        /// <param name="selectmodename">Select the mode of "InstantMode" or "MonthMode" or "TestMode"(For testing)</param>
         /// <param name="outputlocation">Select the wanted CSV location</param>
         /// <param name="triggerdate">Select the first time to trigger datetime</param>
         /// <param name="selectedcolumn">Provide the list of selected column name</param>
         /// <param name="startdate">(For instant mode) Select the specific start datetime</param>
         /// <param name="enddate">(For instant mode) Select the specific end datetime</param>
+        /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
         /// <param name="taskname">(Optional) Search task name</param>
         /// <returns>Return search task object</returns>
-        public static SearchTask CreateTask(string selectmodename, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, string taskname = "default")
+        public static SearchTask CreateTask(string selectmodename, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, bool? selectThis = null, string taskname = "default")
         {
             log.Debug("Run CreateTask");
 
-            IMode m = CreateMode(selectmodename, triggerdate, selectedcolumn, startdate, enddate);
+            IMode m = CreateMode(selectmodename, triggerdate, selectedcolumn, startdate, enddate, selectThis);
 
             string modifyName = Regex.Replace(taskname, @"(\s+|\.|\,|\:|\*|&|\?|\/|#|\\|%|\^|\$|@|!|\(|\))", "");
 
