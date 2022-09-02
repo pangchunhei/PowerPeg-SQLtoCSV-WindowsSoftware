@@ -81,13 +81,7 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Updating " + TypeDescriptor.GetClassName(this), false);
 
-            string filepath = this.filePathDataLabel.Text;
-
-            if (filepath.Equals("<Select Default Path>"))
-            {
-                GlobalFunction.statusUpdate(statusUpdateLabel, "System will select the default path.", true);
-                filepath = GlobalFunction.getDefaultFilePath(this.task.getMode().getInfo()[0]);
-            }
+            string filepath = GlobalFunction.getDefaultFilePath(statusUpdateLabel, this.task.getTaskInfo()[2], this.filePathDataLabel.Text);
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
             MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool>)this.selectThisCoboBox.SelectedItem).Value);
@@ -117,24 +111,7 @@ namespace App_UI
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (frequencyCoboBox.Text.Equals("MonthMode"))
-            {
-                this.selectThisCoboBox.Visible = true;
-                this.selectThisCoboBox.DisplayMember = "Text";
-                this.selectThisCoboBox.ValueMember = "Value";
-
-                this.selectThisCoboBox.Items.Clear();
-                //True
-                this.selectThisCoboBox.Items.Add(new { Text = "Use trigger month's day as month duration", Value = Convert.ToInt32(true) });
-                //False
-                this.selectThisCoboBox.Items.Add(new { Text = "Use trigger month's previrous's month's day as month duration", Value = Convert.ToInt32(false) });
-                this.selectThisCoboBox.SelectedIndex = 0;
-            }
-            else
-            {
-                this.selectThisCoboBox.Visible = false;
-                this.selectThisCoboBox.Items.Clear();
-            }
+            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
         }
     }
 }

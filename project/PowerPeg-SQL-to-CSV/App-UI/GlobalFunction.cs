@@ -38,7 +38,7 @@ namespace App_UI
                 }
             }
 
-            return "<Select Path>";
+            return "<Select Default Path>";
         }
 
         public static List<string> convertListBoxSelected_to_List(ListBox.SelectedObjectCollection listBoxList)
@@ -83,35 +83,67 @@ namespace App_UI
             }
         }
 
-        public static string getDefaultFilePath(string mode)
+        public static string getDefaultFilePath(Label statusUpdateLabel, string mode, string inputPath)
         {
             string path;
 
-            if (mode.Equals("InstantMode"))
+            if (inputPath.Equals("<Select Default Path>"))
             {
-                path = ConfigurationManager.AppSettings["InstantGenPath"] + "\\";
+                statusUpdate(statusUpdateLabel, "System will select the default path.", true);
+
+                if (mode.Equals("InstantMode"))
+                {
+                    path = ConfigurationManager.AppSettings["InstantGenPath"] + "\\";
+                }
+                else
+                {
+                    path = ConfigurationManager.AppSettings["AutoGenPath"] + "\\";
+                }
+
+                try
+                {
+                    FileInfo file = new FileInfo(path);
+                    file.Directory.Create();
+                    return path;
+                }
+                catch (IOException ex)
+                {
+                    path = AppDomain.CurrentDomain.BaseDirectory + "\\output\\";
+
+                    FileInfo file = new FileInfo(path);
+                    file.Directory.Create();
+
+                    return path;
+                }
             }
             else
             {
-                path = ConfigurationManager.AppSettings["AutoGenPath"] + "\\";
-            }
-
-            try
-            {
-                FileInfo file = new FileInfo(path);
-                file.Directory.Create();
+                path = inputPath;
                 return path;
             }
-            catch (IOException ex)
+        }
+
+        public static void setFrequencyDurationDetailOptionList(ComboBox frequencyCoboBox, ComboBox selectThisCoboBox)
+        {
+            if (frequencyCoboBox.Text.Equals("MonthMode"))
             {
-                path = AppDomain.CurrentDomain.BaseDirectory + "\\output\\";
+                selectThisCoboBox.Visible = true;
+                Dictionary<string, bool> comboSource = new Dictionary<string, bool>();
+                comboSource.Add("Use trigger month's day as month duration", true);
+                comboSource.Add("Use trigger month's previrous's month's day as month duration", false);
 
-                FileInfo file = new FileInfo(path);
-                file.Directory.Create();
+                selectThisCoboBox.Items.Clear();
+                selectThisCoboBox.DataSource = new BindingSource(comboSource, null);
+                selectThisCoboBox.DisplayMember = "Key";
+                selectThisCoboBox.ValueMember = "Value";
 
-                return path;
+                selectThisCoboBox.SelectedIndex = 0;
             }
-
+            else
+            {
+                selectThisCoboBox.Visible = false;
+                selectThisCoboBox.Items.Clear();
+            }
         }
     }
 }

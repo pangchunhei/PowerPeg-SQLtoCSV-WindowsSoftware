@@ -255,6 +255,7 @@
             this.selectThisCoboBox.Name = "selectThisCoboBox";
             this.selectThisCoboBox.Size = new System.Drawing.Size(293, 28);
             this.selectThisCoboBox.TabIndex = 76;
+            this.selectThisCoboBox.DropDown += new System.EventHandler(this.AdjustWidthComboBox_DropDown);
             // 
             // CreateNewTask
             // 

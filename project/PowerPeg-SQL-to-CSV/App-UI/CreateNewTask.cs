@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComboBox = System.Windows.Forms.ComboBox;
 
 namespace App_UI
 {
@@ -33,27 +34,22 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing" + TypeDescriptor.GetClassName(this), false);
 
-            if (filePathDataLabel.Text.Equals("<Select Path>"))
+            string filepath = GlobalFunction.getDefaultFilePath(statusUpdateLabel, frequencyCoboBox.Text, this.filePathDataLabel.Text);
+
+            List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
+
+            SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filepath, DateTime.Now, selectCol, selectThis: ((KeyValuePair<string, bool>)this.selectThisCoboBox.SelectedItem).Value, taskname: taskNameDataLabel.Text);
+
+            if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
             {
-                MessageBox.Show("Please select output folder.");
+                GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
+                MainFunction.addScheduleTask(t);
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Finished schedule task setup.", true);
             }
             else
             {
-                List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-
-                SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filePathDataLabel.Text, DateTime.Now, selectCol, selectThis: ((KeyValuePair<string, bool>)this.selectThisCoboBox.SelectedItem).Value, taskname: taskNameDataLabel.Text);
-
-                if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
-                {
-                    GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
-                    MainFunction.addScheduleTask(t);
-                    GlobalFunction.statusUpdate(statusUpdateLabel, "Finished schedule task setup.", true);
-                }
-                else
-                {
-                    GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the settings, discard task.", true);
-                    resetForm();
-                }
+                GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the settings, discard task.", true);
+                resetForm();
             }
         }
 
@@ -74,7 +70,7 @@ namespace App_UI
 
             selectedColListBox.Items.Add("-- All --");
             selectedColListBox.SelectedItem = "-- All --";
-            
+
             List<string> col2 = MainFunction.getGenerationScheduledModeName();
 
             foreach (string s in col2)
@@ -82,7 +78,7 @@ namespace App_UI
                 frequencyCoboBox.Items.Add(s);
             }
             frequencyCoboBox.SelectedIndex = 0;
-            
+
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
@@ -99,24 +95,31 @@ namespace App_UI
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (frequencyCoboBox.Text.Equals("MonthMode")){
-                this.selectThisCoboBox.Visible = true;
-                Dictionary<string, bool> comboSource = new Dictionary<string, bool>();
-                comboSource.Add("Use trigger month's day as month duration", true);
-                comboSource.Add("Use trigger month's previrous's month's day as month duration", false);
+            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
+        }
 
-                this.selectThisCoboBox.Items.Clear();
-                this.selectThisCoboBox.DataSource = new BindingSource(comboSource, null);
-                this.selectThisCoboBox.DisplayMember = "Value";
-                this.selectThisCoboBox.ValueMember = "Key";
+        //TODO--Size
+        private void AdjustWidthComboBox_DropDown(object sender, System.EventArgs e)
+        {
+            ComboBox selectThisCoboBox = (ComboBox)sender;
+            int width = selectThisCoboBox.DropDownWidth;
+            Graphics g = selectThisCoboBox.CreateGraphics();
+            Font font = selectThisCoboBox.Font;
+            int vertScrollBarWidth =
+                (selectThisCoboBox.Items.Count > selectThisCoboBox.MaxDropDownItems)
+                ? SystemInformation.VerticalScrollBarWidth : 0;
 
-                this.selectThisCoboBox.SelectedIndex = 0;
-            }
-            else
+            int newWidth;
+            foreach (string s in ((ComboBox)sender).Items)
             {
-                this.selectThisCoboBox.Visible = false;
-                this.selectThisCoboBox.Items.Clear();
+                newWidth = (int)g.MeasureString(s, font).Width
+                    + vertScrollBarWidth;
+                if (width < newWidth)
+                {
+                    width = newWidth;
+                }
             }
+            selectThisCoboBox.DropDownWidth = width;
         }
     }
 }

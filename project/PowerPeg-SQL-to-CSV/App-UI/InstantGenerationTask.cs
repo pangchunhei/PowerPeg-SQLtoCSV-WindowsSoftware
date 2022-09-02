@@ -50,20 +50,11 @@ namespace App_UI
 
         private bool validate()
         {
-            string filepath = this.filePathDataLabel.Text;
-
-            if (filepath.Equals("<Select Default Path>"))
-            {
-                GlobalFunction.statusUpdate(statusUpdateLabel, "System will select the default path.", true);
-                filepath = GlobalFunction.getDefaultFilePath("InstantMode");
-            }
-
             if (!(fromDateCalendar.SelectionRange.Start < toDateCalendar.SelectionRange.Start))
             {
                 GlobalFunction.statusUpdate(statusUpdateLabel, "From date need to be earlier than To date.", true);
                 return false;
             }
-
             return true;
         }
 
@@ -71,21 +62,12 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing " + TypeDescriptor.GetClassName(this), false);
 
-            if (!(fromDateCalendar.SelectionRange.Start < toDateCalendar.SelectionRange.Start))
+            if (validate())
             {
-                GlobalFunction.statusUpdate(statusUpdateLabel, "From date need to be earlier than To date.", true);
-            }
-            else
-            {
-                string filepath = this.filePathDataLabel.Text;
-
-                if (filepath.Equals("<Select Default Path>"))
-                {
-                    GlobalFunction.statusUpdate(statusUpdateLabel, "System will select the default path.", true);
-                    filepath = GlobalFunction.getDefaultFilePath("InstantMode");
-                }
+                string filepath = GlobalFunction.getDefaultFilePath(statusUpdateLabel, "InstantMode", this.filePathDataLabel.Text);
 
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
+
                 SearchTask t = MainFunction.CreateTask("InstantMode", filepath, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
 
                 if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
