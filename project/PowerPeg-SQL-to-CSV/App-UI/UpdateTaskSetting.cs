@@ -65,9 +65,7 @@ namespace App_UI
             {
                 frequencyCoboBox.Items.Add(s);
             }
-            frequencyCoboBox.SelectedText = task.getTaskInfo()[2];
-
-            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
+            frequencyCoboBox.SelectedIndex = 0;
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
 
@@ -117,20 +115,14 @@ namespace App_UI
         {
             GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
 
-            string[] taskInfo = task.getTaskInfo();
-
-            if (this.frequencyCoboBox.SelectedText == "MonthMode")
+            if (Convert.ToBoolean(task.getTaskInfo()[task.getTaskInfo().Length - 1]))
             {
-                if (Convert.ToBoolean(taskInfo[taskInfo.Length - 1]))
-                {
-                    selectThisCoboBox.SelectedIndex = 0;
-                }
-                else
-                {
-                    selectThisCoboBox.SelectedIndex = 1;
-                }
+                selectThisCoboBox.SelectedIndex = 0;
             }
-            
+            else
+            {
+                selectThisCoboBox.SelectedIndex = 1;
+            }
         }
 
         private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
