@@ -22,7 +22,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             scheduler = await schedulerFactory.GetScheduler();
             await scheduler.Start();
 
-            log.Debug("Background Scheduler is running");
+            log.Info("Background Scheduler is running");
 
             //创建作业和触发器 .WithIdentity("Backgroud-Schedule-Search")
             IJobDetail jobDetail = JobBuilder.Create<BackgroundProcessingJob>().Build();
@@ -54,7 +54,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
                 log.Debug("Interrupt status: " + await this.scheduler.Interrupt(context.JobDetail.Key));
             }
 
-            log.Debug("Stop scheduler");
+            log.Info("Stop scheduler");
             await scheduler.Shutdown(true);
         }
     }

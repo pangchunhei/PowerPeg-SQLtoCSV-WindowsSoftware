@@ -1,4 +1,5 @@
-﻿using PowerPeg_SQL_to_CSV;
+﻿using ChoETL;
+using PowerPeg_SQL_to_CSV;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -98,8 +99,12 @@ namespace App_UI
             GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
         }
 
-        //TODO--Size
-        private void AdjustWidthComboBox_DropDown(object sender, System.EventArgs e)
+        /// <summary>
+        /// To change the dropdown meanuel size to show whole sentance
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
         {
             ComboBox selectThisCoboBox = (ComboBox)sender;
             int width = selectThisCoboBox.DropDownWidth;
@@ -110,10 +115,11 @@ namespace App_UI
                 ? SystemInformation.VerticalScrollBarWidth : 0;
 
             int newWidth;
-            foreach (string s in ((ComboBox)sender).Items)
+            foreach (var displayItem in ((ComboBox)sender).Items)
             {
-                newWidth = (int)g.MeasureString(s, font).Width
-                    + vertScrollBarWidth;
+                string s = ((KeyValuePair<string, bool>)displayItem).Key;
+
+                newWidth = (int)g.MeasureString(s, font).Width + vertScrollBarWidth;
                 if (width < newWidth)
                 {
                     width = newWidth;
