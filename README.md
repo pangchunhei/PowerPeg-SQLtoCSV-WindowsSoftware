@@ -3,7 +3,7 @@
 
 With a single click of the button below, a zip of this repository will start downloading.
 
-[![Download zip](https://custom-icon-badges.herokuapp.com/badge/-Download-limegreen?style=for-the-badge&logo=download&logoColor=white "Download zip")](https://github.com/pangchunhei/PowerPeg-SQLtoCSV-WindowsSoftware/blob/integration-with-EMSD-db/release/powerpeg-release-20220901.zip)
+[![Download zip](https://custom-icon-badges.herokuapp.com/badge/-Download-limegreen?style=for-the-badge&logo=download&logoColor=white "Download zip")](https://github.com/pangchunhei/PowerPeg-SQLtoCSV-WindowsSoftware/tree/integration-with-EMSD-db/release)
 
 Step 1
 - In local machine
@@ -23,7 +23,6 @@ Step 3
 - In Database Server (Access via SQL server management studio)
 ```bash
   Installation of the stored procedure and function
-  - 'Prod - SplitForIN.sql'
   - 'Prod - SQLQuerySearchSpecificCol.sql'
 ```
 
