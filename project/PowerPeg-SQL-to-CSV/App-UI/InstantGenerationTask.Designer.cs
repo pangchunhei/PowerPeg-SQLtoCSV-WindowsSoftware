@@ -208,7 +208,7 @@
             // 
             this.spaceLabel.AccessibleName = "spaceLabel";
             this.spaceLabel.AutoSize = true;
-            this.spaceLabel.Location = new System.Drawing.Point(234, 659);
+            this.spaceLabel.Location = new System.Drawing.Point(230, 662);
             this.spaceLabel.Name = "spaceLabel";
             this.spaceLabel.Size = new System.Drawing.Size(21, 20);
             this.spaceLabel.TabIndex = 36;

@@ -65,9 +65,25 @@ namespace App_UI
             {
                 frequencyCoboBox.Items.Add(s);
             }
-            frequencyCoboBox.SelectedIndex = 0;
+            frequencyCoboBox.SelectedItem = task.getTaskInfo()[2];
 
-            GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
+            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
+
+            if (task.getTaskInfo()[2] == "MonthMode")
+            {
+                if (Convert.ToBoolean(task.getTaskInfo()[task.getTaskInfo().Length - 1]))
+                {
+                    selectThisCoboBox.SelectedIndex = 0;
+                }
+                else
+                {
+                    selectThisCoboBox.SelectedIndex = 1;
+                }
+            }
+            else
+            {
+                selectThisCoboBox.SelectedIndex = 0;
+            }
 
             filePathDataLabel.Text = task.getTaskInfo()[1];
 
@@ -86,7 +102,7 @@ namespace App_UI
             string filepath = GlobalFunction.getDefaultFilePath(statusUpdateLabel, this.task.getTaskInfo()[2], this.filePathDataLabel.Text);
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-            MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool>)this.selectThisCoboBox.SelectedItem).Value);
+            MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value);
             GlobalFunction.statusUpdate(statusUpdateLabel, $"Update finished, the following are the new settings: \r\n{task}", true);
         }
 
@@ -114,15 +130,6 @@ namespace App_UI
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
-
-            if (Convert.ToBoolean(task.getTaskInfo()[task.getTaskInfo().Length - 1]))
-            {
-                selectThisCoboBox.SelectedIndex = 0;
-            }
-            else
-            {
-                selectThisCoboBox.SelectedIndex = 1;
-            }
         }
 
         private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)

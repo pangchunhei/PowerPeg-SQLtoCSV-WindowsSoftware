@@ -24,14 +24,15 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <summary>
         /// Lookup for the site name
         /// </summary>
-        /// <param name="device"></param>
+        /// <param name="table"></param>
         /// <returns></returns>
-        private static string findLookup(string device)
+        private static string findLookup(string table)
         {
             foreach (string[] name in lookupTable)
             {
-                if (name[0] == device)
+                if (name[0] == table)
                 {
+                    log.Debug($"Lookup for {table}, match to {name[1]}");
                     return name[1];
                 }
             }
@@ -106,16 +107,15 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                     DataTable output = DatabaseGateway.getInstance().searchForDBTableData(startSearchDay, endSearchDay, name);
 
-                    log.Debug($"Modify the DataTable column of the search: {name}");
+                    log.Debug($"DataTable table: {name} obtained, Modify the DataTable columnto keep: {output.Columns["ID"].ColumnName}, {output.Columns[5].ColumnName}");
                     //Remove column
                     output.Columns.Remove("ID");
                     output.Columns.Remove("TimeChange");
                     output.Columns.Remove("LogStatus");
                     output.Columns.Remove("StatusFlags");
                     
-                    //Lookup
+                    //Lookup for device column name
                     string lookup = findLookup(name);
-                    log.Debug($"Lookup {name}: {lookup}");
 
                     if (lookup.Equals("Not Found"))
                     {
@@ -124,7 +124,16 @@ namespace PowerPeg_SQL_to_CSV.Mode
                     else
                     {
                         output.Columns[1].ColumnName = lookup;
-                    } 
+                    }
+
+                    //Round to 2dp
+                    foreach (DataRow drRow in output.Rows)
+                    {
+                        double rowValue; 
+                        double.TryParse(drRow[1].ToString(), out rowValue);
+
+                        drRow[1] = Math.Round(rowValue, 2);
+                    }
                     
                     res.updateDataTable(CombileDataTable(res.getResultTable(), output));
                 }

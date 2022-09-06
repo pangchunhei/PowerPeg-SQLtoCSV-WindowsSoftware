@@ -39,7 +39,7 @@ namespace App_UI
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
 
-            SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filepath, DateTime.Now, selectCol, selectThis: ((KeyValuePair<string, bool>)this.selectThisCoboBox.SelectedItem).Value, taskname: taskNameDataLabel.Text);
+            SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filepath, DateTime.Now, selectCol, selectThis: ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value, taskname: taskNameDataLabel.Text);
 
             if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
             {

@@ -125,21 +125,25 @@ namespace App_UI
 
         public static void setFrequencyDurationDetailOptionList(ComboBox frequencyCoboBox, ComboBox selectThisCoboBox)
         {
+            Dictionary<string, bool?> comboSource = new Dictionary<string, bool?>();
+
             if (frequencyCoboBox.Text.Equals("MonthMode"))
             {
                 selectThisCoboBox.Visible = true;
-                Dictionary<string, bool> comboSource = new Dictionary<string, bool>();
+                comboSource.Clear();
                 comboSource.Add("Use trigger month's day as month duration", true);
                 comboSource.Add("Use trigger month's previrous's month's day as month duration", false);
-
-                selectThisCoboBox.DataSource = new BindingSource(comboSource, null);
-                selectThisCoboBox.DisplayMember = "Key";
-                selectThisCoboBox.ValueMember = "Value";
             }
             else
             {
                 selectThisCoboBox.Visible = false;
+                comboSource.Clear();
+                comboSource.Add("NA", null);
             }
+
+            selectThisCoboBox.DataSource = new BindingSource(comboSource, null);
+            selectThisCoboBox.DisplayMember = "Key";
+            selectThisCoboBox.ValueMember = "Value";
         }
 
         /// <summary>
