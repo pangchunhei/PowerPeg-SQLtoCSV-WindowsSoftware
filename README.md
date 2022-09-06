@@ -8,8 +8,8 @@ With a single click of the button below, a zip of this repository will start dow
 Step 1
 - In local machine
 ```bash
-  Copy the release folder to the local machine
-  - Machine that can access the daatbase is required
+  Download and copy the release folder to the local machine
+  - Machine that can access the database is required
 ```
 
 Step 2
@@ -20,19 +20,27 @@ Step 2
 ```
 
 Step 3
+- For dev and release operator
+```bash
+  Update the config file
+  - Coneection string
+  - File default location
+```
+
+Step 4
 - In Database Server (Access via SQL server management studio)
 ```bash
   Installation of the stored procedure and function
   - 'Prod - SQLQuerySearchSpecificCol.sql'
 ```
 
-Step 4
+Step 5
 - In local machine
 ```bash
   Create the App-UI.exe shortcut and place to 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup'
 ```
 
-Step 5
+Step 6
 ```bash
   Restart the PC to run or press the shortcut to run
 ```    
