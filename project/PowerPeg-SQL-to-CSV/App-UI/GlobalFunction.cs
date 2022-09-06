@@ -132,18 +132,42 @@ namespace App_UI
                 comboSource.Add("Use trigger month's day as month duration", true);
                 comboSource.Add("Use trigger month's previrous's month's day as month duration", false);
 
-                selectThisCoboBox.Items.Clear();
                 selectThisCoboBox.DataSource = new BindingSource(comboSource, null);
                 selectThisCoboBox.DisplayMember = "Key";
                 selectThisCoboBox.ValueMember = "Value";
-
-                selectThisCoboBox.SelectedIndex = 0;
             }
             else
             {
                 selectThisCoboBox.Visible = false;
-                selectThisCoboBox.Items.Clear();
             }
+        }
+
+        /// <summary>
+        /// To change the dropdown meanuel size to show whole sentance
+        /// </summary>
+        /// <param name="sender">The combobox that want to change size</param>
+        public static void adjustCoboBoxDropdownWidth(ComboBox sender)
+        {
+            ComboBox selectThisCoboBox = sender;
+            int width = selectThisCoboBox.DropDownWidth;
+            Graphics g = selectThisCoboBox.CreateGraphics();
+            Font font = selectThisCoboBox.Font;
+            int vertScrollBarWidth =
+                (selectThisCoboBox.Items.Count > selectThisCoboBox.MaxDropDownItems)
+                ? SystemInformation.VerticalScrollBarWidth : 0;
+
+            int newWidth;
+            foreach (var displayItem in sender.Items)
+            {
+                string s = ((KeyValuePair<string, bool>)displayItem).Key;
+
+                newWidth = (int)g.MeasureString(s, font).Width + vertScrollBarWidth;
+                if (width < newWidth)
+                {
+                    width = newWidth;
+                }
+            }
+            selectThisCoboBox.DropDownWidth = width;
         }
     }
 }

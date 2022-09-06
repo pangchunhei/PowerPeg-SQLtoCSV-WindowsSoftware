@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComboBox = System.Windows.Forms.ComboBox;
 
 namespace App_UI
 {
@@ -54,6 +55,7 @@ namespace App_UI
                 selectedColListBox.SelectedItems.Add(s);
             }
             */
+
             selectedColListBox.Items.Add("-- All --");
             selectedColListBox.SelectedItems.Add("-- All --");
 
@@ -85,7 +87,7 @@ namespace App_UI
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
             MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool>)this.selectThisCoboBox.SelectedItem).Value);
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Update finished.", true);
+            GlobalFunction.statusUpdate(statusUpdateLabel, $"Update finished, the following are the new settings: \r\n{task}", true);
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -112,6 +114,20 @@ namespace App_UI
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
+
+            if (Convert.ToBoolean(task.getTaskInfo()[task.getTaskInfo().Length - 1]))
+            {
+                selectThisCoboBox.SelectedIndex = 0;
+            }
+            else
+            {
+                selectThisCoboBox.SelectedIndex = 1;
+            }
+        }
+
+        private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
+        {
+            GlobalFunction.adjustCoboBoxDropdownWidth((ComboBox)sender);
         }
     }
 }

@@ -40,7 +40,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             int minuteLength = 1;
 
-            int minuteFromLastRun = (runDateTime - this.lastRunDateTime).Minutes;
+            int minuteFromLastRun = (int)runDateTime.Subtract(lastRunDateTime).TotalMinutes;
 
             if (minuteFromLastRun >= minuteLength)
             {
@@ -68,7 +68,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                 res = SQLProcessFunction.processAllDBTable(startSearchDay, endSearchDay, this.selectColumn, res);
 
-                this.lastRunDateTime = new DateTime(runDateTime.Year, runDateTime.Month, runDateTime.Day, runDateTime.Hour, runDateTime.Minute, this.lastRunDateTime.Second);
+                this.lastRunDateTime = runDateTime;
 
                 return res;
             }
@@ -100,7 +100,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         public override string ToString()
         {
-            return $"Mode: {this.modeName}\r\nFirst trigger Day: {this.triggerDateTime.ToString()}\r\nLast Search Day: {this.lastRunDateTime.ToString()}\r\nSelected Column: {string.Join(",", this.selectColumn)}";
+            return $"Mode: {this.modeName}\r\nFirst trigger Day (Inclusive): {this.triggerDateTime.ToString()}\r\nLast Search Day (Exclusive): {this.lastRunDateTime.ToString()}\r\nSelected Field: {string.Join(",", this.selectColumn)}";
         }
     }
 }

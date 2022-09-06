@@ -101,7 +101,9 @@ namespace PowerPeg_SQL_to_CSV.Mode
             {
                 if (selectColumn.Contains(name) || selectColumn[0] == "*")
                 {
-                    //TODO-- Check if select such column
+                    //TODO-- Check if select such field
+
+
                     DataTable output = DatabaseGateway.getInstance().searchForDBTableData(startSearchDay, endSearchDay, name);
 
                     log.Debug($"Modify the DataTable column of the search: {name}");

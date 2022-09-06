@@ -52,7 +52,7 @@ namespace PowerPeg_SQL_to_CSV
 
             if(resultOfSQL != null)
             {
-                log.Info($"Search task result generated, generate file: {this.taskName}");
+                log.Info($"Search task result generated, generate CSV file: {this.taskName}");
 
                 string fileOutputFileName = taskName + "_generation_time_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
 
@@ -60,8 +60,7 @@ namespace PowerPeg_SQL_to_CSV
             }
             else
             {
-                //TODO-- log
-                log.Info($"No need to process the search task: {this.taskName}");
+                log.Info($"No need to store the search task to CSV file: {this.taskName}");
             }
         }
 

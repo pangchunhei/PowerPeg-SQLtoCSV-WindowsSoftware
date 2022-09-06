@@ -42,8 +42,7 @@ namespace PowerPeg_SQL_to_CSV
                 }
                 else
                 {
-                    //TODO-- incorrect data type for instant mode;
-                    throw new Exception();
+                    throw new Exception("Incorrect data type for instant mode");
                 }
             }
             else if (selectmode.Equals("MonthMode"))
@@ -54,8 +53,7 @@ namespace PowerPeg_SQL_to_CSV
                 }
                 else
                 {
-                    //TODO-- need select para
-                    throw new Exception();
+                    throw new Exception("TODO-- Need to have selectThis boolean");
                 }
             }
             else if (selectmode.Equals("TestMode"))
@@ -64,8 +62,7 @@ namespace PowerPeg_SQL_to_CSV
             }
             else
             {
-                //TODO-- No such mode
-                throw new Exception();
+                throw new Exception("No such mode");
             }
         }
 
@@ -114,7 +111,6 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="selectedcolumn">Updated list of selected column</param>
         public static void updateTaskSetting(SearchTask searchtask, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, bool? selectThis = null)
         {
-            //TODO--UPDATE
             log.Debug("Run updateTaskSetting");
 
             IMode m = CreateMode(selectmode, triggerdate, selectedcolumn, selectThis: selectThis);

@@ -192,9 +192,9 @@
             // triggerDateTimePicker
             // 
             this.triggerDateTimePicker.AccessibleName = "triggerDateTimePicker";
-            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy HH";
             this.triggerDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.triggerDateTimePicker.Location = new System.Drawing.Point(231, 231);
+            this.triggerDateTimePicker.Location = new System.Drawing.Point(388, 231);
             this.triggerDateTimePicker.Name = "triggerDateTimePicker";
             this.triggerDateTimePicker.Size = new System.Drawing.Size(250, 27);
             this.triggerDateTimePicker.TabIndex = 77;
@@ -206,9 +206,9 @@
             this.triggerDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.triggerDateLabel.Location = new System.Drawing.Point(102, 229);
             this.triggerDateLabel.Name = "triggerDateLabel";
-            this.triggerDateLabel.Size = new System.Drawing.Size(123, 28);
+            this.triggerDateLabel.Size = new System.Drawing.Size(289, 28);
             this.triggerDateLabel.TabIndex = 76;
-            this.triggerDateLabel.Text = "Trigger Date:";
+            this.triggerDateLabel.Text = "Trigger Date (MM/dd/yyyy HH):";
             // 
             // selectFieldLabel
             // 
@@ -246,7 +246,7 @@
             // 
             this.frequencyCoboBox.AccessibleName = "frequencyCoboBox";
             this.frequencyCoboBox.FormattingEnabled = true;
-            this.frequencyCoboBox.Location = new System.Drawing.Point(231, 188);
+            this.frequencyCoboBox.Location = new System.Drawing.Point(214, 188);
             this.frequencyCoboBox.Name = "frequencyCoboBox";
             this.frequencyCoboBox.Size = new System.Drawing.Size(151, 28);
             this.frequencyCoboBox.TabIndex = 89;
@@ -267,11 +267,12 @@
             // 
             this.selectThisCoboBox.AccessibleName = "selectThisCoboBox";
             this.selectThisCoboBox.FormattingEnabled = true;
-            this.selectThisCoboBox.Location = new System.Drawing.Point(388, 188);
+            this.selectThisCoboBox.Location = new System.Drawing.Point(371, 188);
             this.selectThisCoboBox.Name = "selectThisCoboBox";
-            this.selectThisCoboBox.Size = new System.Drawing.Size(340, 28);
+            this.selectThisCoboBox.Size = new System.Drawing.Size(282, 28);
             this.selectThisCoboBox.TabIndex = 90;
             this.selectThisCoboBox.Visible = false;
+            this.selectThisCoboBox.DropDown += new System.EventHandler(this.AdjustWidthComboBox_DropDown);
             // 
             // UpdateTaskSetting
             // 

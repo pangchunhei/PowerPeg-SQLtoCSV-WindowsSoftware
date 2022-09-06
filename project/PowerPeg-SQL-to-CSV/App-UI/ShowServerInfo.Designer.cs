@@ -93,6 +93,7 @@
             this.tableTextbox.Multiline = true;
             this.tableTextbox.Name = "tableTextbox";
             this.tableTextbox.ReadOnly = true;
+            this.tableTextbox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.tableTextbox.Size = new System.Drawing.Size(452, 170);
             this.tableTextbox.TabIndex = 10;
             // 

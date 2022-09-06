@@ -32,6 +32,13 @@ namespace PowerPeg_SQL_to_CSV.Mode
             lastRunDateTime = new DateTime(1999, triggerDate.Month,triggerDate.Day, triggerDate.Hour, triggerDate.Minute, triggerDate.Second);
         }
 
+        /// <summary>
+        /// Get the frequency day's gap
+        /// True: Using the tigger month
+        /// False: Using the tigger month's previous month
+        /// </summary>
+        /// <param name="runDateTime"></param>
+        /// <returns></returns>
         private int getMonthLength(DateTime runDateTime)
         {
             if (selectThisMonth)
@@ -53,16 +60,16 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             int monthLength = getMonthLength(runDateTime);
 
-            int daysFromLastRun = (runDateTime - this.lastRunDateTime).Days;
+            int daysFromLastRun = (int)runDateTime.Subtract(lastRunDateTime).TotalDays;
 
-            if (daysFromLastRun >= monthLength)
+            if (daysFromLastRun >= monthLength && runDateTime.Hour == this.triggerDateTime.Hour)
             {
-                log.Info($"Need to run search as last run time: {this.lastRunDateTime} time from last run: {daysFromLastRun} days");
+                log.Info($"Need to run search as last run time: {this.lastRunDateTime} time from last run: {daysFromLastRun} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerDateTime.Hour} ");
                 return true;
             }
             else
             {
-                log.Info($"No need to run search as last run time: {this.lastRunDateTime} time from last run: {daysFromLastRun} days");
+                log.Info($"No need to run search as last run time: {this.lastRunDateTime} time from last run: {daysFromLastRun} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerDateTime.Hour}");
                 return false;
             }
         }
@@ -89,9 +96,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                 res = SQLProcessFunction.processAllDBTable(pStartSearchDay, pEndSearchDay, this.selectColumn, res);
 
-                //TODO--No need min/sec
-                this.lastRunDateTime = new DateTime(runDateTime.Year, runDateTime.Month, runDateTime.Day, this.lastRunDateTime.Hour, this.lastRunDateTime.Minute, this.lastRunDateTime.Second);
-
+                this.lastRunDateTime = runDateTime;
                 return res;
             }
             else
@@ -122,7 +127,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         public override string ToString()
         {
-            return $"Mode: {this.modeName}\r\nFirst trigger Day: {this.triggerDateTime.ToString()}\r\nLast Search Day: {this.lastRunDateTime.ToString()}\r\nSelect day duration of current trigger month: {this.selectThisMonth.ToString()}\r\nSelected Column: {string.Join(",", this.selectColumn)}";
+            return $"Mode: {this.modeName}\r\nFirst trigger Day (Inclusive): {this.triggerDateTime.ToString()}\r\nLast Search Day (Exclusive): {this.lastRunDateTime.ToString()}\r\nSelect day duration of current trigger month: {this.selectThisMonth.ToString()}\r\nSelected Field: {string.Join(",", this.selectColumn)}";
         }
     }
 }

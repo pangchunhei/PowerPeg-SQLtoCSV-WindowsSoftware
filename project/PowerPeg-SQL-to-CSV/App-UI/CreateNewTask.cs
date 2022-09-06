@@ -44,7 +44,16 @@ namespace App_UI
             if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
             {
                 GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
-                MainFunction.addScheduleTask(t);
+
+                try
+                {
+                    MainFunction.addScheduleTask(t);
+                }
+                catch (Exception ex)
+                {
+                    GlobalFunction.statusUpdate(statusUpdateLabel, ex.Message, true);
+                }
+
                 GlobalFunction.statusUpdate(statusUpdateLabel, "Finished schedule task setup.", true);
             }
             else
@@ -97,35 +106,13 @@ namespace App_UI
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
+
+            this.selectThisCoboBox.SelectedIndex = 0;
         }
 
-        /// <summary>
-        /// To change the dropdown meanuel size to show whole sentance
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
         {
-            ComboBox selectThisCoboBox = (ComboBox)sender;
-            int width = selectThisCoboBox.DropDownWidth;
-            Graphics g = selectThisCoboBox.CreateGraphics();
-            Font font = selectThisCoboBox.Font;
-            int vertScrollBarWidth =
-                (selectThisCoboBox.Items.Count > selectThisCoboBox.MaxDropDownItems)
-                ? SystemInformation.VerticalScrollBarWidth : 0;
-
-            int newWidth;
-            foreach (var displayItem in ((ComboBox)sender).Items)
-            {
-                string s = ((KeyValuePair<string, bool>)displayItem).Key;
-
-                newWidth = (int)g.MeasureString(s, font).Width + vertScrollBarWidth;
-                if (width < newWidth)
-                {
-                    width = newWidth;
-                }
-            }
-            selectThisCoboBox.DropDownWidth = width;
+            GlobalFunction.adjustCoboBoxDropdownWidth((ComboBox)sender);
         }
     }
 }

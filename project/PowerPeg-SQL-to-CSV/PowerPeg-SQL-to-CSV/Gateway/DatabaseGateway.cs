@@ -156,7 +156,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
 
                         da.Fill(sqlOutput);
 
-                        log.Info($"Recieved Database data of: {tableName}, {startSearchDate}, {endSearchDate}");
+                        log.Info($"Recieved Database data of tablename: {tableName}, start search date: {startSearchDate}, end search date: {endSearchDate}");
                     }
                 }
             }

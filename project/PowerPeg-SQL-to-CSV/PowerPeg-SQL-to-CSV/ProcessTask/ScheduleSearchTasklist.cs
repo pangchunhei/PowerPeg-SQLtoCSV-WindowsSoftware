@@ -31,7 +31,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         }
 
         /// <summary>
-        /// Find the seatch task object from name
+        /// Find the search task object from name
         /// </summary>
         /// <param name="selectedSearchTaskName">Name of the search task</param>
         /// <returns>Return SearchTask object from the tasklist</returns>
@@ -49,7 +49,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         }
 
         /// <summary>
-        /// Add new search task into tasklist
+        /// Add new search task into tasklist, limit the schedule task to 3
         /// </summary>
         /// <param name="searchtask">New search task</param>
         /// <exception cref="Exception"></exception>
@@ -57,12 +57,19 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         {
             if (searchtask.getMode().GetType() != typeof(InstantMode))
             {
-                searchTaskslist.Add(searchtask);
+                //limit the schedule task to 3
+                if (searchTaskslist.Count < 3)
+                {
+                    searchTaskslist.Add(searchtask);
+                }
+                else
+                {
+                    throw new Exception("Exceed max scheduled task allowed");
+                }
             }
             else
             {
-                //TODO-- Exception
-                throw new Exception();
+                throw new Exception("It is instant mode, cannot add to schedule task");
             }
 
             jsonGateway.updateTasklistJSON(searchTaskslist);

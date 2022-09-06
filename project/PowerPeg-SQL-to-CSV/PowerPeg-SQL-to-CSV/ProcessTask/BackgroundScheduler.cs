@@ -54,7 +54,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
                 log.Debug("Interrupt status: " + await this.scheduler.Interrupt(context.JobDetail.Key));
             }
 
-            log.Info("Stop scheduler");
+            log.Info("Scheduler Stopped");
             await scheduler.Shutdown(true);
         }
     }

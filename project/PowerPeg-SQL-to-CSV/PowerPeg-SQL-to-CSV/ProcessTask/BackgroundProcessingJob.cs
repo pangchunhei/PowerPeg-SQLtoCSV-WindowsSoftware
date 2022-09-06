@@ -33,7 +33,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
         /// <param name="context"></param>
         private void processTask(IJobExecutionContext context)
         {
-            log.Info($"Backround job is created and running");
+            log.Info($"Backround job is created and running: {context.JobDetail.Key}, UTCFiretime: {context.FireTimeUtc}");
 
             searchTasklist = new ScheduleSearchTasklist();
 
