@@ -23,7 +23,6 @@ Step 3
 - In Database Server (Access via SQL server management studio)
 ```bash
   Installation of the stored procedure and function
-  - 'Prod - SplitForIN.sql'
   - 'Prod - SQLQuerySearchSpecificCol.sql'
 ```
 
