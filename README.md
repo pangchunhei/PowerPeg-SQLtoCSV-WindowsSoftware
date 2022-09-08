@@ -22,7 +22,7 @@ Step 2
 Step 3
 - For dev and release operator
 ```bash
-  Update the config file
+  Update the config file 'App-UI.dll.config'
   - Coneection string
   - File default location
 ```
