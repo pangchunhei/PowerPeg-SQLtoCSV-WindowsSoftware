@@ -163,7 +163,7 @@ namespace App_UI
             int newWidth;
             foreach (var displayItem in sender.Items)
             {
-                string s = ((KeyValuePair<string, bool>)displayItem).Key;
+                string s = ((KeyValuePair<string, bool?>)displayItem).Key;
 
                 newWidth = (int)g.MeasureString(s, font).Width + vertScrollBarWidth;
                 if (width < newWidth)

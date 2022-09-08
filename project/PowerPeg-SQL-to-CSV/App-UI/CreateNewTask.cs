@@ -89,6 +89,8 @@ namespace App_UI
             }
             frequencyCoboBox.SelectedIndex = 0;
 
+            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
+
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
