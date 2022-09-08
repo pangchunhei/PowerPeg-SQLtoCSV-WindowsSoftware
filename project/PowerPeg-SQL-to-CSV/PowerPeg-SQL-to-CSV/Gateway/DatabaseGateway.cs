@@ -134,7 +134,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         /// <returns>DataTable of the search result</returns>
         public DataTable searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, string tableName)
         {
-            log.Debug($"Request Database data of: {tableName}, {startSearchDate}, {endSearchDate}");
+            log.Debug($"Request Database data of tablename: {tableName}, start search date: {startSearchDate}, end search date: {endSearchDate}");
 
             //Use the stored procedure cmd
             DataTable sqlOutput;
