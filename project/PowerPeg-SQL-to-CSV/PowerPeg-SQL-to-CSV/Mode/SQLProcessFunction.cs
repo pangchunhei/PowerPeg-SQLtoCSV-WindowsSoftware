@@ -22,11 +22,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
         private static readonly ILog log = LogHelper.getLogger();
 
         /// <summary>
-        /// Lookup for the site name
+        /// Lookup for the site name in the lookup table csv
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
-        private static string findLookup(string table)
+        private static string searchLookupTable(string table)
         {
             foreach (string[] name in lookupTable)
             {
@@ -46,7 +46,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <returns></returns>
         private static DataTable FullOuterJoinDataTables(params DataTable[] datatables) // supports as many datatables as you need.
         {
-            log.Debug($"Outer Join DataTables");
+            log.Debug($"Outer Join all DataTables");
 
             DataTable result = datatables.First().Clone();
 
@@ -81,7 +81,6 @@ namespace PowerPeg_SQL_to_CSV.Mode
             dt1.PrimaryKey = new DataColumn[] { dt1.Columns[keyColumn] };
             dt2.PrimaryKey = new DataColumn[] { dt2.Columns[keyColumn] };
             
-            log.Debug($"Define 2 DataTables primary key, now trigger combine");
             return FullOuterJoinDataTables(new DataTable[] { dt1, dt2 });
         }
 
@@ -98,6 +97,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
             List<string> selectedTableName = DatabaseGateway.getInstance().getSelectedTable();
 
+            DataTable resultDt = new DataTable();
+
             foreach (string name in selectedTableName)
             {
                 if (selectColumn.Contains(name) || selectColumn[0] == "*")
@@ -107,7 +108,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                     DataTable output = DatabaseGateway.getInstance().searchForDBTableData(startSearchDay, endSearchDay, name);
 
-                    log.Debug($"DataTable table: {name} obtained, Modify the DataTable columnto keep: {output.Columns["ID"].ColumnName}, {output.Columns[5].ColumnName}");
+                    log.Debug($"DataTable table: {name} obtained, Modify the DataTable columnto keep: {output.Columns["Timestamp"].ColumnName}, {output.Columns[5].ColumnName}");
+                    
                     //Remove column
                     output.Columns.Remove("ID");
                     output.Columns.Remove("TimeChange");
@@ -115,7 +117,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
                     output.Columns.Remove("StatusFlags");
                     
                     //Lookup for device column name
-                    string lookup = findLookup(name);
+                    string lookup = searchLookupTable(name);
 
                     if (lookup.Equals("Not Found"))
                     {
@@ -125,19 +127,29 @@ namespace PowerPeg_SQL_to_CSV.Mode
                     {
                         output.Columns[1].ColumnName = lookup;
                     }
-
-                    //Round to 2dp
-                    foreach (DataRow drRow in output.Rows)
-                    {
-                        double rowValue; 
-                        double.TryParse(drRow[1].ToString(), out rowValue);
-
-                        drRow[1] = Math.Round(rowValue, 2);
-                    }
                     
-                    res.updateDataTable(CombileDataTable(res.getResultTable(), output));
+                    resultDt = CombileDataTable(resultDt, output);
                 }
             }
+
+            //Rounding
+            log.Info($"Rounding DataTable");
+            foreach (DataRow dtRow in resultDt.Rows)
+            {
+                for (int i = 1; i < resultDt.Columns.Count; i++)
+                {
+                    double rowValue;
+                    double.TryParse(dtRow[i].ToString(), out rowValue);
+                    dtRow[i] = Math.Round(rowValue, 2);
+                }
+            }
+
+            //Sorting
+            log.Info($"Sorting DataTable");
+            resultDt.DefaultView.Sort = "Timestamp";
+            resultDt = resultDt.DefaultView.ToTable();
+
+            res.updateDataTable(resultDt);
 
             log.Info($"SQL and DataTable process completed");
 

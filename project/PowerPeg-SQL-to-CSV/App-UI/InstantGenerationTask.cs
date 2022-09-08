@@ -78,7 +78,7 @@ namespace App_UI
 
                 if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
                 {
-                    GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now run task.", false);
+                    GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now running task, please wait.", false);
                     MainFunction.runTaskNow(t);
                     GlobalFunction.statusUpdate(statusUpdateLabel, "Finished the task, please check the output csv.", true);
                 }
