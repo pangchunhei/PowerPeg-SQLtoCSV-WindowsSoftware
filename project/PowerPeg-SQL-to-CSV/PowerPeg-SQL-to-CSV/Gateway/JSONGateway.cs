@@ -93,7 +93,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         /// <returns></returns>
         private object? importJson(Type type, string filepath)
         {
-            log.Info($"Import {filepath} Json data");
+            log.Info($"Import Json data: {filepath}");
 
             using (StreamReader file = File.OpenText(filepath))
             {
@@ -148,7 +148,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                 };
                 using (StreamWriter file = File.CreateText(filepath))
                 {
-                    log.Debug($"Update {filepath} JSON data");
+                    log.Debug($"Update JSON data: {filepath}");
 
                     JsonSerializer serializer = JsonSerializer.Create(settings);
                     serializer.Serialize(file, list);

@@ -74,13 +74,13 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <param name="dt1">DataTable 1</param>
         /// <param name="dt2">DataTable 2</param>
         /// <returns></returns>
-        private static DataTable CombileDataTable(DataTable dt1, DataTable dt2)
+        private static DataTable combileDataTable(DataTable dt1, DataTable dt2)
         {
             string keyColumn = "Timestamp";
 
             dt1.PrimaryKey = new DataColumn[] { dt1.Columns[keyColumn] };
             dt2.PrimaryKey = new DataColumn[] { dt2.Columns[keyColumn] };
-            
+
             return FullOuterJoinDataTables(new DataTable[] { dt1, dt2 });
         }
 
@@ -109,13 +109,13 @@ namespace PowerPeg_SQL_to_CSV.Mode
                     DataTable output = DatabaseGateway.getInstance().searchForDBTableData(startSearchDay, endSearchDay, name);
 
                     log.Debug($"DataTable table: {name} obtained, Modify the DataTable columnto keep: {output.Columns["Timestamp"].ColumnName}, {output.Columns[5].ColumnName}");
-                    
+
                     //Remove column
                     output.Columns.Remove("ID");
                     output.Columns.Remove("TimeChange");
                     output.Columns.Remove("LogStatus");
                     output.Columns.Remove("StatusFlags");
-                    
+
                     //Lookup for device column name
                     string lookup = searchLookupTable(name);
 
@@ -127,8 +127,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
                     {
                         output.Columns[1].ColumnName = lookup;
                     }
-                    
-                    resultDt = CombileDataTable(resultDt, output);
+
+                    resultDt = combileDataTable(resultDt, output);
                 }
             }
 
