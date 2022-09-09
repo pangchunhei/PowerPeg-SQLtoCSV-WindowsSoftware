@@ -50,6 +50,7 @@
             this.past30Btn = new System.Windows.Forms.Button();
             this.past60Btn = new System.Windows.Forms.Button();
             this.past90Btn = new System.Windows.Forms.Button();
+            this.txtConsole = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -208,7 +209,7 @@
             // 
             this.spaceLabel.AccessibleName = "spaceLabel";
             this.spaceLabel.AutoSize = true;
-            this.spaceLabel.Location = new System.Drawing.Point(230, 662);
+            this.spaceLabel.Location = new System.Drawing.Point(707, 1022);
             this.spaceLabel.Name = "spaceLabel";
             this.spaceLabel.Size = new System.Drawing.Size(21, 20);
             this.spaceLabel.TabIndex = 36;
@@ -294,12 +295,24 @@
             this.past90Btn.Visible = false;
             this.past90Btn.Click += new System.EventHandler(this.past90Btn_Click);
             // 
+            // txtConsole
+            // 
+            this.txtConsole.Location = new System.Drawing.Point(67, 665);
+            this.txtConsole.Multiline = true;
+            this.txtConsole.Name = "txtConsole";
+            this.txtConsole.ReadOnly = true;
+            this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtConsole.Size = new System.Drawing.Size(669, 359);
+            this.txtConsole.TabIndex = 74;
+            this.txtConsole.WordWrap = false;
+            // 
             // InstantGenerationTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 684);
+            this.ClientSize = new System.Drawing.Size(800, 813);
+            this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.past90Btn);
             this.Controls.Add(this.past60Btn);
             this.Controls.Add(this.past30Btn);
@@ -354,5 +367,6 @@
         private Button past30Btn;
         private Button past60Btn;
         private Button past90Btn;
+        private TextBox txtConsole;
     }
 }

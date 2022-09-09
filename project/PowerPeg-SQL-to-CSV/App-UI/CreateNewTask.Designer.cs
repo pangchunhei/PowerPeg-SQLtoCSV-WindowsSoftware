@@ -219,7 +219,7 @@
             // 
             this.label1.AccessibleName = "spaceLabel";
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(241, 486);
+            this.label1.Location = new System.Drawing.Point(241, 482);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 20);
             this.label1.TabIndex = 71;
@@ -262,7 +262,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 504);
             this.Controls.Add(this.selectThisCoboBox);
             this.Controls.Add(this.frequencyCoboBox);
             this.Controls.Add(this.frequenceLabel);

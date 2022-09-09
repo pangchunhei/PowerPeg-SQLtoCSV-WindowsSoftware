@@ -50,15 +50,14 @@ namespace App_UI
 
         private bool validate()
         {
-            //TODO-- change to 30days
             if (!(fromDateCalendar.SelectionRange.Start < toDateCalendar.SelectionRange.Start))
             {
                 GlobalFunction.statusUpdate(statusUpdateLabel, "From date need to be earlier than To date.", true);
                 return false;
             }
-            if (toDateCalendar.SelectionRange.Start.Subtract(fromDateCalendar.SelectionRange.Start).TotalDays > 90)
+            if (toDateCalendar.SelectionRange.Start.Subtract(fromDateCalendar.SelectionRange.Start).TotalDays > 31)
             {
-                GlobalFunction.statusUpdate(statusUpdateLabel, "Cannot select the date range the longer than 90.", true);
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Cannot select the date range the longer than 31.", true);
                 return false;
             }
             return true;
