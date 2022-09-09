@@ -94,14 +94,17 @@ namespace App_UI
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
         {
             filePathDataLabel.Text = GlobalFunction.exploreFilePath();
+
+            filePathDataLabel.Text = GlobalFunction.valildateFilepath(this.frequencyCoboBox.Text, filePathDataLabel.Text);
+
+            this.filePathDataLabel.Visible = true;
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Updating " + TypeDescriptor.GetClassName(this), false);
 
-            //TODO--Filepath
-            string filepath = GlobalFunction.getDefaultFilePath(this.task.getTaskInfo()[2], this.filePathDataLabel.Text);
+            string filepath = GlobalFunction.valildateFilepath(this.frequencyCoboBox.Text, this.filePathDataLabel.Text);
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
             MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value);

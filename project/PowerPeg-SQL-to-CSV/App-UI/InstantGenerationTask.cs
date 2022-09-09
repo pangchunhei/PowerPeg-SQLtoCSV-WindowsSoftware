@@ -12,6 +12,7 @@ namespace App_UI
         {
             InitializeComponent();
             this.ControlBox = false;
+            this.filePathDataLabel.Visible = false;
         }
 
         private void InstantGenerationOptionForm_Load(object sender, EventArgs e)
@@ -32,14 +33,13 @@ namespace App_UI
             selectedColListBox.Items.Add("-- All --");
             selectedColListBox.SelectedItem = "-- All --";
 
-            this.filePathDataLabel.Text = GlobalFunction.getDefaultFilePath("InstantMode", this.filePathDataLabel.Text);
-
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
         {
             filePathDataLabel.Text = GlobalFunction.exploreFilePath();
+            this.filePathDataLabel.Visible = true;
 
         }
 
@@ -73,8 +73,9 @@ namespace App_UI
             {
 
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
+                string filepath = GlobalFunction.valildateFilepath("InstantMode", this.filePathDataLabel.Text);
 
-                SearchTask t = MainFunction.CreateTask("InstantMode", this.filePathDataLabel.Text, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
+                SearchTask t = MainFunction.CreateTask("InstantMode", filepath, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
 
                 if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
                 {
@@ -119,11 +120,6 @@ namespace App_UI
         {
             fromDateCalendar.SetDate(DateTime.Now.AddDays(-90));
             toDateCalendar.SetDate(DateTime.Now);
-        }
-
-        private void filePathDataLabel_TextChanged(object sender, EventArgs e)
-        {
-            this.filePathDataLabel.Text = GlobalFunction.getDefaultFilePath("InstantMode", this.filePathDataLabel.Text);
         }
     }
 }

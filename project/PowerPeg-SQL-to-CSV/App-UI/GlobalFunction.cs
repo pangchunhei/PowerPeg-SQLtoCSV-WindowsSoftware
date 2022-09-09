@@ -83,13 +83,21 @@ namespace App_UI
             }
         }
 
-        public static string getDefaultFilePath(string mode, string inputPath)
+        /// <summary>
+        /// Get check the user input path is correct and get the default path if necessary
+        /// </summary>
+        /// <param name="mode"></param>
+        /// <param name="inputPath"></param>
+        /// <returns></returns>
+        public static string valildateFilepath(string mode, string inputPath)
         {
             string path;
 
             if (inputPath.Equals("<Select Default Path>"))
             {
                 log.Debug("System get the default path info.");
+
+                MessageBox.Show("No folder path selected, sytem will use the default.");
 
                 if (mode.Equals("InstantMode"))
                 {
@@ -108,7 +116,7 @@ namespace App_UI
 
             try
             {
-                log.Debug("Test path.");
+                log.Debug("Try path info.");
 
                 FileInfo file = new FileInfo(path);
                 file.Directory.Create();

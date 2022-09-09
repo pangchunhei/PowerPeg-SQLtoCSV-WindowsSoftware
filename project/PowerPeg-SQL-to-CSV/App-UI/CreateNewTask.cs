@@ -20,6 +20,8 @@ namespace App_UI
         {
             InitializeComponent();
             this.ControlBox = false;
+            this.filePathDataLabel.Visible = false;
+
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading CreateNewTask.", false);
         }
 
@@ -35,8 +37,7 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing" + TypeDescriptor.GetClassName(this), false);
 
-            //TODO--Filepath
-            string filepath = GlobalFunction.getDefaultFilePath(frequencyCoboBox.Text, this.filePathDataLabel.Text);
+            string filepath = GlobalFunction.valildateFilepath(frequencyCoboBox.Text, this.filePathDataLabel.Text);
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
 
@@ -100,6 +101,7 @@ namespace App_UI
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
         {
             filePathDataLabel.Text = GlobalFunction.exploreFilePath();
+            this.filePathDataLabel.Visible = true;
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -113,8 +115,6 @@ namespace App_UI
             GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
 
             this.selectThisCoboBox.SelectedIndex = 0;
-
-            this.filePathDataLabel.Text = GlobalFunction.getDefaultFilePath(this.frequencyCoboBox.Text, this.filePathDataLabel.Text);
         }
 
         private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
