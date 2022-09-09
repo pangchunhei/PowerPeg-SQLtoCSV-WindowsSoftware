@@ -93,12 +93,11 @@ namespace PowerPeg_SQL_to_CSV
         /// Trigger the running if the task in the currnt time
         /// </summary>
         /// <param name="task">Search task that wanted to run now</param>
-        public static void runTaskNow(SearchTask task)
+        public static async Task runTaskNow(SearchTask task)
         {
-            log.Debug("Run runTaskNow");
+            log.Debug("Run runTaskNow in async");
 
-            //Bg the run task
-            task.toRunTask(DateTime.Now);
+            await Task.Run(() => task.toRunTask(DateTime.Now));
         }
 
         /// <summary>

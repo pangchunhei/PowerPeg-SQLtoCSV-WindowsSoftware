@@ -64,7 +64,7 @@ namespace App_UI
             return true;
         }
 
-        private void generateBtn_Click(object sender, EventArgs e)
+        private async void generateBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing " + TypeDescriptor.GetClassName(this), false);
 
@@ -82,8 +82,9 @@ namespace App_UI
                     this.cancelBtn.Enabled = false;
                     this.generateBtn.Enabled = false;
 
-                    MainFunction.runTaskNow(t);
-                    GlobalFunction.statusUpdate(statusUpdateLabel, "Finished the task, please check the output csv.", true);
+                    await MainFunction.runTaskNow(t);
+
+                    GlobalFunction.statusUpdate(statusUpdateLabel, $"Finished the task, please check the output csv.", true);
 
                     this.cancelBtn.Enabled = true;
                     this.generateBtn.Enabled = true;
