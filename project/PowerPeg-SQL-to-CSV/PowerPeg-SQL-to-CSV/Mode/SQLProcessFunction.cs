@@ -138,9 +138,12 @@ namespace PowerPeg_SQL_to_CSV.Mode
             {
                 for (int i = 1; i < resultDt.Columns.Count; i++)
                 {
-                    double rowValue;
-                    double.TryParse(dtRow[i].ToString(), out rowValue);
-                    dtRow[i] = Math.Round(rowValue, 2);
+                    if (dtRow[i].ToString() != "")
+                    {
+                        double rowValue;
+                        double.TryParse(dtRow[i].ToString(), out rowValue);
+                        dtRow[i] = Math.Round(rowValue, 2);
+                    }
                 }
             }
 

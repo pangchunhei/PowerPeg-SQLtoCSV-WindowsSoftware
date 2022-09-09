@@ -279,6 +279,7 @@
             this.past60Btn.TabIndex = 42;
             this.past60Btn.Text = "Past 60 Days";
             this.past60Btn.UseVisualStyleBackColor = true;
+            this.past60Btn.Visible = false;
             this.past60Btn.Click += new System.EventHandler(this.past60Btn_Click);
             // 
             // past90Btn
@@ -290,6 +291,7 @@
             this.past90Btn.TabIndex = 43;
             this.past90Btn.Text = "Past 90 Days";
             this.past90Btn.UseVisualStyleBackColor = true;
+            this.past90Btn.Visible = false;
             this.past90Btn.Click += new System.EventHandler(this.past90Btn_Click);
             // 
             // InstantGenerationTask
@@ -297,7 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 684);
             this.Controls.Add(this.past90Btn);
             this.Controls.Add(this.past60Btn);
             this.Controls.Add(this.past30Btn);

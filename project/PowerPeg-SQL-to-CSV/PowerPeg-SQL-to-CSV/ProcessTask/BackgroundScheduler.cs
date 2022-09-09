@@ -25,7 +25,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             log.Info("Background Scheduler is running");
 
             //创建作业和触发器 .WithIdentity("Backgroud-Schedule-Search")
-            IJobDetail jobDetail = JobBuilder.Create<BackgroundProcessingJob>().Build();
+            IJobDetail jobDetail = JobBuilder.Create<BackgroundJobScheduleTask>().Build();
 
             //Every 1 sec create an new Job
             ITrigger trigger = TriggerBuilder.Create()

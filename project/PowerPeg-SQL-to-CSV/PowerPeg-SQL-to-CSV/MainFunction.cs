@@ -97,6 +97,7 @@ namespace PowerPeg_SQL_to_CSV
         {
             log.Debug("Run runTaskNow");
 
+            //Bg the run task
             task.toRunTask(DateTime.Now);
         }
 

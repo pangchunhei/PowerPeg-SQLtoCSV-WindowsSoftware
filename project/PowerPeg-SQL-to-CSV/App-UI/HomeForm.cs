@@ -22,13 +22,15 @@ namespace App_UI
 {
     public partial class HomeForm : Form
     {
-        
+
         public HomeForm()
         {
             InitializeComponent();
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Initializing UI Application.", false);
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading HomeForm.", false);
+
+            this.MaximizeBox = false;
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Starting background task.", false);
             _ = MainFunction.startBackgroundJob();
@@ -68,7 +70,7 @@ namespace App_UI
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Showing background task.", false);
             this.Show();
-            
+
             //Update time gap for sync
             Thread.Sleep(500);
 
@@ -76,24 +78,33 @@ namespace App_UI
             _ = MainFunction.startBackgroundJob();
         }
 
-        private void reStartProgramBtn_Click(object sender, EventArgs e)
+        private void minimizeBtn_Click(object sender, EventArgs e)
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Restarting background task.", false);
-            _ = MainFunction.reStartBackgroundJob();
+            this.Close();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "User request the closing of application.", false);
 
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Closing background task.", false);
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("Please confirm closing the application.", "Confirm", buttons);
+            if (result == DialogResult.Yes)
+            {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Closing background task.", false);
 
-            _ = MainFunction.stopBackgroundJob();
-            //Giving time to close
-            Thread.Sleep(3000);
+                _ = MainFunction.stopBackgroundJob();
+                //Giving time to close
+                Thread.Sleep(3000);
 
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Appication closing.", false);
+                GlobalFunction.statusUpdate(statusUpdateLabel, "Appication closing.", false);
 
-            Application.Exit();
+                Application.Exit();
+            }
+            else
+            {
+                GlobalFunction.statusUpdate(statusUpdateLabel, "User cancelled the closing of application.", false);
+            }
         }
 
         private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)

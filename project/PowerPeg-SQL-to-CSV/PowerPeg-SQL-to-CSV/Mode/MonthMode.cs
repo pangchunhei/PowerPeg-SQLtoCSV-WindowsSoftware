@@ -21,7 +21,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// Create and change mode of Month Mode
         /// </summary>
         /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
-        /// <param name="selectThis">Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
+        /// <param name="selectThis">Select the duration, for the true: use current month's day; for false, use previous month day</param>
         /// <param name="selection">List of selected column name</param>
         public MonthMode(DateTime triggerDate, bool selectThis, List<string> selection)
         {

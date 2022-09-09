@@ -192,7 +192,7 @@
             // triggerDateTimePicker
             // 
             this.triggerDateTimePicker.AccessibleName = "triggerDateTimePicker";
-            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy HH";
+            this.triggerDateTimePicker.CustomFormat = "dd HH";
             this.triggerDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.triggerDateTimePicker.Location = new System.Drawing.Point(388, 231);
             this.triggerDateTimePicker.Name = "triggerDateTimePicker";
@@ -206,9 +206,9 @@
             this.triggerDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.triggerDateLabel.Location = new System.Drawing.Point(102, 229);
             this.triggerDateLabel.Name = "triggerDateLabel";
-            this.triggerDateLabel.Size = new System.Drawing.Size(289, 28);
+            this.triggerDateLabel.Size = new System.Drawing.Size(286, 28);
             this.triggerDateLabel.TabIndex = 76;
-            this.triggerDateLabel.Text = "Trigger Date (MM/dd/yyyy HH):";
+            this.triggerDateLabel.Text = "Trigger Date (dd-day HH-hour):";
             // 
             // selectFieldLabel
             // 
@@ -279,7 +279,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 490);
             this.Controls.Add(this.selectThisCoboBox);
             this.Controls.Add(this.frequencyCoboBox);
             this.Controls.Add(this.frequenceLabel);

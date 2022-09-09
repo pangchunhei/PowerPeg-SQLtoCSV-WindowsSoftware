@@ -131,8 +131,8 @@ namespace App_UI
             {
                 selectThisCoboBox.Visible = true;
                 comboSource.Clear();
-                comboSource.Add("Use trigger month's day as month duration", true);
-                comboSource.Add("Use trigger month's previrous's month's day as month duration", false);
+                comboSource.Add("Use current month's day as month duration", true);
+                comboSource.Add("Use previrous's month's day as month duration", false);
             }
             else
             {

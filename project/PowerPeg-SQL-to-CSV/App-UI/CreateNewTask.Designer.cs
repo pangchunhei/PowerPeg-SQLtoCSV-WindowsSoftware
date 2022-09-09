@@ -60,7 +60,7 @@
             // triggerDateTimePicker
             // 
             this.triggerDateTimePicker.AccessibleName = "triggerDateTimePicker";
-            this.triggerDateTimePicker.CustomFormat = "MM/dd/yyyy HH";
+            this.triggerDateTimePicker.CustomFormat = "dd HH";
             this.triggerDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.triggerDateTimePicker.Location = new System.Drawing.Point(407, 246);
             this.triggerDateTimePicker.Name = "triggerDateTimePicker";
@@ -74,9 +74,9 @@
             this.triggerDateLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.triggerDateLabel.Location = new System.Drawing.Point(118, 244);
             this.triggerDateLabel.Name = "triggerDateLabel";
-            this.triggerDateLabel.Size = new System.Drawing.Size(289, 28);
+            this.triggerDateLabel.Size = new System.Drawing.Size(286, 28);
             this.triggerDateLabel.TabIndex = 60;
-            this.triggerDateLabel.Text = "Trigger Date (MM/dd/yyyy HH):";
+            this.triggerDateLabel.Text = "Trigger Date (dd-day HH-hour):";
             // 
             // selectFieldLabel
             // 

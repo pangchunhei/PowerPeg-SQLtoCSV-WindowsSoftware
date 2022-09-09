@@ -78,8 +78,10 @@ namespace App_UI
             selectedColListBox.SelectedItem = "-- All --";
             */
 
-            selectedColListBox.Items.Add("-- All --");
-            selectedColListBox.SelectedItem = "-- All --";
+            this.triggerDateTimePicker.Value = DateTime.Now;
+
+            this.selectedColListBox.Items.Add("-- All --");
+            this.selectedColListBox.SelectedItem = "-- All --";
 
             List<string> col2 = MainFunction.getGenerationScheduledModeName();
 

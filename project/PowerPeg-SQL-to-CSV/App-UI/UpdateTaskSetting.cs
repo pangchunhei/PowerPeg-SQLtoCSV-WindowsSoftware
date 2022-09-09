@@ -22,6 +22,7 @@ namespace App_UI
         {
             InitializeComponent();
             this.ControlBox = false;
+
             this.selectedTaskName = selectedTaskName;
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading ChangeTaskSetting.", false);
         }

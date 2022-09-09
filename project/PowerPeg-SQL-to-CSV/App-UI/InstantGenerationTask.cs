@@ -79,8 +79,14 @@ namespace App_UI
                 if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm the settings, now running task, please wait.", false);
+                    this.cancelBtn.Enabled = false;
+                    this.generateBtn.Enabled = false;
+
                     MainFunction.runTaskNow(t);
                     GlobalFunction.statusUpdate(statusUpdateLabel, "Finished the task, please check the output csv.", true);
+
+                    this.cancelBtn.Enabled = true;
+                    this.generateBtn.Enabled = true;
                 }
                 else
                 {

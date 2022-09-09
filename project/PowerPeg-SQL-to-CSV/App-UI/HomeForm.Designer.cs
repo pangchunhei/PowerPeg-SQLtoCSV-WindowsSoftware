@@ -34,7 +34,7 @@
             this.instantGenerationBtn = new System.Windows.Forms.Button();
             this.changeScheduleGenerationBtn = new System.Windows.Forms.Button();
             this.showServerInfoBtn = new System.Windows.Forms.Button();
-            this.reStartProgramBtn = new System.Windows.Forms.Button();
+            this.minimizeBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.header2Label = new System.Windows.Forms.Label();
@@ -92,16 +92,16 @@
             this.showServerInfoBtn.UseVisualStyleBackColor = true;
             this.showServerInfoBtn.Click += new System.EventHandler(this.showServerInfoBtn_Click);
             // 
-            // reStartProgramBtn
+            // minimizeBtn
             // 
-            this.reStartProgramBtn.AccessibleName = "reStartProgramBtn";
-            this.reStartProgramBtn.Location = new System.Drawing.Point(237, 293);
-            this.reStartProgramBtn.Name = "reStartProgramBtn";
-            this.reStartProgramBtn.Size = new System.Drawing.Size(156, 52);
-            this.reStartProgramBtn.TabIndex = 4;
-            this.reStartProgramBtn.Text = "Restart Background Task";
-            this.reStartProgramBtn.UseVisualStyleBackColor = true;
-            this.reStartProgramBtn.Click += new System.EventHandler(this.reStartProgramBtn_Click);
+            this.minimizeBtn.AccessibleName = "minimizeBtn";
+            this.minimizeBtn.Location = new System.Drawing.Point(237, 293);
+            this.minimizeBtn.Name = "minimizeBtn";
+            this.minimizeBtn.Size = new System.Drawing.Size(156, 52);
+            this.minimizeBtn.TabIndex = 4;
+            this.minimizeBtn.Text = "Minimize to System-Tray";
+            this.minimizeBtn.UseVisualStyleBackColor = true;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
             // exitBtn
             // 
@@ -159,7 +159,7 @@
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ReadOnly = true;
             this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtConsole.Size = new System.Drawing.Size(658, 359);
+            this.txtConsole.Size = new System.Drawing.Size(669, 359);
             this.txtConsole.TabIndex = 73;
             this.txtConsole.WordWrap = false;
             // 
@@ -168,17 +168,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 793);
             this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusUpdateLabel);
             this.Controls.Add(this.header2Label);
             this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.reStartProgramBtn);
+            this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.showServerInfoBtn);
             this.Controls.Add(this.changeScheduleGenerationBtn);
             this.Controls.Add(this.instantGenerationBtn);
             this.Controls.Add(this.headerLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "HomeForm";
@@ -196,7 +197,7 @@
         private Button instantGenerationBtn;
         private Button changeScheduleGenerationBtn;
         private Button showServerInfoBtn;
-        private Button reStartProgramBtn;
+        private Button minimizeBtn;
         private Button exitBtn;
         private NotifyIcon notifyIcon;
         private Label header2Label;
