@@ -32,6 +32,8 @@ namespace App_UI
             selectedColListBox.Items.Add("-- All --");
             selectedColListBox.SelectedItem = "-- All --";
 
+            this.filePathDataLabel.Text = GlobalFunction.getDefaultFilePath("InstantMode", this.filePathDataLabel.Text);
+
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
@@ -69,11 +71,10 @@ namespace App_UI
 
             if (validate())
             {
-                string filepath = GlobalFunction.getDefaultFilePath(statusUpdateLabel, "InstantMode", this.filePathDataLabel.Text);
 
                 List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
 
-                SearchTask t = MainFunction.CreateTask("InstantMode", filepath, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
+                SearchTask t = MainFunction.CreateTask("InstantMode", this.filePathDataLabel.Text, DateTime.Now, selectCol, fromDateCalendar.SelectionRange.Start, toDateCalendar.SelectionRange.Start);
 
                 if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
                 {
@@ -118,6 +119,11 @@ namespace App_UI
         {
             fromDateCalendar.SetDate(DateTime.Now.AddDays(-90));
             toDateCalendar.SetDate(DateTime.Now);
+        }
+
+        private void filePathDataLabel_TextChanged(object sender, EventArgs e)
+        {
+            this.filePathDataLabel.Text = GlobalFunction.getDefaultFilePath("InstantMode", this.filePathDataLabel.Text);
         }
     }
 }

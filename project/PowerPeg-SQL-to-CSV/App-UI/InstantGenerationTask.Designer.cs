@@ -180,6 +180,7 @@
             this.filePathDataLabel.Size = new System.Drawing.Size(183, 25);
             this.filePathDataLabel.TabIndex = 13;
             this.filePathDataLabel.Text = "<Select Default Path>";
+            this.filePathDataLabel.TextChanged += new System.EventHandler(this.filePathDataLabel_TextChanged);
             // 
             // getFileExplorerBtn
             // 

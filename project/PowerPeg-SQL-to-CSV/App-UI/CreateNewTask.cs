@@ -35,7 +35,8 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing" + TypeDescriptor.GetClassName(this), false);
 
-            string filepath = GlobalFunction.getDefaultFilePath(statusUpdateLabel, frequencyCoboBox.Text, this.filePathDataLabel.Text);
+            //TODO--Filepath
+            string filepath = GlobalFunction.getDefaultFilePath(frequencyCoboBox.Text, this.filePathDataLabel.Text);
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
 
@@ -112,6 +113,8 @@ namespace App_UI
             GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
 
             this.selectThisCoboBox.SelectedIndex = 0;
+
+            this.filePathDataLabel.Text = GlobalFunction.getDefaultFilePath(this.frequencyCoboBox.Text, this.filePathDataLabel.Text);
         }
 
         private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)

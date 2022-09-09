@@ -83,13 +83,13 @@ namespace App_UI
             }
         }
 
-        public static string getDefaultFilePath(Label statusUpdateLabel, string mode, string inputPath)
+        public static string getDefaultFilePath(string mode, string inputPath)
         {
             string path;
 
             if (inputPath.Equals("<Select Default Path>"))
             {
-                statusUpdate(statusUpdateLabel, "System will select the default path.", true);
+                log.Debug("System get the default path info.");
 
                 if (mode.Equals("InstantMode"))
                 {
@@ -99,26 +99,30 @@ namespace App_UI
                 {
                     path = ConfigurationManager.AppSettings["AutoGenPath"] + "\\";
                 }
-
-                try
-                {
-                    FileInfo file = new FileInfo(path);
-                    file.Directory.Create();
-                    return path;
-                }
-                catch (IOException ex)
-                {
-                    path = AppDomain.CurrentDomain.BaseDirectory + "\\output\\";
-
-                    FileInfo file = new FileInfo(path);
-                    file.Directory.Create();
-
-                    return path;
-                }
             }
             else
             {
+                log.Debug("Use user input path.");
                 path = inputPath;
+            }
+
+            try
+            {
+                log.Debug("Test path.");
+
+                FileInfo file = new FileInfo(path);
+                file.Directory.Create();
+                return path;
+            }
+            catch (IOException ex)
+            {
+                log.Error("Problem in default file path, not store in application.");
+
+                path = AppDomain.CurrentDomain.BaseDirectory + "\\output\\";
+
+                FileInfo file = new FileInfo(path);
+                file.Directory.Create();
+
                 return path;
             }
         }

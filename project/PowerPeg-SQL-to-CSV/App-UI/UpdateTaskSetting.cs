@@ -100,7 +100,8 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Updating " + TypeDescriptor.GetClassName(this), false);
 
-            string filepath = GlobalFunction.getDefaultFilePath(statusUpdateLabel, this.task.getTaskInfo()[2], this.filePathDataLabel.Text);
+            //TODO--Filepath
+            string filepath = GlobalFunction.getDefaultFilePath(this.task.getTaskInfo()[2], this.filePathDataLabel.Text);
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
             MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value);
