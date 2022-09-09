@@ -124,7 +124,9 @@ namespace App_UI
             }
             catch (IOException ex)
             {
-                log.Error("Problem in default file path, not store in application.");
+                log.Error($"Problem in default file path, now store in application output folder. {ex.ToString()}");
+
+                MessageBox.Show("Problem in path, now store in application output folder.");
 
                 path = AppDomain.CurrentDomain.BaseDirectory + "\\output\\";
 
