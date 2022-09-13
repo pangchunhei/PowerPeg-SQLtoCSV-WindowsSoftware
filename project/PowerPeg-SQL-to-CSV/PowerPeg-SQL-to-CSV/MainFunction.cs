@@ -16,11 +16,7 @@ namespace PowerPeg_SQL_to_CSV
         private static ScheduleSearchTasklist scheduleSearchTasklist = new ScheduleSearchTasklist();
         
         private static BackgroundScheduler backgroundScheduler = null;
-        
-        private static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
 
-
-        /*
         /// <summary>
         /// Create the mode object
         /// TODO-- If have new mode, need to update here
@@ -33,15 +29,17 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
         /// <returns>Return the specific mode object</returns>
         /// <exception cref="Exception"></exception>
-        private static IMode CreateMode(string selectmode, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, bool? selectThis = null)
+        private static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
+        
+        private static IMode CreateMode(string selectmode, List<string> selectedcolumn, DateTime? i_startdate = null, DateTime? i_enddate = null, DayOfWeek? m_triggerdayofweek = null, TimeOnly? m_triggerhour = null, DateTime? t_triggerdatetime = null)
         {
             log.Debug("Run CreateMode");
 
             if (selectmode.Equals("InstantMode"))
             {
-                if (startdate != null && enddate != null)
+                if (i_startdate != null && i_enddate != null)
                 {
-                    return new InstantMode((DateTime)startdate, (DateTime)enddate, selectedcolumn);
+                    return new InstantMode((DateTime)i_startdate, (DateTime)i_enddate, selectedcolumn);
                 }
                 else
                 {
@@ -50,7 +48,7 @@ namespace PowerPeg_SQL_to_CSV
             }
             else if (selectmode.Equals("MonthMode"))
             {
-                if(selectThis != null)
+                if(m_triggerdayofweek != null && m_triggerhour != null)
                 {
                     return new MonthMode(triggerdate, (bool)selectThis, selectedcolumn);
                 }
@@ -68,11 +66,10 @@ namespace PowerPeg_SQL_to_CSV
                 throw new Exception("No such mode");
             }
         }
-        */
 
-        public static IMode createInstantMode(DateTime startdate, DateTime enddate, List<string> selectedcolumn)
+        public static IMode createInstantMode(DateTime startDate, DateTime endDate, List<string> selectedcolumn)
         {
-            return new InstantMode(startdate, enddate, selectedcolumn);
+            return 
         }
 
         public static IMode createMonthMode(DayOfWeek triggerDayOfWeek, TimeOnly triggerHour, List<string> selectedcolumn)
@@ -80,7 +77,7 @@ namespace PowerPeg_SQL_to_CSV
             return new MonthMode(triggerDayOfWeek, triggerHour, selectedcolumn);
         }
 
-        public static IMode createTestMode(DateTime, List<string> selectedcolumn)
+        public static IMode createTestMode(DateTime triggerDateTime, List<string> selectedcolumn)
         {
             return new TestMode(triggerDateTime, selectedcolumn);
         }
@@ -97,7 +94,7 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
         /// <param name="taskname">(Optional) Search task name</param>
         /// <returns>Return search task object</returns>
-        public static SearchTask CreateTask(string selectmodename, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, bool? selectThis = null, string taskname = "default")
+        public static SearchTask CreateTask(string selectmodename, string outputlocation, List<string> selectedcolumn, DateTime? i_startdate = null, DateTime? i_enddate = null, DayOfWeek? m_triggerdayofweek = null, TimeOnly? m_triggerhour = null, DateTime? t_triggerdatetime = null, string taskname = "default")
         {
             log.Debug("Run CreateTask");
 
