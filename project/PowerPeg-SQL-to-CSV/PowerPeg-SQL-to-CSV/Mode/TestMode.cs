@@ -44,12 +44,12 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
             if (minuteFromLastRun >= minuteLength)
             {
-                log.Info($"Need to run search as last run time: {this.lastRunDateTime} time from last run: {minuteFromLastRun} minutes");
+                log.Info($"Run search as last run time: {this.lastRunDateTime} time from last run: {minuteFromLastRun} minutes");
                 return true;
             }
             else
             {
-                log.Info($"No need to run search as last run time: {this.lastRunDateTime} time from last run: {minuteFromLastRun} minutes");
+                log.Info($"No run search as last run time: {this.lastRunDateTime} time from last run: {minuteFromLastRun} minutes");
                 return false;
             }
         }

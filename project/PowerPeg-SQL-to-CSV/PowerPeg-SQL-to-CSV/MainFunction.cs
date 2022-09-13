@@ -5,6 +5,7 @@ using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 using PowerPeg_SQL_to_CSV.Log;
+using Quartz;
 
 namespace PowerPeg_SQL_to_CSV
 {
@@ -18,6 +19,8 @@ namespace PowerPeg_SQL_to_CSV
         
         private static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
 
+
+        /*
         /// <summary>
         /// Create the mode object
         /// TODO-- If have new mode, need to update here
@@ -30,7 +33,7 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
         /// <returns>Return the specific mode object</returns>
         /// <exception cref="Exception"></exception>
-        private static IMode CreateMode(string selectmode, DateTime triggerdate, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, bool? selectThis = null)
+        private static IMode CreateMode(string selectmode, List<string> selectedcolumn, DateTime? startdate = null, DateTime? enddate = null, bool? selectThis = null)
         {
             log.Debug("Run CreateMode");
 
@@ -38,7 +41,7 @@ namespace PowerPeg_SQL_to_CSV
             {
                 if (startdate != null && enddate != null)
                 {
-                    return new InstantMode((DateTime)startdate, (DateTime)enddate, triggerdate, selectedcolumn);
+                    return new InstantMode((DateTime)startdate, (DateTime)enddate, selectedcolumn);
                 }
                 else
                 {
@@ -64,6 +67,22 @@ namespace PowerPeg_SQL_to_CSV
             {
                 throw new Exception("No such mode");
             }
+        }
+        */
+
+        public static IMode createInstantMode(DateTime startdate, DateTime enddate, List<string> selectedcolumn)
+        {
+            return new InstantMode(startdate, enddate, selectedcolumn);
+        }
+
+        public static IMode createMonthMode(DayOfWeek triggerDayOfWeek, TimeOnly triggerHour, List<string> selectedcolumn)
+        {
+            return new MonthMode(triggerDayOfWeek, triggerHour, selectedcolumn);
+        }
+
+        public static IMode createTestMode(DateTime, List<string> selectedcolumn)
+        {
+            return new TestMode(triggerDateTime, selectedcolumn);
         }
 
         /// <summary>

@@ -2,6 +2,7 @@
 using PowerPeg_SQL_to_CSV.Gateway;
 using PowerPeg_SQL_to_CSV.Log;
 using PowerPeg_SQL_to_CSV.ProcessTask;
+using Quartz.Xml.JobSchedulingData20;
 using System.Data;
 using System.Diagnostics;
 
@@ -10,9 +11,9 @@ namespace PowerPeg_SQL_to_CSV.Mode
     public class MonthMode : IMode
     {
         private string modeName;
-        private DateTime triggerDateTime;
+        private DayOfWeek triggerDay;
+        private TimeOnly triggerTime;
         private DateTime lastRunDateTime;
-        private bool selectThisMonth;
         private List<string> selectColumn = new List<string>();
 
         private static readonly ILog log = LogHelper.getLogger();
@@ -23,32 +24,32 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
         /// <param name="selectThis">Select the duration, for the true: use current month's day; for false, use previous month day</param>
         /// <param name="selection">List of selected column name</param>
-        public MonthMode(DateTime triggerDate, bool selectThis, List<string> selection)
+        public MonthMode(DayOfWeek triggerDay, TimeOnly triggerTime, List<string> selection)
         {
-            modeName = "MonthMode";
-            triggerDateTime = triggerDate;
-            this.selectThisMonth = selectThis;
-            selectColumn = selection;
-            lastRunDateTime = new DateTime(1999, triggerDate.Month,triggerDate.Day, triggerDate.Hour, triggerDate.Minute, triggerDate.Second);
+            this.modeName = "MonthMode";
+            this.triggerDay = triggerDay;
+            this.triggerTime = triggerTime;
+            this.selectColumn = selection;
+            //Force it to run once in the upcoming month
+            DateTime initializeLastRun = DateTime.Now.AddMonths(-1);
+            this.lastRunDateTime = getFirstWeekofDay(initializeLastRun);
         }
 
-        /// <summary>
-        /// Get the frequency day's gap
-        /// True: Using the tigger month
-        /// False: Using the tigger month's previous month
-        /// </summary>
-        /// <param name="runDateTime"></param>
-        /// <returns></returns>
-        private int getMonthLength(DateTime runDateTime)
+        public DateTime getFirstWeekofDay(DateTime target)
         {
-            if (selectThisMonth)
+            DateTime resultDate = new DateTime(target.Year, target.Month, 1);
+            while (resultDate.DayOfWeek != this.triggerDay)
             {
-                return DateTime.DaysInMonth(runDateTime.Year, runDateTime.Month);
+                resultDate = resultDate.AddDays(1);
             }
-            else
-            {
-                return DateTime.DaysInMonth(runDateTime.AddMonths(-1).Year, runDateTime.AddMonths(-1).Month);
-            }
+
+            return resultDate;
+        } 
+
+
+        public DateTime findNextTriggerDateTime()
+        {
+            return getFirstWeekofDay(this.lastRunDateTime);
         }
 
         /// <summary>
@@ -58,19 +59,19 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <returns>Return bool</returns>
         private bool needRun(DateTime runDateTime)
         {
-            int monthLength = getMonthLength(runDateTime);
+            DateTime nextRunTime = findNextTriggerDateTime();
 
-            int daysFromLastRun = (int)runDateTime.Subtract(lastRunDateTime).TotalDays;
+            int daysFromLastRun = (int)runDateTime.Subtract(nextRunTime).TotalDays;
 
-            if (daysFromLastRun >= monthLength && runDateTime.Hour == this.triggerDateTime.Hour)
+            if (daysFromLastRun == 0 && runDateTime.Hour == this.triggerTime.Hour)
             {
-                log.Info($"Need to run search as last run time: {this.lastRunDateTime} time from last run: {daysFromLastRun} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerDateTime.Hour} ");
+                log.Info($"Run search - last run time: {this.lastRunDateTime} next run time: {nextRunTime} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime.Hour} ");
                 return true;
             }
             else
             {
-                log.Info($"No need to run search as last run time: {this.lastRunDateTime} time from last run: {daysFromLastRun} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerDateTime.Hour}");
-                return false;
+                log.Info($"No run search - last run time: {this.lastRunDateTime} next run time: {nextRunTime} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime.Hour} ");
+                return true;
             }
         }
 
@@ -80,21 +81,14 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
             if (needRun(runDateTime))
             {
-                DateTime startSearchDay;
-                DateTime endSearchDay;
-
-                endSearchDay = runDateTime;
-
-                int length = getMonthLength(runDateTime);
-
-                startSearchDay = endSearchDay.AddDays(-length);
-
-                DateTime pStartSearchDay = new DateTime(startSearchDay.Year,startSearchDay.Month,startSearchDay.Day,00,00,00);
-                DateTime pEndSearchDay = new DateTime(endSearchDay.Year, endSearchDay.Month, endSearchDay.Day, 23, 59, 59);
+                //Start day inclusive, End day exclusive
+                DateTime lastMonth = runDateTime.AddMonths(-1);
+                DateTime startSearchDay = new DateTime(lastMonth.Year, lastMonth.Month, 1,00,00,00);
+                DateTime endSearchDay = new DateTime(runDateTime.Year, runDateTime.Month, 1, 00, 00, 00);
 
                 Result res = new Result(runDateTime);
 
-                res = SQLProcessFunction.processAllDBTable(pStartSearchDay, pEndSearchDay, this.selectColumn, res);
+                res = SQLProcessFunction.processAllDBTable(startSearchDay, endSearchDay, this.selectColumn, res);
 
                 this.lastRunDateTime = runDateTime;
                 return res;
@@ -106,28 +100,22 @@ namespace PowerPeg_SQL_to_CSV.Mode
             
         }
 
+        /// <summary>
+        /// Get the mode information
+        /// </summary>
+        /// <returns>return "Mode Name", "Trigger Week of Day", "Trigger Hour", "Selection List"</returns>
         public string[] getInfo()
         {
             string selectionStr = string.Join(", ", selectColumn);
 
-            string[] output = { modeName, triggerDateTime.ToString(), selectionStr, selectThisMonth.ToString() };
+            string[] output = { this.modeName, this.triggerDay.ToString(), triggerTime.Hour.ToString(), selectionStr};
 
             return output;
         }
 
-        public DateTime getTriggerDateTime()
-        {
-            return triggerDateTime;
-        }
-
-        public List<string> getSelectColumn()
-        {
-            return selectColumn;
-        }
-
         public override string ToString()
         {
-            return $"Mode: {this.modeName}\r\nFirst trigger Day (Inclusive): {this.triggerDateTime.ToString()}\r\nLast Search Day (Exclusive): {this.lastRunDateTime.ToString()}\r\nSelect day duration of current trigger month: {this.selectThisMonth.ToString()}\r\nSelected Field: {string.Join(",", this.selectColumn)}";
+            return $"Mode: {this.modeName}\r\nTrigger Week of day: {this.triggerDay.ToString()}\r\nTrigger hour: {this.triggerTime.ToString()}\r\nLast Trigger Date: {this.lastRunDateTime.ToString()}\r\nSelected Field: {string.Join(",", this.selectColumn)}";
         }
     }
 }

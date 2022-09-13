@@ -12,7 +12,6 @@ namespace PowerPeg_SQL_to_CSV.Mode
         private string modeName;
         private DateTime startSearchDay;
         private DateTime endSearchDay;
-        private DateTime triggerDateTime;
         private List<string> selectColumn = new List<string>();
         private static readonly ILog log = LogHelper.getLogger();
 
@@ -23,15 +22,19 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <param name="endDate">End DateTime of the search</param>
         /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
         /// <param name="selection">List of selected column name</param>
-        public InstantMode(DateTime startDate, DateTime endDate, DateTime triggerDate, List<string> selection)
+        public InstantMode(DateTime startDate, DateTime endDate, List<string> selection)
         {
             modeName = "InstantMode";
             startSearchDay = new DateTime(startDate.Year, startDate.Month, startDate.Day, 00, 00, 00);
             endSearchDay = new DateTime(endDate.Year, endDate.Month, endDate.Day, 23, 59, 59);
-            triggerDateTime = triggerDate;
             selectColumn = selection;
         }
 
+        /// <summary>
+        /// Run the search of the search task according to Mode (Interface)
+        /// </summary>
+        /// <param name="runDateTime">Provide the current DateTime</param>
+        /// <returns>Return an Result object</returns>
         public Result runSearch(DateTime runDateTime)
         {
             log.Info($"Trigger instant mode search: " + String.Join(", ", getInfo()));
@@ -44,23 +47,17 @@ namespace PowerPeg_SQL_to_CSV.Mode
             return SQLProcessFunction.processAllDBTable(this.startSearchDay, this.endSearchDay, this.selectColumn, res);
         }
 
+        /// <summary>
+        /// Get the mode information
+        /// </summary>
+        /// <returns>return "Mode Name", "Start Search Day", "End Search Day" "Selection List"</returns>
         public string[] getInfo()
         {
             string selectionStr = string.Join(", ", selectColumn);
 
-            string[] output = { modeName, triggerDateTime.ToString(), startSearchDay.ToString(), endSearchDay.ToString(), selectionStr };
+            string[] output = { modeName, startSearchDay.ToString(), endSearchDay.ToString(), selectionStr };
 
             return output;
-        }
-
-        public DateTime getTriggerDateTime()
-        {
-            return triggerDateTime;
-        }
-
-        public List<string> getSelectColumn()
-        {
-            return selectColumn;
         }
 
         public override string ToString()
