@@ -2,6 +2,7 @@
 using PowerPeg_SQL_to_CSV.Log;
 using Quartz;
 using Quartz.Impl;
+using System.Diagnostics;
 
 namespace PowerPeg_SQL_to_CSV.ProcessTask
 {

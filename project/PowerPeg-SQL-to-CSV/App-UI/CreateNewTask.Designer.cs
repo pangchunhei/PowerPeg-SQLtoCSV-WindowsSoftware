@@ -167,7 +167,7 @@
             this.generateBtn.TabIndex = 64;
             this.generateBtn.Text = "Create";
             this.generateBtn.UseVisualStyleBackColor = false;
-            this.generateBtn.Click += new System.EventHandler(this.createBtn_Click);
+            this.generateBtn.Click += new System.EventHandler(this.generateBtn_Click);
             // 
             // outputLoactionLabel
             // 

@@ -2,8 +2,10 @@
 using PowerPeg_SQL_to_CSV.Gateway;
 using PowerPeg_SQL_to_CSV.Mode;
 using PowerPeg_SQL_to_CSV.ProcessTask;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 using PowerPeg_SQL_to_CSV.Log;
+using Quartz;
 
 namespace PowerPeg_SQL_to_CSV
 {
@@ -15,20 +17,20 @@ namespace PowerPeg_SQL_to_CSV
         
         private static BackgroundScheduler backgroundScheduler = null;
 
-        private static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
-
         /// <summary>
         /// Create the mode object
+        /// TODO-- If have new mode, need to update here
         /// </summary>
-        /// <param name="selectmode">Select the mode of "InstantMode" or "MonthMode" or "TestMode"(For testing)</param>
+        /// <param name="selectmode">Select the mode of "InstantMode" or "MonthMode" or "MinuteMode"(For testing)</param>
+        /// <param name="triggerdate">Select the first time to trigger datetime</param>
         /// <param name="selectedcolumn">Provide the list of selected column name</param>
-        /// <param name="i_startdate"></param>[InstantMode] - Select the specific start datetime
-        /// <param name="i_enddate"></param>[InstantMode] - Select the specific end datetime
-        /// <param name="m_triggerdayofweek"></param>[MonthMode] - Select the trigger week of day
-        /// <param name="m_triggerhour"></param>[MonthMode] - Select the trigger hour
-        /// <param name="t_triggerdatetime">[TestMode] - Select the first time to trigger datetime</param>
+        /// <param name="startdate">(For instant mode) Select the specific start datetime</param>
+        /// <param name="enddate">(For instant mode)Select the specific end datetime</param>
+        /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
         /// <returns>Return the specific mode object</returns>
         /// <exception cref="Exception"></exception>
+        private static DatabaseGateway databaseGateway = DatabaseGateway.getInstance();
+        
         private static IMode CreateMode(string selectmode, List<string> selectedcolumn, DateTime? i_startdate = null, DateTime? i_enddate = null, DayOfWeek? m_triggerdayofweek = null, TimeOnly? m_triggerhour = null, DateTime? t_triggerdatetime = null)
         {
             log.Debug("Run CreateMode");
@@ -48,7 +50,7 @@ namespace PowerPeg_SQL_to_CSV
             {
                 if(m_triggerdayofweek != null && m_triggerhour != null)
                 {
-                    return new MonthMode((DayOfWeek)m_triggerdayofweek, (TimeOnly)m_triggerhour, selectedcolumn);
+                    return new MonthMode(triggerdate, (bool)selectThis, selectedcolumn);
                 }
                 else
                 {
@@ -57,14 +59,7 @@ namespace PowerPeg_SQL_to_CSV
             }
             else if (selectmode.Equals("TestMode"))
             {
-                if (m_triggerdayofweek != null && m_triggerhour != null)
-                {
-                    return new MonthMode((DayOfWeek)m_triggerdayofweek, (TimeOnly)m_triggerhour, selectedcolumn);
-                }
-                else
-                {
-                    throw new Exception("TODO-- Need to have triggerdate");
-                }
+                return new TestMode(triggerdate, selectedcolumn);
             }
             else
             {
@@ -72,24 +67,38 @@ namespace PowerPeg_SQL_to_CSV
             }
         }
 
+        public static IMode createInstantMode(DateTime startDate, DateTime endDate, List<string> selectedcolumn)
+        {
+            return 
+        }
+
+        public static IMode createMonthMode(DayOfWeek triggerDayOfWeek, TimeOnly triggerHour, List<string> selectedcolumn)
+        {
+            return new MonthMode(triggerDayOfWeek, triggerHour, selectedcolumn);
+        }
+
+        public static IMode createTestMode(DateTime triggerDateTime, List<string> selectedcolumn)
+        {
+            return new TestMode(triggerDateTime, selectedcolumn);
+        }
+
         /// <summary>
         /// Create new search task
         /// </summary>
         /// <param name="selectmodename">Select the mode of "InstantMode" or "MonthMode" or "TestMode"(For testing)</param>
         /// <param name="outputlocation">Select the wanted CSV location</param>
+        /// <param name="triggerdate">Select the first time to trigger datetime</param>
         /// <param name="selectedcolumn">Provide the list of selected column name</param>
-        /// <param name="i_startdate"></param>[InstantMode] - Select the specific start datetime
-        /// <param name="i_enddate"></param>[InstantMode] - Select the specific end datetime
-        /// <param name="m_triggerdayofweek"></param>[MonthMode] - Select the trigger week of day
-        /// <param name="m_triggerhour"></param>[MonthMode] - Select the trigger hour
-        /// <param name="t_triggerdatetime">[TestMode] - Select the first time to trigger datetime</param>
-        /// <param name="taskname">[For schedule task] - Search task name</param>
+        /// <param name="startdate">(For instant mode) Select the specific start datetime</param>
+        /// <param name="enddate">(For instant mode) Select the specific end datetime</param>
+        /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
+        /// <param name="taskname">(Optional) Search task name</param>
         /// <returns>Return search task object</returns>
         public static SearchTask CreateTask(string selectmodename, string outputlocation, List<string> selectedcolumn, DateTime? i_startdate = null, DateTime? i_enddate = null, DayOfWeek? m_triggerdayofweek = null, TimeOnly? m_triggerhour = null, DateTime? t_triggerdatetime = null, string taskname = "default")
         {
             log.Debug("Run CreateTask");
 
-            IMode m = CreateMode(selectmodename, selectedcolumn, i_startdate, i_enddate, m_triggerdayofweek, m_triggerhour, t_triggerdatetime);
+            IMode m = CreateMode(selectmodename, triggerdate, selectedcolumn, startdate, enddate, selectThis);
 
             string modifyName = Regex.Replace(taskname, @"(\s+|\.|\,|\:|\*|&|\?|\/|#|\\|%|\^|\$|@|!|\(|\))", "");
 
@@ -111,17 +120,16 @@ namespace PowerPeg_SQL_to_CSV
         /// Update the search task setting
         /// </summary>
         /// <param name="searchtask">Search task object that wanted to be updated</param>
+        /// <param name="selectmode">Updated mode</param>
         /// <param name="outputlocation">Updated CSV file location</param>
-        /// <param name="selectmodename">Updated mode</param>
-        /// <param name="selectedcolumn">Provide the list of selected column name</param>
-        /// <param name="m_triggerdayofweek">[MonthMode] - Select the trigger week of day</param>
-        /// <param name="m_triggerhour">[MonthMode] - Select the trigger hour</param>
-        /// <param name="t_triggerdatetime">[TestMode] - Updated first time trigger date</param>
-        public static void updateTaskSetting(SearchTask searchtask, string outputlocation, string selectmodename, List<string> selectedcolumn, DayOfWeek? m_triggerdayofweek = null, TimeOnly? m_triggerhour = null, DateTime? t_triggerdatetime = null)
+        /// <param name="triggerdate">Updated first time trigger date</param>
+        /// <param name="selectThis">(For Month mode) Select the duration, for the true: use trigger month's day; for false, use trigger month's previous month day</param>
+        /// <param name="selectedcolumn">Updated list of selected column</param>
+        public static void updateTaskSetting(SearchTask searchtask, string selectmode, string outputlocation, DateTime triggerdate, List<string> selectedcolumn, bool? selectThis = null)
         {
             log.Debug("Run updateTaskSetting");
 
-            IMode m = CreateMode(selectmodename, selectedcolumn, m_triggerdayofweek: m_triggerdayofweek, m_triggerhour: m_triggerhour, t_triggerdatetime: t_triggerdatetime);
+            IMode m = CreateMode(selectmode, triggerdate, selectedcolumn, selectThis: selectThis);
 
             searchtask.updateTaskSetting(outputlocation, m);
 
@@ -220,6 +228,19 @@ namespace PowerPeg_SQL_to_CSV
 
             backgroundScheduler = new BackgroundScheduler();
             await backgroundScheduler.runAsync();
+        }
+
+        /// <summary>
+        /// Restart the running of the background jobs
+        /// </summary>
+        /// <returns></returns>
+        public static async Task reStartBackgroundJob()
+        {
+            log.Debug("Run reStartBackgroundJob");
+
+            await stopBackgroundJob();
+
+            await startBackgroundJob();
         }
 
         /// <summary>

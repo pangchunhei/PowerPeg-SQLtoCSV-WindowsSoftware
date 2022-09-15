@@ -32,8 +32,7 @@ namespace App_UI
             this.task = MainFunction.findTaskObject(selectedTaskName);
 
             this.taskNameDataLabel.Text = task.getTaskInfo()[0];
-            //TODO-- getTrigger
-            //this.triggerDateTimePicker.Value = task.getMode().getTriggerDateTime();
+            this.triggerDateTimePicker.Value = task.getMode().getTriggerDateTime();
 
             /*
             TODO-- Select specific device
@@ -108,8 +107,7 @@ namespace App_UI
             string filepath = GlobalFunction.valildateFilepath(this.frequencyCoboBox.Text, this.filePathDataLabel.Text);
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-            //TODO-- Update the update UI
-            //MainFunction.updateTaskSetting(this.task, filepath, this.frequencyCoboBox.Text, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value);
+            MainFunction.updateTaskSetting(this.task, this.frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value);
             GlobalFunction.statusUpdate(statusUpdateLabel, $"Update finished, the following are the new settings: \r\n{task}", true);
         }
 
