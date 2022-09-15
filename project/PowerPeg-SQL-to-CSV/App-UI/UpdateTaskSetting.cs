@@ -86,12 +86,13 @@ namespace App_UI
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Updating " + TypeDescriptor.GetClassName(this), false);
 
-            string filepath = GlobalFunction.valildateFilepath(this.frequencyCoboBox.Text, this.filePathDataLabel.Text);
-
+            string filepath = GlobalFunction.valildateFilepath(frequencyCoboBox.Text, this.filePathDataLabel.Text);
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
-            //TODO-- Update the update UI
-            //MainFunction.updateTaskSetting(this.task, filepath, this.frequencyCoboBox.Text, this.triggerDateTimePicker.Value, selectCol, ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value);
-            GlobalFunction.statusUpdate(statusUpdateLabel, $"Update finished, the following are the new settings: \r\n{task}", true);
+            DayOfWeek dayOfWeek = ((KeyValuePair<string, DayOfWeek>)this.triggerWeekDayComboBox.SelectedItem).Value;
+            int hour = Convert.ToInt32(Math.Round(this.triggerHourUpDown.Value, 0));
+
+            MainFunction.updateTaskSetting(this.task, filepath, this.frequencyCoboBox.Text, selectCol, dayOfWeek, hour, this.triggerDateTimePicker.Value);
+            GlobalFunction.statusUpdate(statusUpdateLabel, $"Update finished, the following are the new settings: \r\n{this.task}", true);
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
