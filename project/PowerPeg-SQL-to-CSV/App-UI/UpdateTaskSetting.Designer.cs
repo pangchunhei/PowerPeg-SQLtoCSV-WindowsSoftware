@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.frequencyCoboBox = new System.Windows.Forms.ComboBox();
             this.frequenceLabel = new System.Windows.Forms.Label();
+            this.selectThisCoboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // taskNameDataLabel
@@ -262,12 +263,24 @@
             this.frequenceLabel.TabIndex = 88;
             this.frequenceLabel.Text = "Frequency:";
             // 
+            // selectThisCoboBox
+            // 
+            this.selectThisCoboBox.AccessibleName = "selectThisCoboBox";
+            this.selectThisCoboBox.FormattingEnabled = true;
+            this.selectThisCoboBox.Location = new System.Drawing.Point(371, 188);
+            this.selectThisCoboBox.Name = "selectThisCoboBox";
+            this.selectThisCoboBox.Size = new System.Drawing.Size(282, 28);
+            this.selectThisCoboBox.TabIndex = 90;
+            this.selectThisCoboBox.Visible = false;
+            this.selectThisCoboBox.DropDown += new System.EventHandler(this.AdjustWidthComboBox_DropDown);
+            // 
             // UpdateTaskSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.selectThisCoboBox);
             this.Controls.Add(this.frequencyCoboBox);
             this.Controls.Add(this.frequenceLabel);
             this.Controls.Add(this.label1);
@@ -315,5 +328,6 @@
         private Label label1;
         private ComboBox frequencyCoboBox;
         private Label frequenceLabel;
+        private ComboBox selectThisCoboBox;
     }
 }
