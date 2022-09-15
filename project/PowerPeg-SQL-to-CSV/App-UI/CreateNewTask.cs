@@ -87,7 +87,10 @@ namespace App_UI
             this.selectedColListBox.SelectedItem = "-- All --";
 
             GlobalFunction.createModeTypeDropDown(this.frequencyCoboBox);
+            this.frequencyCoboBox.SelectedIndex = 0;
+
             GlobalFunction.createMonthModeWeekOfDayDropDown(this.triggerWeekDayComboBox);
+            this.triggerWeekDayComboBox.SelectedIndex = 0;
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }

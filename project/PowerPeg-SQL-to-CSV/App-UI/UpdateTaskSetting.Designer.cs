@@ -254,7 +254,7 @@
             // 
             this.testGroupBox.Controls.Add(this.triggerDateTimePicker);
             this.testGroupBox.Controls.Add(this.label2);
-            this.testGroupBox.Location = new System.Drawing.Point(102, 219);
+            this.testGroupBox.Location = new System.Drawing.Point(102, 218);
             this.testGroupBox.Name = "testGroupBox";
             this.testGroupBox.Size = new System.Drawing.Size(521, 65);
             this.testGroupBox.TabIndex = 91;

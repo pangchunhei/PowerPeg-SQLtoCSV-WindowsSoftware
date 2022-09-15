@@ -142,7 +142,6 @@ namespace App_UI
             {
                 frequencyCoboBox.Items.Add(s);
             }
-            frequencyCoboBox.SelectedIndex = 0;
         }
 
         public static void createMonthModeWeekOfDayDropDown(ComboBox triggerWeekDayComboBox)
@@ -160,8 +159,6 @@ namespace App_UI
             triggerWeekDayComboBox.DataSource = new BindingSource(weekOfDay, null);
             triggerWeekDayComboBox.DisplayMember = "Key";
             triggerWeekDayComboBox.ValueMember = "Value";
-
-            triggerWeekDayComboBox.SelectedIndex = 0;
         }
 
         public static void updateModeSettingOption(string selectedMode, GroupBox monthGroupBox, GroupBox testGroupBox)

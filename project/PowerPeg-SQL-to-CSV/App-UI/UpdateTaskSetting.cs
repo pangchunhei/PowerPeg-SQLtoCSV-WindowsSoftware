@@ -61,14 +61,17 @@ namespace App_UI
             selectedColListBox.Items.Add("-- All --");
             selectedColListBox.SelectedItems.Add("-- All --");
 
-            List<string> col3 = MainFunction.getGenerationScheduledModeName();
-
-            foreach (string s in col3)
-            {
-                frequencyCoboBox.Items.Add(s);
-            }
+            GlobalFunction.createModeTypeDropDown(this.frequencyCoboBox);
             frequencyCoboBox.SelectedItem = task.getTaskInfo()[2];
 
+            GlobalFunction.createMonthModeWeekOfDayDropDown(this.triggerWeekDayComboBox);
+            if (task.getTaskInfo()[2].Equals("MonthMode"))
+            {
+                string selectDay = task.getTaskInfo()[3];
+                int num = Convert.ToInt32(task.getTaskInfo()[4]);
+                this.triggerWeekDayComboBox.SelectedIndex = this.triggerWeekDayComboBox.FindStringExact(selectDay);
+                this.triggerHourUpDown.Value = num;
+            }
             filePathDataLabel.Text = task.getTaskInfo()[1];
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
@@ -114,11 +117,7 @@ namespace App_UI
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-        }
-
-        private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
-        {
-            GlobalFunction.adjustCoboBoxDropdownWidth((ComboBox)sender);
+            GlobalFunction.updateModeSettingOption(this.frequencyCoboBox.Text, this.monthGroupBox, this.testGroupBox);
         }
 
         //TODO-- CHnage the quick select for the previous month

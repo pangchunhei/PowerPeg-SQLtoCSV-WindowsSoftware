@@ -68,7 +68,7 @@ namespace PowerPeg_SQL_to_CSV
         /// Get the information of the search task settings
         /// </summary>
         /// <returns>
-        /// Return "Task Name", "Output Location", "Mode Name", "Trigger DateTime", "Start Search Date", "End Search Date", "Selected Column List, "(Select This)"
+        /// Return "Task Name", "Output Location", "-Mode Info-"
         /// </returns>
         public string[] getTaskInfo()
         {
