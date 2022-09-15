@@ -69,6 +69,8 @@ namespace App_UI
             }
             frequencyCoboBox.SelectedItem = task.getTaskInfo()[2];
 
+            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
+
             if (task.getTaskInfo()[2] == "MonthMode")
             {
                 if (Convert.ToBoolean(task.getTaskInfo()[task.getTaskInfo().Length - 1]))
@@ -134,6 +136,7 @@ namespace App_UI
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
         }
 
         private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
