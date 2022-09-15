@@ -82,7 +82,7 @@ namespace App_UI
             selectedColListBox.SelectedItem = "-- All --";
             */
 
-            this.triggerDateTimePicker.Value = DateTime.Now;
+            //TODO--this.triggerDateTimePicker.Value = DateTime.Now;
 
             this.selectedColListBox.Items.Add("-- All --");
             this.selectedColListBox.SelectedItem = "-- All --";
@@ -94,8 +94,6 @@ namespace App_UI
                 frequencyCoboBox.Items.Add(s);
             }
             frequencyCoboBox.SelectedIndex = 0;
-
-            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
@@ -114,9 +112,9 @@ namespace App_UI
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(frequencyCoboBox.Text == ""
+            //TODO-- if(frequencyCoboBox.Text == ""
 
-            this.selectThisCoboBox.SelectedIndex = 0;
+            //TODO-- this.selectThisCoboBox.SelectedIndex = 0;
         }
 
         private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
