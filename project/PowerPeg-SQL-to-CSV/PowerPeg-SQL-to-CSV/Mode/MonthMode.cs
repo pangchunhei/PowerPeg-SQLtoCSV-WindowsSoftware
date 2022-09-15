@@ -32,7 +32,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
             this.lastRunDateTime = getFirstWeekofDay(initializeLastRun);
         }
 
-        public DateTime getFirstWeekofDay(DateTime target)
+        private DateTime getFirstWeekofDay(DateTime target)
         {
             DateTime resultDate = new DateTime(target.Year, target.Month, 1);
             while (resultDate.DayOfWeek != this.triggerDay)
@@ -109,7 +109,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             string selectionStr = string.Join(", ", selectColumn);
 
-            string[] output = { this.modeName, this.triggerDay.ToString(), triggerTime.ToString(), selectionStr};
+            string[] output = { this.modeName, this.triggerDay.ToString(), this.triggerTime.ToString(), selectionStr};
 
             return output;
         }
