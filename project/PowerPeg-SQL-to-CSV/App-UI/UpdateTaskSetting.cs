@@ -69,22 +69,6 @@ namespace App_UI
             }
             frequencyCoboBox.SelectedItem = task.getTaskInfo()[2];
 
-            if (task.getTaskInfo()[2] == "MonthMode")
-            {
-                if (Convert.ToBoolean(task.getTaskInfo()[task.getTaskInfo().Length - 1]))
-                {
-                    selectThisCoboBox.SelectedIndex = 0;
-                }
-                else
-                {
-                    selectThisCoboBox.SelectedIndex = 1;
-                }
-            }
-            else
-            {
-                selectThisCoboBox.SelectedIndex = 0;
-            }
-
             filePathDataLabel.Text = task.getTaskInfo()[1];
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
@@ -92,11 +76,7 @@ namespace App_UI
 
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
         {
-            filePathDataLabel.Text = GlobalFunction.exploreFilePath();
-
-            filePathDataLabel.Text = GlobalFunction.valildateFilepath(this.frequencyCoboBox.Text, filePathDataLabel.Text);
-
-            this.filePathDataLabel.Visible = true;
+            GlobalFunction.exploreFilePath(filePathDataLabel);
         }
 
         private void updateBtn_Click(object sender, EventArgs e)

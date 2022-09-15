@@ -4,6 +4,7 @@ using PowerPeg_SQL_to_CSV.Mode;
 using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Text.RegularExpressions;
 using PowerPeg_SQL_to_CSV.Log;
+using Quartz;
 
 namespace PowerPeg_SQL_to_CSV
 {
@@ -29,7 +30,7 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="t_triggerdatetime">[TestMode] - Select the first time to trigger datetime</param>
         /// <returns>Return the specific mode object</returns>
         /// <exception cref="Exception"></exception>
-        private static IMode CreateMode(string selectmode, List<string> selectedcolumn, DateTime? i_startdate = null, DateTime? i_enddate = null, DayOfWeek? m_triggerdayofweek = null, TimeOnly? m_triggerhour = null, DateTime? t_triggerdatetime = null)
+        private static IMode CreateMode(string selectmode, List<string> selectedcolumn, DateTime? i_startdate = null, DateTime? i_enddate = null, DayOfWeek? m_triggerdayofweek = null, int? m_triggerhour = null, DateTime? t_triggerdatetime = null)
         {
             log.Debug("Run CreateMode");
 
@@ -48,7 +49,7 @@ namespace PowerPeg_SQL_to_CSV
             {
                 if(m_triggerdayofweek != null && m_triggerhour != null)
                 {
-                    return new MonthMode((DayOfWeek)m_triggerdayofweek, (TimeOnly)m_triggerhour, selectedcolumn);
+                    return new MonthMode((DayOfWeek)m_triggerdayofweek, (int)m_triggerhour, selectedcolumn);
                 }
                 else
                 {
@@ -57,9 +58,9 @@ namespace PowerPeg_SQL_to_CSV
             }
             else if (selectmode.Equals("TestMode"))
             {
-                if (m_triggerdayofweek != null && m_triggerhour != null)
+                if (t_triggerdatetime != null)
                 {
-                    return new MonthMode((DayOfWeek)m_triggerdayofweek, (TimeOnly)m_triggerhour, selectedcolumn);
+                    return new TestMode((DateTime)t_triggerdatetime, selectedcolumn);
                 }
                 else
                 {
@@ -85,7 +86,7 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="t_triggerdatetime">[TestMode] - Select the first time to trigger datetime</param>
         /// <param name="taskname">[For schedule task] - Search task name</param>
         /// <returns>Return search task object</returns>
-        public static SearchTask CreateTask(string selectmodename, string outputlocation, List<string> selectedcolumn, DateTime? i_startdate = null, DateTime? i_enddate = null, DayOfWeek? m_triggerdayofweek = null, TimeOnly? m_triggerhour = null, DateTime? t_triggerdatetime = null, string taskname = "default")
+        public static SearchTask CreateTask(string selectmodename, string outputlocation, List<string> selectedcolumn, DateTime? i_startdate = null, DateTime? i_enddate = null, DayOfWeek? m_triggerdayofweek = null, int? m_triggerhour = null, DateTime? t_triggerdatetime = null, string taskname = "default")
         {
             log.Debug("Run CreateTask");
 
@@ -117,7 +118,7 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="m_triggerdayofweek">[MonthMode] - Select the trigger week of day</param>
         /// <param name="m_triggerhour">[MonthMode] - Select the trigger hour</param>
         /// <param name="t_triggerdatetime">[TestMode] - Updated first time trigger date</param>
-        public static void updateTaskSetting(SearchTask searchtask, string outputlocation, string selectmodename, List<string> selectedcolumn, DayOfWeek? m_triggerdayofweek = null, TimeOnly? m_triggerhour = null, DateTime? t_triggerdatetime = null)
+        public static void updateTaskSetting(SearchTask searchtask, string outputlocation, string selectmodename, List<string> selectedcolumn, DayOfWeek? m_triggerdayofweek = null, int? m_triggerhour = null, DateTime? t_triggerdatetime = null)
         {
             log.Debug("Run updateTaskSetting");
 

@@ -38,11 +38,11 @@ namespace App_UI
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing" + TypeDescriptor.GetClassName(this), false);
 
             string filepath = GlobalFunction.valildateFilepath(frequencyCoboBox.Text, this.filePathDataLabel.Text);
-
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
+            DayOfWeek dayOfWeek = ((KeyValuePair<string, DayOfWeek>)this.triggerWeekDayComboBox.SelectedItem).Value;
+            int hour = Convert.ToInt32(Math.Round(this.triggerHourUpDown.Value, 0));
 
-            //TODO-- Update
-            /*SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, selectThis: ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value, taskname: taskNameDataLabel.Text);
+            SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filepath, selectCol, m_triggerdayofweek: dayOfWeek, m_triggerhour: hour, t_triggerdatetime: this.triggerDateTimePicker.Value, taskname: taskNameDataLabel.Text);
 
             if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
             {
@@ -64,7 +64,6 @@ namespace App_UI
                 GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the settings, discard task.", true);
                 resetForm();
             }
-            */
         }
 
         private void CreateNewTask_Load(object sender, EventArgs e)
@@ -82,26 +81,20 @@ namespace App_UI
             selectedColListBox.SelectedItem = "-- All --";
             */
 
-            this.triggerDateTimePicker.Value = DateTime.Now;
+            //TODO--this.triggerDateTimePicker.Value = DateTime.Now;
 
             this.selectedColListBox.Items.Add("-- All --");
             this.selectedColListBox.SelectedItem = "-- All --";
 
-            List<string> col2 = MainFunction.getGenerationScheduledModeName();
-
-            foreach (string s in col2)
-            {
-                frequencyCoboBox.Items.Add(s);
-            }
-            frequencyCoboBox.SelectedIndex = 0;
+            GlobalFunction.createModeTypeDropDown(this.frequencyCoboBox);
+            GlobalFunction.createMonthModeWeekOfDayDropDown(this.triggerWeekDayComboBox);
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
         {
-            filePathDataLabel.Text = GlobalFunction.exploreFilePath();
-            this.filePathDataLabel.Visible = true;
+            GlobalFunction.exploreFilePath(filePathDataLabel);
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -112,11 +105,7 @@ namespace App_UI
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-        }
-
-        private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
-        {
-            GlobalFunction.adjustCoboBoxDropdownWidth((ComboBox)sender);
+            GlobalFunction.updateModeSettingOption(this.frequencyCoboBox.Text, this.monthGroupBox, this.testGroupBox);
         }
     }
 }

@@ -38,9 +38,7 @@ namespace App_UI
 
         private void getFileExplorerBtn_Click(object sender, EventArgs e)
         {
-            filePathDataLabel.Text = GlobalFunction.exploreFilePath();
-            this.filePathDataLabel.Visible = true;
-
+            GlobalFunction.exploreFilePath(filePathDataLabel);
         }
 
         public void resetForm()

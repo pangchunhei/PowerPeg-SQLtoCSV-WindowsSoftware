@@ -80,7 +80,7 @@
             this.serverInfoDataLabel.AccessibleName = "serverInfoDataLabel";
             this.serverInfoDataLabel.AutoSize = true;
             this.serverInfoDataLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.serverInfoDataLabel.Location = new System.Drawing.Point(295, 110);
+            this.serverInfoDataLabel.Location = new System.Drawing.Point(282, 112);
             this.serverInfoDataLabel.Name = "serverInfoDataLabel";
             this.serverInfoDataLabel.Size = new System.Drawing.Size(170, 28);
             this.serverInfoDataLabel.TabIndex = 2;

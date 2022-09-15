@@ -12,7 +12,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
     {
         private string modeName;
         private DayOfWeek triggerDay;
-        private TimeOnly triggerTime;
+        private int triggerTime;
         private DateTime lastRunDateTime;
         private List<string> selectColumn = new List<string>();
 
@@ -21,10 +21,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <summary>
         /// Create and change mode of Month Mode
         /// </summary>
-        /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
-        /// <param name="selectThis">Select the duration, for the true: use current month's day; for false, use previous month day</param>
-        /// <param name="selection">List of selected column name</param>
-        public MonthMode(DayOfWeek triggerDay, TimeOnly triggerTime, List<string> selection)
+        public MonthMode(DayOfWeek triggerDay, int triggerTime, List<string> selection)
         {
             this.modeName = "MonthMode";
             this.triggerDay = triggerDay;
@@ -49,7 +46,9 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         public DateTime findNextTriggerDateTime()
         {
-            return getFirstWeekofDay(this.lastRunDateTime);
+            //TODO-- Update
+            DateTime next = this.lastRunDateTime.AddMonths(1);
+            return getFirstWeekofDay(next);
         }
 
         /// <summary>
@@ -63,15 +62,15 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
             int daysFromLastRun = (int)runDateTime.Subtract(nextRunTime).TotalDays;
 
-            if (daysFromLastRun == 0 && runDateTime.Hour == this.triggerTime.Hour)
+            if (daysFromLastRun == 0 && runDateTime.Hour == this.triggerTime)
             {
-                log.Info($"Run search - last run time: {this.lastRunDateTime} next run time: {nextRunTime} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime.Hour} ");
+                log.Info($"Run search - last run time: {this.lastRunDateTime} next run time: {nextRunTime} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime} ");
                 return true;
             }
             else
             {
-                log.Info($"No run search - last run time: {this.lastRunDateTime} next run time: {nextRunTime} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime.Hour} ");
-                return true;
+                log.Info($"No run search - last run time: {this.lastRunDateTime} next run time: {nextRunTime} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime} ");
+                return false;
             }
         }
 
@@ -108,7 +107,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             string selectionStr = string.Join(", ", selectColumn);
 
-            string[] output = { this.modeName, this.triggerDay.ToString(), triggerTime.Hour.ToString(), selectionStr};
+            string[] output = { this.modeName, this.triggerDay.ToString(), triggerTime.ToString(), selectionStr};
 
             return output;
         }

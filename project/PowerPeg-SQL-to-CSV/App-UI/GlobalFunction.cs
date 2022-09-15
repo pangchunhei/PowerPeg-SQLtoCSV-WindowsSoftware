@@ -24,7 +24,7 @@ namespace App_UI
             log.Info(msg);
         }
 
-        public static string exploreFilePath()
+        public static void exploreFilePath(Label filePathDataLabel)
         {
             using (var fbd = new FolderBrowserDialog())
             {
@@ -32,13 +32,11 @@ namespace App_UI
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-                    return fbd.SelectedPath;
-
+                    filePathDataLabel.Text = fbd.SelectedPath;
+                    filePathDataLabel.Visible = true;
                     //System.Windows.Forms.MessageBox.Show("Files found: " + fbd.SelectedPath, "Message");
                 }
             }
-
-            return "<Select Default Path>";
         }
 
         public static List<string> convertListBoxSelected_to_List(ListBox.SelectedObjectCollection listBoxList)
@@ -134,6 +132,50 @@ namespace App_UI
                 file.Directory.Create();
 
                 return path;
+            }
+        }
+
+        public static void createModeTypeDropDown(ComboBox frequencyCoboBox)
+        {
+            List<string> col2 = MainFunction.getGenerationScheduledModeName();
+            foreach (string s in col2)
+            {
+                frequencyCoboBox.Items.Add(s);
+            }
+            frequencyCoboBox.SelectedIndex = 0;
+        }
+
+        public static void createMonthModeWeekOfDayDropDown(ComboBox triggerWeekDayComboBox)
+        {
+            //https://stackoverflow.com/questions/3063320/combobox-adding-text-and-value-to-an-item-no-binding-source
+            // Bind combobox to dictionary
+            Dictionary<string, DayOfWeek> weekOfDay = new Dictionary<string, DayOfWeek>();
+            weekOfDay.Add("Monday", DayOfWeek.Monday);
+            weekOfDay.Add("Tuesday", DayOfWeek.Tuesday);
+            weekOfDay.Add("Wednesday", DayOfWeek.Wednesday);
+            weekOfDay.Add("Thursday", DayOfWeek.Thursday);
+            weekOfDay.Add("Friday", DayOfWeek.Friday);
+            weekOfDay.Add("Saturday", DayOfWeek.Saturday);
+            weekOfDay.Add("Sunday", DayOfWeek.Sunday);
+            triggerWeekDayComboBox.DataSource = new BindingSource(weekOfDay, null);
+            triggerWeekDayComboBox.DisplayMember = "Key";
+            triggerWeekDayComboBox.ValueMember = "Value";
+
+            triggerWeekDayComboBox.SelectedIndex = 0;
+        }
+
+        public static void updateModeSettingOption(string selectedMode, GroupBox monthGroupBox, GroupBox testGroupBox)
+        {
+            monthGroupBox.Visible = false;
+            testGroupBox.Visible = false;
+
+            if (selectedMode.Equals("MonthMode"))
+            {
+                monthGroupBox.Visible = true;
+            }
+            else if (selectedMode.Equals("TestMode"))
+            {
+                testGroupBox.Visible = true;
             }
         }
 

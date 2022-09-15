@@ -106,6 +106,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
                 };
                 JsonSerializer serializer = JsonSerializer.Create(settings);
 
+
                 return serializer.Deserialize(file, type);
             }
         }
