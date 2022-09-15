@@ -95,8 +95,6 @@ namespace App_UI
             }
             frequencyCoboBox.SelectedIndex = 0;
 
-            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
-
             GlobalFunction.statusUpdate(statusUpdateLabel, "User creating form", false);
         }
 
@@ -114,9 +112,6 @@ namespace App_UI
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(frequencyCoboBox.Text == ""
-
-            this.selectThisCoboBox.SelectedIndex = 0;
         }
 
         private void AdjustWidthComboBox_DropDown(object sender, EventArgs e)
