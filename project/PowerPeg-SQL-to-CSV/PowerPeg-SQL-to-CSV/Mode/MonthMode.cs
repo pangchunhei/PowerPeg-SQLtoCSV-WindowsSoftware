@@ -28,7 +28,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
             this.triggerTime = triggerTime;
             this.selectColumn = selection;
             //Force it to run once in the upcoming month
-            DateTime initializeLastRun = DateTime.Now.AddMonths(-1);
+            DateTime initializeLastRun = DateTime.Now;
             this.lastRunDateTime = getFirstWeekofDay(initializeLastRun);
         }
 
