@@ -14059,3 +14059,182 @@
 2022-09-15 19:49:14,825: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete. 
 2022-09-15 19:49:17,823: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Appication closing. 
 2022-09-15 19:49:17,843: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] - UI Application shut down. 
+2022-09-15 20:02:23,528: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] - UI Application starting. 
+2022-09-15 20:02:23,546: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] - UI Application started. 
+2022-09-15 20:02:24,283: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Initializing UI Application. 
+2022-09-15 20:02:24,286: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading HomeForm. 
+2022-09-15 20:02:24,288: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Starting background task. 
+2022-09-15 20:02:24,294: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - JSON app data filepath C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json, C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json 
+2022-09-15 20:02:24,297: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:02:24,318: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:24,550: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-02-24,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:02:24,553: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:02:24,556: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Setup the Database gateway: Data Source=192.168.0.212\ION;Database=SYP_8F_AC_Plant_RM;User ID=EMSD;Password=Emsd$1234;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False 
+2022-09-15 20:02:24,558: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import included table data 
+2022-09-15 20:02:24,560: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json 
+2022-09-15 20:02:24,563: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import included table 
+2022-09-15 20:02:24,565: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Setup the selected Database Table, number of tables: 102 
+2022-09-15 20:02:24,567: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Run startBackgroundJob 
+2022-09-15 20:02:24,638: INFO [Quartz.Impl.StdSchedulerFactory] - Default Quartz.NET properties loaded from embedded resource file 
+2022-09-15 20:02:24,688: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler. 
+2022-09-15 20:02:24,704: INFO [Quartz.Core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+2022-09-15 20:02:24,706: INFO [Quartz.Core.QuartzScheduler] - Quartz Scheduler created 
+2022-09-15 20:02:24,709: INFO [Quartz.Simpl.RAMJobStore] - RAMJobStore initialized. 
+2022-09-15 20:02:24,714: INFO [Quartz.Core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v3.4.0.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+2022-09-15 20:02:24,716: INFO [Quartz.Impl.StdSchedulerFactory] - Quartz scheduler 'DefaultQuartzScheduler' initialized 
+2022-09-15 20:02:24,718: INFO [Quartz.Impl.StdSchedulerFactory] - Quartz scheduler version: 3.4.0.0 
+2022-09-15 20:02:24,731: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+2022-09-15 20:02:24,733: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Background Scheduler is running 
+2022-09-15 20:02:24,754: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:02:24,773: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2022-09-15 20:02:24,800: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2022-09-15 20:02:24,806: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:02:24,837: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c 
+2022-09-15 20:02:24,846: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c, UTCFiretime: 9/15/2022 12:02:24 PM +00:00 
+2022-09-15 20:02:24,850: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:02:24,852: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:24,865: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-02-24,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:02:24,867: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:02:24,869: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of test_2022-09-15_17-53-40 
+2022-09-15 20:02:24,871: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on test_2022-09-15_17-53-40 
+2022-09-15 20:02:24,873: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Sunday, 6, * 
+2022-09-15 20:02:24,877: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - No run search - last run time: 9/15/2022 5:54:40 PM next run time: 10/2/2022 6:00:00 AM days, current hour: 20 vs trigger hour: 6  
+2022-09-15 20:02:24,878: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - No need to store the search task to CSV file: test_2022-09-15_17-53-40 
+2022-09-15 20:02:24,880: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Finished background job, save the search task state 
+2022-09-15 20:02:24,882: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON tasklist data 
+2022-09-15 20:02:24,884: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:24,935: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2022-09-15 20:02:24,941: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2022-09-15 20:02:34,748: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2022-09-15 20:02:34,754: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:02:34,757: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c 
+2022-09-15 20:02:34,765: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c, UTCFiretime: 9/15/2022 12:02:34 PM +00:00 
+2022-09-15 20:02:34,774: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:02:34,777: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:34,783: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-02-34,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:02:34,785: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:02:34,787: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of test_2022-09-15_17-53-40 
+2022-09-15 20:02:34,789: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on test_2022-09-15_17-53-40 
+2022-09-15 20:02:34,791: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Sunday, 6, * 
+2022-09-15 20:02:34,792: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - No run search - last run time: 9/15/2022 5:54:40 PM next run time: 10/2/2022 6:00:00 AM days, current hour: 20 vs trigger hour: 6  
+2022-09-15 20:02:34,794: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - No need to store the search task to CSV file: test_2022-09-15_17-53-40 
+2022-09-15 20:02:34,796: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Finished background job, save the search task state 
+2022-09-15 20:02:34,797: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON tasklist data 
+2022-09-15 20:02:34,800: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:34,806: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2022-09-15 20:02:34,808: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2022-09-15 20:02:44,751: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2022-09-15 20:02:44,758: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:02:44,761: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c 
+2022-09-15 20:02:44,769: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c, UTCFiretime: 9/15/2022 12:02:44 PM +00:00 
+2022-09-15 20:02:44,775: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:02:44,781: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:44,798: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-02-44,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:02:44,804: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:02:44,809: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of test_2022-09-15_17-53-40 
+2022-09-15 20:02:44,812: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on test_2022-09-15_17-53-40 
+2022-09-15 20:02:44,815: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Sunday, 6, * 
+2022-09-15 20:02:44,817: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - No run search - last run time: 9/15/2022 5:54:40 PM next run time: 10/2/2022 6:00:00 AM days, current hour: 20 vs trigger hour: 6  
+2022-09-15 20:02:44,819: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - No need to store the search task to CSV file: test_2022-09-15_17-53-40 
+2022-09-15 20:02:44,820: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Finished background job, save the search task state 
+2022-09-15 20:02:44,822: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON tasklist data 
+2022-09-15 20:02:44,824: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:44,831: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2022-09-15 20:02:44,832: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2022-09-15 20:02:54,741: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2022-09-15 20:02:54,745: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:02:54,746: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c 
+2022-09-15 20:02:54,753: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c, UTCFiretime: 9/15/2022 12:02:54 PM +00:00 
+2022-09-15 20:02:54,757: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:02:54,761: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:54,767: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-02-54,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:02:54,769: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:02:54,770: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of test_2022-09-15_17-53-40 
+2022-09-15 20:02:54,771: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on test_2022-09-15_17-53-40 
+2022-09-15 20:02:54,773: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Sunday, 6, * 
+2022-09-15 20:02:54,774: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - No run search - last run time: 9/15/2022 5:54:40 PM next run time: 10/2/2022 6:00:00 AM days, current hour: 20 vs trigger hour: 6  
+2022-09-15 20:02:54,775: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - No need to store the search task to CSV file: test_2022-09-15_17-53-40 
+2022-09-15 20:02:54,777: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Finished background job, save the search task state 
+2022-09-15 20:02:54,778: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON tasklist data 
+2022-09-15 20:02:54,780: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:02:54,785: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2022-09-15 20:02:54,787: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2022-09-15 20:03:04,748: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2022-09-15 20:03:04,754: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:03:04,755: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c 
+2022-09-15 20:03:04,766: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c, UTCFiretime: 9/15/2022 12:03:04 PM +00:00 
+2022-09-15 20:03:04,771: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:03:04,775: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:03:04,784: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-03-04,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:03:04,787: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:03:04,790: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of test_2022-09-15_17-53-40 
+2022-09-15 20:03:04,792: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on test_2022-09-15_17-53-40 
+2022-09-15 20:03:04,794: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Sunday, 6, * 
+2022-09-15 20:03:04,796: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - No run search - last run time: 9/15/2022 5:54:40 PM next run time: 10/2/2022 6:00:00 AM days, current hour: 20 vs trigger hour: 6  
+2022-09-15 20:03:04,797: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - No need to store the search task to CSV file: test_2022-09-15_17-53-40 
+2022-09-15 20:03:04,799: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Finished background job, save the search task state 
+2022-09-15 20:03:04,800: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON tasklist data 
+2022-09-15 20:03:04,802: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:03:04,808: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2022-09-15 20:03:04,812: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2022-09-15 20:03:14,743: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2022-09-15 20:03:14,750: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:03:14,753: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c 
+2022-09-15 20:03:14,760: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c, UTCFiretime: 9/15/2022 12:03:14 PM +00:00 
+2022-09-15 20:03:14,764: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:03:14,768: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:03:14,774: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-03-14,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:03:14,776: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:03:14,778: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of test_2022-09-15_17-53-40 
+2022-09-15 20:03:14,779: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on test_2022-09-15_17-53-40 
+2022-09-15 20:03:14,781: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Sunday, 6, * 
+2022-09-15 20:03:14,783: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - No run search - last run time: 9/15/2022 5:54:40 PM next run time: 10/2/2022 6:00:00 AM days, current hour: 20 vs trigger hour: 6  
+2022-09-15 20:03:14,784: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - No need to store the search task to CSV file: test_2022-09-15_17-53-40 
+2022-09-15 20:03:14,786: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Finished background job, save the search task state 
+2022-09-15 20:03:14,788: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON tasklist data 
+2022-09-15 20:03:14,790: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:03:14,796: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2022-09-15 20:03:14,797: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2022-09-15 20:03:24,746: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2022-09-15 20:03:24,752: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:03:24,755: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c 
+2022-09-15 20:03:24,764: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c, UTCFiretime: 9/15/2022 12:03:24 PM +00:00 
+2022-09-15 20:03:24,770: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:03:24,777: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:03:24,795: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-03-24,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:03:24,800: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:03:24,805: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of test_2022-09-15_17-53-40 
+2022-09-15 20:03:24,808: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on test_2022-09-15_17-53-40 
+2022-09-15 20:03:24,813: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Sunday, 6, * 
+2022-09-15 20:03:24,817: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - No run search - last run time: 9/15/2022 5:54:40 PM next run time: 10/2/2022 6:00:00 AM days, current hour: 20 vs trigger hour: 6  
+2022-09-15 20:03:24,821: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - No need to store the search task to CSV file: test_2022-09-15_17-53-40 
+2022-09-15 20:03:24,824: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Finished background job, save the search task state 
+2022-09-15 20:03:24,826: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON tasklist data 
+2022-09-15 20:03:24,828: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:03:24,835: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2022-09-15 20:03:24,840: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2022-09-15 20:03:34,737: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2022-09-15 20:03:34,741: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2022-09-15 20:03:34,743: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c 
+2022-09-15 20:03:34,749: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.75a5f821-dc86-461f-9969-a2c24ab16a8c, UTCFiretime: 9/15/2022 12:03:34 PM +00:00 
+2022-09-15 20:03:34,751: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2022-09-15 20:03:34,753: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:03:34,758: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2022-09-15_20-03-34,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Sunday,6,* 
+2022-09-15 20:03:34,760: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2022-09-15 20:03:34,761: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of test_2022-09-15_17-53-40 
+2022-09-15 20:03:34,762: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on test_2022-09-15_17-53-40 
+2022-09-15 20:03:34,764: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Sunday, 6, * 
+2022-09-15 20:03:34,765: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - No run search - last run time: 9/15/2022 5:54:40 PM next run time: 10/2/2022 6:00:00 AM days, current hour: 20 vs trigger hour: 6  
+2022-09-15 20:03:34,767: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - No need to store the search task to CSV file: test_2022-09-15_17-53-40 
+2022-09-15 20:03:34,768: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Finished background job, save the search task state 
+2022-09-15 20:03:34,769: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON tasklist data 
+2022-09-15 20:03:34,771: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Update JSON data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQL-to-CSV\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2022-09-15 20:03:34,776: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2022-09-15 20:03:34,778: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 

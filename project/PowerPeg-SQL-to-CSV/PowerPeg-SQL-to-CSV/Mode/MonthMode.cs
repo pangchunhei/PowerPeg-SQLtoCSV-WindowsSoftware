@@ -48,7 +48,9 @@ namespace PowerPeg_SQL_to_CSV.Mode
         {
             //TODO-- Update
             DateTime next = this.lastRunDateTime.AddMonths(1);
-            return getFirstWeekofDay(next);
+            DateTime result = getFirstWeekofDay(next);
+            result = new DateTime(result.Year, result.Month, result.Day, this.triggerTime, 0, 0);
+            return result;
         }
 
         /// <summary>
@@ -64,12 +66,12 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
             if (daysFromLastRun == 0 && runDateTime.Hour == this.triggerTime)
             {
-                log.Info($"Run search - last run time: {this.lastRunDateTime} next run time: {nextRunTime} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime} ");
+                log.Info($"Run search - last run time: {this.lastRunDateTime}, next run time: {nextRunTime} days, trigger day of week: {this.triggerDay}, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime} ");
                 return true;
             }
             else
             {
-                log.Info($"No run search - last run time: {this.lastRunDateTime} next run time: {nextRunTime} days, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime} ");
+                log.Info($"No run search - last run time: {this.lastRunDateTime}, next run time: {nextRunTime} days, trigger day of week: {this.triggerDay}, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime} ");
                 return false;
             }
         }
