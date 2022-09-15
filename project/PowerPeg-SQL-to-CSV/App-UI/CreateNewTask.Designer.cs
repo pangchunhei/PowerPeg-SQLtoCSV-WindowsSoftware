@@ -46,7 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.frequenceLabel = new System.Windows.Forms.Label();
             this.frequencyCoboBox = new System.Windows.Forms.ComboBox();
-            this.selectThisCoboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // taskNameDataLabel
@@ -168,7 +167,7 @@
             this.generateBtn.TabIndex = 64;
             this.generateBtn.Text = "Create";
             this.generateBtn.UseVisualStyleBackColor = false;
-            this.generateBtn.Click += new System.EventHandler(this.generateBtn_Click);
+            this.generateBtn.Click += new System.EventHandler(this.createBtn_Click);
             // 
             // outputLoactionLabel
             // 
@@ -246,24 +245,12 @@
             this.frequencyCoboBox.TabIndex = 75;
             this.frequencyCoboBox.SelectedIndexChanged += new System.EventHandler(this.frequencyCoboBox_SelectedIndexChanged);
             // 
-            // selectThisCoboBox
-            // 
-            this.selectThisCoboBox.AccessibleName = "selectThisCoboBox";
-            this.selectThisCoboBox.FormattingEnabled = true;
-            this.selectThisCoboBox.Location = new System.Drawing.Point(387, 207);
-            this.selectThisCoboBox.Name = "selectThisCoboBox";
-            this.selectThisCoboBox.Size = new System.Drawing.Size(293, 28);
-            this.selectThisCoboBox.TabIndex = 76;
-            this.selectThisCoboBox.Visible = false;
-            this.selectThisCoboBox.DropDown += new System.EventHandler(this.AdjustWidthComboBox_DropDown);
-            // 
             // CreateNewTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 504);
-            this.Controls.Add(this.selectThisCoboBox);
             this.Controls.Add(this.frequencyCoboBox);
             this.Controls.Add(this.frequenceLabel);
             this.Controls.Add(this.statusUpdateLabel);
@@ -310,6 +297,5 @@
         private Label label1;
         private Label frequenceLabel;
         private ComboBox frequencyCoboBox;
-        private ComboBox selectThisCoboBox;
     }
 }

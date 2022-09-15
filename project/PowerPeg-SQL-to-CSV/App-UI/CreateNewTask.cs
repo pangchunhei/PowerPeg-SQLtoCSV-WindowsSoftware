@@ -33,7 +33,7 @@ namespace App_UI
             this.Dispose(false);
         }
 
-        private void generateBtn_Click(object sender, EventArgs e)
+        private void createBtn_Click(object sender, EventArgs e)
         {
             GlobalFunction.statusUpdate(statusUpdateLabel, "Processing" + TypeDescriptor.GetClassName(this), false);
 
@@ -41,7 +41,8 @@ namespace App_UI
 
             List<string> selectCol = GlobalFunction.convertListBoxSelected_to_List(selectedColListBox.SelectedItems);
 
-            SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, selectThis: ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value, taskname: taskNameDataLabel.Text);
+            //TODO-- Update
+            /*SearchTask t = MainFunction.CreateTask(frequencyCoboBox.Text, filepath, this.triggerDateTimePicker.Value, selectCol, selectThis: ((KeyValuePair<string, bool?>)this.selectThisCoboBox.SelectedItem).Value, taskname: taskNameDataLabel.Text);
 
             if (GlobalFunction.userCheckTaskDetail("Please check the task settings: ", t))
             {
@@ -63,6 +64,7 @@ namespace App_UI
                 GlobalFunction.statusUpdate(statusUpdateLabel, "User deline the settings, discard task.", true);
                 resetForm();
             }
+            */
         }
 
         private void CreateNewTask_Load(object sender, EventArgs e)
@@ -112,7 +114,7 @@ namespace App_UI
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GlobalFunction.setFrequencyDurationDetailOptionList(this.frequencyCoboBox, this.selectThisCoboBox);
+            if(frequencyCoboBox.Text == ""
 
             this.selectThisCoboBox.SelectedIndex = 0;
         }

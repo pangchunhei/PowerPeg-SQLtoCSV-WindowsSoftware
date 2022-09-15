@@ -137,31 +137,8 @@ namespace App_UI
             }
         }
 
-        public static void setFrequencyDurationDetailOptionList(ComboBox frequencyCoboBox, ComboBox selectThisCoboBox)
-        {
-            Dictionary<string, bool?> comboSource = new Dictionary<string, bool?>();
-
-            if (frequencyCoboBox.Text.Equals("MonthMode"))
-            {
-                selectThisCoboBox.Visible = true;
-                comboSource.Clear();
-                comboSource.Add("Use current month's day as month duration", true);
-                comboSource.Add("Use previrous's month's day as month duration", false);
-            }
-            else
-            {
-                selectThisCoboBox.Visible = false;
-                comboSource.Clear();
-                comboSource.Add("NA", null);
-            }
-
-            selectThisCoboBox.DataSource = new BindingSource(comboSource, null);
-            selectThisCoboBox.DisplayMember = "Key";
-            selectThisCoboBox.ValueMember = "Value";
-        }
-
         /// <summary>
-        /// To change the dropdown meanuel size to show whole sentance
+        /// To change the dropdown size to show whole sentance
         /// </summary>
         /// <param name="sender">The combobox that want to change size</param>
         public static void adjustCoboBoxDropdownWidth(ComboBox sender)
