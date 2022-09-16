@@ -1,7 +1,7 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PowerPeg_SQL_to_CSV.Mode;
 using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace Unit_Testing
 {
@@ -12,73 +12,94 @@ namespace Unit_Testing
         {
             List<string> list = new List<string>();
             list.Add("*");
-            
-            MonthMode m = new MonthMode(DayOfWeek.Tuesday, 12, list);
 
-            //Set trigger date, correct day and time (Next month trigeger)
+            //Run the private method (Create with current date)
+            Type type = typeof(MonthMode);
+            //Set tigger date
+            var m = Activator.CreateInstance(type, DayOfWeek.Tuesday, 12, list);
+            MethodInfo method = type.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
+            .Where(x => x.Name == "needRun" && x.IsPrivate)
+            .First();
+
+            //Set trigger date, correct day and time (Update every time - Next month trigeger)
             //Tue 1200
             DateTime dt = new DateTime(2022, 10, 4, 12, 0, 0);
 
-            Result res = m.runSearch(dt);
-            MethodInfo methodInfo = typeof(MonthMode).GetMethod("needRun", BindingFlags.NonPublic | BindingFlags.Instance);
-            object[] parameters = { "God" };
+            //Act
+            bool res = (bool)method.Invoke(m, new object[] { dt });
 
-            object result = methodInfo.Invoke(sut, parameters);
-
-            Assert.NotNull(res);
+            Assert.True(res);
         }
 
         [Fact]
         public void Test2()
         {
-
             List<string> list = new List<string>();
             list.Add("*");
 
-            MonthMode m = new MonthMode(DayOfWeek.Tuesday, 12, list);
+            //Run the private method (Create with current date)
+            Type type = typeof(MonthMode);
+            //Set tigger date
+            var m = Activator.CreateInstance(type, DayOfWeek.Tuesday, 12, list);
+            MethodInfo method = type.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
+            .Where(x => x.Name == "needRun" && x.IsPrivate)
+            .First();
 
-            //Set trigger date, correct day, wrong time
+            //Set trigger date, correct day and time (Update every time - Next month trigeger)
             //Tue 0000
             DateTime dt = new DateTime(2022, 10, 4, 0, 0, 0);
-            Result res = m.runSearch(dt);
 
-            Assert.Null(res);
+            //Act
+            bool res = (bool)method.Invoke(m, new object[] { dt });
+
+            Assert.False(res);
         }
 
         [Fact]
         public void Test3()
         {
-
             List<string> list = new List<string>();
             list.Add("*");
 
-            MonthMode m = new MonthMode(DayOfWeek.Tuesday, 12, list);
-
-            //Set trigger date, wrong day, correct time
+            //Run the private method (Create with current date)
+            Type type = typeof(MonthMode);
+            //Set tigger date
+            var m = Activator.CreateInstance(type, DayOfWeek.Tuesday, 12, list);
+            MethodInfo method = type.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
+            .Where(x => x.Name == "needRun" && x.IsPrivate)
+            .First();
+            //Set trigger date, wrong day, correct time (Update every time - Next month trigeger)
             //Thu 1200
             DateTime dt = new DateTime(2022, 10, 1, 12, 0, 0);
-            Result res = m.runSearch(dt);
 
-            Assert.Null(res);
+            //Act
+            bool res = (bool)method.Invoke(m, new object[] { dt });
+
+            Assert.False(res);
         }
 
         [Fact]
         public void Test4()
         {
-            //Set create date
-            
-
             List<string> list = new List<string>();
             list.Add("*");
 
-            MonthMode m = new MonthMode(DayOfWeek.Tuesday, 12, list);
+            //Run the private method (Create with current date)
+            Type type = typeof(MonthMode);
+            //Set tigger date
+            var m = Activator.CreateInstance(type, DayOfWeek.Tuesday, 12, list);
+            MethodInfo method = type.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
+            .Where(x => x.Name == "needRun" && x.IsPrivate)
+            .First();
 
-            //Set trigger date, wrong day, wrong time
+            //Set trigger date, wrong day and time (Update every time - Next month trigeger)
             //Thu 0000
             DateTime dt = new DateTime(2022, 10, 1, 0, 0, 0);
-            Result res = m.runSearch(dt);
 
-            Assert.Null(res);
+            //Act
+            bool res = (bool)method.Invoke(m, new object[] { dt });
+
+            Assert.False(res);
         }
     }
 }
