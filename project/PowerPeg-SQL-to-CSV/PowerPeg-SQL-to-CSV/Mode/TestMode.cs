@@ -62,7 +62,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
             {
 
                 DateTime startSearchDay = new DateTime(2022, 8, 1, 00, 00, 00);
-                DateTime endSearchDay = new DateTime(2022, 8, 23, 23, 59, 59);
+                DateTime endSearchDay = new DateTime(2022, 9, 1, 00, 00, 00);
                 
                 Result res = new Result(runDateTime);
 

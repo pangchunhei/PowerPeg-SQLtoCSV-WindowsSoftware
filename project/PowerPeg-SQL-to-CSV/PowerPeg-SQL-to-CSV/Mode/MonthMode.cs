@@ -44,7 +44,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         } 
 
 
-        public DateTime findNextTriggerDateTime()
+        private DateTime findNextTriggerDateTime()
         {
             //TODO-- Update
             DateTime next = this.lastRunDateTime.AddMonths(1);
