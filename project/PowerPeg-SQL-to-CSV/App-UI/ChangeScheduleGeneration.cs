@@ -55,6 +55,7 @@ namespace App_UI
             if (currentTaskName.Count == 0)
             {
                 selectTaskCoboBox.Items.Add("-- No Scheduled Task --");
+                this.createBtn.Enabled = true;
             }
             else
             {
@@ -62,6 +63,7 @@ namespace App_UI
                 {
                     selectTaskCoboBox.Items.Add(s);
                 }
+                this.createBtn.Enabled = false;
             }
 
             selectTaskCoboBox.SelectedIndex = 0;

@@ -149,13 +149,13 @@ namespace App_UI
             //https://stackoverflow.com/questions/3063320/combobox-adding-text-and-value-to-an-item-no-binding-source
             // Bind combobox to dictionary
             Dictionary<string, DayOfWeek> weekOfDay = new Dictionary<string, DayOfWeek>();
-            weekOfDay.Add("Monday", DayOfWeek.Monday);
-            weekOfDay.Add("Tuesday", DayOfWeek.Tuesday);
-            weekOfDay.Add("Wednesday", DayOfWeek.Wednesday);
-            weekOfDay.Add("Thursday", DayOfWeek.Thursday);
-            weekOfDay.Add("Friday", DayOfWeek.Friday);
-            weekOfDay.Add("Saturday", DayOfWeek.Saturday);
-            weekOfDay.Add("Sunday", DayOfWeek.Sunday);
+            weekOfDay.Add("First Monday", DayOfWeek.Monday);
+            weekOfDay.Add("First Tuesday", DayOfWeek.Tuesday);
+            weekOfDay.Add("First Wednesday", DayOfWeek.Wednesday);
+            weekOfDay.Add("First Thursday", DayOfWeek.Thursday);
+            weekOfDay.Add("First Friday", DayOfWeek.Friday);
+            weekOfDay.Add("First Saturday", DayOfWeek.Saturday);
+            weekOfDay.Add("First Sunday", DayOfWeek.Sunday);
             triggerWeekDayComboBox.DataSource = new BindingSource(weekOfDay, null);
             triggerWeekDayComboBox.DisplayMember = "Key";
             triggerWeekDayComboBox.ValueMember = "Value";

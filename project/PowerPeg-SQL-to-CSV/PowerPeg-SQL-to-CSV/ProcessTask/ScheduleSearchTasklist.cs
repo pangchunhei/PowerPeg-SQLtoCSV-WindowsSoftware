@@ -58,7 +58,7 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
             if (searchtask.getMode().GetType() != typeof(InstantMode))
             {
                 //limit the schedule task to 3
-                if (searchTaskslist.Count < 3)
+                if (searchTaskslist.Count < 1)
                 {
                     searchTaskslist.Add(searchtask);
                 }

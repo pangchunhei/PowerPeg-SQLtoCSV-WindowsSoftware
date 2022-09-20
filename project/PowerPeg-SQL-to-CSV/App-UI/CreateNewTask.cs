@@ -51,13 +51,12 @@ namespace App_UI
                 try
                 {
                     MainFunction.addScheduleTask(t);
+                    GlobalFunction.statusUpdate(statusUpdateLabel, "Finished schedule task setup.", true);
                 }
                 catch (Exception ex)
                 {
                     GlobalFunction.statusUpdate(statusUpdateLabel, ex.Message, true);
                 }
-
-                GlobalFunction.statusUpdate(statusUpdateLabel, "Finished schedule task setup.", true);
             }
             else
             {
