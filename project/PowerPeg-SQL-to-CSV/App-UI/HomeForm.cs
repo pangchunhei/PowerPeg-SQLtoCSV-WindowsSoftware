@@ -31,6 +31,7 @@ namespace App_UI
             GlobalFunction.statusUpdate(statusUpdateLabel, "Loading HomeForm.", false);
 
             this.MaximizeBox = false;
+            this.ControlBox = false;
 
             GlobalFunction.statusUpdate(statusUpdateLabel, "Starting background task.", false);
             _ = MainFunction.startBackgroundJob();
