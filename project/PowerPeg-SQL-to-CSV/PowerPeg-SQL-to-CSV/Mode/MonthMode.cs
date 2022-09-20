@@ -21,15 +21,16 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <summary>
         /// Create and change mode of Month Mode
         /// </summary>
+        /// <param name="triggerDay">The week of day to trigger the search</param>
+        /// <param name="triggerTime">The hour of the day to trigger the search</param>
+        /// <param name="selection">The selection list</param>
         public MonthMode(DayOfWeek triggerDay, int triggerTime, List<string> selection)
         {
             this.modeName = "MonthMode";
             this.triggerDay = triggerDay;
             this.triggerTime = triggerTime;
             this.selectColumn = selection;
-            //Force it to run once in the upcoming month
-            DateTime initializeLastRun = DateTime.Now;
-            this.lastRunDateTime = getFirstWeekofDay(initializeLastRun);
+            this.lastRunDateTime = DateTime.Now;
         }
 
         private DateTime getFirstWeekofDay(DateTime target)
@@ -43,7 +44,10 @@ namespace PowerPeg_SQL_to_CSV.Mode
             return resultDate;
         } 
 
-
+        /// <summary>
+        /// Find the nect trigger date based on the last run time
+        /// </summary>
+        /// <returns></returns>
         private DateTime findNextTriggerDateTime()
         {
             //TODO-- Update
@@ -76,6 +80,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
             }
         }
 
+        /// <summary>
+        /// Run the search of the search task according to Mode (Interface)
+        /// </summary>
+        /// <param name="runDateTime">Provide the current DateTime</param>
+        /// <returns>Return an Result object</returns>
         public Result runSearch(DateTime runDateTime)
         {
             log.Info($"Trigger month mode search: " + String.Join(", ", getInfo()));

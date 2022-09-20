@@ -20,7 +20,6 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// </summary>
         /// <param name="startDate">Start DateTime of the search</param>
         /// <param name="endDate">End DateTime of the search</param>
-        /// <param name="triggerDate">First time of Trigger DateTime of the search</param>
         /// <param name="selection">List of selected column name</param>
         public InstantMode(DateTime startDate, DateTime endDate, List<string> selection)
         {

@@ -1,12 +1,11 @@
 using PowerPeg_SQL_to_CSV.Mode;
-using PowerPeg_SQL_to_CSV.ProcessTask;
 using System.Reflection;
-using System.Windows.Forms;
 
 namespace Unit_Testing
 {
     public class MonthMode_CheckNeedRun
     {
+        //When do the test update the ** value before run
         [Fact]
         public void Test1()
         {
@@ -15,13 +14,13 @@ namespace Unit_Testing
 
             //Run the private method (Create with current date)
             Type type = typeof(MonthMode);
-            //Set tigger date
+            //** Set tigger date
             var m = Activator.CreateInstance(type, DayOfWeek.Tuesday, 12, list);
             MethodInfo method = type.GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
             .Where(x => x.Name == "needRun" && x.IsPrivate)
             .First();
 
-            //Set trigger date, correct day and time (Update every time - Next month trigeger)
+            //** Set trigger date, correct day and time (Update every time - Next month trigeger)
             //Tue 1200
             DateTime dt = new DateTime(2022, 10, 4, 12, 0, 0);
 

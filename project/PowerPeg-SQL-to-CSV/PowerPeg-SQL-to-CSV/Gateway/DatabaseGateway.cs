@@ -73,7 +73,7 @@ namespace PowerPeg_SQL_to_CSV.Gateway
         {
             log.Info("Update gateway");
 
-            if (isServerConnected(this.connectionString))
+            if (isServerConnected(newConnectionString))
             {
                 Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 

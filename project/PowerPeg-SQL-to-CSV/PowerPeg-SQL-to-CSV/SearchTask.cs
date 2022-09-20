@@ -31,6 +31,12 @@ namespace PowerPeg_SQL_to_CSV
             return operationMode;
         }
 
+        /// <summary>
+        /// Create the schedule search task
+        /// </summary>
+        /// <param name="name">Name of the Task</param>
+        /// <param name="outputLocation">The CSV output location</param>
+        /// <param name="operationMode">The mode of the task operation</param>
         public SearchTask(string name, string outputLocation, IMode operationMode)
         {
             this.taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
