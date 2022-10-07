@@ -52,6 +52,7 @@ namespace App_UI
                 {
                     MainFunction.addScheduleTask(t);
                     GlobalFunction.statusUpdate(statusUpdateLabel, "Finished schedule task setup.", true);
+                    closePage();
                 }
                 catch (Exception ex)
                 {
@@ -101,13 +102,18 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Cancel and back to previous page.", false);
-            this.Close();
+            closePage();
         }
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             GlobalFunction.updateModeSettingOption(this.frequencyCoboBox.Text, this.monthGroupBox, this.testGroupBox);
+        }
+
+        private void closePage()
+        {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Cancel and back to previous page.", false);
+            this.Close();
         }
     }
 }

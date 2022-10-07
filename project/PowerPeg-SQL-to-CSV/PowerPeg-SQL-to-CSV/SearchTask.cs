@@ -75,6 +75,7 @@ namespace PowerPeg_SQL_to_CSV
         /// </summary>
         /// <returns>
         /// Return "Task Name", "Output Location", "-Mode Info-"
+        /// --MonthMode--: "Mode Name", "Trigger Week of Day", "Trigger Hour", "Selection List"
         /// </returns>
         public string[] getTaskInfo()
         {

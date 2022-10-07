@@ -67,9 +67,9 @@ namespace App_UI
             GlobalFunction.createMonthModeWeekOfDayDropDown(this.triggerWeekDayComboBox);
             if (task.getTaskInfo()[2].Equals("MonthMode"))
             {
-                string selectDay = task.getTaskInfo()[3];
+                DayOfWeek selectDay = GlobalFunction.convertDayOfWeekfromString(task.getTaskInfo()[3]);
                 int num = Convert.ToInt32(task.getTaskInfo()[4]);
-                this.triggerWeekDayComboBox.SelectedIndex = this.triggerWeekDayComboBox.FindStringExact(selectDay);
+                this.triggerWeekDayComboBox.SelectedIndex = ((int)selectDay);
                 this.triggerHourUpDown.Value = num;
             }
             filePathDataLabel.Text = task.getTaskInfo()[1];
@@ -93,6 +93,9 @@ namespace App_UI
 
             MainFunction.updateTaskSetting(this.task, filepath, this.frequencyCoboBox.Text, selectCol, dayOfWeek, hour, this.triggerDateTimePicker.Value);
             GlobalFunction.statusUpdate(statusUpdateLabel, $"Update finished, the following are the new settings: \r\n{this.task}", true);
+
+            closePage();
+
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -102,7 +105,7 @@ namespace App_UI
                 GlobalFunction.statusUpdate(statusUpdateLabel, "User confirm to delete task.", false);
                 MainFunction.removeScheduleTask(task);
                 GlobalFunction.statusUpdate(statusUpdateLabel, "Schedule Task delated.", true);
-                this.Close();
+                closePage();
             }
             else
             {
@@ -112,8 +115,7 @@ namespace App_UI
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
-            GlobalFunction.statusUpdate(statusUpdateLabel, "Back to previous page.", false);
-            this.Close();
+            closePage();
         }
 
         private void frequencyCoboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,6 +123,10 @@ namespace App_UI
             GlobalFunction.updateModeSettingOption(this.frequencyCoboBox.Text, this.monthGroupBox, this.testGroupBox);
         }
 
-        //TODO-- CHnage the quick select for the previous month
+        private void closePage()
+        {
+            GlobalFunction.statusUpdate(statusUpdateLabel, "Back to previous page.", false);
+            this.Close();
+        }
     }
 }

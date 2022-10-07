@@ -3,6 +3,7 @@ using PowerPeg_SQL_to_CSV;
 using PowerPeg_SQL_to_CSV.Log;
 using PowerPeg_SQL_to_CSV.Mode;
 using System.Configuration;
+using System.IO;
 using System.Text;
 
 namespace App_UI
@@ -149,13 +150,13 @@ namespace App_UI
             //https://stackoverflow.com/questions/3063320/combobox-adding-text-and-value-to-an-item-no-binding-source
             // Bind combobox to dictionary
             Dictionary<string, DayOfWeek> weekOfDay = new Dictionary<string, DayOfWeek>();
+            weekOfDay.Add("First Sunday", DayOfWeek.Sunday);
             weekOfDay.Add("First Monday", DayOfWeek.Monday);
             weekOfDay.Add("First Tuesday", DayOfWeek.Tuesday);
             weekOfDay.Add("First Wednesday", DayOfWeek.Wednesday);
             weekOfDay.Add("First Thursday", DayOfWeek.Thursday);
             weekOfDay.Add("First Friday", DayOfWeek.Friday);
             weekOfDay.Add("First Saturday", DayOfWeek.Saturday);
-            weekOfDay.Add("First Sunday", DayOfWeek.Sunday);
             triggerWeekDayComboBox.DataSource = new BindingSource(weekOfDay, null);
             triggerWeekDayComboBox.DisplayMember = "Key";
             triggerWeekDayComboBox.ValueMember = "Value";
@@ -202,6 +203,14 @@ namespace App_UI
                 }
             }
             selectThisCoboBox.DropDownWidth = width;
+        }
+
+        public static DayOfWeek convertDayOfWeekfromString(string dayStr)
+        {
+            DayOfWeek day;
+            Enum.TryParse<DayOfWeek>(dayStr, out day);
+
+            return day;
         }
     }
 }
