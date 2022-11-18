@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tpkgy4AAU90bGn692WzJYmu3l24VilNSfWfUOt/Wf+5ZydzrOM+jFCMuZcvCMp/P1XN4280U17ujxb3pAm9iEg==",
+  "dgSpecHash": "buJS9KaxySAiDF1Pa9DIZrIbHe4MRzU3Zz1UC/a+uaVDdGAG4rvTCFNmbOaHABFUlowFqswe70g0iLQVWULJuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\Unit-Testing\\Unit-Testing.csproj",
+  "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQLtoCSV-WindowsSoftware\\project\\PowerPeg-SQL-to-CSV\\Unit-Testing\\Unit-Testing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elsto\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\choetl\\1.2.1.48\\choetl.1.2.1.48.nupkg.sha512",

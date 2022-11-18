@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nYdVxa1mIYdnZKAwxzI2SoxRwvAbnYWWmJYXfdthnJPf71fIRichb/BFHwv52wX1Nna4K1hNbdnWbAZTlrAnJw==",
+  "dgSpecHash": "+e/Jrs4CVF7rXSsr/t13Kfg3bE3R3Ywg1BBso8qgCFWLVNFQYcn6qUalXvpep7L1LrGJ+urweStSG8xubabNXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\App-UI\\App-UI.csproj",
+  "projectFilePath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQLtoCSV-WindowsSoftware\\project\\PowerPeg-SQL-to-CSV\\App-UI\\App-UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elsto\\.nuget\\packages\\choetl\\1.2.1.48\\choetl.1.2.1.48.nupkg.sha512",
     "C:\\Users\\elsto\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",

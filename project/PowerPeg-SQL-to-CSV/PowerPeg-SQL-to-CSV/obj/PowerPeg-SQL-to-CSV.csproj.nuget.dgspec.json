@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj": {}
+    "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQLtoCSV-WindowsSoftware\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj": {
+    "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQLtoCSV-WindowsSoftware\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj",
+        "projectUniqueName": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQLtoCSV-WindowsSoftware\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj",
         "projectName": "PowerPeg-SQL-to-CSV",
-        "projectPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj",
+        "projectPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQLtoCSV-WindowsSoftware\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV.csproj",
         "packagesPath": "C:\\Users\\elsto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQL-to-CSV\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\obj\\",
+        "outputPath": "C:\\Users\\elsto\\Documents\\GitHub\\PowerPeg-SQLtoCSV-WindowsSoftware\\project\\PowerPeg-SQL-to-CSV\\PowerPeg-SQL-to-CSV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -105,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
