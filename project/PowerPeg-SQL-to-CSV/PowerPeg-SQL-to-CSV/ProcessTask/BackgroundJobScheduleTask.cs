@@ -39,12 +39,10 @@ namespace PowerPeg_SQL_to_CSV.ProcessTask
 
             scheduleRunlist = searchTasklist.getCurrentTaskList();
 
-            DateTime bwCurrentDateTime = DateTime.Now;
-
             foreach (SearchTask searchTask in scheduleRunlist)
             {
                 log.Debug($"Background job process search task of {searchTask.getTaskInfo()[0]}");
-                searchTask.toRunTask(bwCurrentDateTime);
+                searchTask.toRunTask();
             }
 
             if (context.CancellationToken.IsCancellationRequested)

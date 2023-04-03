@@ -9,7 +9,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// </summary>
         /// <param name="runDateTime">Provide the current DateTime</param>
         /// <returns>Return an Result object</returns>
-        public Result runSearch(DateTime runDateTime);
+        public Result runSearch();
 
         /// <summary>
         /// Get the information of the mode settings (Interface)

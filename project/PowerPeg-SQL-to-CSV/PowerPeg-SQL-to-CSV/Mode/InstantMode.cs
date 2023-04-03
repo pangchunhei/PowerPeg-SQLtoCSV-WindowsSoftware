@@ -9,6 +9,8 @@ namespace PowerPeg_SQL_to_CSV.Mode
 {
     public class InstantMode : IMode
     {
+        private ITimeProvider _timeProvider = new DefaultTimeProvider();
+
         private string modeName;
         private DateTime startSearchDay;
         private DateTime endSearchDay;
@@ -34,10 +36,11 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// </summary>
         /// <param name="runDateTime">Provide the current DateTime</param>
         /// <returns>Return an Result object</returns>
-        public Result runSearch(DateTime runDateTime)
+        public Result runSearch()
         {
             log.Info($"Trigger instant mode search: " + String.Join(", ", getInfo()));
 
+            DateTime runDateTime = _timeProvider.GetCurrentTime();
             //UAT
             //DataTable dt = DatabaseGateway.getInstance().getDBTable01(startSearchDay, endSearchDay, selectColumn);
 

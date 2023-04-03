@@ -19,6 +19,7 @@ namespace PowerPeg_SQL_to_CSV
     public class SearchTask
     {
         private static readonly ILog log = LogHelper.getLogger();
+        private static ITimeProvider _timeProvider = new DefaultTimeProvider();
 
         private string taskName;
 
@@ -39,26 +40,25 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="operationMode">The mode of the task operation</param>
         public SearchTask(string name, string outputLocation, IMode operationMode)
         {
-            this.taskName = name + DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
+            taskName = name + _timeProvider.GetCurrentTime().ToString("_yyyy-MM-dd_HH-mm-ss");
             this.outputLocation = outputLocation;
             this.operationMode = operationMode;
 
-            log.Debug("Created search class" + string.Join(",", this.getTaskInfo()));
+            log.Debug("Created search class" + string.Join(",", getTaskInfo()));
         }
 
         /// <summary>
-        /// Trigger the running of the search task
+        /// Steart the running of the search task
         /// </summary>
-        /// <param name="runDateTime">Trigger DateTime</param>
-        public void toRunTask(DateTime runDateTime)
+        public void toRunTask()
         {
-            log.Info($"Runing search on {this.taskName}");
+            log.Info($"Runing search on {taskName}");
 
-            Result resultOfSQL = operationMode.runSearch(runDateTime);
+            Result resultOfSQL = operationMode.runSearch();
 
-            if(resultOfSQL != null)
+            if (resultOfSQL != null)
             {
-                log.Info($"Search task result generated, generate CSV file: {this.taskName}");
+                log.Info($"Search task result generated, generate CSV file: {taskName}");
 
                 string fileOutputFileName = taskName + "_generation_time_" + resultOfSQL.getGenerationTime().ToString("yyyy-MM-dd_HH-mm-ss");
 
@@ -66,7 +66,7 @@ namespace PowerPeg_SQL_to_CSV
             }
             else
             {
-                log.Info($"No need to store the search task to CSV file: {this.taskName}");
+                log.Info($"No need to store the search task to CSV file: {taskName}");
             }
         }
 
@@ -92,17 +92,17 @@ namespace PowerPeg_SQL_to_CSV
         /// <param name="mode">Mode of the search task</param>
         public void updateTaskSetting(string outputlocation, IMode mode)
         {
-            log.Debug("Orginal search task setting" + string.Join(",", this.getTaskInfo()));
+            log.Debug("Orginal search task setting" + string.Join(",", getTaskInfo()));
 
             outputLocation = outputlocation;
             operationMode = mode;
-            
-            log.Debug("New search task setting updated" + string.Join(",", this.getTaskInfo()));
+
+            log.Debug("New search task setting updated" + string.Join(",", getTaskInfo()));
         }
 
         public override string ToString()
         {
-            return $"Task Name: {this.taskName}\r\nOutput Location: {this.outputLocation}\r\n{this.operationMode.ToString()}";
+            return $"Task Name: {taskName}\r\nOutput Location: {outputLocation}\r\n{operationMode.ToString()}";
         }
     }
 }

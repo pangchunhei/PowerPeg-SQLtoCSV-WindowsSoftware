@@ -1,0 +1,532 @@
+2023-04-03 15:43:29,212: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] - UI Application starting. 
+2023-04-03 15:43:29,221: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] - UI Application started. 
+2023-04-03 15:43:29,863: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Initializing UI Application. 
+2023-04-03 15:43:29,864: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading HomeForm. 
+2023-04-03 15:43:29,865: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Starting background task. 
+2023-04-03 15:43:29,867: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - JSON app data filepath C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json, C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json 
+2023-04-03 15:43:29,868: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2023-04-03 15:43:29,886: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2023-04-03 15:43:30,026: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2023-04-03_15-43-30,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Saturday,4,* 
+2023-04-03 15:43:30,027: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2023-04-03 15:43:30,029: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Setup the Database gateway: Data Source=192.168.0.212\ION;Database=SYP_8F_AC_Plant_RM;User ID=EMSD;Password=Emsd$1234;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False 
+2023-04-03 15:43:30,030: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import included table data 
+2023-04-03 15:43:30,031: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\selectTable.json 
+2023-04-03 15:43:30,035: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import included table 
+2023-04-03 15:43:30,036: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Setup the selected Database Table, number of tables: 102 
+2023-04-03 15:43:30,037: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Run startBackgroundJob 
+2023-04-03 15:43:30,098: INFO [Quartz.Impl.StdSchedulerFactory] - Default Quartz.NET properties loaded from embedded resource file 
+2023-04-03 15:43:30,124: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler. 
+2023-04-03 15:43:30,134: INFO [Quartz.Core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+2023-04-03 15:43:30,136: INFO [Quartz.Core.QuartzScheduler] - Quartz Scheduler created 
+2023-04-03 15:43:30,137: INFO [Quartz.Simpl.RAMJobStore] - RAMJobStore initialized. 
+2023-04-03 15:43:30,140: INFO [Quartz.Core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v3.4.0.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+2023-04-03 15:43:30,141: INFO [Quartz.Impl.StdSchedulerFactory] - Quartz scheduler 'DefaultQuartzScheduler' initialized 
+2023-04-03 15:43:30,142: INFO [Quartz.Impl.StdSchedulerFactory] - Quartz scheduler version: 3.4.0.0 
+2023-04-03 15:43:30,148: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+2023-04-03 15:43:30,150: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Background Scheduler is running 
+2023-04-03 15:43:30,164: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:43:30,177: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2023-04-03 15:43:30,315: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2023-04-03 15:43:30,318: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:43:30,329: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 
+2023-04-03 15:43:30,334: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393, UTCFiretime: 3/4/2023 7:43:30 am +00:00 
+2023-04-03 15:43:30,336: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2023-04-03 15:43:30,338: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2023-04-03 15:43:30,340: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2023-04-03_15-43-30,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Saturday,4,* 
+2023-04-03 15:43:30,342: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2023-04-03 15:43:30,343: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of t2_2022-10-07_12-53-26 
+2023-04-03 15:43:30,345: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on t2_2022-10-07_12-53-26 
+2023-04-03 15:43:30,347: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Saturday, 4, * 
+2023-04-03 15:43:30,349: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Run search - next run time: 3/4/2023 3:43:30 pm days, trigger day of week: Saturday, current hour: 15 vs trigger hour: 4  
+2023-04-03 15:43:30,376: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Request Database data of tablename: 3000STL10, start search date: 1/3/2023 12:00:00 am, end search date: 1/4/2023 12:00:00 am 
+2023-04-03 15:43:59,888: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:44:01,024: ERROR [Quartz.Core.JobRunShell] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 
+2023-04-03 15:44:01,070: ERROR [Quartz.Core.ErrorLogger] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20]
+ 
+2023-04-03 15:44:01,075: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2023-04-03 15:44:01,078: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2023-04-03 15:44:01,079: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2023-04-03 15:44:01,081: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:44:01,095: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 
+2023-04-03 15:44:01,098: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393, UTCFiretime: 3/4/2023 7:44:01 am +00:00 
+2023-04-03 15:44:01,100: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2023-04-03 15:44:01,101: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2023-04-03 15:44:01,103: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2023-04-03_15-44-01,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Saturday,4,* 
+2023-04-03 15:44:01,105: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2023-04-03 15:44:01,106: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of t2_2022-10-07_12-53-26 
+2023-04-03 15:44:01,107: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on t2_2022-10-07_12-53-26 
+2023-04-03 15:44:01,108: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Saturday, 4, * 
+2023-04-03 15:44:01,109: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Run search - next run time: 3/4/2023 3:44:01 pm days, trigger day of week: Saturday, current hour: 15 vs trigger hour: 4  
+2023-04-03 15:44:01,110: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Request Database data of tablename: 3000STL10, start search date: 1/3/2023 12:00:00 am, end search date: 1/4/2023 12:00:00 am 
+2023-04-03 15:44:01,124: ERROR [Quartz.Core.JobRunShell] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 
+2023-04-03 15:44:01,125: ERROR [Quartz.Core.ErrorLogger] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20]
+ 
+2023-04-03 15:44:01,127: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2023-04-03 15:44:01,128: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2023-04-03 15:44:01,129: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2023-04-03 15:44:01,130: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:44:01,131: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 
+2023-04-03 15:44:01,132: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393, UTCFiretime: 3/4/2023 7:44:01 am +00:00 
+2023-04-03 15:44:01,133: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2023-04-03 15:44:01,134: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2023-04-03 15:44:01,137: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2023-04-03_15-44-01,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Saturday,4,* 
+2023-04-03 15:44:01,138: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2023-04-03 15:44:01,139: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of t2_2022-10-07_12-53-26 
+2023-04-03 15:44:01,140: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on t2_2022-10-07_12-53-26 
+2023-04-03 15:44:01,141: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Saturday, 4, * 
+2023-04-03 15:44:01,142: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Run search - next run time: 3/4/2023 3:44:01 pm days, trigger day of week: Saturday, current hour: 15 vs trigger hour: 4  
+2023-04-03 15:44:01,142: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Request Database data of tablename: 3000STL10, start search date: 1/3/2023 12:00:00 am, end search date: 1/4/2023 12:00:00 am 
+2023-04-03 15:44:01,155: ERROR [Quartz.Core.JobRunShell] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 
+2023-04-03 15:44:01,156: ERROR [Quartz.Core.ErrorLogger] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20]
+ 
+2023-04-03 15:44:01,158: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2023-04-03 15:44:01,159: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2023-04-03 15:44:01,160: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2023-04-03 15:44:01,161: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:44:01,161: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 
+2023-04-03 15:44:01,162: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393, UTCFiretime: 3/4/2023 7:44:01 am +00:00 
+2023-04-03 15:44:01,163: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2023-04-03 15:44:01,164: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2023-04-03 15:44:01,167: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2023-04-03_15-44-01,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Saturday,4,* 
+2023-04-03 15:44:01,168: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2023-04-03 15:44:01,169: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of t2_2022-10-07_12-53-26 
+2023-04-03 15:44:01,171: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on t2_2022-10-07_12-53-26 
+2023-04-03 15:44:01,172: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Saturday, 4, * 
+2023-04-03 15:44:01,173: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Run search - next run time: 3/4/2023 3:44:01 pm days, trigger day of week: Saturday, current hour: 15 vs trigger hour: 4  
+2023-04-03 15:44:01,174: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Request Database data of tablename: 3000STL10, start search date: 1/3/2023 12:00:00 am, end search date: 1/4/2023 12:00:00 am 
+2023-04-03 15:44:01,188: ERROR [Quartz.Core.JobRunShell] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 
+2023-04-03 15:44:01,190: ERROR [Quartz.Core.ErrorLogger] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20]
+ 
+2023-04-03 15:44:01,192: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2023-04-03 15:44:01,193: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2023-04-03 15:44:10,152: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2023-04-03 15:44:10,153: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:44:10,153: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 
+2023-04-03 15:44:10,154: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393, UTCFiretime: 3/4/2023 7:44:10 am +00:00 
+2023-04-03 15:44:10,155: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2023-04-03 15:44:10,156: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2023-04-03 15:44:10,159: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2023-04-03_15-44-10,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Saturday,4,* 
+2023-04-03 15:44:10,159: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2023-04-03 15:44:10,160: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of t2_2022-10-07_12-53-26 
+2023-04-03 15:44:10,161: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on t2_2022-10-07_12-53-26 
+2023-04-03 15:44:10,162: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Saturday, 4, * 
+2023-04-03 15:44:10,163: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Run search - next run time: 3/4/2023 3:44:10 pm days, trigger day of week: Saturday, current hour: 15 vs trigger hour: 4  
+2023-04-03 15:44:10,164: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Request Database data of tablename: 3000STL10, start search date: 1/3/2023 12:00:00 am, end search date: 1/4/2023 12:00:00 am 
+2023-04-03 15:44:28,059: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading ShowServerInfo. 
+2023-04-03 15:44:28,085: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - User updating form 
+2023-04-03 15:44:29,181: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Closing ShowServerInfo and Go back to previous page.. 
+2023-04-03 15:44:30,064: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - User creating form 
+2023-04-03 15:44:34,282: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Back to previous page. 
+2023-04-03 15:44:35,396: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Stopping background task. 
+2023-04-03 15:44:35,398: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Run stopBackgroundJob 
+2023-04-03 15:44:35,399: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Have background task, stopping background task 
+2023-04-03 15:44:35,401: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Trying to interrupt job: JobDetail 'DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393':  jobType: 'PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask persistJobDataAfterExecution: False concurrentExecutionDisallowed: True isDurable: False requestsRecovers: False 
+2023-04-03 15:44:35,403: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Interrupt status: True 
+2023-04-03 15:44:35,405: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Scheduler Stopped 
+2023-04-03 15:44:35,408: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down. 
+2023-04-03 15:44:35,410: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused. 
+2023-04-03 15:44:35,419: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Starting background task. 
+2023-04-03 15:44:35,421: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - Shutting down threadpool... 
+2023-04-03 15:44:35,422: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - Waiting for 1 threads to complete. 
+2023-04-03 15:44:35,450: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading ChangeScheduleGeneration. 
+2023-04-03 15:44:35,466: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading Database information. 
+2023-04-03 15:44:35,468: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading current scheduled tasklist. 
+2023-04-03 15:44:38,151: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Close ChnageSchedukeGeneration and Go back to previous page. 
+2023-04-03 15:44:38,162: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Showing background task. 
+2023-04-03 15:44:38,678: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Restarting background task. 
+2023-04-03 15:44:38,688: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Run startBackgroundJob 
+2023-04-03 15:44:38,689: INFO [Quartz.Impl.StdSchedulerFactory] - Default Quartz.NET properties loaded from embedded resource file 
+2023-04-03 15:44:39,366: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Stopping background task. 
+2023-04-03 15:44:39,367: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Run stopBackgroundJob 
+2023-04-03 15:44:39,368: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Have background task, stopping background task 
+2023-04-03 15:44:39,370: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Trying to interrupt job: JobDetail 'DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393':  jobType: 'PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask persistJobDataAfterExecution: False concurrentExecutionDisallowed: True isDurable: False requestsRecovers: False 
+2023-04-03 15:44:39,370: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Interrupt status: True 
+2023-04-03 15:44:39,371: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Scheduler Stopped 
+2023-04-03 15:44:39,373: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Starting background task. 
+2023-04-03 15:44:39,398: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading ChangeScheduleGeneration. 
+2023-04-03 15:44:39,413: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading Database information. 
+2023-04-03 15:44:39,414: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading current scheduled tasklist. 
+2023-04-03 15:44:40,334: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Requesting to update existing schedule task setting. 
+2023-04-03 15:44:40,384: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading ChangeTaskSetting. 
+2023-04-03 15:44:40,551: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Mode list: IMode, InstantMode, MonthMode 
+2023-04-03 15:44:40,603: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - User creating form 
+2023-04-03 15:44:40,704: ERROR [Quartz.Core.JobRunShell] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an unhandled Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 
+2023-04-03 15:44:40,706: ERROR [Quartz.Core.ErrorLogger] - Job DEFAULT.1088992c-a991-412c-9fe4-47830bdfd393 threw an exception.Quartz.SchedulerException: Job threw an unhandled exception.
+ ---> System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+   --- End of inner exception stack trace --- [See nested exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at PowerPeg_SQL_to_CSV.Gateway.DatabaseGateway.searchForDBTableData(DateTime startSearchDate, DateTime endSearchDate, String tableName) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs:line 157
+   at PowerPeg_SQL_to_CSV.Mode.SQLProcessFunction.processAllDBTable(DateTime startSearchDay, DateTime endSearchDay, List`1 selectColumn, Result res) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\SQLProcessFunction.cs:line 109
+   at PowerPeg_SQL_to_CSV.Mode.MonthMode.runSearch() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs:line 102
+   at PowerPeg_SQL_to_CSV.SearchTask.toRunTask() in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs:line 56
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.processTask(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 45
+   at PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask.Execute(IJobExecutionContext context) in C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs:line 27
+   at Quartz.Core.JobRunShell.Run(CancellationToken cancellationToken)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20]
+ 
+2023-04-03 15:44:40,709: DEBUG [Quartz.Core.JobRunShell] - Trigger instruction : NoInstruction 
+2023-04-03 15:44:40,710: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - No executing jobs remaining, all threads stopped. 
+2023-04-03 15:44:40,711: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - Shutdown of threadpool complete. 
+2023-04-03 15:44:40,718: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED Shutdown complete. 
+2023-04-03 15:45:08,765: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Back to previous page. 
+2023-04-03 15:45:08,801: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Loading current scheduled tasklist. 
+2023-04-03 15:45:10,326: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Close ChnageSchedukeGeneration and Go back to previous page. 
+2023-04-03 15:45:10,337: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Showing background task. 
+2023-04-03 15:45:10,855: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Restarting background task. 
+2023-04-03 15:45:10,856: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Run startBackgroundJob 
+2023-04-03 15:45:10,856: INFO [Quartz.Impl.StdSchedulerFactory] - Default Quartz.NET properties loaded from embedded resource file 
+2023-04-03 15:45:10,857: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler. 
+2023-04-03 15:45:10,858: INFO [Quartz.Core.SchedulerSignalerImpl] - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl 
+2023-04-03 15:45:10,859: INFO [Quartz.Core.QuartzScheduler] - Quartz Scheduler created 
+2023-04-03 15:45:10,860: INFO [Quartz.Simpl.RAMJobStore] - RAMJobStore initialized. 
+2023-04-03 15:45:10,861: INFO [Quartz.Core.QuartzScheduler] - Scheduler meta-data: Quartz Scheduler (v3.4.0.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+2023-04-03 15:45:10,861: INFO [Quartz.Impl.StdSchedulerFactory] - Quartz scheduler 'DefaultQuartzScheduler' initialized 
+2023-04-03 15:45:10,862: INFO [Quartz.Impl.StdSchedulerFactory] - Quartz scheduler version: 3.4.0.0 
+2023-04-03 15:45:10,863: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started. 
+2023-04-03 15:45:10,863: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:45:10,864: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Background Scheduler is running 
+2023-04-03 15:45:10,867: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 1 triggers 
+2023-04-03 15:45:10,868: DEBUG [Quartz.Simpl.SimpleJobFactory] - Producing instance of Job 'DEFAULT.290c1cfa-c412-4a84-8f3b-0a8220273f6d', class=PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask 
+2023-04-03 15:45:10,869: DEBUG [Quartz.Core.QuartzSchedulerThread] - Batch acquisition of 0 triggers 
+2023-04-03 15:45:10,869: DEBUG [Quartz.Core.JobRunShell] - Calling Execute on job DEFAULT.290c1cfa-c412-4a84-8f3b-0a8220273f6d 
+2023-04-03 15:45:10,871: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Backround job is created and running: DEFAULT.290c1cfa-c412-4a84-8f3b-0a8220273f6d, UTCFiretime: 3/4/2023 7:45:10 am +00:00 
+2023-04-03 15:45:10,875: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import tasklist data 
+2023-04-03 15:45:10,876: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Import Json data: C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\bin\Debug\net6.0-windows\scheduledTask.json 
+2023-04-03 15:45:10,879: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Created search class_2023-04-03_15-45-10,C:\Users\elsto\Downloads\PowerPeg-SQL-CSV\AutoGeneration\,MonthMode,Saturday,4,* 
+2023-04-03 15:45:10,880: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\JSONGateway.cs] - Finished import tasklist 
+2023-04-03 15:45:10,881: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundJobScheduleTask.cs] - Background job process search task of t2_2022-10-07_12-53-26 
+2023-04-03 15:45:10,882: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\SearchTask.cs] - Runing search on t2_2022-10-07_12-53-26 
+2023-04-03 15:45:10,883: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Trigger month mode search: MonthMode, Saturday, 4, * 
+2023-04-03 15:45:10,884: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Mode\MonthMode.cs] - Run search - next run time: 3/4/2023 3:45:10 pm days, trigger day of week: Saturday, current hour: 15 vs trigger hour: 4  
+2023-04-03 15:45:10,885: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\Gateway\DatabaseGateway.cs] - Request Database data of tablename: 3000STL10, start search date: 1/3/2023 12:00:00 am, end search date: 1/4/2023 12:00:00 am 
+2023-04-03 15:45:11,985: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - User request the closing of application. 
+2023-04-03 15:45:13,002: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Closing background task. 
+2023-04-03 15:45:13,003: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Run stopBackgroundJob 
+2023-04-03 15:45:13,004: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\MainFunction.cs] - Have background task, stopping background task 
+2023-04-03 15:45:13,005: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Trying to interrupt job: JobDetail 'DEFAULT.290c1cfa-c412-4a84-8f3b-0a8220273f6d':  jobType: 'PowerPeg_SQL_to_CSV.ProcessTask.BackgroundJobScheduleTask persistJobDataAfterExecution: False concurrentExecutionDisallowed: True isDurable: False requestsRecovers: False 
+2023-04-03 15:45:13,006: DEBUG [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Interrupt status: True 
+2023-04-03 15:45:13,007: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\PowerPeg-SQL-to-CSV\ProcessTask\BackgroundScheduler.cs] - Scheduler Stopped 
+2023-04-03 15:45:13,008: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down. 
+2023-04-03 15:45:13,008: INFO [Quartz.Core.QuartzScheduler] - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused. 
+2023-04-03 15:45:13,010: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - Shutting down threadpool... 
+2023-04-03 15:45:13,011: DEBUG [Quartz.Simpl.TaskSchedulingThreadPool] - Waiting for 1 threads to complete. 
+2023-04-03 15:45:16,011: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\GlobalFunction.cs] - Appication closing. 
+2023-04-03 15:45:16,019: INFO [C:\Users\elsto\Documents\GitHub\PowerPeg-SQLtoCSV-WindowsSoftware\project\PowerPeg-SQL-to-CSV\App-UI\Program.cs] - UI Application shut down. 

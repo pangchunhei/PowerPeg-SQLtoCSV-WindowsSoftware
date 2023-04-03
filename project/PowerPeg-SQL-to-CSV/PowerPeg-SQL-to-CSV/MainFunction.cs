@@ -56,17 +56,6 @@ namespace PowerPeg_SQL_to_CSV
                     throw new Exception("TODO-- Need to have selectThis boolean");
                 }
             }
-            else if (selectmode.Equals("TestMode"))
-            {
-                if (t_triggerdatetime != null)
-                {
-                    return new TestMode((DateTime)t_triggerdatetime, selectedcolumn);
-                }
-                else
-                {
-                    throw new Exception("TODO-- Need to have triggerdate");
-                }
-            }
             else
             {
                 throw new Exception("No such mode");
@@ -105,7 +94,7 @@ namespace PowerPeg_SQL_to_CSV
         {
             log.Debug("Run runTaskNow in async");
 
-            await Task.Run(() => task.toRunTask(DateTime.Now));
+            await Task.Run(() => task.toRunTask());
         }
 
         /// <summary>

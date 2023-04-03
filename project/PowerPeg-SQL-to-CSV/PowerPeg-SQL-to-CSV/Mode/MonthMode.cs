@@ -5,15 +5,25 @@ using PowerPeg_SQL_to_CSV.ProcessTask;
 using Quartz.Xml.JobSchedulingData20;
 using System.Data;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("Unit-Testing")]
 namespace PowerPeg_SQL_to_CSV.Mode
 {
     public class MonthMode : IMode
     {
+        private static ITimeProvider _timeProvider = new DefaultTimeProvider();
+        internal static ITimeProvider TimeProvider
+        {
+            get { return _timeProvider; }
+            set { _timeProvider = value; }
+        }
+
         private string modeName;
         private DayOfWeek triggerDay;
         private int triggerTime;
-        private DateTime lastRunDateTime;
+        /*private DateTime lastRunDateTime;*/
+        internal DateTime nextRunDateTime;
         private List<string> selectColumn = new List<string>();
 
         private static readonly ILog log = LogHelper.getLogger();
@@ -26,56 +36,57 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <param name="selection">The selection list</param>
         public MonthMode(DayOfWeek triggerDay, int triggerTime, List<string> selection)
         {
+
             this.modeName = "MonthMode";
             this.triggerDay = triggerDay;
             this.triggerTime = triggerTime;
             this.selectColumn = selection;
-            this.lastRunDateTime = DateTime.Now;
+            
+            /*this.lastRunDateTime = DateTime.Now;*/
+            this.nextRunDateTime = _timeProvider.GetCurrentTime().AddMinutes(-10);
+
         }
 
-        private DateTime getFirstWeekofDay(DateTime target)
+        internal DateTime CalculateNextTriggerDate(DateTime givenDateTime)
         {
-            DateTime resultDate = new DateTime(target.Year, target.Month, 1);
-            while (resultDate.DayOfWeek != this.triggerDay)
+            DateTime nextDate = new DateTime(givenDateTime.Year, givenDateTime.Month, 1);
+
+            while (nextDate.DayOfWeek != this.triggerDay)
             {
-                resultDate = resultDate.AddDays(1);
+                nextDate = nextDate.AddDays(1);
             }
 
-            return resultDate;
-        } 
+            if (nextDate <= givenDateTime)
+            {
+                nextDate = nextDate.AddMonths(1);
+                nextDate = new DateTime(nextDate.Year, nextDate.Month, 1);
 
-        /// <summary>
-        /// Find the nect trigger date based on the last run time
-        /// </summary>
-        /// <returns></returns>
-        private DateTime findNextTriggerDateTime()
-        {
-            //TODO-- Update
-            DateTime next = this.lastRunDateTime.AddMonths(1);
-            DateTime result = getFirstWeekofDay(next);
-            result = new DateTime(result.Year, result.Month, result.Day, this.triggerTime, 0, 0);
+                while (nextDate.DayOfWeek != this.triggerDay)
+                {
+                    nextDate = nextDate.AddDays(1);
+                }
+            }
+            
+            DateTime result = new DateTime(nextDate.Year, nextDate.Month, nextDate.Day, this.triggerTime, 0, 0);
             return result;
         }
 
         /// <summary>
         /// Check if the provided time is needed to run the function
         /// </summary>
-        /// <param name="runDateTime"></param>
+        /// <param name="currentDateTime">Provide the current DateTime</param>
         /// <returns>Return bool</returns>
-        private bool needRun(DateTime runDateTime)
+        internal bool needRun(DateTime currentDateTime)
         {
-            DateTime nextRunTime = findNextTriggerDateTime();
 
-            int daysFromLastRun = (int)runDateTime.Subtract(nextRunTime).TotalDays;
-
-            if (daysFromLastRun == 0 && runDateTime.Hour == this.triggerTime)
+            if (currentDateTime >= this.nextRunDateTime)
             {
-                log.Info($"Run search - last run time: {this.lastRunDateTime}, next run time: {nextRunTime} days, trigger day of week: {this.triggerDay}, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime} ");
+                log.Info($"Run search - next run time: {this.nextRunDateTime} days, trigger day of week: {this.triggerDay}, current hour: {currentDateTime.Hour} vs trigger hour: {this.triggerTime} ");
                 return true;
             }
             else
             {
-                log.Info($"No run search - last run time: {this.lastRunDateTime}, next run time: {nextRunTime} days, trigger day of week: {this.triggerDay}, current hour: {runDateTime.Hour} vs trigger hour: {this.triggerTime} ");
+                log.Info($"No run search - next run time: {this.nextRunDateTime} days, trigger day of week: {this.triggerDay}, current hour: {currentDateTime.Hour} vs trigger hour: {this.triggerTime} ");
                 return false;
             }
         }
@@ -83,14 +94,16 @@ namespace PowerPeg_SQL_to_CSV.Mode
         /// <summary>
         /// Run the search of the search task according to Mode (Interface)
         /// </summary>
-        /// <param name="runDateTime">Provide the current DateTime</param>
         /// <returns>Return an Result object</returns>
-        public Result runSearch(DateTime runDateTime)
+        public virtual Result runSearch()
         {
             log.Info($"Trigger month mode search: " + String.Join(", ", getInfo()));
 
+            DateTime runDateTime = _timeProvider.GetCurrentTime();
+
             if (needRun(runDateTime))
             {
+                //Setup search range
                 //Start day inclusive, End day exclusive
                 DateTime lastMonth = runDateTime.AddMonths(-1);
                 DateTime startSearchDay = new DateTime(lastMonth.Year, lastMonth.Month, 1,00,00,00);
@@ -100,14 +113,14 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
                 res = SQLProcessFunction.processAllDBTable(startSearchDay, endSearchDay, this.selectColumn, res);
 
-                this.lastRunDateTime = runDateTime;
+                /*this.lastRunDateTime = runDateTime;*/
+                this.nextRunDateTime = CalculateNextTriggerDate(runDateTime);
                 return res;
             }
             else
             {
                 return null;
             }
-            
         }
 
         /// <summary>
@@ -125,7 +138,7 @@ namespace PowerPeg_SQL_to_CSV.Mode
 
         public override string ToString()
         {
-            return $"Mode: {this.modeName}\r\nTrigger Week of day: {this.triggerDay.ToString()}\r\nTrigger hour: {this.triggerTime.ToString()}\r\nLast Trigger Date: {this.lastRunDateTime.ToString()}\r\nSelected Field: {string.Join(",", this.selectColumn)}";
+            return $"Mode: {this.modeName}\r\nTrigger Week of day: {this.triggerDay.ToString()}\r\nTrigger hour: {this.triggerTime.ToString()}\r\nNext Trigger Date: {this.nextRunDateTime.ToString()}\r\nSelected Field: {string.Join(",", this.selectColumn)}";
         }
     }
 }
